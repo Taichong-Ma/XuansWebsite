@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CreateX | Multipurpose Bootstrap Theme
-    </title>
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="CreateX - Multipurpose Bootstrap Theme">
-    <meta name="keywords" content="multipurpose, portfolio, blog, shop, e-commerce, modern, flat style, responsive,  business, corporate, mobile, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
-    <meta name="author" content="Createx Studio">
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon and Touch Icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" color="#343b43" href="safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#603cba">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
-    <link rel="stylesheet" media="screen" href="css/vendor.min.css">
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="css/theme.min.css">
-    <!-- Modernizr-->
-    <script src="js/modernizr.min.js"></script>
-  </head>
-  <!-- Body-->
-  <body>
-    <!-- Navbar: Ghost-->
-    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
-    <header class="navbar-ghost navbar-floating navbar-sticky">
-      <div class="container text-center"><a class="search-trigger" href="#fs-search" data-toggle="fullscreen-overlay"><i class="fe-icon-search"></i></a><a class="menu-trigger" href="#fs-menu" data-toggle="fullscreen-overlay"><span>Menu</span><i class="fe-icon-menu"></i></a><a class="navbar-brand d-inline-block" href="index.html"><img src="img/logo/logo-dark.png" alt="CreateX"/></a></div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>Blog Grid
+  </title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="CreateX - Multipurpose Bootstrap Theme">
+  <meta name="keywords" content="multipurpose, portfolio, blog, shop, e-commerce, modern, flat style, responsive,  business, corporate, mobile, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
+  <meta name="author" content="Createx Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" color="#343b43" href="safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+  <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="css/theme.min.css">
+  <!-- Modernizr-->
+  <script src="js/modernizr.min.js"></script>
+</head>
+<!-- Body-->
+<body>
+  <!-- Off-Canvas Menu-->
+  <div class="offcanvas-container is-triggered offcanvas-container-reverse" id="mobile-menu"><span class="offcanvas-close"><i class="fe-icon-x"></i></span>
+    <div class="px-4 pb-4">
+      <h6>Menu</h6>
+    </div>
+    <div class="offcanvas-scrollable-area border-top" style="height:calc(100% - 100px); top: 100px;">
+      <!-- Mobile Menu-->
+      <div class="accordion mobile-menu" id="accordion-menu">
+        <!-- Home-->
+        <div class="card">
+          <div class="card-header"><a class="mobile-menu-link active" href="index.html">Home</a></div>
+        </div>
+        <!-- Portfolio-->
+        <div class="card">
+          <div class="card-header"><a class="mobile-menu-link" href="portfolio-style1-boxed.html">Portfolio</a></div>
+        </div>
+        <!-- Blog-->
+        <div class="card">
+          <div class="card-header"><a class="mobile-menu-link" href="blog-grid-ls.html">Blog</a></div>
+        </div>
+        <!-- About Me-->
+        <div class="card">
+          <div class="card-header"><a class="mobile-menu-link" href="about-us-v1.html">About Me</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer px-4 pt-3 pb-2 text-center"><a class="social-btn sb-style-3 sb-twitter" href="#"><i class="socicon-twitter"></i></a><a class="social-btn sb-style-3 sb-facebook" href="#"><i class="socicon-facebook"></i></a><a class="social-btn sb-style-3 sb-pinterest" href="#"><i class="socicon-pinterest"></i></a><a class="social-btn sb-style-3 sb-instagram" href="#"><i class="socicon-instagram"></i></a></div>
+  </div>
+  <!-- Navbar: Default-->
+  <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+  <header class="navbar-wrapper navbar-sticky">
+    <div class="d-table-cell align-middle pr-md-3"><a class="navbar-brand mr-1" href="index.html"><img src="img/logo/logo-dark.png" alt="CreateX"/></a></div>
+    <div class="d-table-cell w-100 align-middle pl-md-3">
+      <div class="navbar justify-content-end justify-content-lg-between">
+        <!-- Main Menu-->
+        <ul class="navbar-nav d-none d-lg-block">
+          <!-- Home-->
+          <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+          <!-- Portfolio-->
+          <li class="nav-item"><a class="nav-link" href="portfolio-style1-boxed.html">Portfolio</a></li>
+          <!-- Blog-->
+          <li class="nav-item"><a class="nav-link" href="blog-grid-ls.html">Blog</a></li>
+          <!-- About Me-->
+          <li class="nav-item"><a class="nav-link" href="about-us-v1.html">About Me</a></li>
+        </ul>
+        <div>
+          <ul class="navbar-buttons d-inline-block align-middle mr-lg-2">
+            <li class="d-block d-lg-none"><a href="#mobile-menu" data-toggle="offcanvas"><i class="fe-icon-menu"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
     <!-- Full Screen Search-->
     <div class="fs-overlay-wrapper" id="fs-search" style="background-image: url(img/fs-overlay-bg.png);"><span class="fs-overlay-close"><i class="fe-icon-x"></i></span>
       <div class="fs-overlay-inner">
