@@ -1,0 +1,130 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Block Title'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Block Title Sizes Code Modal
+  include code/block-title-sizes
+
+  //- Block Title with Subtitle Code Modal
+  include code/block-title-subtitle
+
+  //- Block Title Alignment Code Modal
+  include code/block-title-alignment
+
+  //- Block Title with Icon Code Modal
+  include code/block-title-icon
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-30
+      
+      // Sizes
+      .row
+        .col-md-6.pb-5.mb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Sizes
+            a(href='#block-title-sizes-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          h2.block-title.mb-30 H2. Block title
+          h3.block-title.mb-30 H3. Block title
+          h4.block-title.mb-30 H4. Block title
+          h5.block-title.mb-30 H5. Block title
+          h6.block-title H6. Block title
+        .col-md-6.pb-5.mb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Title &amp; Subtitle
+            a(href='#block-title-subtitle-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          h4.block-title.mb-30
+            | Block title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          h5.block-title.mb-30
+            | Block title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          h6.block-title.mb-30
+            | Block title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+      // Alignment
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Alignment
+        a(href='#block-title-alignment-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-3
+        .col-md-4
+          h3.block-title.text-left.mb-30 Left aligned
+        .col-md-4
+          h3.block-title.text-center.mb-30 Center aligned
+        .col-md-4
+          h3.block-title.text-right.mb-30 Right aligned
+      .row.pb-5.mb-1
+        .col-md-4.text-left
+          h4.block-title.mb-30
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-md-4.text-center
+          h4.block-title.mb-30
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-md-4.text-right
+          h4.block-title.mb-30
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+      // With icons
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With icons
+        a(href='#block-title-icon-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-3
+        .col-md-4
+          h3.block-title.text-left.mb-30
+            span.block-title-icon: i.fe-icon-anchor
+            | Left aligned
+        .col-md-4
+          h3.block-title.text-center.mb-30
+            span.block-title-icon: i.fe-icon-camera
+            | Center aligned
+        .col-md-4
+          h3.block-title.text-right.mb-30
+            span.block-title-icon: i.fe-icon-alert-circle
+            | Right aligned
+      hr.pb-30
+      .row
+        .col-md-4.text-left
+          h4.block-title.mb-30
+            span.block-title-icon.rounded-circle: i.fe-icon-bell
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-md-4.text-center
+          h4.block-title.mb-30
+            span.block-title-icon.rounded-circle: i.fe-icon-clock
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-md-4.text-right
+          h4.block-title.mb-30
+            span.block-title-icon.rounded-circle: i.fe-icon-cloud-lightning
+            | Title with subtitle
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

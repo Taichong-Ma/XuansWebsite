@@ -1,0 +1,82 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Single Ticket'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Single Ticket'
+  - var isModalTicket = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-3
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Ticket
+      .col-lg-8.pb-5
+        h2.h5.text-center.text-sm-left Yet another ticket
+        .d-sm-flex.justify-content-between.bg-secondary.py-3.mb-3
+          .p-2.w-100.text-center
+            strong.d-block.mb-1 Date Submitted
+            span 13/09/2018
+          .py-2.w-100.text-center
+            strong.d-block.mb-1 Last Updated
+            span 17/09/2018
+          .py-2.w-100.text-center
+            strong.d-block.mb-1 Type
+            span Website problem
+          .py-2.w-100.text-center
+            strong.d-block.mb-1 Priority
+            span.badge.badge-warning High
+          .py-2.w-100.text-center
+            strong.d-block.mb-1 Status
+            span.badge.badge-accent Open
+        .blockquote.comment.mb-4
+          p Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+          .d-sm-flex.justify-content-between.align-items-center
+            .testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/03.jpg', 'Comment Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Michael Davis
+                  cite September 17, 2018 at 11:05AM
+        .blockquote.comment.mb-4
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est cum soluta nobis.
+          .d-sm-flex.justify-content-between.align-items-center
+            .testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/03.jpg', 'Comment Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Michael Davis
+                  cite September 14, 2018 at 3:10PM
+          .blockquote.comment
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+            .testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/05.jpg', 'Comment Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Daniel Adams
+                  cite September 13, 2018 at 5:00PM
+
+        h3.h6.pt-4.pb-2 Leave a Message
+        form(novalidate).needs-validation
+          .form-group
+            textarea(rows='8' placeholder='Write your message here...' required).form-control
+            .invalid-tooltip Please write the message!
+          .d-flex.flex-wrap.justify-content-between.align-items-center
+            .custom-control.custom-checkbox.d-block
+              input(type='checkbox' id='close-ticket').custom-control-input
+              label(for='close-ticket').custom-control-label Submit and close the ticket
+            button(type='submit').btn.btn-primary.my-2 Submit Message
+
+  //- footer-shop.pug template
+  include partials/footer-shop

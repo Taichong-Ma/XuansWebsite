@@ -1,0 +1,166 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Code'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Code Inline Code Modal
+  include code/code-inline
+
+  //- Code User Input Code Modal
+  include code/code-user-input
+
+  //- Code Block Code Modal
+  include code/code-block
+
+  //- Code Block Scrollable Code Modal
+  include code/code-block-scrollable
+
+  //- Code Block Tabs Code Modal
+  include code/code-block-tabs
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Inline code
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Inline code
+          a(href='#code-inline-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        p.text-lg Wrap inline snippets of code with <code>&lt;code&gt;</code>. Be sure to escape HTML angle brackets.
+    
+      // User input
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 User input
+          a(href='#code-user-input-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        p.text-lg To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+    
+      // Code block
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Code block
+          a(href='#code-block-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        pre.text-md: code &lt;p&gt;Sample text here...&lt;/p&gt;<br>&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+    
+      // Code block scrollable
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Code block scrollable
+          a(href='#code-block-scrollable-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        pre.pre-scrollable.text-md
+          code.
+            &lt;div class=&quot;team-card-style-1 mx-auto&quot;&gt;
+              &lt;div class=&quot;team-card-inner&quot;&gt;
+                &lt;div class=&quot;team-thumb&quot;&gt;
+                  &lt;img src=&quot;path-to-image.jpg&quot; alt=&quot;Team Member Picture&quot;/&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;team-social-bar text-center&quot;&gt;
+                  &lt;a class=&quot;social-btn sb-style-4 sb-twitter&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a class=&quot;social-btn sb-style-4 sb-github&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a class=&quot;social-btn sb-style-4 sb-stackoverflow&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-stackoverflow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a class=&quot;social-btn sb-style-4 sb-skype&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-skype&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;a class=&quot;team-contact-link&quot; href=&quot;tel:+19871625346&quot;&gt;
+                  &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;+1 (987) 162 53 46
+                &lt;/a&gt;
+                &lt;a class=&quot;team-contact-link&quot; href=&quot;mailto:info@example.com&quot;&gt;
+                  &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;info@example.com
+                &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;span class=&quot;team-position&quot;&gt;Lead Programmer&lt;/span&gt;
+              &lt;h4 class=&quot;team-name&quot;&gt;William Smith&lt;/h4&gt;
+            &lt;/div&gt;
+            
+    
+      // Code block tabs
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Code block tabs
+          a(href='#code-block-tabs-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                &lt;div class=&quot;team-card-style-1 mx-auto&quot;&gt;
+                  &lt;div class=&quot;team-card-inner&quot;&gt;
+                    &lt;div class=&quot;team-thumb&quot;&gt;
+                      &lt;img src=&quot;path-to-image.jpg&quot; alt=&quot;Team Member Picture&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;team-social-bar text-center&quot;&gt;
+                      &lt;a class=&quot;social-btn sb-style-4 sb-twitter&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-4 sb-github&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-4 sb-stackoverflow&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-stackoverflow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-4 sb-skype&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-skype&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;a class=&quot;team-contact-link&quot; href=&quot;tel:+19871625346&quot;&gt;
+                      &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;+1 (987) 162 53 46
+                    &lt;/a&gt;
+                    &lt;a class=&quot;team-contact-link&quot; href=&quot;mailto:info@example.com&quot;&gt;
+                      &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;info@example.com
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;span class=&quot;team-position&quot;&gt;Lead Programmer&lt;/span&gt;
+                  &lt;h4 class=&quot;team-name&quot;&gt;William Smith&lt;/h4&gt;
+                &lt;/div&gt;
+          div(id='pug' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                .team-card-style-1.mx-auto
+                  .team-card-inner
+                    .team-thumb
+                      +image(&quot;path-to-image.jpg&quot;, &quot;Team Member Picture&quot;)
+                    .team-social-bar.text-center
+                      a(href=&quot;#&quot;).social-btn.sb-style-4.sb-twitter
+                        i.socicon-twitter
+                      a(href=&quot;#&quot;).social-btn.sb-style-4.sb-github
+                        i.socicon-github
+                      a(href=&quot;#&quot;).social-btn.sb-style-4.sb-stackoverflow
+                        i.socicon-stackoverflow
+                      a(href=&quot;#&quot;).social-btn.sb-style-4.sb-skype
+                        i.socicon-skype
+                    a(href=&quot;tel:+19871625346&quot;).team-contact-link
+                      i.fe-icon-phone
+                      | &amp;nbsp;+1 (987) 162 53 46
+                    a(href=&quot;mailto:info@example.com&quot;).team-contact-link
+                      i.fe-icon-mail
+                      | &amp;nbsp;info@example.com
+                  span.team-position Lead Programmer
+                  h4.team-name William Smith

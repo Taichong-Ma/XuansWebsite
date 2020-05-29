@@ -1,0 +1,52 @@
+// Pills Style 1 (Default) Code
+#pills-style1-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Pills Style 1 (Default) --&gt;</strong>
+                &lt;ul class=&quot;nav nav-pills&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#&quot;&gt;Active&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                    &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;&gt;Dropdown&lt;/a&gt;
+                    &lt;div class=&quot;dropdown-menu&quot;&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another Action&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot;&gt;Disabled&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Pills Style 1 (Default)</strong>
+                ul.nav.nav-pills
+                  li.nav-item: a(href=&quot;#&quot; class=&quot;nav-link active&quot;) Active
+                  li.nav-item: a(href=&quot;#&quot; class=&quot;nav-link&quot;) Link
+                  li.nav-item.dropdown
+                    a(href=&quot;#&quot; class=&quot;nav-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;) Dropdown
+                    .dropdown-menu
+                      a(href=&quot;#&quot; class=&quot;dropdown-item&quot;) Action
+                      a(href=&quot;#&quot; class=&quot;dropdown-item&quot;) Another Action
+                      a(href=&quot;#&quot; class=&quot;dropdown-item&quot;) Something else here
+                  li.nav-item: a(href=&quot;#&quot; class=&quot;nav-link disabled&quot;) Disabled

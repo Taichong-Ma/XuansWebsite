@@ -1,0 +1,429 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Components'
+  - var pageSubTitle = '<strong>45+</strong> UI components <strong>*</strong> <strong>N</strong> variations <strong>=</strong> <strong>Unlimited</strong> possibilities'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern-alt.png'
+  - var pageTitleXY = {x: 'center', y: 'center'}
+
+//- Page Content
+block content
+  .container.pb-5
+
+    // Search + Filter
+    .row.justify-content-center
+      .col-lg-8
+        div(data-filter='#components-grid').pb-4.mb-3
+          .input-group.form-group
+            .input-group-prepend
+              .input-group-text
+                i.fe-icon-search
+            input(type='text' placeholder='Search components').form-control
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-all' name='compFilter' value='all' checked).custom-control-input
+            label(for='filter-all').custom-control-label ALL
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-ab' name='compFilter' value='ab').custom-control-input
+            label(for='filter-ab').custom-control-label A-B
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-cf' name='compFilter' value='cf').custom-control-input
+            label(for='filter-cf').custom-control-label C-F
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-gl' name='compFilter' value='gl').custom-control-input
+            label(for='filter-gl').custom-control-label G-L
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-mp' name='compFilter' value='mp').custom-control-input
+            label(for='filter-mp').custom-control-label M-P
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-rs' name='compFilter' value='rs').custom-control-input
+            label(for='filter-rs').custom-control-label R-S
+          .custom-control.custom-radio.custom-control-inline
+            input(type='radio' id='filter-tw' name='compFilter' value='tw').custom-control-input
+            label(for='filter-tw').custom-control-label T-W
+
+    #components-grid
+      .row
+
+        // Accordion
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.border-primary.text-center
+            .card-body
+              h3.card-title Accordion
+              p.card-text.text-sm Vertically stacked list of items. Each item can be expanded to reveal hidden content.
+              a(href='components/accordion.html').btn.btn-secondary.btn-sm View Component
+        
+        // Alerts
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.border-info.text-center
+            .card-body
+              h3.card-title Alerts
+              p.card-text.text-sm Provide contextual feedback messages for typical user actions with the flexible alert messages.
+              a(href='components/alerts.html').btn.btn-secondary.btn-sm View Component
+        
+        // Animated Digits
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.border-accent.text-center
+            .card-body
+              h3.card-title Animated Digits
+              p.card-text.text-sm Digits that are animated from zero to a set value when reaching the viewport.
+              a(href='components/animated-digits.html').btn.btn-secondary.btn-sm View Component
+        
+        // Block Title
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.border-success.text-center
+            .card-body
+              h3.card-title Block Title
+              p.card-text.text-sm Block title is designed to display heading of the content section of the web page.
+              a(href='components/block-title.html').btn.btn-secondary.btn-sm View Component
+
+        // Blog Post Cards
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.border-warning.text-center
+            .card-body
+              h3.card-title Blog Post Cards
+              p.card-text.text-sm Card-like container for displaying blog posts. Feature thumbnail, post tile, post meta data, etc.
+              a(href='components/blog-post-cards.html').btn.btn-secondary.btn-sm View Component
+        
+        // Buttons
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='ab')
+          .card.border.text-center(style='border-color: #4db6ac !important;')
+            .card-body
+              h3.card-title Buttons
+              p.card-text.text-sm Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, etc.
+              a(href='components/buttons.html').btn.btn-secondary.btn-sm View Component
+        
+        // Cards
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #5f8aa9 !important;')
+            .card-body
+              h3.card-title Cards
+              p.card-text.text-sm Cards provide a flexible and extensible content container with multiple variants and options.
+              a(href='components/cards.html').btn.btn-secondary.btn-sm View Component
+        
+        // Carousel
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.border-danger.text-center
+            .card-body
+              h3.card-title Carousel
+              p.card-text.text-sm A slideshow component for cycling through elements—images or slides of text like a carousel.
+              a(href='components/carousel.html').btn.btn-secondary.btn-sm View Component
+
+        // Code
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #7e57c2 !important;')
+            .card-body
+              h3.card-title Code
+              p.card-text.text-sm Documentation and examples for displaying inline and multiline blocks of code.
+              a(href='components/code.html').btn.btn-secondary.btn-sm View Component
+        
+        // Contacts Card
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #ffd400 !important;')
+            .card-body
+              h3.card-title Contacts Card
+              p.card-text.text-sm Contacts details like address, phone, email inside card. Can be used with image or map.
+              a(href='components/contacts-card.html').btn.btn-secondary.btn-sm View Component
+        
+        // Countdown
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #06dbff !important;')
+            .card-body
+              h3.card-title Countdown
+              p.card-text.text-sm Interactive element designed to showcase limited offers, coming soon, etc.
+              a(href='components/countdown.html').btn.btn-secondary.btn-sm View Component
+        
+        // Dropdowns
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #cddc39 !important;')
+            .card-body
+              h3.card-title Dropdowns
+              p.card-text.text-sm Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+              a(href='components/dropdowns.html').btn.btn-secondary.btn-sm View Component
+
+        // Forms
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='cf')
+          .card.border.text-center(style='border-color: #7cb342 !important;')
+            .card-body
+              h3.card-title Forms
+              p.card-text.text-sm Form control styles, layout options, and custom components for creating a wide variety of forms.
+              a(href='components/forms.html').btn.btn-secondary.btn-sm View Component
+        
+        // Gallery
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.text-center(style='border-color: #ff5722 !important;')
+            .card-body
+              h3.card-title Gallery
+              p.card-text.text-sm Mix images and video (YouTube, Vimeo) inside highly customizable Classic or Masonry grid.
+              a(href='components/gallery.html').btn.btn-secondary.btn-sm View Component
+        
+        // Google Maps
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.text-center(style='border-color: #8d6e63 !important;')
+            .card-body
+              h3.card-title Google Maps
+              p.card-text.text-sm Interactive element designed to showcase limited offers, coming soon, etc.
+              a(href='components/google-maps.html').btn.btn-secondary.btn-sm View Component
+        
+        // Icon Box
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.text-center(style='border-color: #03a9f4 !important;')
+            .card-body
+              h3.card-title Icon Box
+              p.card-text.text-sm Choose a font icon or an image, add title and description to it. Best for displaying features or process.
+              a(href='components/icon-box.html').btn.btn-secondary.btn-sm View Component
+
+        // Images
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.text-center(style='border-color: #aa00ff !important;')
+            .card-body
+              h3.card-title Images &amp; Figures
+              p.card-text.text-sm The collection of modifier classes to alter shapes, appearance of the responsive images.
+              a(href='components/images.html').btn.btn-secondary.btn-sm View Component
+        
+        // Input Group
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.border-info.text-center
+            .card-body
+              h3.card-title Input Group
+              p.card-text.text-sm Easily extend form controls by adding text, buttons, or button groups on either side of the inputs.
+              a(href='components/input-group.html').btn.btn-secondary.btn-sm View Component
+        
+        // Jumbotron
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.text-center(style='border-color: #90a4ae !important;')
+            .card-body
+              h3.card-title Jumbotron
+              p.card-text.text-sm A lightweight, flexible component for showcasing key marketing messages or hero content on your site.
+              a(href='components/jumbotron.html').btn.btn-secondary.btn-sm View Component
+        
+        // List Group
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='gl')
+          .card.border.border-accent.text-center
+            .card-body
+              h3.card-title List Group
+              p.card-text.text-sm List groups are a flexible and powerful component for displaying a series of content.
+              a(href='components/list-group.html').btn.btn-secondary.btn-sm View Component
+        
+        // Market Buttons
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.border-success.text-center
+            .card-body
+              h3.card-title Market Buttons
+              p.card-text.text-sm The collection of the mobile apps market buttons like Google Play, App Store, Amazon, etc.
+              a(href='components/market-buttons.html').btn.btn-secondary.btn-sm View Component
+
+        // Media Object
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.border-warning.text-center
+            .card-body
+              h3.card-title Media Object
+              p.card-text.text-sm Helps build complex and repetitive components where some media is positioned alongside content.
+              a(href='components/media.html').btn.btn-secondary.btn-sm View Component
+        
+        // Modal
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #4db6ac !important;')
+            .card-body
+              h3.card-title Modal
+              p.card-text.text-sm Add dialogs to your site for lightboxes, user notifications, or completely custom content.
+              a(href='components/modal.html').btn.btn-secondary.btn-sm View Component
+        
+        // Navbar
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #8d6e63 !important;')
+            .card-body
+              h3.card-title Navbar
+              p.card-text.text-sm Powerful, responsive navigation header. Includes different styles, layouts and content options.
+              a(href='components/navbar.html').btn.btn-secondary.btn-sm View Component
+        
+        // Pagination
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #7e57c2 !important;')
+            .card-body
+              h3.card-title Pagination
+              p.card-text.text-sm Pagination is used to indicate a series of related content exists across multiple pages.
+              a(href='components/pagination.html').btn.btn-secondary.btn-sm View Component
+        
+        // Parallax Scrolling
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.border-danger.text-center
+            .card-body
+              h3.card-title Parallax Scrolling
+              p.card-text.text-sm The effect when one element is moved at a different speed than the other element while scrolling.
+              a(href='components/parallax-scrolling.html').btn.btn-secondary.btn-sm View Component
+
+        // Pills
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.border-info.text-center
+            .card-body
+              h3.card-title Pills
+              p.card-text.text-sm Navigation component which got its name because of its shape. Comes in different styles.
+              a(href='components/pills.html').btn.btn-secondary.btn-sm View Component
+        
+        // Portfolio Cards
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #ffb300 !important;')
+            .card-body
+              h3.card-title Portfolio Cards
+              p.card-text.text-sm Card-like container for displaying portfolio posts. Feature thumbnail, post tile, post meta data, etc.
+              a(href='components/portfolio-cards.html').btn.btn-secondary.btn-sm View Component
+        
+        // Pricing
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #90a4ae !important;')
+            .card-body
+              h3.card-title Pricing
+              p.card-text.text-sm Element helps you quickly build pricing plans for subscription based pricing model.
+              a(href='components/pricing.html').btn.btn-secondary.btn-sm View Component
+        
+        // Progress Bar
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='mp')
+          .card.border.text-center(style='border-color: #cddc39 !important;')
+            .card-body
+              h3.card-title Progress Bar
+              p.card-text.text-sm Displays an indicator showing the completion progress of a task, displayed as a bar.
+              a(href='components/progress-bar.html').btn.btn-secondary.btn-sm View Component
+
+        // Responsive Embed
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.text-center(style='border-color: #4e05ff !important;')
+            .card-body
+              h3.card-title Responsive Embed
+              p.card-text.text-sm Create responsive video or audio embeds based on the width of the parent that scales on any device.
+              a(href='components/responsive-embed.html').btn.btn-secondary.btn-sm View Component
+        
+        // Reviews & Comments
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.border-accent.text-center
+            .card-body
+              h3.card-title Review/Comment
+              p.card-text.text-sm Component designed to display product reviews with star ratings and blog post comments.
+              a(href='components/reviews-comments.html').btn.btn-secondary.btn-sm View Component
+        
+        // Shop Components
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.border-success.text-center
+            .card-body
+              h3.card-title Shop Components
+              p.card-text.text-sm Components related to the e-commerce: product cards, shop category cards, promo banners.
+              a(href='components/shop-components.html').btn.btn-secondary.btn-sm View Component
+        
+        // Social Buttons
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.text-center(style='border-color: #8d6e63 !important;')
+            .card-body
+              h3.card-title Social Buttons
+              p.card-text.text-sm The collection of the social media buttons like Facebook, Twitter, Instagram, Linkedin, etc.
+              a(href='components/social-buttons.html').btn.btn-secondary.btn-sm View Component
+        
+        // Spinners
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.text-center(style='border-color: #06dbff !important;')
+            .card-body
+              h3.card-title Spinners
+              p.card-text.text-sm Component is used to Indicate the loading state of a component or page. Built entirely in HTML/CSS.
+              a(href='components/spinners.html').btn.btn-secondary.btn-sm View Component
+
+        // Steps
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='rs')
+          .card.border.border-warning.text-center
+            .card-body
+              h3.card-title Steps
+              p.card-text.text-sm Element to showcase numbered steps of the process. Comes in different styles.
+              a(href='components/steps.html').btn.btn-secondary.btn-sm View Component
+        
+        // Tables
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-info.text-center
+            .card-body
+              h3.card-title Tables
+              p.card-text.text-sm Documentation and examples for custom styling of tables. In Bootstrap table styling is opt-in.
+              a(href='components/tables.html').btn.btn-secondary.btn-sm View Component
+        
+        // Tabs
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-primary.text-center
+            .card-body
+              h3.card-title Tabs
+              p.card-text.text-sm Horizontally stacked list of items. When clicked each item switch content in the tab pane.
+              a(href='components/tabs.html').btn.btn-secondary.btn-sm View Component
+        
+        // Team
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-danger.text-center
+            .card-body
+              h3.card-title Team
+              p.card-text.text-sm This element is designed to showcase a team members. Comes in different styles and layouts.
+              a(href='components/team.html').btn.btn-secondary.btn-sm View Component
+
+        // Testimonials
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-success.text-center
+            .card-body
+              h3.card-title Testimonials
+              p.card-text.text-sm Element designed to showcase testimonials from satisfied clients on your website.
+              a(href='components/testimonials.html').btn.btn-secondary.btn-sm View Component
+        
+        // Toast Notifications
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.text-center(style='border-color: #ec407a !important;')
+            .card-body
+              h3.card-title Toast Notifications
+              p.card-text.text-sm Small message that shows up in a box at the top/bottom of the screen and disappears after few seconds.
+              a(href='components/toasts.html').btn.btn-secondary.btn-sm View Component
+        
+        // Tooltips/Popovers
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.text-center(style='border-color: #cddc39 !important;')
+            .card-body
+              h3.card-title Tooltips/Popovers
+              p.card-text.text-sm Custom styled messages which appear when a cursor is positioned over an element.
+              a(href='components/tooltips-popovers.html').btn.btn-secondary.btn-sm View Component
+        
+        // Typography
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.text-center(style='border-color: #00b8d4 !important;')
+            .card-body
+              h3.card-title Typography
+              p.card-text.text-sm All typography related components like headings, body copy, lists, blockquotes, etc.
+              a(href='components/typography.html').btn.btn-secondary.btn-sm View Component
+
+        // Utilities
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-primary.text-center
+            .card-body
+              h3.card-title Utilities
+              p.card-text.text-sm Classes with a purpose to reduce the frequency of highly repetitive declarations.
+              a(href='components/utilities.html').btn.btn-secondary.btn-sm View Component
+        
+        // Video Player
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-info.text-center
+            .card-body
+              h3.card-title Video Player
+              p.card-text.text-sm Responsive YouTube and Vimeo video players as well as button that triggers video in popup.
+              a(href='components/video-player.html').btn.btn-secondary.btn-sm View Component
+        
+        // Widgets
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.border-danger.text-center
+            .card-body
+              h3.card-title Widgets
+              p.card-text.text-sm Collection of tiny elements to use inside sidebar area. Includes general, blog and shop widgets.
+              a(href='components/widgets.html').btn.btn-secondary.btn-sm View Component
+        
+        // Wizard
+        .col-lg-3.col-sm-6.mb-30.pb-2(data-filter-item='tw')
+          .card.border.text-center(style='border-color: #90a4ae !important;')
+            .card-body
+              h3.card-title Wizard
+              p.card-text.text-sm Series of steps or conditions that the user needs to complete in order to accomplish a goal.
+              a(href='components/wizard.html').btn.btn-secondary.btn-sm View Component
+
+  // Footer
+  footer.bg-secondary.border-top.border-bottom.py-4
+    .container.text-center
+      p.m-0.text-sm <span class='opacity-90'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-body p-0' target='_blank'>by Createx Studio</a>

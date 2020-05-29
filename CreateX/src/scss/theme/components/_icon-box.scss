@@ -1,0 +1,98 @@
+//
+// Icon Box
+// --------------------------------------------------
+
+.icon-box {
+  display: block;
+  max-width: $icon-box-max-width;
+  padding: ($spacer * 1.5);
+  transition: all .3s .12s;
+  text-decoration: none;
+  .icon-box-icon,
+  .icon-box-image {
+    display: inline-block;
+    width: $icon-box-icon-size;
+    height: $icon-box-icon-size;
+    margin-bottom: ($spacer * 1.75);
+    transition: all .3s .12s;
+    border-radius: 50%;
+    background-color: rgba($primary, .1);
+    color: $primary;
+    font-size: ($icon-box-icon-size / 2.5);
+    line-height: $icon-box-icon-size;
+    text-align: center;
+  }
+  .icon-box-image > img {
+    display: block;
+    width: 100%;
+  }
+  .icon-box-title {
+    margin-bottom: ($spacer * .75);
+    font: {
+      size: $font-size-lg;
+      weight: bold;
+    }
+  }
+  .icon-box-text {
+    margin-bottom: ($spacer * .75);
+    color: $gray-500;
+  }
+  .icon-box-link {
+    display: inline-block;
+    padding-bottom: ($spacer / 2);
+    color: $primary;
+    font: {
+      size: $font-size-sm;
+      weight: bold;
+    }
+    letter-spacing: .1em;
+    text-decoration: none;
+    > i {
+      display: inline-block;
+      margin-left: .125rem;
+      transition: all .25s;
+      font-size: 1.2em;
+      vertical-align: middle;
+    }
+    &:hover > i { transform: translateX(3px); }
+  }
+  &:hover {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+    .icon-box-icon {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  &.icon-box-horizontal {
+    width: 100%;
+    min-width: 100%;
+  }
+  &.icon-box-light-skin {
+    .icon-box-icon {
+      background-color: rgba($white, .1);
+      color: $white;
+    }
+    .icon-box-title,
+    .icon-box-text,
+    .icon-box-link { color: $white; }
+    .icon-box-text { opacity: .5; }
+    &:hover {
+      background-color: rgba($white, .1);
+      .icon-box-icon {
+        background-color: $white;
+        color: $primary;
+      }
+    }
+  }
+}
+.touchevents .icon-box {
+  &:hover {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+  .icon-box-icon {
+    background-color: rgba($primary, .1);
+    color: $primary;
+  }
+}

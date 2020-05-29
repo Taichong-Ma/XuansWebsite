@@ -1,0 +1,38 @@
+// Off-Canvas Menu
+#mobile-menu.offcanvas-container.is-triggered.offcanvas-container-reverse
+  span.offcanvas-close
+    i.fe-icon-x
+  .px-4.pb-4
+    h6 Menu
+    .d-flex.justify-content-between.pt-2
+      .btn-group.w-100.mr-2
+        a(href='#' data-toggle='dropdown').btn.btn-secondary.btn-sm.btn-block.dropdown-toggle
+          +image('img/flags/en.png', 'English')
+          | English
+        .dropdown-menu(style='min-width: 150px;')
+          a(href='#').dropdown-item
+            +image('img/flags/fr.png', 'Français')
+            | Français
+          a(href='#').dropdown-item
+            +image('img/flags/de.png', 'Deutsch')
+            | Deutsch
+          a(href='#').dropdown-item
+            +image('img/flags/it.png', 'Italiano')
+            | Italiano
+      a(href='account-login.html').btn.btn-primary.btn-sm.btn-block
+        i.fe-icon-user
+        | &nbsp;Login
+  .offcanvas-scrollable-area.border-top(style='height:calc(100% - 235px); top: 144px;')
+
+    //- menu-mobile.pug template
+    include menu-mobile
+  
+  .offcanvas-footer.px-4.pt-3.pb-2.text-center
+    a(href='#').social-btn.sb-style-3.sb-twitter
+      i.socicon-twitter
+    a(href='#').social-btn.sb-style-3.sb-facebook
+      i.socicon-facebook
+    a(href='#').social-btn.sb-style-3.sb-pinterest
+      i.socicon-pinterest
+    a(href='#').social-btn.sb-style-3.sb-instagram
+      i.socicon-instagram

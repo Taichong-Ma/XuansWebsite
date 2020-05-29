@@ -1,0 +1,78 @@
+// Gallery Masonry Grid Code
+#gallery-masonry-grid-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Gallery Masonry Grid with Gutters --&gt;</strong>
+                &lt;div class=&quot;isotope-grid cols-3&quot;&gt;
+                  &lt;div class=&quot;gutter-sizer&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;grid-sizer&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://vimeo.com/VideID?color=ac32e4&quot; data-fancybox=&quot;gallery4&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;grid-item&quot;&gt;
+                    &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://www.youtube.com/watch?v=VideoID&amp;amp;amp;autoplay=1&amp;amp;amp;rel=0&amp;amp;amp;controls=0&amp;amp;amp;showinfo=0&quot; data-fancybox=&quot;gallery4&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Gallery Masonry Grid with Gutters</strong>
+                .isotope-grid.cols-3
+                  .gutter-sizer
+                  .grid-sizer
+                  .grid-item
+                    a(href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery4&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .grid-item
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .grid-item
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .grid-item
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .grid-item
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery4&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .grid-item
+                    a(href=&quot;https://www.youtube.com/watch?v=VideoID&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&quot; data-fancybox=&quot;gallery4&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)

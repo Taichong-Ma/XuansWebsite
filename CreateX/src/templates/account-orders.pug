@@ -1,0 +1,86 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'My Orders'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Orders List'
+  - var isModalOrder = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-4
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Orders Table
+      .col-lg-8.pb-5
+        .d-flex.justify-content-end.pb-3
+          .form-inline
+            label(for='order-sort').text-muted.mr-3 Sort Orders
+            select#order-sort.form-control
+              option All
+              option Delivered
+              option In Progress
+              option Delayed
+              option Canceled
+        .table-responsive
+          table.table.table-hover.mb-0
+            thead
+              tr
+                th Order #
+                th Date Purchased
+                th Status
+                th Total
+            tbody
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 78A643CD409
+                td August 08, 2017
+                td
+                  span.badge.badge-danger.m-0 Canceled
+                td
+                  span $760.50
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 34VB5540K83
+                td July 21, 2017
+                td
+                  span.badge.badge-info.m-0 In Progress
+                td $315.20
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 112P45A90V2
+                td June 15, 2017
+                td
+                  span.badge.badge-warning.m-0 Delayed
+                td $1,264.00
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 28BA67U0981
+                td May 19, 2017
+                td
+                  span.badge.badge-success.m-0 Delivered
+                td $198.35
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 502TR872W2
+                td April 04, 2017
+                td
+                  span.badge.badge-success.m-0 Delivered
+                td $2,133.90
+              tr
+                td
+                  a(href='#order-details' data-toggle='modal').navi-link 47H76G09F33
+                td March 30, 2017
+                td
+                  span.badge.badge-success.m-0 Delivered
+                td $86.40
+
+  //- footer-shop.pug template
+  include partials/footer-shop

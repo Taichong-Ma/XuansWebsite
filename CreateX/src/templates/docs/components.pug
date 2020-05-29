@@ -1,0 +1,26 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Components'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      .alert.alert-secondary.mb-4
+        p.font-weight-medium Component - is a snippet of HTML code with assosiated CSS classes and sometimes attached JavaScript functionality that is rendered by the browser as a standalone website element. They can be mixed together to produce more complex components.
+      p Along with all Bootstrap 4 components CreateX introduces new elements you can use across website. More than 40 components in total.
+      p: a(href='../components/accordion.html' class='font-weight-medium' target='_blank') List of all Components as well as their visual reference and code snippets can be found here.
+      p.pb-3: a(href='https://getbootstrap.com/docs/4.1/components/alerts/' class='font-weight-medium' target='_blank') Bootstrap 4 Components and documentation.
+      p.pb-1: strong Below is the image showing how to see code snippet for each component:
+      img(src='../img/docs/component.png' alt='Component Show Code').d-block.img-thumbnail

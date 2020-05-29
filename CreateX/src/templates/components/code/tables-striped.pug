@@ -1,0 +1,155 @@
+// Table Striped Rows Code
+#tables-striped-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Table Striped Rows --&gt;</strong>
+                &lt;div class=&quot;table-responsive&quot;&gt;
+                  &lt;table class=&quot;table table-striped&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;#&lt;/th&gt;
+                        &lt;th&gt;First Name&lt;/th&gt;
+                        &lt;th&gt;Last Name&lt;/th&gt;
+                        &lt;th&gt;Position&lt;/th&gt;
+                        &lt;th&gt;Phone&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                        &lt;td&gt;John&lt;/td&gt;
+                        &lt;td&gt;Doe&lt;/td&gt;
+                        &lt;td&gt;CEO, Founder&lt;/td&gt;
+                        &lt;td&gt;+3 555 68 70&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                        &lt;td&gt;Anna&lt;/td&gt;
+                        &lt;td&gt;Cabana&lt;/td&gt;
+                        &lt;td&gt;Designer&lt;/td&gt;
+                        &lt;td&gt;+3 434 65 93&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                        &lt;td&gt;Kale&lt;/td&gt;
+                        &lt;td&gt;Thornton&lt;/td&gt;
+                        &lt;td&gt;Developer&lt;/td&gt;
+                        &lt;td&gt;+3 285 42 88&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Table Inverse Striped Rows --&gt;</strong>
+                &lt;div class=&quot;table-responsive&quot;&gt;
+                  &lt;table class=&quot;table table-dark table-striped&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;#&lt;/th&gt;
+                        &lt;th&gt;First Name&lt;/th&gt;
+                        &lt;th&gt;Last Name&lt;/th&gt;
+                        &lt;th&gt;Position&lt;/th&gt;
+                        &lt;th&gt;Phone&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                        &lt;td&gt;John&lt;/td&gt;
+                        &lt;td&gt;Doe&lt;/td&gt;
+                        &lt;td&gt;CEO, Founder&lt;/td&gt;
+                        &lt;td&gt;+3 555 68 70&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                        &lt;td&gt;Anna&lt;/td&gt;
+                        &lt;td&gt;Cabana&lt;/td&gt;
+                        &lt;td&gt;Designer&lt;/td&gt;
+                        &lt;td&gt;+3 434 65 93&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                        &lt;td&gt;Kale&lt;/td&gt;
+                        &lt;td&gt;Thornton&lt;/td&gt;
+                        &lt;td&gt;Developer&lt;/td&gt;
+                        &lt;td&gt;+3 285 42 88&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Table Striped Rows</strong>
+                .table-responsive
+                  table.table.table-striped
+                    thead
+                      tr
+                        th #
+                        th First Name
+                        th Last Name
+                        th Position
+                        th Phone
+                    tbody
+                      tr
+                        th(scope=&quot;row&quot;) 1
+                        td John
+                        td Doe
+                        td CEO, Founder
+                        td +3 555 68 70
+                      tr
+                        th(scope=&quot;row&quot;) 2
+                        td Anna
+                        td Cabana
+                        td Designer
+                        td +3 434 65 93
+                      tr
+                        th(scope=&quot;row&quot;) 3
+                        td Kale
+                        td Thornton
+                        td Developer
+                        td +3 285 42 88
+                
+                <strong>//- Table Inverse Striped Rows</strong>
+                .table-responsive
+                  table.table.table-dark.table-striped
+                    thead
+                      tr
+                        th #
+                        th First Name
+                        th Last Name
+                        th Position
+                        th Phone
+                    tbody
+                      tr
+                        th(scope=&quot;row&quot;) 1
+                        td John
+                        td Doe
+                        td CEO, Founder
+                        td +3 555 68 70
+                      tr
+                        th(scope=&quot;row&quot;) 2
+                        td Anna
+                        td Cabana
+                        td Designer
+                        td +3 434 65 93
+                      tr
+                        th(scope=&quot;row&quot;) 3
+                        td Kale
+                        td Thornton
+                        td Developer
+                        td +3 285 42 88

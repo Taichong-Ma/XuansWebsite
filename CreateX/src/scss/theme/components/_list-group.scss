@@ -1,0 +1,101 @@
+//
+// List Group
+// --------------------------------------------------
+
+.list-group-item {
+  transition: all .3s;
+  color: $gray-700;
+  font: {
+    size: $nav-link-font-size;
+    weight: $nav-link-font-weight;
+  }
+  letter-spacing: $nav-link-letter-spacing;
+  text: {
+    transform: $nav-link-text-transform;
+    decoration: none;
+  }
+  i {
+    display: inline-block;
+    margin-top: -.0625rem;
+    margin-right: .5rem;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  p, ul, ol, li, span:not(.badge), small {
+    font-weight: normal !important;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  h1, .h1, h2, .h2, h3, .h3,
+  h4, .h4, h5, .h5, h6, .h6 {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: transparent;
+    content: '';
+  }
+  &.active:not(.disabled) {
+    cursor: default;
+    pointer-events: none;
+    > i, i { color: $list-group-active-color !important; }
+    &::before { background-color: $list-group-active-color; }
+  }
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+  .badge { margin: 0; }
+}
+a.list-group-item,
+.list-group-item-action {
+  color: $list-group-action-color;
+  font-weight: $nav-link-font-weight;
+  &:hover { background-color: $list-group-hover-bg; }
+  &:hover, &:active {
+    &:not(.disabled) {border-color: $border-color; }
+  }
+}
+
+// // Contextual variants
+.list-group-item-primary {
+  @include list-group-variant($primary, rgba($primary, .1), lighten($primary, 32%));
+}
+.list-group-item-secondary {
+  @include list-group-variant($gray-700, $gray-100, $border-color);
+}
+.list-group-item-accent {
+  @include list-group-variant($accent, rgba($accent, .1), lighten($accent, 32%));
+}
+.list-group-item-info {
+  @include list-group-variant($info, rgba($info, .1), lighten($info, 20%));
+}
+.list-group-item-success {
+  @include list-group-variant(darken($success, 3%), rgba($success, .1), lighten($success, 30%));
+}
+.list-group-item-warning {
+  @include list-group-variant(darken($warning, 3%), rgba($warning, .1), lighten($warning, 30%));
+}
+.list-group-item-danger {
+  @include list-group-variant(darken($danger, 3%), rgba($danger, .1), lighten($danger, 22%));
+}
+.list-group-item-dark {
+  @include list-group-variant($white, $gray-800, $gray-800);
+}
+a:hover, a.active,
+.list-group-item-action:hover,
+.list-group-item-action.active {
+  &.list-group-item-primary { background-color: rgba($primary, .18); }
+  &.list-group-item-accent { background-color: rgba($accent, .18); }
+  &.list-group-item-info { background-color: rgba($info, .18); }
+  &.list-group-item-success { background-color: rgba($success, .18); }
+  &.list-group-item-warning { background-color: rgba($warning, .18); }
+  &.list-group-item-danger { background-color: rgba($danger, .18); }
+  &.list-group-item-dark { background-color: darken($gray-800, 3%); }
+}

@@ -1,0 +1,192 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Single Service Page'
+
+//- Page Content
+block content
+  // Description
+  section.bg-parallax
+    .bg-parallax-img(data-parallax='{"y" : 100}')
+      img(src='img/pages/service-hero-bg.png' alt='Service')
+    .container.bg-parallax-content.pt-5.pb-5
+      div(style='width: 120px; height: 120px;').box-shadow.bg-white.rounded-circle.mx-auto.mb-4
+        img(src='img/services/07.png' alt='Back-End Development').d-block.mx-auto
+      h1.h2.block-title.text-center Front-End Development
+      .row.justify-content-center.pt-2
+        .col-xl-8.col-lg-9.col-md-10
+          p.opacity-80.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          p.opacity-80.text-center Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.
+
+  .container
+    
+    // Process
+    h2.h4.text-center.pt-5 Our process
+    .row.pt-3.pb-2
+      .col-lg-3.col-sm-6.mb-3
+        // Step
+        .step.text-center
+          .step-number 1
+          h3.step-title Gathering User Data
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      .col-lg-3.col-sm-6.mb-3
+        // Step
+        .step.text-center
+          .step-number 2
+          h3.step-title Prototyping (Wireframes)
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      .col-lg-3.col-sm-6.mb-3
+        // Step
+        .step.text-center
+          .step-number 3
+          h3.step-title Pixel-perfect UI Design
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      .col-lg-3.col-sm-6.mb-3
+        // Step
+        .step.text-center
+          .step-number 4
+          h3.step-title Development (Coding)
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    
+    // Latest Works
+    h2.h4.text-center.pt-5.pb-3 Latest works
+  .container-fluid.pb-5.mb-3
+    .isotope-grid.filter-grid.cols-4
+      .gutter-sizer
+      .grid-sizer
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/01.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | William Smith
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') iOS App UI Design
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 12
+
+      // Portfolio Item
+      .grid-item.branding.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-slider.html').portfolio-thumb
+            +image('img/portfolio/03.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Olivia Davis
+            h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Company Brand Design
+          .card-footer
+            div
+              a(href='#').tag-link Branding
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 25
+
+      // Portfolio Item
+      .grid-item.web-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/02.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Benjamin Miller
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Web App Front-End
+          .card-footer
+            div
+              a(href='#').tag-link Web Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 8
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+            +image('img/portfolio/12.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Michael Brown
+            h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') Photo App UX
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 183
+    .text-center.pt-2
+      a(href='portfolio-style2-boxed.html').btn.btn-primary See All Projects
+  
+  // Clients' Reviews
+  section.bg-secondary
+    .container.py-5
+      h2.h4.text-center.pt-2.pb-4 Clients' reviews
+      .owl-carousel.testimonials-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": -15, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":2},"1200":{"items":3}} }')
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Barbara Palson
+                cite Graphic Designer
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Hinata Nakamura
+                cite Financial Director
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Michael Davis
+                cite Co-Founder, CEO
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/04.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Sophia Johnson
+                cite Marketing Manager
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/05.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Christopher Lee
+                cite Marketing Manager
+
+  //- footer-default.pug template
+  include partials/footer-default

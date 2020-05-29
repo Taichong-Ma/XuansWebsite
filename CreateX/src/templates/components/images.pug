@@ -1,0 +1,82 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Images & Figures'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var isModalExample = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Image Shapes Code Modal
+  include code/images-shapes
+
+  //- Image Thumbnail Shapes Code Modal
+  include code/images-thumb-shapes
+
+  //- Image Figures with Caption Code Modal
+  include code/images-captions
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-2
+
+      // Image shapes
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Image shapes
+        a(href='#images-shapes-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/01.jpg' alt='Image square').d-block.mx-auto
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/02.jpg' alt='Image rounded').rounded.d-block.mx-auto
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/03.jpg' alt='Image rounded').rounded-circle.d-block.mx-auto
+
+      // Thumbnail shapes
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Thumbnail shapes
+        a(href='#images-thumb-shapes-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/04.jpg' alt='Thumbnail square').img-thumbnail.d-block.mx-auto
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/05.jpg' alt='Thumbnail rounded').img-thumbnail.rounded.d-block.mx-auto
+        .col-sm-6.col-md-4.mb-4
+          img(src='../img/components/figures/06.jpg' alt='Thumbnail rounded').img-thumbnail.rounded-circle.d-block.mx-auto
+
+      // Figures with caption
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Figures with caption
+        a(href='#images-captions-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-sm-6.col-md-4.mb-4.text-center
+          figure.figure
+            img(src='../img/components/figures/03.jpg' alt='Image with caption').figure-img
+            figcaption.figure-caption.text-left Image caption (left)
+        .col-sm-6.col-md-4.mb-4.text-center
+          figure.figure
+            img(src='../img/components/figures/01.jpg' alt='Image with caption').figure-img
+            figcaption.figure-caption.text-center Image caption (center)
+        .col-sm-6.col-md-4.mb-4.text-center
+          figure.figure
+            img(src='../img/components/figures/02.jpg' alt='Image with caption').figure-img
+            figcaption.figure-caption.text-right Image caption (right)

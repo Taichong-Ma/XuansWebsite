@@ -1,0 +1,56 @@
+// Progress Animated When in View Code
+#progress-animated-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 Use background utility classes to change the appearance of individual progress bars. For example, to dispaly Info (blue) color progress bar add <code>bg-info</code> class to individual <code>progress-bar</code>.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Progress Primary Animated (Style 2) --&gt;</strong>
+                &lt;span class=&quot;progress-label&quot;&gt;
+                  &lt;i class=&quot;fe-icon-globe&quot;&gt;&lt;/i&gt;
+                  Web Development
+                &lt;/span&gt;
+                &lt;div class=&quot;progress progress-style-2 progress-animate-fill&quot;&gt;
+                  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;progress-label text-right&quot;&gt;60%&lt;/span&gt;
+
+                <strong>&lt;!-- Progress Warning Animated (Style 3) --&gt;</strong>
+                &lt;span class=&quot;progress-label&quot;&gt;
+                  &lt;i class=&quot;fe-icon-database&quot;&gt;&lt;/i&gt;
+                  Back-End Dev
+                &lt;/span&gt;
+                &lt;div class=&quot;progress progress-style-3 progress-animate-fill&quot;&gt;
+                  &lt;div class=&quot;progress-bar bg-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;progress-label text-right&quot;&gt;75%&lt;/span&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Progress Primary Animated (Style 2)</strong>
+                span.progress-label
+                  i.fe-icon-globe
+                  | Web Development
+                .progress.progress-style-2.progress-animate-fill
+                  .progress-bar(role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;)
+                span.progress-label.text-right 60%
+
+                <strong>//- Progress Warning Animated (Style 3)</strong>
+                span.progress-label
+                  i.fe-icon-database
+                  | Back-End Dev
+                .progress.progress-style-3.progress-animate-fill
+                  .progress-bar.bg-warning(role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;)
+                span.progress-label.text-right 75%

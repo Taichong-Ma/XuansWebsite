@@ -1,0 +1,53 @@
+// Input Group Multiple Addons Code
+#input-group-multiple-addons-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Multiple Addons on the Left --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fe-icon-dollar-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;.00&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Amount&quot;&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Multiple Addons on the Right --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Amount&quot;&gt;
+                  &lt;div class=&quot;input-group-append&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fe-icon-dollar-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;.00&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Multiple Addons on the Left</strong>
+                .input-group
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fe-icon-dollar-sign
+                    span.input-group-text .00
+                  input(type=&quot;text&quot; placeholder=&quot;Amount&quot;).form-control
+
+                <strong>//- Multiple Addons on the Right</strong>
+                .input-group
+                  input(type=&quot;text&quot; placeholder=&quot;Amount&quot;).form-control
+                  .input-group-append
+                    span.input-group-text
+                      i.fe-icon-dollar-sign
+                    span.input-group-text .00

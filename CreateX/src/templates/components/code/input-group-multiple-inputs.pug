@@ -1,0 +1,35 @@
+// Input Group Multiple Inputs Code
+#input-group-multiple-inputs-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Multiple Inputs --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;First &amp;amp; last name&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;First name&quot;&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Last name&quot;&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Multiple Inputs</strong>
+                .input-group
+                  .input-group-prepend
+                    span.input-group-text First &amp; last name
+                  input(type=&quot;text&quot; placeholder=&quot;First name&quot;).form-control
+                  input(type=&quot;text&quot; placeholder=&quot;Last name&quot;).form-control

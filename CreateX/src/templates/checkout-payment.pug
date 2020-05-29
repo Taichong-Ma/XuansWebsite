@@ -1,0 +1,105 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Checkout'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Checkout - Payment'
+  - var isCardScript = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-4.mb-2
+    .row
+
+      // Checkout: Payment
+      .col-xl-9.col-lg-8.pb-5
+        .wizard
+          .wizard-steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between
+            a(href='checkout-address.html').wizard-step
+              i.fe-icon-check-circle
+              | 1. Address
+            a(href='checkout-shipping.html').wizard-step
+              i.fe-icon-check-circle
+              | 2. Shipping
+            .wizard-step.active 3. Payment
+            a(href='checkout-review.html').wizard-step 4. Review
+          .wizard-body
+            h3.h5.pb-3 Choose Payment Method
+            div(id='accordion' class='accordion accordion-style-2' role='tablist')
+              .card
+                .card-header(role='tab')
+                  h6
+                    a(href='#card' data-toggle='collapse').pl-0
+                      i.fe-icon-credit-card
+                      | Pay with Credit Card
+                div(id='card' class='collapse show' data-parent='#accordion' role='tabpanel')
+                  .card-body.px-0
+                    p
+                      | We accept following credit cards:&nbsp;&nbsp;
+                      img(src='img/credit-cards.png' style='width: 120px;' alt='Cerdit Cards').d-inline-block.align-middle
+                    .card-wrapper
+                    form.interactive-credit-card.row
+                      .form-group.col-sm-6
+                        input(type='text' name='number' placeholder='Card Number' required).form-control
+                      .form-group.col-sm-6
+                        input(type='text' name='name' placeholder='Full Name' required).form-control
+                      .form-group.col-sm-3
+                        input(type='text' name='expiry' placeholder='MM/YY' required).form-control
+                      .form-group.col-sm-3
+                        input(type='text' name='cvc' placeholder='CVC' required).form-control
+                      .col-sm-6
+                        button(type='submit').btn.btn-primary.btn-block.mt-0 Submit
+              .card
+                .card-header(role='tab')
+                  h6
+                    a(href='#paypal' class='collapsed' data-toggle='collapse').pl-0
+                      i.socicon-paypal
+                      | Pay with PayPal
+                div(id='paypal' class='collapse' data-parent='#accordion' role='tabpanel')
+                  .card-body.px-0
+                    p <strong>PayPal</strong> - the safer, easier way to pay
+                    form(method='post').row
+                      .col-sm-6
+                        .form-group
+                          input(type='email' placeholder='E-mail' required).form-control
+                      .col-sm-6
+                        .form-group
+                          input(type='password' placeholder='Password' required).form-control
+                      .col-12
+                        .d-flex.flex-wrap.justify-content-between.align-items-center
+                          a(href='#').navi-link Forgot password?
+                          button(type='submit').btn.btn-primary.btn-sm Log In
+              .card
+                .card-header(role='tab')
+                  h6
+                    a(href='#points' class='collapsed' data-toggle='collapse').pl-0
+                      i.fe-icon-award
+                      | Redeem Reward Points
+                div(id='points' class='collapse' data-parent='#accordion' role='tabpanel')
+                  .card-body.px-0
+                    p
+                      | You currently have
+                      strong &nbsp;2,549
+                      | &nbsp;Reward Points to spend.
+                    .custom-control.custom-checkbox.d-block
+                      input(type='checkbox' id='use_points').custom-control-input
+                      label(for='use_points').custom-control-label Use my Reward Points to pay for this order.
+          .wizard-footer.d-flex.justify-content-between
+            a(href='checkout-shipping.html').btn.btn-secondary.my-2
+              i.fe-icon-arrow-left
+              span.d-none.d-sm-inline-block Back
+            a(href='checkout-review.html').btn.btn-primary.my-2
+              span.d-none.d-sm-inline-block Continue
+              i.fe-icon-arrow-right
+
+      // Sidebar
+      aside.col-xl-3.col-lg-4.pb-4.mb-2
+        //- sidebar-checkout.pug template
+        include partials/sidebar-checkout
+
+  //- footer-shop.pug template
+  include partials/footer-shop

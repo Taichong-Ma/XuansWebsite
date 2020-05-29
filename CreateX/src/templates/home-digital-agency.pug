@@ -1,0 +1,392 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-floating'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Digital Agency'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/digital-agency/hero-bg.png);').bg-center.bg-no-repeat.py-5.mt-lg-5
+    .row.no-gutters.pt-lg-5.mt-lg-5
+      .col-xl-7.col-lg-8
+        img(src='img/homepages/digital-agency/hero-img.jpg' alt='Hero Image').d-block
+      .col-lg-4.pt-xl-5
+        .px-3.px-lg-0.text-center.text-lg-left
+          h1.pt-md-5.pb-md-4.pt-3.pb-3.pt-md-0.pb-md-5 We do all the hard work for you
+          a(href='#services').scroll-to.btn.btn-style-4.btn-gradient.btn-icon-right.btn-lg
+            | Learn How
+            i.fe-icon-arrow-down
+  
+  // Statistics
+  section.bg-white.container-fluid.border-top
+    .row
+      .col-md-3.col-sm-6.border-right.py-5.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='350')
+          h5.animated-digits-digit
+            span 0
+            | +
+          p.animated-digits-text
+            | Totally satisfied clients
+      .col-md-3.col-sm-6.py-5.border-right.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='92')
+          h5.animated-digits-digit
+            span 0
+            | %
+          p.animated-digits-text
+            | Positive feedback
+      .col-md-3.col-sm-6.py-5.border-right.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='1446')
+          h5.animated-digits-digit
+            span 0
+          p.animated-digits-text
+            | Completed projects
+      .col-md-3.col-sm-6.py-5.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='28')
+          h5.animated-digits-digit
+            | $
+            span 0
+          p.animated-digits-text
+            | Average cost per hour
+
+  // Services
+  section#services.bg-dark.py-5
+    .container.pt-4
+      h2.h3.block-title.text-white.text-center.px-3 We develop digital strategies, products, services and some other cool things
+      .row.pt-4
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/01.jpg' alt='Branding & identity').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Branding &amp; identity
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/02.jpg' alt='UI / UX design').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 UI / UX design
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/03.jpg' alt='Front-end development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Front-end development
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/04.jpg' alt='Digital strategy').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Digital strategy
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/05.jpg' alt='Back-end development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Back-end development
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/06.jpg' alt='Mobile development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Mobile development
+  
+  // Team
+  section.container.py-5.mt-3
+    h2.h3.block-title.text-center.mb-4
+      | Meet our team
+      small People behind your great experience
+    .row
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/05.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-4.sb-linkedin
+                i.socicon-linkedin
+            a(href='tel:+72056557984').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+7 (205) 655 79 84
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position CEO, Co-Founder
+          h4.team-name James McCorvinus
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/06.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-4.sb-linkedin
+                i.socicon-linkedin
+            a(href='tel:+57872336590').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+5 (787) 233 65 90
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Marketing Manager
+          h4.team-name Sara Palson
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/07.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-github
+                i.socicon-github
+              a(href='#').social-btn.sb-style-4.sb-stackoverflow
+                i.socicon-stackoverflow
+              a(href='#').social-btn.sb-style-4.sb-skype
+                i.socicon-skype
+            a(href='tel:+19871625346').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (987) 162 53 46
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Lead Programmer
+          h4.team-name Brandon Nash
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/03.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-pinterest
+                i.socicon-pinterest
+              a(href='#').social-btn.sb-style-4.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-4.sb-dribbble
+                i.socicon-dribbble
+            a(href='tel:+13907765843').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (390) 776 58 43
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Graphic Designer
+          h4.team-name Emma Johnson
+
+  // Steps
+  section(style='background-image: url(img/homepages/digital-agency/steps-bg.jpg);').bg-center-top.bg-no-repeat.bg-cover.py-5
+    .container-fluid.pt-4
+      .row.pt-1
+        .col-xl-8.offset-xl-1
+          h2.h3.mb-4.ml-lg-3.text-center.text-lg-left And that’s how we do it!
+          .row
+            .col-lg-3.col-sm-6
+              // Step
+              .step.step-with-icon
+                .step-number 1
+                .step-icon: img(src='img/icons/user-data.svg' alt='Gathering User Data')
+                h3.step-title Gathering User Data
+                p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore cupiditate non provident.
+                a(href='#').step-link
+                  | Learn more
+                  i.fe-icon-arrow-right
+            .col-lg-3.col-sm-6
+              // Step
+              .step.step-with-icon
+                .step-number 2
+                .step-icon: img(src='img/icons/prototyping.svg' alt='Prototyping (Wireframes)')
+                h3.step-title Prototyping (Wireframes)
+                p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore cupiditate non provident.
+                a(href='#').step-link
+                  | Learn more
+                  i.fe-icon-arrow-right
+            .col-lg-3.col-sm-6
+              // Step
+              .step.step-with-icon
+                .step-number 3
+                .step-icon: img(src='img/icons/ui-design.svg' alt='Pixel-perfect UI Design')
+                h3.step-title Pixel-perfect UI Design
+                p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore cupiditate non provident.
+                a(href='#').step-link
+                  | Learn more
+                  i.fe-icon-arrow-right
+            .col-lg-3.col-sm-6
+              // Step
+              .step.step-with-icon
+                .step-number 4
+                .step-icon: img(src='img/icons/coding.svg' alt='Development (Coding)')
+                h3.step-title Development (Coding)
+                p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore cupiditate non provident.
+                a(href='#').step-link
+                  | Learn more
+                  i.fe-icon-arrow-right
+    
+  // Portfolio
+  section.container.py-5.mb-3
+    h2.h3.block-title.text-center.mt-3
+      | Latest works
+      small Hand-picked collection of my most prominent works
+    .row.pt-4
+        
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/01.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | William Smith
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') iOS App UI Design
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 12
+
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/02.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Benjamin Miller
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Web App Front-End
+          .card-footer
+            div
+              a(href='#').tag-link Web Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 8
+
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-slider.html').portfolio-thumb
+            +image('img/portfolio/03.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Olivia Davis
+            h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Company Brand Design
+          .card-footer
+            div
+              a(href='#').tag-link Branding
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 25
+
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+            +image('img/portfolio/04.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Michael Brown
+            h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') iOS App Development
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 43
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/05.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Emilia Green
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') Working Space Design
+          .card-footer
+            div
+              a(href='#').tag-link Interior Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 27
+
+      // Portfolio Item
+      .col-md-4.col-sm-6.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/09.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Emilia Green
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Watch Interaface Design
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 116
+    .text-center.pt-2
+      a(href='portfolio-style2-boxed.html').btn.btn-style-4.btn-primary.btn-icon-right
+        i.fe-icon-arrow-right.text-md.bg-white.text-primary
+        | View all works
+  
+  // Contact Form
+  section.bg-secondary.pt-5.pb-3
+    .container.py-2
+      h2.h3.block-title.text-center
+        | Contact us
+        small We'll be glad to answer all your questions. We normally respond within 2 - 3 business days.
+      form(novalidate).needs-validation.pt-4.pb-5
+        .row
+          .col-md-4.col-sm-6.form-group
+            label(for='cont-name') Your Name <span class='text-danger font-weight-medium'>*</span>
+            input(type='text' id='cont-name' placeholder='John Doe' required).form-control
+            .invalid-feedback Please fill in your name!
+          .col-md-4.col-sm-6.form-group
+            label(for='cont-email') Email Address <span class='text-danger font-weight-medium'>*</span>
+            input(type='email' id='cont-email' placeholder='johndoe@example.com' required).form-control
+            .invalid-feedback Please provide valid email address!
+          .col-md-4.form-group
+            label(for='cont-subject') Subject
+            input(type='email' id='cont-subject' placeholder='Title of your message').form-control
+        .form-group
+          label(for='cont-message') Message <span class='text-danger font-weight-medium'>*</span>
+          textarea(id='cont-message' rows='8' placeholder='Type your message...' required).form-control
+          .invalid-feedback Please type your message!
+        .text-center
+          button(type='submit').btn.btn-style-4.btn-icon-left.btn-primary
+            i.fe-icon-mail.text-md.bg-white.text-primary
+            | Send Message
+
+  //- footer-portfolio.pug template
+  include partials/footer-portfolio

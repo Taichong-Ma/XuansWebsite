@@ -1,0 +1,136 @@
+// Forms Validation: Status Text Code
+#forms-validation-text-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html7' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug7' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html7' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Forms Validation: Status Text --&gt;</strong>
+                &lt;form class=&quot;container needs-validation pb-5&quot; novalidate&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-4 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustom01&quot;&gt;First name&lt;/label&gt;
+                      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;validationCustom01&quot; placeholder=&quot;First name&quot; value=&quot;John&quot; required&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustom02&quot;&gt;Last name&lt;/label&gt;
+                      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;validationCustom02&quot; placeholder=&quot;Last name&quot; value=&quot;Doe&quot; required&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustomUsername&quot;&gt;Username&lt;/label&gt;
+                      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;validationCustomUsername&quot; placeholder=&quot;Username&quot; required&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;Please choose a username.&lt;/div&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-6 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustom03&quot;&gt;City&lt;/label&gt;
+                      &lt;select class=&quot;form-control&quot; id=&quot;validationCustom03&quot; required&gt;
+                        &lt;option value=&quot;&quot;&gt;Choose city...&lt;/option&gt;
+                        &lt;option value=&quot;Dallas&quot;&gt;Dallas&lt;/option&gt;
+                        &lt;option value=&quot;Houston&quot;&gt;Houston&lt;/option&gt;
+                        &lt;option value=&quot;Los Angeles&quot;&gt;Los Angeles&lt;/option&gt;
+                        &lt;option value=&quot;Miami&quot;&gt;Miami&lt;/option&gt;
+                        &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+                      &lt;/select&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;Please provide a valid city.&lt;/div&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-3 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustom04&quot;&gt;State&lt;/label&gt;
+                      &lt;select class=&quot;form-control&quot; id=&quot;validationCustom04&quot; required&gt;
+                        &lt;option value=&quot;&quot;&gt;Choose state...&lt;/option&gt;
+                        &lt;option value=&quot;Arizona&quot;&gt;Arizona&lt;/option&gt;
+                        &lt;option value=&quot;Colorado&quot;&gt;Colorado&lt;/option&gt;
+                        &lt;option value=&quot;Florida&quot;&gt;Florida&lt;/option&gt;
+                        &lt;option value=&quot;Indiana&quot;&gt;Indiana&lt;/option&gt;
+                        &lt;option value=&quot;Kentucky&quot;&gt;Kentucky&lt;/option&gt;
+                        &lt;option value=&quot;Texas&quot;&gt;Texas&lt;/option&gt;
+                      &lt;/select&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;Please provide a valid state.&lt;/div&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-3 form-group&quot;&gt;
+                      &lt;label for=&quot;validationCustom05&quot;&gt;Zip&lt;/label&gt;
+                      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;validationCustom05&quot; placeholder=&quot;Zip&quot; required&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;Please provide a valid zip.&lt;/div&gt;
+                      &lt;div class=&quot;valid-feedback&quot;&gt;Looks good!&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                      &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;invalidCheck&quot; required&gt;
+                      &lt;label class=&quot;custom-control-label&quot; for=&quot;invalidCheck&quot;&gt;Agree to terms and conditions&lt;/label&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;You must agree before submitting.&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Submit Form&lt;/button&gt;
+                &lt;/form&gt;
+          div(id='pug7' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Forms Validation: Status Text</strong>
+                form(novalidate).container.needs-validation.pb-5
+                  .row
+                    .col-md-4.form-group
+                      label(for=&quot;validationCustom01&quot;) First name
+                      input(type=&quot;text&quot; id=&quot;validationCustom01&quot; placeholder=&quot;First name&quot; value=&quot;John&quot; required).form-control
+                      .valid-feedback Looks good!
+                    .col-md-4.form-group
+                      label(for=&quot;validationCustom02&quot;) Last name
+                      input(type=&quot;text&quot; id=&quot;validationCustom02&quot; placeholder=&quot;Last name&quot; value=&quot;Doe&quot; required).form-control
+                      .valid-feedback Looks good!
+                    .col-md-4.form-group
+                      label(for=&quot;validationCustomUsername&quot;) Username
+                      input(type=&quot;text&quot; id=&quot;validationCustomUsername&quot; placeholder=&quot;Username&quot; required).form-control
+                      .invalid-feedback Please choose a username.
+                      .valid-feedback Looks good!
+                  .row
+                    .col-md-6.form-group
+                      label(for=&quot;validationCustom03&quot;) City
+                      select(id=&quot;validationCustom03&quot; required).form-control
+                        option(value=&quot;&quot;) Choose city...
+                        option(value=&quot;Dallas&quot;) Dallas
+                        option(value=&quot;Houston&quot;) Houston
+                        option(value=&quot;Los Angeles&quot;) Los Angeles
+                        option(value=&quot;Miami&quot;) Miami
+                        option(value=&quot;New York&quot;) New York
+                      .invalid-feedback Please provide a valid city.
+                      .valid-feedback Looks good!
+                    .col-md-3.form-group
+                      label(for=&quot;validationCustom04&quot;) State
+                      select(id=&quot;validationCustom04&quot; required).form-control
+                        option(value=&quot;&quot;) Choose state...
+                        option(value=&quot;Arizona&quot;) Arizona
+                        option(value=&quot;Colorado&quot;) Colorado
+                        option(value=&quot;Florida&quot;) Florida
+                        option(value=&quot;Indiana&quot;) Indiana
+                        option(value=&quot;Kentucky&quot;) Kentucky
+                        option(value=&quot;Texas&quot;) Texas
+                      .invalid-feedback Please provide a valid state.
+                      .valid-feedback Looks good!
+                    .col-md-3.form-group
+                      label(for=&quot;validationCustom05&quot;) Zip
+                      input(type=&quot;text&quot; id=&quot;validationCustom05&quot; placeholder=&quot;Zip&quot; required).form-control
+                      .invalid-feedback Please provide a valid zip.
+                      .valid-feedback Looks good!
+                  .form-group
+                    .custom-control.custom-checkbox
+                      input(type=&quot;checkbox&quot; id=&quot;invalidCheck&quot; required).custom-control-input
+                      label(for=&quot;invalidCheck&quot;).custom-control-label Agree to terms and conditions
+                      .invalid-feedback You must agree before submitting.
+                  button(type=&quot;submit&quot;).btn.btn-primary Submit Form

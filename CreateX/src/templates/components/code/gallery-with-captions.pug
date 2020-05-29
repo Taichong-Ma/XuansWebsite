@@ -1,0 +1,65 @@
+// Gallery with Captions Code
+#gallery-with-captions-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Gallery with Captions --&gt;</strong>
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-md-4 col-sm-6&quot;&gt;
+                    &lt;figure class=&quot;figure mb-30&quot;&gt;
+                      &lt;a class=&quot;gallery-item figure-img&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                        &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                      &lt;/a&gt;
+                      &lt;figcaption class=&quot;figure-caption&quot;&gt;Image caption (left)&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-4 col-sm-6&quot;&gt;
+                    &lt;figure class=&quot;figure mb-30&quot;&gt;
+                      &lt;a class=&quot;gallery-item figure-img&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                        &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                      &lt;/a&gt;
+                      &lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Image caption (center)&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-4 col-sm-6&quot;&gt;
+                    &lt;figure class=&quot;figure mb-30&quot;&gt;
+                      &lt;a class=&quot;gallery-item type-video figure-img&quot; href=&quot;https://www.youtube.com/watch?v=VideoID&amp;amp;amp;autoplay=1&amp;amp;amp;rel=0&amp;amp;amp;controls=0&amp;amp;amp;showinfo=0&quot; data-fancybox=&quot;gallery2&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                        &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                      &lt;/a&gt;
+                      &lt;figcaption class=&quot;figure-caption text-right&quot;&gt;Image caption (right)&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Gallery with Captions</strong>
+                .row
+                  .col-md-4.col-sm-6
+                    figure.figure.mb-30
+                      a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.figure-img
+                        +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                      figcaption.figure-caption Image caption (left)
+                  .col-md-4.col-sm-6
+                    figure.figure.mb-30
+                      a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.figure-img
+                        +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                      figcaption.figure-caption.text-center Image caption (center)
+                  .col-md-4.col-sm-6
+                    figure.figure.mb-30
+                      a(href=&quot;https://www.youtube.com/watch?v=VideoID&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&quot; data-fancybox=&quot;gallery2&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video.figure-img
+                        +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                      figcaption.figure-caption.text-right Image caption (right)

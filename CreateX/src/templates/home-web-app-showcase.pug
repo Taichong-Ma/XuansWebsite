@@ -1,0 +1,260 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-floating'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Web App Showcase (SAAS)'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/web-app-showcase/hero-bg.jpg); background-color: #fffbfb;').bg-center-top.bg-no-repeat.py-5
+    .container-fluid.pt-4.pt-lg-5.pb-5.my-lg-5
+      .row.align-items-center.pb-lg-5
+        .col-lg-6.pt-lg-5.pt-xl-0.pb-lg-5.mb-lg-5
+          div(style='max-width: 555px;').mx-auto.ml-lg-auto.mr-lg-0.text-center.text-lg-left
+            h2.text-white Build an impressive website <span class='font-weight-normal'> for business and personal use.</span>
+            p.text-white.opacity-80.pb-4 Morbi fringilla ex luctus, tempor ante id, finibus ante. Nulla facilisi. Phasellus et quam porta, elementum sem eget, pellentesque dolor magni dolores eos qui ratione.
+            a(href='#info').scroll-to.btn.btn-style-4.btn-light.btn-icon-right.mb-3.mr-3
+              | Learn More
+              i.fe-icon-arrow-down
+            a(href='#').btn.btn-style-4.btn-warning.mb-3 Get Started For Free
+        .col-lg-6.pt-4
+          img(src='img/homepages/web-app-showcase/hero-img.png' alt='Web App Interface').d-block.mx-auto
+  
+  // Info Block #1
+  section(style='margin-top: -200px; background-image: url(img/homepages/web-app-showcase/info01-bg.jpg); background-color: #fffbfb;' data-offset-top='50')#info.bg-center-top.bg-no-repeat.py-5
+    .container.pt-5
+      .row.align-items-center
+        .col-md-7.order-2.order-md-1.pt-3.pt-md-0
+          img(src='img/homepages/web-app-showcase/info01.png' alt='Info Block #1').d-block.mx-auto.mx-md-0
+        .col-md-5.order-1.order-md-2.text-center.text-md-left
+          h2.h4 Create website without programming
+          p.text-muted.pt-3.pb-3.pb-md-4 Donec ipsum risus, efficitur et sapien vehicula, porttitor aliquet tellus. Praesent odio tellus, pulvinar non aliquet sed, euismod ac dolor. Proin tellus sem, euismod ut ligula ac, facilisis pellentesque metus. Maecenas pulvinar justo metus, ut malesuada ligula dapibus.
+          a(href='#').btn.btn-style-4.btn-primary Learn More
+
+  // Info Block #2
+  section(style='margin-top: -110px; background-image: url(img/homepages/web-app-showcase/info02-bg.jpg); background-color: #fffbfb;').bg-center-top.bg-no-repeat.py-5
+    .container.pt-5.pb-3.pb-md-4
+      .row.align-items-center
+        .col-md-5.text-center.text-md-left
+          h2.h4 Intuitive site builder
+          p.text-muted.pt-3.pb-3.pb-md-4 Donec ipsum risus, efficitur et sapien vehicula, porttitor aliquet tellus. Praesent odio tellus, pulvinar non aliquet sed, euismod ac dolor. Proin tellus sem, euismod ut ligula ac, facilisis pellentesque metus. Maecenas pulvinar justo metus, ut malesuada ligula dapibus.
+          a(href='#').btn.btn-style-4.btn-primary Learn More
+        .col-md-7.pt-3.pt-md-0
+          img(src='img/homepages/web-app-showcase/info02.png' alt='Info Block #2').d-block.mx-auto.ml-md-auto.mr-md-0
+
+  // Templates + Video
+  section(style='background-color: #2d3238;').position-relative.bg-center-top.bg-no-repeat.py-5
+    .img-cover.bg-auto(style='background-image: url(img/homepages/web-app-showcase/video-bg.jpg);').d-none.d-md-block
+    .container.bg-content.pt-4.py-md-5
+      .row.py-lg-5
+        .col-xl-5.col-lg-6.col-md-8.py-lg-5.my-lg-4.text-center.text-md-left
+          h2.h1.text-white.pb-4 Get started with a template
+          a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-2: i.fe-icon-play
+          span.video-player-label.text-white.opacity-80.mr-4 Watch video!
+          a(href='#').btn.btn-style-4.btn-primary Explore Templates
+  
+  // Features
+  section.container.py-5
+    h2.h3.block-title.text-center.pt-3
+      | Exclusive features
+      small Our app introduces some kill features that no other builder has
+    .row.pt-3.pb-4.mb-3
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-award
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Award-Winning Design
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-trending-up
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Truly High Performance
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-code
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Clean and Valid Code
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-upload-cloud
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Cloud Files Storage
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-layout
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Drag-and-Drop Page Builder
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Feature
+      .col-md-6
+        .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+          .d-sm-table-cell.align-top
+            .icon-box-icon: i.fe-icon-shield
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Spam &amp; Malware Protection
+            p.icon-box-text.text-sm Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+    hr
+
+  // Pricing
+  section.container.pt-4.pb-5
+    h2.h3.block-title.text-center.pt-1
+      | Find the plan for you
+      small <span class='font-weight-medium text-danger'>*</span> Note that you save 20% on Yearly subscription
+    .pricing-plans.pt-4
+      ul.nav.nav-tabs.nav-tabs-style-3.pricing-tabs.justify-content-center
+        li.nav-item
+          a(href='#' class='nav-link active' data-toggle='price' data-period='monthly') Monthly
+        li.nav-item
+          a(href='#' class='nav-link' data-toggle='price' data-period='yearly')
+            | Yearly&nbsp;
+            sup -20%
+      .owl-carousel.carousel-flush.pt-2(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+
+        // Plan
+        .mb-30.pb-3
+          .card.pricing-card
+            .card-body.text-center
+              span.badge.badge-success Best Offer
+              h5.pt-3 Starter
+              .pricing-card-price.monthly.active <span>$</span>40
+              .pricing-card-price.yearly <span>$</span>32
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>4GB</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Community support
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>5 projects</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>2GB</strong>
+            .card-footer.text-center
+              a(href='#').btn
+                i.fe-icon-shopping-cart.text-lg
+                | &nbsp;&nbsp;Buy Now
+ 
+        // Pricing Plan
+        .mb-30.pb-3
+          .card.pricing-card.border.border-primary
+            .card-body.text-center
+              span.badge.badge-warning Most Popular
+              h5.pt-3 Team
+              .pricing-card-price.monthly.active <span>$</span>70
+              .pricing-card-price.yearly <span>$</span>56
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>16GB</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Premium support 24/7
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>10 projects</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>5GB</strong>
+            .card-footer.text-center
+              a(href='#').btn
+                i.fe-icon-shopping-cart.text-lg
+                | &nbsp;&nbsp;Buy Now
+
+        // Pricing Plan
+        .mb-30.pb-3
+          .card.pricing-card
+            .card-body.text-center
+              span.badge.badge-danger Rich Features
+              h5.pt-3 Premium
+              .pricing-card-price.monthly.active <span>$</span>100
+              .pricing-card-price.yearly <span>$</span>80
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>Unlimited</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Premium support 24/7
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>Unlimited</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>Unlimited</strong>
+            .card-footer.text-center
+              a(href='#').btn
+                i.fe-icon-shopping-cart.text-lg
+                | &nbsp;&nbsp;Buy Now
+
+  // CTA
+  section.container-fluid.pb-5
+    .bg-center-top.bg-no-repeat.py-5(style='background-image: url(img/homepages/web-app-showcase/cta-bg.png); background-color: #bf43dd;')
+      .container.px-4.py-5
+        .row.justify-content-center.py-3
+          .col-xl-7.col-lg-9
+            h2.block-title.text-white.text-center.pb-4 The site you dreamed of starts right here
+            .pt-4.text-center
+              a(href='#').btn.btn-style-4.btn-light Get Started For Free
+
+  // Footer
+  footer.pt-3
+    
+    // Subscription
+    .container
+      h6.text-center Subscribe to Newsletter
+      .row.justify-content-center.pb-4.mb-3
+        .col-xl-6.col-lg-7.col-md-9
+          form(action='https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=29ca296126' method='post' target='_blank' novalidate)
+            .input-group
+              input(type='email' name='EMAIL' placeholder="Email address").form-control
+              .input-group-append
+                button(type='submit').btn.btn-primary Sign Up
+            small.form-text.text-muted.pt-1.text-center Enter email to receive a newsletter about new templates and updates.
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;' aria-hidden='true')
+              input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+
+      // Follow Me
+      h6.text-center Follow Us
+      .text-center.pt-2.pb-4.mb-2
+        a(href='#').social-btn.sb-style-6.sb-facebook
+          i.socicon-facebook
+        a(href='#').social-btn.sb-style-6.sb-twitter
+          i.socicon-twitter
+        a(href='#').social-btn.sb-style-6.sb-dribbble
+          i.socicon-dribbble
+        a(href='#').social-btn.sb-style-6.sb-instagram
+          i.socicon-instagram
+        a(href='#').social-btn.sb-style-6.sb-youtube
+          i.socicon-youtube
+      hr
+      .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+        div.order-2
+          a(href='#').footer-link About
+          a(href='#').footer-link.ml-3 Help &amp; Info
+          a(href='#').footer-link.ml-3 Privacy Policy
+        p.m-0.text-sm.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block navi-link p-0' target='_blank'>by Createx Studio</a>

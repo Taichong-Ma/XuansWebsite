@@ -1,0 +1,111 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Contacts'
+  - var pageTitleBgImage ='img/page-title/blog-pattern.jpg'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Contacts v.2'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Pages', 'link': '#'}]
+
+//- Page Content
+block content
+  .container.pb-4.mb-2
+
+    // Customer Service
+    .row
+      .col-md-7
+        h2.text-muted.opacity-50.mb-30 Customer Service
+      .col-md-5
+        ul.list-icon
+          li.mb-2 
+            i.fe-icon-mail.text-muted
+            a(href='mailto:customer.service@example.com').navi-link.ml-1 customer.service@example.com
+          li.mb-2
+            i.fe-icon-phone.text-muted
+            a(href='tel:108044357260').navi-link.ml-1 +1 (080) 44 357 260
+          li.mb-2
+            i.fe-icon-clock.text-muted
+            span.ml-1 1 - 2 business days
+    hr.mt-5
+
+    // Tech Support
+    .row.mt-5.pb-3
+      .col-md-7
+        h2.text-muted.opacity-50.mb-30 Tech Support
+      .col-md-5
+        ul.list-icon
+          li.mb-2
+            i.fe-icon-mail.text-muted
+            a(href='mailto:support@example.com').navi-link.ml-1 support@example.com
+          li.mb-2
+            i.fe-icon-phone.text-muted
+            a(href='tel:100331697720').navi-link.ml-1 +1 00 33 169 7720
+          li.mb-2
+            i.fe-icon-clock.text-muted
+            span.ml-1 1 - 2 business days
+    
+    // Outlet Stores
+    h3.h4.pt-5.pb-4.text-center Outlet Stores
+    .row
+      .col-lg-4.col-sm-6.mb-30.pb-4
+        .card
+          +image('img/contacts/orlando.jpg', 'Orlando, USA')
+          .card-body
+            h6 Orlando, USA
+            .widget.widget-contacts
+              ul
+                li
+                  i.fe-icon-map-pin
+                  span Find us
+                  a(href='#') 514 S. Magnolia St. Orlando, FL 32806, USA
+                li
+                  i.fe-icon-phone
+                  span Call us
+                  a(href='tel:+178632256040') +1 (786) 322 560 40
+                li
+                  i.fe-icon-mail
+                  span Write us
+                  a(href='mailto:orlando@example.com') orlando@example.com
+      .col-lg-4.col-sm-6.mb-30.pb-4
+        .card
+          +image('img/contacts/chicago.jpg', 'Chicago, USA')
+          .card-body
+            h6 Chicago, USA
+            .widget.widget-contacts
+              ul
+                li
+                  i.fe-icon-map-pin
+                  span Find us
+                  a(href='#') 769, Industrial Dr, West Chicago, IL 60185, USA
+                li
+                  i.fe-icon-phone
+                  span Call us
+                  a(href='tel:+184725276533') +1 (847) 252 765 33
+                li
+                  i.fe-icon-mail
+                  span Write us
+                  a(href='mailto:chicago@example.com') chicago@example.com
+      .col-lg-4.col-sm-6.mb-30.pb-4
+        .card
+          +image('img/contacts/newyork.jpg', 'New York, USA')
+          .card-body
+            h6 New York, USA
+            .widget.widget-contacts
+              ul
+                li
+                  i.fe-icon-map-pin
+                  span Find us
+                  a(href='#') 396 Lillian Blvd, Holbrook, NY 11741, USA
+                li
+                  i.fe-icon-phone
+                  span Call us
+                  a(href='tel:+1212477690000') +1 (212) 477 690 000
+                li
+                  i.fe-icon-mail
+                  span Write us
+                  a(href='mailto:newyork@example.com') newyork@example.com
+
+  //- footer-default.pug template
+  include partials/footer-default

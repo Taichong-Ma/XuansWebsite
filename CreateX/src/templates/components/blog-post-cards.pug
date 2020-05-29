@@ -1,0 +1,305 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Blog Post Cards'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Blog Post Cards Formats Code Modal
+  include code/post-cards-formats
+
+  //- Blog Post Cards with Thumbnails Code Modal
+  include code/post-cards-thumbnails
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+    
+      // Post formats
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Post formats
+        a(href='#post-cards-formats-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              h5.post-title
+                a(href='#') Default Blog Post Title Goes Here. No Post Format.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+              a(href='#').tag-link Business
+              a(href='#').tag-link Technology
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th01.jpg', 'Post Author')
+                .post-author-name Sara Palson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 21
+                span
+                  i.fe-icon-clock
+                  | Sep 03, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              span.post-format
+                i.fe-icon-copy
+              h5.post-title
+                a(href='#') Post Format - Gallery
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Management
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th02.jpg', 'Post Author')
+                .post-author-name Mark Peterson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 19
+                span
+                  i.fe-icon-clock
+                  | Aug 26, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              span.post-format
+                i.font-family-heading.h4.text-primary.pt-1 “
+              h5.post-title
+                a(href='#') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+              p.text-muted Someone famous
+              a(href='#').tag-link Business Wisdom
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th03.jpg', 'Post Author')
+                .post-author-name Jessica Jones
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 7
+                span
+                  i.fe-icon-clock
+                  | Aug 13, 2018
+
+      .row.pb-5.mb-4
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              span.post-format
+                i.fe-icon-link
+              h5.post-title.post-title-link
+                a(href='#') Post Format - Link. Display link to 3rd party resources.
+              a(href='#').tag-link Business
+              a(href='#').tag-link Marketing
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th04.jpg', 'Post Author')
+                .post-author-name Emanuel Ortega
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 5
+                span
+                  i.fe-icon-clock
+                  | Aug 07, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              span.post-format
+                i.fe-icon-video
+              h5.post-title
+                a(href='#') Post Format - Video
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Travelling
+              a(href='#').tag-link Lifestyle
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th05.jpg', 'Post Author')
+                .post-author-name Endrew Wilson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 31
+                span
+                  i.fe-icon-clock
+                  | Jul 29, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body
+              span.post-format
+                i.fe-icon-mic
+              h5.post-title
+                a(href='#') Post Format - Audio
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Education
+              a(href='#').tag-link Courses
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th06.jpg', 'Post Author')
+                .post-author-name Silvia Clark
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 3
+                span
+                  i.fe-icon-clock
+                  | Jul 15, 2018
+    
+      // With thumbnails
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With thumbnails
+        a(href='#post-cards-tumbnails-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            a(href='#').post-thumb
+              +image('img/blog/01.jpg', 'Post Thumbnail')
+            .card-body
+              h5.post-title
+                a(href='#') Default Blog Post Title Goes Here. No Post Format.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Space
+              a(href='#').tag-link Technology
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th01.jpg', 'Post Author')
+                .post-author-name Sara Palson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 21
+                span
+                  i.fe-icon-clock
+                  | Sep 03, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            a(href='#').post-thumb
+              +image('img/blog/02.jpg', 'Post Thumbnail')
+            .card-body
+              h5.post-title
+                a(href='#') Post Format - Gallery
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Travelling
+              a(href='#').tag-link Lifestyle
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th02.jpg', 'Post Author')
+                .post-author-name Mark Peterson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 19
+                span
+                  i.fe-icon-clock
+                  | Aug 26, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .card-body(style='background-image: url(../img/blog/03.jpg);')
+              span.post-format.bg-gradient
+                i.font-family-heading.h4.text-white.pt-1 “
+              h5.post-title
+                a(href='#').text-white Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+              p.text-white Someone famous
+              a(href='#').tag-link Business Wisdom
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th03.jpg', 'Post Author')
+                .post-author-name Jessica Jones
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 7
+                span
+                  i.fe-icon-clock
+                  | Aug 13, 2018
+
+      .row.pb-5.mb-4
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            .embed-responsive.embed-responsive-16by9
+              iframe(src='https://player.vimeo.com/video/262037152?color=ac32e4&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+            .card-body
+              h5.post-title
+                a(href='#') Post Format - Video
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Management
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th05.jpg', 'Post Author')
+                .post-author-name Endrew Wilson
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 31
+                span
+                  i.fe-icon-clock
+                  | Jul 29, 2018
+
+        // Post
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.blog-card
+            iframe(src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149243221&color=%23ac32e4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true' allowfullscreen)
+            .card-body
+              h5.post-title
+                a(href='#') Post Format - Audio
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Music
+              a(href='#').tag-link Classic Rock
+            .card-footer
+              a(href='#').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th06.jpg', 'Post Author')
+                .post-author-name Silvia Clark
+              .post-meta
+                a(href='#')
+                  i.fe-icon-message-square
+                  | 3
+                span
+                  i.fe-icon-clock
+                  | Jul 15, 2018

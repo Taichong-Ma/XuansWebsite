@@ -1,0 +1,52 @@
+// Forms Sizing Code
+#forms-sizing-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Large Input --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;large-input&quot;&gt;Large input&lt;/label&gt;
+                  &lt;input class=&quot;form-control form-control-lg&quot; type=&quot;text&quot; id=&quot;large-input&quot; placeholder=&quot;Large input placeholder&quot;&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Normal Input --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;normal-input&quot;&gt;Normal input&lt;/label&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;normal-input&quot; placeholder=&quot;Normal input placeholder&quot;&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Small Input --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;small-input&quot;&gt;Small input&lt;/label&gt;
+                  &lt;input class=&quot;form-control form-control-sm&quot; type=&quot;text&quot; id=&quot;small-input&quot; placeholder=&quot;Small input placeholder&quot;&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Large Input</strong>
+                .form-group
+                  label(for=&quot;large-input&quot;) Large input
+                  input(type=&quot;text&quot; id=&quot;large-input&quot; placeholder=&quot;Large input placeholder&quot;).form-control.form-control-lg
+
+                <strong>//- Normal Input</strong>
+                .form-group
+                  label(for=&quot;normal-input&quot;) Normal input
+                  input(type=&quot;text&quot; id=&quot;normal-input&quot; placeholder=&quot;Normal input placeholder&quot;).form-control
+                
+                <strong>//- Small Input</strong>
+                .form-group
+                  label(for=&quot;small-input&quot;) Small input
+                  input(type=&quot;text&quot; id=&quot;small-input&quot; placeholder=&quot;Small input placeholder&quot;).form-control.form-control-sm

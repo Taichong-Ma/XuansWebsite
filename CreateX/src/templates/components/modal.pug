@@ -1,0 +1,78 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Modal'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var isModalExample = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Modal Components Code Modal
+  include code/modal-components
+
+  //- Modal Variations Code Modal
+  include code/modal-variations
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-2
+
+      // Modal components
+      //-- Styles For Demo purpose only
+      style.
+        .example-modal .modal {
+          display: block;
+          position: relative;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          z-index: 1;
+        }
+      //-- End of styles
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Modal components
+          a(href='#modal-components-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .example-modal
+          .modal
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h4.modal-title Modal title
+                  button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  p Modal body text goes here.
+                .modal-footer
+                  button(type='button' class='btn btn-secondary btn-sm' data-dismiss='modal') Close
+                  button(type='button' class='btn btn-primary btn-sm') Save changes
+
+      // Live demos
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Live demos
+          a(href='#modal-variations-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalSmall') Small Modal
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalDefault') Default Modal
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalLarge') Large Modal
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalXL') Extra Large Modal
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalLong') Long Modal
+        button(type='button' class='btn btn-secondary mr-3 mb-3' data-toggle='modal' data-target='#modalScroll') Scrolling Content
+        button(type='button' class='btn btn-secondary mb-3' data-toggle='modal' data-target='#modalCentered') Vertically Centered Modal

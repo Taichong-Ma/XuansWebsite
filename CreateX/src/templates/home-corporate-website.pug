@@ -1,0 +1,184 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-simple-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Corporate Website'
+
+//- Page Content
+block content
+
+  // Hero Slider
+  section.owl-carousel.dots-inside.controls-hidden-mobile(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "autoplay": true, "autoplayTimeout": 7000 }')
+    .bg-cover.bg-center.bg-no-repeat.py-5(style='background-image: url(img/homepages/corporate-website/hero-slide01.jpg);')
+      span.bg-overlay
+      .container.bg-content.py-md-5
+        .row.justify-content-center.py-md-5
+          .col-12.text-center.py-md-5
+            .d-table.w-100.bg-no-repeat.bg-center(style='min-height: 448px; background-size: 452px 448px; background-image: url(img/homepages/corporate-website/hero-slide-shape01.png);')
+              .d-table-cell.align-middle
+                h2.display-4.text-white <em class='font-weight-light'>Focusing on</em> Excellence
+                p.text-xl.text-white.opacity-75.pb-4 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                a(href='#').btn.btn-style-4.btn-light Learn More
+    .bg-cover.bg-center.bg-no-repeat.py-5(style='background-image: url(img/homepages/corporate-website/hero-slide02.jpg);')
+      span.bg-overlay(style='opacity: .55;')
+      .container.bg-content.py-md-5
+        .row.justify-content-center.py-md-5
+          .col-12.text-center.py-md-5
+            .d-table.w-100.bg-no-repeat.bg-center(style='min-height: 448px; background-size: 452px 448px; background-image: url(img/homepages/corporate-website/hero-slide-shape02.png);')
+              .d-table-cell.align-middle
+                h2.display-4.text-white <em class='font-weight-light'>Focusing on</em> Performance
+                p.text-xl.text-white.opacity-75.pb-4 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                a(href='#').btn.btn-style-4.btn-light Learn More
+  
+  // About
+  section.container.my-5
+    .bg-secondary.px-3.py-5
+      .row.justify-content-center
+        .col-xl-8.col-lg-10.pt-3.text-center
+          span.d-block.text-lg.mb-2 About us
+          h2.h3.block-title.mb-3 Support <span class='font-weight-light text-muted'>/</span> Prevention <span class='font-weight-light text-muted'>/</span> Management
+          p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          a(href='https://player.vimeo.com/video/56362909?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-3: i.fe-icon-play
+          span.video-player-label.text-muted Corporate video
+  
+  // Services
+  section.container.pt-3
+    h2.h3.block-title.text-center
+      | What we do
+      small Whatever we do, we do with you in mind 
+    .row.pt-5.mt-30
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='#').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/homepages/corporate-website/service-icon01.png' alt='Certification').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Certification
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='#').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/homepages/corporate-website/service-icon02.png' alt='Training').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Training
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='#').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/homepages/corporate-website/service-icon03.png' alt='Consulting').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Consulting
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+
+  // News ans Events
+  section.container-fluid.pt-sm-4.pb-5
+    .row.justify-content-center
+      .col-xl-5.col-lg-6.mb-5.mb-lg-0
+        .position-relative.bg-cover.bg-center.bg-no-repeat.px-4.py-5(style='background-image: url(img/homepages/corporate-website/event-bg.jpg);')
+          span.bg-overlay(style='opacity: .1;')
+          .bg-content.pt-4.text-center
+            h3.font-family-body.font-weight-light.text-white.mb-2 Summit
+            h2.text-white.mb-2.pb-1 Quality Management
+            h5.font-family-body.font-weight-light.text-white.mb-5 Hurry up to reserve your spot!
+            .countdown.countdown-style-2.countdown-light-skin.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}').mb-3
+            br
+            a(href='#').btn.btn-style-4.btn-gradient.mb-3 Attend Summit
+      .col-xl-5.col-lg-6
+        .pl-xl-5
+          .d-sm-flex.justify-content-between.text-center.text-sm-left
+            h2.h4 Latest news
+            a(href='#').btn.btn-style-4.btn-primary.btn-sm Read all news
+          .row.pt-4
+            .col-sm-6.mb-4
+              .blog-card.border
+                a(href='#').post-thumb
+                  +image('img/homepages/corporate-website/news01.jpg', 'Post Thumbnail')
+                .card-body
+                  h5.post-title
+                    a(href='#') Ensure safety in a high-risk environment
+                  a(href='#').tag-link Risk management
+                .card-footer
+                  a(href='#').post-author
+                    .post-author-avatar
+                      +image('img/blog/authors/th01.jpg', 'Post Author')
+                    .post-author-name Sara Palson
+                  .post-meta
+                    a(href='#')
+                      i.fe-icon-message-square
+                      | 21
+                    span
+                      i.fe-icon-clock
+                      | Sep 03, 2018
+            .col-sm-6.mb-4
+              .blog-card.border
+                a(href='#').post-thumb
+                  +image('img/homepages/corporate-website/news02.jpg', 'Post Thumbnail')
+                .card-body
+                  h5.post-title
+                    a(href='#') Adapt to a changing business environment
+                  a(href='#').tag-link Business
+                .card-footer
+                  a(href='#').post-author
+                    .post-author-avatar
+                      +image('img/blog/authors/th02.jpg', 'Post Author')
+                    .post-author-name Mark Peterson
+                  .post-meta
+                    a(href='#')
+                      i.fe-icon-message-square
+                      | 19
+                    span
+                      i.fe-icon-clock
+                      | Aug 26, 2018
+
+  // Clients
+  section.container.pb-5.my-sm-2
+    h2.h3.block-title.text-center.mt-sm-3.mb-5
+      | Brands we collaborate with
+      small Well respected people and companies from around the world
+    .row
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/01.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/02.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/03.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/04.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/07.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/05.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/08.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+      .col-6.col-md-3
+        a(href='#').d-block.py-2.mb-30.gray-to-color
+          img(src='img/partners/09.png' width='165' alt='Partner').d-block.mx-auto.opacity-75
+  
+  // Contact Us CTA
+  section.bg-gradient.py-4
+    div(style='background-image: url(img/pages/dotted-map.png);').container.position-relative.bg-no-repeat.bg-center.py-5.text-center
+      h2.block-title.text-white.mt-5.mb-4
+        | Why CreateX?
+        small.text-white We are leading risk management and certification company with over 30 years of expertise.
+      a(href='contacts-v1.html').btn.btn-style-4.btn-light.mb-5 Contact Us
+  
+  //- footer-default.pug template
+  include partials/footer-default

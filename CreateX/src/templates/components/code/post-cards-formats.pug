@@ -1,0 +1,300 @@
+// Blog Post Cards Formats Code
+#post-cards-formats-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- No Post Format --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h5 class=&quot;post-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Default Blog Post Title Goes Here. No Post Format.&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.&lt;/p&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Business&lt;/a&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Technology&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Sara Palson&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;21&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Sep 03, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Post Format - Gallery --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;span class=&quot;post-format&quot;&gt;&lt;i class=&quot;fe-icon-copy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;h5 class=&quot;post-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Post Format - Gallery&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Management&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Mark Peterson&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;19&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Aug 26, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Post Format - Quotation --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;span class=&quot;post-format&quot;&gt;
+                      &lt;i class=&quot;font-family-heading h4 text-primary pt-1&quot;&gt;“&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;h5 class=&quot;post-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Someone famous&lt;/p&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Business Wisdom&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Jessica Jones&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;7&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Aug 13, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Post Format - Link --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;span class=&quot;post-format&quot;&gt;&lt;i class=&quot;fe-icon-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;h5 class=&quot;post-title post-title-link&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Post Format - Link. Display link to 3rd party resources.&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Business&lt;/a&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Marketing&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Emanuel Ortega&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;5&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Aug 07, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Post Format - Video --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;span class=&quot;post-format&quot;&gt;&lt;i class=&quot;fe-icon-video&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;h5 class=&quot;post-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Post Format - Video&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Travelling&lt;/a&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Lifestyle&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Endrew Wilson&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;31&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Jul 29, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Post Format - Audio --&gt;</strong>
+                &lt;div class=&quot;card blog-card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;span class=&quot;post-format&quot;&gt;&lt;i class=&quot;fe-icon-mic&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;h5 class=&quot;post-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Post Format - Audio&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Education&lt;/a&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Courses&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;a class=&quot;post-author&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;post-author-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-author-name&quot;&gt;Silvia Clark&lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;3&lt;/a&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;Jul 15, 2018&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- No Post Format</strong>
+                .card.blog-card
+                  .card-body
+                    h5.post-title
+                      a(href=&quot;#&quot;) Default Blog Post Title Goes Here. No Post Format.
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+                    a(href=&quot;#&quot;).tag-link Business
+                    a(href=&quot;#&quot;).tag-link Technology
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Post Author&quot;)
+                      .post-author-name Sara Palson
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 21
+                      span
+                        i.fe-icon-clock
+                        | Sep 03, 2018
+                
+                <strong>//- Post Format - Gallery</strong>
+                .card.blog-card
+                  .card-body
+                    span.post-format
+                      i.fe-icon-copy
+                    h5.post-title
+                      a(href=&quot;#&quot;) Post Format - Gallery
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    a(href=&quot;#&quot;).tag-link Management
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-mage&quot;, &quot;Post Author&quot;)
+                      .post-author-name Mark Peterson
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 19
+                      span
+                        i.fe-icon-clock
+                        | Aug 26, 2018
+                
+                <strong>//- Post Format - Quotation</strong>
+                .card.blog-card
+                  .card-body
+                    span.post-format
+                      i.font-family-heading.h4.text-primary.pt-1 “
+                    h5.post-title
+                      a(href=&quot;#&quot;) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                    p.text-muted Someone famous
+                    a(href=&quot;#&quot;).tag-link Business Wisdom
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Post Author&quot;)
+                      .post-author-name Jessica Jones
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 7
+                      span
+                        i.fe-icon-clock
+                        | Aug 13, 2018
+                
+                <strong>//- Post Format - Link</strong>
+                .card.blog-card
+                  .card-body
+                    span.post-format
+                      i.fe-icon-link
+                    h5.post-title.post-title-link
+                      a(href=&quot;#&quot;) Post Format - Link. Display link to 3rd party resources.
+                    a(href=&quot;#&quot;).tag-link Business
+                    a(href=&quot;#&quot;).tag-link Marketing
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Post Author&quot;)
+                      .post-author-name Emanuel Ortega
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 5
+                      span
+                        i.fe-icon-clock
+                        | Aug 07, 2018
+                
+                <strong>//- Post Format - Video</strong>
+                .card.blog-card
+                  .card-body
+                    span.post-format
+                      i.fe-icon-video
+                    h5.post-title
+                      a(href=&quot;#&quot;) Post Format - Video
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    a(href=&quot;#&quot;).tag-link Travelling
+                    a(href=&quot;#&quot;).tag-link Lifestyle
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Post Author&quot;)
+                      .post-author-name Endrew Wilson
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 31
+                      span
+                        i.fe-icon-clock
+                        | Jul 29, 2018
+                
+                <strong>//- Post Format - Audio</strong>
+                .card.blog-card
+                  .card-body
+                    span.post-format
+                      i.fe-icon-mic
+                    h5.post-title
+                      a(href=&quot;#&quot;) Post Format - Audio
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    a(href=&quot;#&quot;).tag-link Education
+                    a(href=&quot;#&quot;).tag-link Courses
+                  .card-footer
+                    a(href=&quot;#&quot;).post-author
+                      .post-author-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Post Author&quot;)
+                      .post-author-name Silvia Clark
+                    .post-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-message-square
+                        | 3
+                      span
+                        i.fe-icon-clock
+                        | Jul 15, 2018

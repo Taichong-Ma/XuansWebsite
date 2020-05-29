@@ -1,0 +1,56 @@
+// Gallery inside Carousel Code
+#gallery-carousel-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html6' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug6' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html6' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Gallery inside Carousel --&gt;</strong>
+                &lt;div class=&quot;owl-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;margin&quot;: 30, &quot;center&quot;: true, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;630&quot;:{&quot;items&quot;:2},&quot;991&quot;:{&quot;items&quot;:3},&quot;1200&quot;:{&quot;items&quot;:3}} }'&gt;
+                  &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://www.youtube.com/watch?v=VideoID&amp;amp;amp;autoplay=1&amp;amp;amp;rel=0&amp;amp;amp;controls=0&amp;amp;amp;showinfo=0&quot; data-fancybox=&quot;gallery6&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery6&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-imageg&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                    &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug6' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Gallery inside Carousel</strong>
+                .owl-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;margin&quot;: 30, &quot;center&quot;: true, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;630&quot;:{&quot;items&quot;:2},&quot;991&quot;:{&quot;items&quot;:3},&quot;1200&quot;:{&quot;items&quot;:3}} }')
+                  a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  a(href=&quot;https://www.youtube.com/watch?v=VideoID&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&quot; data-fancybox=&quot;gallery6&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  a(href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery6&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery6&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                    +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)

@@ -1,0 +1,114 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Carousel'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Carousel: One item + Arrows + Dots outside + Loop Code Modal
+  include code/carousel-oneitem-dots-outside
+
+  //- Carousel: One item + Arrows + Dots inside + No loop Code Modal
+  include code/carousel-oneitem-dots-inside
+
+  //- Carousel: Multiple items + Dots + Loop + Autoplay Code Modal
+  include code/carousel-multiple-items
+
+  //- Carousel: Bootstrap Default
+  include code/carousel-bootstrap
+
+  //- Carousel: Multiple items + Dots + Loop + Autoplay Code Modal
+  include code/carousel-multiple-items
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // One item + Arrows + Dots outside + Loop
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 One item + Arrows + Dots outside + Loop
+        a(href='#carousel-oneitem-dots-outside-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-1
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
+          +image('img/components/carousel/01.jpg', 'Carousel Image')
+          +image('img/components/carousel/02.jpg', 'Carousel Image')
+          +image('img/components/carousel/03.jpg', 'Carousel Image')
+    
+      // One item + Arrows + Dots inside + No loop
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 One item + Arrows + Dots inside + No loop
+        a(href='#carousel-oneitem-dots-inside-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-4
+        .owl-carousel.dots-inside(data-owl-carousel='{ "nav": true, "dots": true, "loop": false }')
+          +image('img/components/carousel/04.jpg', 'Carousel Image')
+          +image('img/components/carousel/05.jpg', 'Carousel Image')
+          +image('img/components/carousel/06.jpg', 'Carousel Image')
+    
+      // Multiple items + Dots + Loop + Autoplay
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Multiple items + Dots + Loop + Autoplay
+        a(href='#carousel-multiple-items-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-3
+        .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          +image('img/components/gallery/th01.jpg', 'Carousel Image')
+          +image('img/components/gallery/th02.jpg', 'Carousel Image')
+          +image('img/components/gallery/th03.jpg', 'Carousel Image')
+          +image('img/components/gallery/th04.jpg', 'Carousel Image')
+          +image('img/components/gallery/th05.jpg', 'Carousel Image')
+          +image('img/components/gallery/th06.jpg', 'Carousel Image')
+    
+      // Default Bootstrap Carousel
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Default Bootstrap Carousel
+        a(href='#carousel-bootstrap-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5
+        #carouselBSExample.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li(data-target='#carouselBSExample' data-slide-to='0').active
+            li(data-target='#carouselBSExample' data-slide-to='1')
+            li(data-target='#carouselBSExample' data-slide-to='2')
+          .carousel-inner
+            .carousel-item.active
+              +image('img/components/carousel/01.jpg', 'Carousel Image')
+              .carousel-caption.d-none.d-md-block
+                h6.text-white.text-shadow.mb-1 First slide label
+                p.text-shadow Nulla vitae elit libero, a pharetra augue mollis interdum
+            .carousel-item
+              +image('img/components/carousel/06.jpg', 'Carousel Image')
+              .carousel-caption.d-none.d-md-block
+                h6.text-white.text-shadow.mb-1 Second slide label
+                p.text-shadow Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            .carousel-item
+              +image('img/components/carousel/03.jpg', 'Carousel Image')
+              .carousel-caption.d-none.d-md-block
+                h6.text-white.text-shadow.mb-1 Third slide label
+                p.text-shadow Praesent commodo cursus magna, vel scelerisque nisl consectetur
+          a(href='#carouselBSExample' role='button' data-slide='prev').carousel-control-prev
+            span(aria-hidden='true').carousel-control-prev-icon
+            span.sr-only Previous
+          a(href='#carouselBSExample' role='button' data-slide='next').carousel-control-next
+            span(aria-hidden='true').carousel-control-next-icon
+            span.sr-only Next

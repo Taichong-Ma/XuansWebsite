@@ -1,0 +1,76 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Parallax Scrolling'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Element Parallax Code Modal
+  include code/parallax-element
+
+  //- Background Image Parallax Code Modal
+  include code/parallax-background
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Element parallax
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Element parallax
+          a(href='#parallax-element-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .bg-secondary.border.px-4.py-5.text-center.mb-5
+          .h1.text-uppercase.py-4
+            span(data-parallax='{"y" : -20}').d-inline-block.mr-2 P
+            span(data-parallax='{"y" : 20}').d-inline-block.mr-2 a
+            span(data-parallax='{"y" : -20}').d-inline-block.mr-2 r
+            span(data-parallax='{"y" : 25}').d-inline-block.mr-2 a
+            span(data-parallax='{"y" : -25}').d-inline-block.mr-2 l
+            span(data-parallax='{"y" : 30}').d-inline-block.mr-2 l
+            span(data-parallax='{"y" : -30}').d-inline-block.mr-2 a
+            span(data-parallax='{"y" : 35}').d-inline-block.mr-2 x
+        
+        .row
+          .col-md-4.mb-3
+            figure(data-parallax='{"rotateZ" : 20}').figure.d-table.mx-auto
+              img(src='../img/components/parallax/01.jpg' style='width: 200px;' alt='Image square').figure-img.mb-0
+          .col-md-4.mb-3
+            figure(data-parallax='{"scale" : 0.75}').figure.d-table.mx-auto
+              img(src='../img/components/parallax/02.jpg' style='width: 200px;' alt='Image square').figure-img.mb-0
+          .col-md-4.mb-3
+            figure(data-parallax='{"rotateZ" : -20}').figure.d-table.mx-auto
+              img(src='../img/components/parallax/03.jpg' style='width: 200px;' alt='Image square').figure-img.mb-0
+
+      // Background image parallax
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Background image parallax
+          a(href='#parallax-background-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .bg-parallax.py-5.mb-4
+          span(style='opacity: .3;').bg-overlay
+          .bg-parallax-img(data-parallax='{"y" : -100}')
+            +image('img/components/parallax/parallax-bg.jpg', 'Parallax Background')
+          div(style='max-width: 600px;').bg-parallax-content.px-4.py-5.mx-auto.mt-4.mb-2.text-center
+            h2.text-white Some cool title here!
+            p.text-white.opacity-80.pb-3 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            a(href='#').btn.btn-gradient CTA Button
+        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

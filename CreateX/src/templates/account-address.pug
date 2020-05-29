@@ -1,0 +1,73 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Contact / Shipping Address'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Contact / Shipping Address'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-4
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Addresses
+      .col-lg-8.pb-5
+        h5 Contact Address
+        hr.pb-3
+        form.row
+          .col-md-6
+            .form-group
+              label(for='account-company') Company
+              input(type='text' id='account-company' value='Bets Company Ltd.').form-control
+          .col-md-6
+            .form-group
+              label(for='account-country') Country
+              select(id='account-country').form-control
+                option Choose country
+                option Australia
+                option Canada
+                option France
+                option Germany
+                option Switzerland
+                option(selected) United States
+          .col-md-6
+            .form-group
+              label(for='account-city') City
+              select(id='account-city').form-control
+                option Choose city
+                option Amsterdam
+                option Berlin
+                option Geneve
+                option(selected) New York
+                option Paris
+          .col-md-6
+            .form-group
+              label(for='account-zip') ZIP Code
+              input(type='text' id='account-zip' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-address1') Address 1
+              input(type='text' id='account-address1' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-address2') Address 2
+              input(type='text' id='account-address2').form-control
+          .col-12.padding-top-1x
+            h5 Shipping Address
+            hr.pb-3
+            .custom-control.custom-checkbox.d-block
+              input(type='checkbox' id='same_address' checked).custom-control-input
+              label(for='same_address').custom-control-label Same as Contact Address
+            hr.my-3
+            .text-right
+              button(type='button' class='btn btn-primary' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Success!' data-toast-message='Your address updated successfuly.') Update Address
+  
+  //- footer-shop.pug template
+  include partials/footer-shop

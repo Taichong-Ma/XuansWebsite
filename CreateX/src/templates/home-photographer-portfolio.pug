@@ -1,0 +1,161 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-ghost-white'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = "Photographer's Portfolio"
+
+//- Page Content
+block content
+  
+  // Hero
+  section(style='height: 260px;').bg-dark.bg-center.bg-no-repeat
+  .container(style='margin-top: -160px;')
+    .bg-white.box-shadow.pt-4.pb-5.px-3.px-sm-4
+      figure(style='width: 180px;').figure.d-block.rounded-circle.my-3.p-2.mx-auto
+        img(src='img/homepages/photographer-portfolio/avatar.jpg' alt='James Smith').d-block.w-100.rounded-circle
+      .text-center
+        p.text-xl.text-muted.font-weight-medium.mb-2 Photographer
+        h1.h3.block-title Andrew Williams
+        ul.text-lg.list-inline.py-3
+          li.mx-2.font-weight-medium.align-middle
+            i.d-inline-block.fe-icon-map-pin.align-middle.text-muted
+            | &nbsp;60 Broadway, New York
+          li.mx-2.font-weight-medium.align-middle
+            i.d-inline-block.fe-icon-mail.align-middle.text-muted
+            | &nbsp;a.williams@email.com
+        .d-inline-block.align-middle.mx-2.mb-3
+          img(src='img/homepages/personal-blog/followers.png' width='126' alt='Followers').d-block
+        span.d-inline-block.align-middle.text-muted.font-weight-medium.mb-3 12k followers
+        a(href='#').btn.btn-gradient.btn-sm.mx-3.mb-3
+          i.fe-icon-user-plus
+          | &nbsp;Follow
+  
+  // Categories
+  section.container.pt-5.pb-4
+    .row
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .4;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category01.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Women
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .2;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category02.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Men
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .35;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category03.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Travel
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .35;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category04.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Food
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .4;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category05.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Wedding
+      .col-md-4.col-sm-6
+        a(href='#').d-block.position-relative.text-decoration-none.text-center.py-5.mb-30
+          .bg-overlay(style='opacity: .4;')
+          .img-cover(style='background-image: url(img/homepages/photographer-portfolio/category06.jpg);')
+          .bg-content.px-4.pt-5.mt-5
+            h3.h5.text-white.text-shadow.mb-0 Nature
+  
+  // Portfolio
+  section.container-fluid
+    .isotope-grid.cols-4
+      .gutter-sizer
+      .grid-sizer
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/01.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th01.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/02.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th02.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/03.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th03.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/04.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th04.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/05.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th05.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/06.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th06.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/07.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th07.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/08.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th08.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/09.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th09.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/10.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th10.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/11.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th11.jpg', 'Gallery Image')
+      .grid-item
+        a(href='img/homepages/photographer-portfolio/portfolio/12.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+          +image('img/homepages/photographer-portfolio/portfolio/th12.jpg', 'Gallery Image')
+  
+  // Contact Form
+  section(style='margin-bottom: -130px; z-index: 5;').container.position-relative.pt-4
+    .bg-white.box-shadow.pt-3.pb-5.px-3.px-sm-4
+      h2.h4.block-title.text-center Get in touch with me
+      form(novalidate).needs-validation.pt-4
+        .row
+          .col-lg-4.col-md-6
+            .form-group
+              label(for='cont-name') Your Name <strong class='text-danger'>*</strong>
+              input(type='text' id='cont-name' required).form-control
+              .invalid-feedback Please enter your name!
+          .col-lg-4.col-md-6
+            .form-group
+              label(for='cont-email') Email Address <strong class='text-danger'>*</strong>
+              input(type='email' id='cont-email' required).form-control
+              .invalid-feedback Please provide valid email address!
+          .col-lg-4
+            .form-group
+              label(for='cont-subject') Subject
+              input(type='text' id='cont-subject').form-control
+        .form-group
+          label(for='cont-message') Message <strong class='text-danger'>*</strong>
+          textarea(id='cont-message' rows='10' required).form-control
+          .invalid-feedback Please type in your message!
+        .text-center
+          button(type='submit').btn.btn-gradient Send Message
+  
+  // Footer
+  footer.bg-dark.pt-5.pb-4
+    .container.pt-5
+      .d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.pt-5
+        div.w-100.order-2.pt-3.text-center.text-sm-right
+          a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+            i.socicon-facebook
+          a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+            i.socicon-twitter
+          a(href='#').social-btn.sb-style-6.sb-instagram.sb-light-skin
+            i.socicon-instagram
+          a(href='#').social-btn.sb-style-6.sb-flickr.sb-light-skin
+            i.socicon-flickr
+        p.d-block.w-100.m-0.text-sm.text-white.order-1.pt-3.text-center.text-sm-left <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-white opacity-60 p-0' target='_blank'>by Createx Studio</a>
+
+
+

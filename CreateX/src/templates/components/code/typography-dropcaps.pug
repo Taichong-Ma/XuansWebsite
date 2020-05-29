@@ -1,0 +1,32 @@
+// Typography: Drop Caps Code
+#typography-dropcaps-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 Combine <code>drop-cap</code> class with text color classes like <code>text-primary</code>, <code>text-info</code>, etc. to alter first letter color.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html8' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug8' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html8' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Drop Cap Default --&gt;</strong>
+                &lt;p class=&quot;drop-cap&quot;&gt;Sed ut perspiciatis unde omnis iste...&lt;/p&gt;
+
+                <strong>&lt;!-- Drop Cap Primary --&gt;</strong>
+                &lt;p class=&quot;drop-cap text-primary&quot;&gt;At vero eos et accusamus...&lt;/p&gt;
+          div(id='pug8' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Drop Cap Default</strong>
+                p.drop-cap Sed ut perspiciatis unde omnis iste...
+
+                <strong>//- Drop Cap Primary</strong>
+                p.drop-cap.text-primary At vero eos et accusamus...

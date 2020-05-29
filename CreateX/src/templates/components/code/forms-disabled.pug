@@ -1,0 +1,46 @@
+// Forms Disabled Code
+#forms-disabled-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Readonly Input --&gt;</strong>
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Readonly input here...&quot; readonly&gt;
+
+                <strong>&lt;!-- Disabled Input --&gt;</strong>
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Disabled input here...&quot; disabled&gt;
+
+                <strong>&lt;!-- Disabled Select --&gt;</strong>
+                &lt;select class=&quot;form-control&quot; disabled&gt;
+                  &lt;option&gt;Disabled select here...&lt;/option&gt;
+                  &lt;option&gt;Option item 1&lt;/option&gt;
+                  &lt;option&gt;Option item 2&lt;/option&gt;
+                  &lt;option&gt;Option item 3&lt;/option&gt;
+                &lt;/select&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Readonly Input</strong>
+                input(type=&quot;text&quot; placeholder=&quot;Readonly input here...&quot; readonly).form-control
+                
+                <strong>//- Disabled Input</strong>
+                input(type=&quot;text&quot; placeholder=&quot;Disabled input here...&quot; disabled).form-control
+                
+                <strong>//- Disabled Select</strong>
+                select(disabled).form-control
+                  option Disabled select here...
+                  option Option item 1
+                  option Option item 2
+                  option Option item 3

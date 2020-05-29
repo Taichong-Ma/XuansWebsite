@@ -1,0 +1,243 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Blog Grid'
+  - var pageSubTitle = 'Blog Grid View with <strong>Sidebar on the Left</strong>'
+  - var pageTitleBgImage ='img/page-title/blog-pattern.jpg'
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Grid Left Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-grid-rs.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-3
+    .row
+      .col-lg-3
+        //- sidebar-blog.pug template
+        include partials/sidebar-blog
+      
+      // Blog Grid
+      .col-lg-9
+        .isotope-grid.cols-2
+          .gutter-sizer
+          .grid-sizer
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              a(href='blog-single-carousel.html').post-thumb
+                +image('img/blog/01.jpg', 'Post Thumbnail')
+              .card-body
+                h5.post-title
+                  a(href='blog-single-carousel.html') The Real Truth About Space
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque...
+                a(href='#').tag-link Space
+                a(href='#').tag-link Technology
+              .card-footer
+                a(href='blog-single-carousel.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th01.jpg', 'Post Author')
+                  .post-author-name Sara Palson
+                .post-meta
+                  a(href='blog-single-carousel.html#comments')
+                    i.fe-icon-message-square
+                    | 21
+                  span
+                    i.fe-icon-clock
+                    | Sep 03, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              a(href='blog-single-gallery.html').post-thumb
+                +image('img/blog/04.jpg', 'Post Thumbnail')
+              .card-body
+                h5.post-title
+                  a(href='blog-single-gallery.html') Modern Architecture in 10 Slides. New Trends and Look Back.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                a(href='#').tag-link Design
+                a(href='#').tag-link Architecture
+              .card-footer
+                a(href='blog-single-gallery.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th02.jpg', 'Post Author')
+                  .post-author-name Mark Peterson
+                .post-meta
+                  a(href='blog-single-gallery.html#comments')
+                    i.fe-icon-message-square
+                    | 19
+                  span
+                    i.fe-icon-clock
+                    | Aug 26, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .card-body
+                h5.post-title
+                  a(href='blog-single-carousel.html') My First Post About Technology. This Is How It All Begins.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                a(href='#').tag-link Business
+                a(href='#').tag-link Technology
+              .card-footer
+                a(href='blog-single-carousel.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th04.jpg', 'Post Author')
+                  .post-author-name Emanuel Ortega
+                .post-meta
+                  a(href='blog-single-carousel.html#comments')
+                    i.fe-icon-message-square
+                    | 21
+                  span
+                    i.fe-icon-clock
+                    | Sep 03, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .card-body(style='background-image: url(img/blog/03.jpg);')
+                span.post-format.bg-gradient
+                  i.font-family-heading.h4.text-white.pt-1 “
+                h5.post-title
+                  a(href='blog-single-quotation.html').text-white When I do good, I feel good. When I do bad, I feel bad. That’s my religion.
+                p.text-white Abraham Lincoln
+                a(href='#').tag-link Business Wisdom
+              .card-footer
+                a(href='blog-single-quotation.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th03.jpg', 'Post Author')
+                  .post-author-name Jessica Jones
+                .post-meta
+                  a(href='blog-single-quotation.html#comments')
+                    i.fe-icon-message-square
+                    | 7
+                  span
+                    i.fe-icon-clock
+                    | Aug 13, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .embed-responsive.embed-responsive-16by9
+                iframe(src='https://player.vimeo.com/video/262037152?color=ac32e4&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+              .card-body
+                h5.post-title
+                  a(href='blog-single-video.html') We Live in a Digital Era.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                a(href='#').tag-link Technology
+              .card-footer
+                a(href='blog-single-video.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th05.jpg', 'Post Author')
+                  .post-author-name Endrew Wilson
+                .post-meta
+                  a(href='blog-single-video.html#comments')
+                    i.fe-icon-message-square
+                    | 31
+                  span
+                    i.fe-icon-clock
+                    | Jul 29, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .card-body
+                span.post-format
+                  i.fe-icon-mic
+                h5.post-title
+                  a(href='blog-single-audio.html') Deep Purple "Smoke on the Water". Song History and Records.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                a(href='#').tag-link Music
+                a(href='#').tag-link Classic Rock
+              .card-footer
+                a(href='blog-single-audio.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th06.jpg', 'Post Author')
+                  .post-author-name Silvia Clark
+                .post-meta
+                  a(href='blog-single-audio.html#comments')
+                    i.fe-icon-message-square
+                    | 3
+                  span
+                    i.fe-icon-clock
+                    | Jul 15, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              a(href='blog-single-gallery.html').post-thumb
+                +image('img/blog/02.jpg', 'Post Thumbnail')
+              .card-body
+                h5.post-title
+                  a(href='blog-single-gallery.html') Around the World in 80 Days. Collection of Photographs.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                a(href='#').tag-link Travelling
+                a(href='#').tag-link Lifestyle
+              .card-footer
+                a(href='blog-single-gallery.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th02.jpg', 'Post Author')
+                  .post-author-name Mark Peterson
+                .post-meta
+                  a(href='blog-single-gallery.html#comments')
+                    i.fe-icon-message-square
+                    | 19
+                  span
+                    i.fe-icon-clock
+                    | Aug 26, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .card-body
+                span.post-format
+                  i.fe-icon-link
+                h5.post-title.post-title-link
+                  a(href='#') Google Analytics Academy. Learn with free online courses.
+                a(href='#').tag-link Business
+                a(href='#').tag-link Marketing
+              .card-footer
+                a(href='blog-single-link.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th04.jpg', 'Post Author')
+                  .post-author-name Emanuel Ortega
+                .post-meta
+                  a(href='blog-single-link.html#comments')
+                    i.fe-icon-message-square
+                    | 5
+                  span
+                    i.fe-icon-clock
+                    | Aug 07, 2018
+          
+          // Post
+          .grid-item
+            .card.blog-card.mb-2
+              .card-body
+                span.post-format
+                  i.fe-icon-video
+                h5.post-title
+                  a(href='blog-single-video.html') The List of Most Anticipated Movies of 2018.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                a(href='#').tag-link Movies
+                a(href='#').tag-link Trailers
+              .card-footer
+                a(href='blog-single-video.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th01.jpg', 'Post Author')
+                  .post-author-name Sara Palson
+                .post-meta
+                  a(href='blog-single-video.html#comments')
+                    i.fe-icon-message-square
+                    | 31
+                  span
+                    i.fe-icon-clock
+                    | Jul 29, 2018
+
+        .pt-2
+          //-pagination.pug template
+          include partials/pagination
+
+  //- footer-blog.pug template
+  include partials/footer-blog

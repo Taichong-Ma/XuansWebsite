@@ -1,0 +1,269 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Buttons'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+  
+  //- Buttons Style 1 Code Modal
+  include code/buttons-style1
+  
+  //- Buttons Style 2 Code Modal
+  include code/buttons-style2
+  
+  //- Buttons Style 3 Code Modal
+  include code/buttons-style3
+  
+  //- Buttons Style 4 Code Modal
+  include code/buttons-style4
+  
+  //- Buttons Style 5 Code Modal
+  include code/buttons-style5
+  
+  //- Buttons Style 6 Code Modal
+  include code/buttons-style6
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4.mb-2
+
+      // Style 1 (Default)
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 1 (Default)
+          a(href='#buttons-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-primary.mr-3.mb-3
+          i.fe-icon-edit.mr-1
+          | Primary
+        a(href='#').btn.btn-secondary.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders.ml-1
+        a(href='#').btn.btn-accent.mr-3.mb-3
+          i.fe-icon-camera.mr-1
+          | Accent
+        a(href='#').btn.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-gradient.mr-3.mb-3 Gradient
+        .bg-dark.d-inline-block.p-4.mr-3.mb-3.align-middle
+          a(href="#").btn.btn-light 
+            i.fe-icon-settings.mr-1
+            | Light Button
+        a(href='#').btn.btn-dark.mr-3.mb-3 Dark Button
+        a(href='#').btn.btn-secondary.btn-lg.mr-3.mb-3 Large Button
+        a(href='#').btn.btn-secondary.mr-3.mb-3 Normal Button
+        a(href='#').btn.btn-secondary.btn-sm.mr-3.mb-3 Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-secondary.btn-block.mb-3 Block Button
+
+      // Style 2
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 2
+          a(href='#buttons-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-style-2.btn-primary.mr-3.mb-3
+          i.fe-icon-edit.mr-1
+          | Primary
+        a(href='#').btn.btn-style-2.btn-secondary.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders.ml-1
+        a(href='#').btn.btn-style-2.btn-accent.mr-3.mb-3
+          i.fe-icon-camera.mr-1
+          | Accent
+        a(href='#').btn.btn-style-2.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-style-2.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-style-2.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-style-2.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-style-2.btn-gradient.mr-3.mb-3 Gradient
+        .bg-dark.d-inline-block.p-4.mr-3.mb-3.align-middle
+          a(href="#").btn.btn-style-2.btn-light 
+            i.fe-icon-settings.mr-1
+            | Light Button
+        a(href='#').btn.btn-style-2.btn-dark.mr-3.mb-3 Dark Button
+        a(href='#').btn.btn-style-2.btn-secondary.btn-lg.mr-3.mb-3 Large Button
+        a(href='#').btn.btn-style-2.btn-secondary.mr-3.mb-3 Normal Button
+        a(href='#').btn.btn-style-2.btn-secondary.btn-sm.mr-3.mb-3 Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-style-2.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-2.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-2.btn-secondary.btn-block.mb-3 Block Button
+
+      // Style 3
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 3
+          a(href='#buttons-style3-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-style-3.btn-primary.mr-3.mb-3
+          i.fe-icon-edit.mr-1
+          | Primary
+        a(href='#').btn.btn-style-3.btn-secondary.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders.ml-1
+        a(href='#').btn.btn-style-3.btn-accent.mr-3.mb-3
+          i.fe-icon-camera.mr-1
+          | Accent
+        a(href='#').btn.btn-style-3.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-style-3.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-style-3.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-style-3.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-style-3.btn-gradient.mr-3.mb-3 Gradient
+        a(href='#').btn.btn-style-3.btn-dark.mr-3.mb-3 Dark Button
+        a(href='#').btn.btn-style-3.btn-secondary.btn-lg.mr-3.mb-3 Large Button
+        a(href='#').btn.btn-style-3.btn-secondary.mr-3.mb-3 Normal Button
+        a(href='#').btn.btn-style-3.btn-secondary.btn-sm.mr-3.mb-3 Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-style-3.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-3.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-3.btn-secondary.btn-block.mb-3 Block Button
+
+      // Style 4
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 4
+          a(href='#buttons-style4-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-style-4.btn-primary.btn-icon-left.mr-3.mb-3
+          i.fe-icon-edit
+          | Primary
+        a(href='#').btn.btn-style-4.btn-secondary.btn-icon-right.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders
+        a(href='#').btn.btn-style-4.btn-accent.btn-icon-left.mr-3.mb-3
+          i.fe-icon-camera
+          | Accent
+        a(href='#').btn.btn-style-4.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-style-4.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-style-4.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-style-4.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-style-4.btn-gradient.btn-icon-right.mr-3.mb-3
+          i.fe-icon-download
+          | Gradient
+        .bg-dark.d-inline-block.p-4.mr-3.mb-3.align-middle
+          a(href="#").btn.btn-style-4.btn-light.btn-icon-left
+            i.fe-icon-settings
+            | Light Button
+        a(href='#').btn.btn-style-4.btn-dark.btn-icon-right.mr-3.mb-3
+          i.fe-icon-download
+          | Dark Button
+        a(href='#').btn.btn-style-4.btn-secondary.btn-icon-left.btn-lg.mr-3.mb-3
+          i.fe-icon-heart
+          | Large Button
+        a(href='#').btn.btn-style-4.btn-secondary.btn-icon-left.mr-3.mb-3
+          i.fe-icon-check-circle
+          | Normal Button
+        a(href='#').btn.btn-style-4.btn-secondary.btn-icon-right.btn-sm.mr-3.mb-3
+          i.fe-icon-eye
+          | Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-style-4.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-4.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-4.btn-secondary.btn-block.mb-3 Block Button
+
+      // Style 5
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 5
+          a(href='#buttons-style5-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-style-5.btn-primary.mr-3.mb-3
+          i.fe-icon-edit.mr-1
+          | Primary
+        a(href='#').btn.btn-style-5.btn-secondary.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders.ml-1
+        a(href='#').btn.btn-style-5.btn-accent.mr-3.mb-3
+          i.fe-icon-camera.mr-1
+          | Accent
+        a(href='#').btn.btn-style-5.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-style-5.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-style-5.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-style-5.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-style-5.btn-gradient.mr-3.mb-3 Gradient
+        .bg-dark.d-inline-block.p-4.mr-3.mb-3.align-middle
+          a(href='#').btn.btn-style-5.btn-light 
+            i.fe-icon-settings.mr-1
+            | Light Button
+        a(href='#').btn.btn-style-5.btn-dark.mr-3.mb-3 Dark Button
+        a(href='#').btn.btn-style-5.btn-secondary.btn-lg.mr-3.mb-3 Large Button
+        a(href='#').btn.btn-style-5.btn-secondary.mr-3.mb-3 Normal Button
+        a(href='#').btn.btn-style-5.btn-secondary.btn-sm.mr-3.mb-3 Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-style-5.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-5.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-5.btn-secondary.btn-block.mb-3 Block Button
+
+      // Style 6
+      section.pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 6
+          a(href='#buttons-style6-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        a(href='#').btn.btn-style-6.btn-primary.mr-3.mb-3
+          i.fe-icon-edit.mr-1
+          | Primary
+        a(href='#').btn.btn-style-6.btn-secondary.mr-3.mb-3
+          | Secondary
+          i.fe-icon-sliders.ml-1
+        a(href='#').btn.btn-style-6.btn-accent.mr-3.mb-3
+          i.fe-icon-camera.mr-1
+          | Accent
+        a(href='#').btn.btn-style-6.btn-info.mr-3.mb-3 Info
+        a(href='#').btn.btn-style-6.btn-success.mr-3.mb-3 Success
+        a(href='#').btn.btn-style-6.btn-warning.mr-3.mb-3 Warning
+        a(href='#').btn.btn-style-6.btn-danger.mr-3.mb-3 Danger
+        a(href='#').btn.btn-style-6.btn-gradient.mr-3.mb-3 Gradient
+        a(href='#').btn.btn-style-6.btn-dark.mr-3.mb-3 Dark Button
+        a(href='#').btn.btn-style-6.btn-secondary.btn-lg.mr-3.mb-3 Large Button
+        a(href='#').btn.btn-style-6.btn-secondary.mr-3.mb-3 Normal Button
+        a(href='#').btn.btn-style-6.btn-secondary.btn-sm.mr-3.mb-3 Small Button
+        .row
+          .col-sm-4
+            a(href='#').btn.btn-style-6.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-6.btn-secondary.btn-block.mb-3 Block Button
+          .col-sm-4
+            a(href='#').btn.btn-style-6.btn-secondary.btn-block.mb-3 Block Button

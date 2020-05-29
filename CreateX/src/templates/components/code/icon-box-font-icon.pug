@@ -1,0 +1,85 @@
+// Icon Box: Font Icon Variant Code
+#icon-box-font-icon-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Font Icon Left Aligned (Deault) --&gt;</strong>
+                &lt;div class=&quot;icon-box&quot;&gt;
+                  &lt;div class=&quot;icon-box-icon&quot;&gt;
+                    &lt;i class=&quot;fe-icon-feather&quot;&gt;&lt;/i&gt;
+                  &lt;/div&gt;
+                  &lt;h3 class=&quot;icon-box-title&quot;&gt;Icon box title&lt;/h3&gt;
+                  &lt;p class=&quot;icon-box-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;a class=&quot;icon-box-link&quot; href=&quot;#&quot;&gt;
+                    Learn more
+                    &lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Font Icon Center Aligned --&gt;</strong>
+                &lt;div class=&quot;icon-box text-center&quot;&gt;
+                  &lt;div class=&quot;icon-box-icon&quot;&gt;
+                    &lt;i class=&quot;fe-icon-bell&quot;&gt;&lt;/i&gt;
+                  &lt;/div&gt;
+                  &lt;h3 class=&quot;icon-box-title&quot;&gt;Icon box title&lt;/h3&gt;
+                  &lt;p class=&quot;icon-box-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;a class=&quot;icon-box-link&quot; href=&quot;#&quot;&gt;
+                    Learn more
+                    &lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Font Icon Right Aligned --&gt;</strong>
+                &lt;div class=&quot;icon-box text-right&quot;&gt;
+                  &lt;div class=&quot;icon-box-icon&quot;&gt;
+                    &lt;i class=&quot;fe-icon-camera&quot;&gt;&lt;/i&gt;
+                  &lt;/div&gt;
+                  &lt;h3 class=&quot;icon-box-title&quot;&gt;Icon box title&lt;/h3&gt;
+                  &lt;p class=&quot;icon-box-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;a class=&quot;icon-box-link&quot; href=&quot;#&quot;&gt;
+                    Learn more
+                    &lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Font Icon Left Aligned (Deault)</strong>
+                .icon-box
+                  .icon-box-icon: i.fe-icon-feather
+                  h3.icon-box-title Icon box title
+                  p.icon-box-text Lorem ipsum dolor sit amet...
+                  a(href=&quot;#&quot;).icon-box-link
+                    | Learn more
+                    i.fe-icon-arrow-right
+                
+                <strong>//- Font Icon Center Aligned</strong>
+                .icon-box.text-center
+                  .icon-box-icon: i.fe-icon-bell
+                  h3.icon-box-title Icon box title
+                  p.icon-box-text Lorem ipsum dolor sit amet...
+                  a(href=&quot;#&quot;).icon-box-link
+                    | Learn more
+                    i.fe-icon-arrow-right
+                
+                <strong>//- Font Icon Right Aligned</strong>
+                .icon-box.text-right
+                  .icon-box-icon: i.fe-icon-camera
+                  h3.icon-box-title Icon box title
+                  p.icon-box-text Lorem ipsum dolor sit amet...
+                  a(href=&quot;#&quot;).icon-box-link
+                    | Learn more
+                    i.fe-icon-arrow-right

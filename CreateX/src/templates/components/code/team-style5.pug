@@ -1,0 +1,74 @@
+// Team Style 5 Code
+#team-style5-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Team Style 5 --&gt;</strong>
+                &lt;div class=&quot;team-card-style-5 mx-auto&quot;&gt;
+                  &lt;div class=&quot;team-thumb&quot;&gt;
+                    &lt;div class=&quot;team-card-inner&quot;&gt;
+                      &lt;a class=&quot;team-contact-link&quot; href=&quot;tel:+19871625346&quot;&gt;
+                        &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                        &amp;nbsp;+1 (987) 162 53 46
+                      &lt;/a&gt;
+                      &lt;a class=&quot;team-contact-link&quot; href=&quot;mailto:info@example.com&quot;&gt;
+                        &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                        &amp;nbsp;info@example.com
+                      &lt;/a&gt;
+                      &lt;div class=&quot;team-social-bar pt-3 text-center&quot;&gt;
+                        &lt;a class=&quot;social-btn sb-style-6 sb-twitter sb-light-skin&quot; href=&quot;#&quot;&gt;
+                          &lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-6 sb-pinterest sb-light-skin&quot; href=&quot;#&quot;&gt;
+                          &lt;i class=&quot;socicon-pinterest&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-6 sb-behance sb-light-skin&quot; href=&quot;#&quot;&gt;
+                          &lt;i class=&quot;socicon-behance&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-6 sb-dribbble sb-light-skin&quot; href=&quot;#&quot;&gt;
+                          &lt;i class=&quot;socicon-dribbble&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;img src=&quot;path-to-iamge&quot; alt=&quot;Team Member Picture&quot;/&gt;
+                  &lt;/div&gt;
+                  &lt;h4 class=&quot;team-name&quot;&gt;Olivia Davis&lt;/h4&gt;
+                  &lt;span class=&quot;team-position&quot;&gt;Lead Visual Artist&lt;/span&gt;
+                &lt;/div&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Team Style 5</strong>
+                .team-card-style-5.mx-auto
+                  .team-thumb
+                    .team-card-inner
+                      a(href=&quot;tel:+19871625346&quot;).team-contact-link
+                        i.fe-icon-phone
+                        | &amp;nbsp;+1 (987) 162 53 46
+                      a(href=&quot;mailto:info@example.com&quot;).team-contact-link
+                        i.fe-icon-mail
+                        | &amp;nbsp;info@example.com
+                      .team-social-bar.pt-3.text-center
+                        a(href=&quot;#&quot;).social-btn.sb-style-6.sb-twitter.sb-light-skin
+                          i.socicon-twitter
+                        a(href=&quot;#&quot;).social-btn.sb-style-6.sb-pinterest.sb-light-skin
+                          i.socicon-pinterest
+                        a(href=&quot;#&quot;).social-btn.sb-style-6.sb-behance.sb-light-skin
+                          i.socicon-behance
+                        a(href=&quot;#&quot;).social-btn.sb-style-6.sb-dribbble.sb-light-skin
+                          i.socicon-dribbble
+                    +image(&quot;path-to-image&quot;, &quot;Team Member Picture&quot;)
+                  h4.team-name Olivia Davis
+                  span.team-position Lead Visual Artist

@@ -1,0 +1,52 @@
+// Image Figures with Caption Code
+#images-captions-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Left Caption (Default) --&gt;</strong>
+                &lt;figure class=&quot;figure&quot;&gt;
+                  &lt;img class=&quot;figure-img&quot; src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;&gt;
+                  &lt;figcaption class=&quot;figure-caption&quot;&gt;Image caption (left)&lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                <strong>&lt;!-- Center Caption --&gt;</strong>
+                &lt;figure class=&quot;figure&quot;&gt;
+                  &lt;img class=&quot;figure-img&quot; src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;&gt;
+                  &lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Image caption (left)&lt;/figcaption&gt;
+                &lt;/figure&gt;
+
+                <strong>&lt;!-- Right Caption --&gt;</strong>
+                &lt;figure class=&quot;figure&quot;&gt;
+                  &lt;img class=&quot;figure-img&quot; src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;&gt;
+                  &lt;figcaption class=&quot;figure-caption text-right&quot;&gt;Image caption (left)&lt;/figcaption&gt;
+                &lt;/figure&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Left Caption (Default)</strong>
+                figure.figure
+                  img(src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;).figure-img
+                  figcaption.figure-caption Image caption (left)
+
+                <strong>//- Center Caption</strong>
+                figure.figure
+                  img(src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;).figure-img
+                  figcaption.figure-caption.text-center Image caption (center)
+
+                <strong>//- Right Caption</strong>
+                figure.figure
+                  img(src=&quot;path-to-image&quot; alt=&quot;Image with caption&quot;).figure-img
+                  figcaption.figure-caption.text-right Image caption (right)

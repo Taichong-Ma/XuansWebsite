@@ -1,0 +1,357 @@
+// Widgets: Shop Code
+#widgets-shop-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Range Slider Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Range slider&lt;/h4&gt;
+                  &lt;form class=&quot;range-slider&quot; method=&quot;post&quot; data-start-min=&quot;250&quot; data-start-max=&quot;650&quot; data-min=&quot;0&quot; data-max=&quot;1000&quot; data-step=&quot;1&quot;&gt;
+                    &lt;div class=&quot;ui-range-slider&quot;&gt;&lt;/div&gt;
+                    &lt;footer class=&quot;ui-range-slider-footer&quot;&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                        &lt;button class=&quot;btn btn-primary btn-xs&quot; type=&quot;submit&quot;&gt;Filter&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                        &lt;div class=&quot;ui-range-values&quot;&gt;
+                          &lt;div class=&quot;ui-range-label&quot;&gt;Price:&lt;/div&gt;
+                          &lt;div class=&quot;ui-range-value-min&quot;&gt;$&lt;span&gt;&lt;/span&gt;
+                            &lt;input type=&quot;hidden&quot;&gt;
+                          &lt;/div&gt;&amp;nbsp;&amp;ndash;&amp;nbsp;
+                          &lt;div class=&quot;ui-range-value-max&quot;&gt;$&lt;span&gt;&lt;/span&gt;
+                            &lt;input type=&quot;hidden&quot;&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/form&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Shop Categories Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-categories&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Shop categories&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#tv&quot; data-toggle=&quot;collapse&quot;&gt;TV, Video &amp;amp; Audio&lt;span&gt;&amp;nbsp;(420)&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;div class=&quot;collapse show&quot; id=&quot;tv&quot;&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Smart TV Sets&lt;span&gt;&amp;nbsp;(180)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blue-Ray Players&lt;span&gt;&amp;nbsp;(132)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sound Systems&lt;span&gt;&amp;nbsp;(47)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home Theaters&lt;span&gt;&amp;nbsp;(61)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a class=&quot;collapsed&quot; href=&quot;#headphones&quot; data-toggle=&quot;collapse&quot;&gt;Headphones&lt;span&gt;&amp;nbsp;(1239)&lt;/span&gt;&lt;/a&gt;
+                      &lt;div class=&quot;collapse&quot; id=&quot;headphones&quot;&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Earbuds Headphones&lt;span&gt;&amp;nbsp;(752)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Over-Ear Headphones&lt;span&gt;&amp;nbsp;(487)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Bluetooth Headphones&lt;span&gt;&amp;nbsp;(205)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sport &amp;amp; Fitness&lt;span&gt;&amp;nbsp;(96)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Noise-Cancelling&lt;span&gt;&amp;nbsp;(113)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Featured Products. List Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-featured-products&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Featured products. List&lt;/h4&gt;
+                  &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;featured-product-thumb&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Product Image&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;featured-product-info&quot;&gt;
+                      &lt;h5 class=&quot;featured-product-title&quot;&gt;Amazon Echo Dot 2&lt;/h5&gt;
+                      &lt;div class=&quot;rating-stars&quot;&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star&quot;&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                      &lt;span class=&quot;featured-product-price&quot;&gt;
+                        &lt;del&gt;$62.00&lt;/del&gt;&amp;nbsp;$49.99
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                  &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Featured Products. Carousel Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-featured-products-carousel&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Featured products. Carousel&lt;/h4&gt;
+                  &lt;div class=&quot;owl-carousel&quot; data-owl-carousel=&quot;{ &amp;quot;nav&amp;quot;: false, &amp;quot;dots&amp;quot;: true, &amp;quot;margin&amp;quot;: 10, &amp;quot;loop&amp;quot;: true }&quot;&gt;
+                    &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;featured-product-thumb&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Product Image&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;featured-product-info&quot;&gt;
+                        &lt;h5 class=&quot;featured-product-title&quot;&gt;Amazon Echo Dot 2&lt;/h5&gt;
+                        &lt;div class=&quot;rating-stars&quot;&gt;
+                          &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                          &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                          &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                          &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                          &lt;i class=&quot;fe-icon-star&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;featured-product-price&quot;&gt;
+                          &lt;del&gt;$62.00&lt;/del&gt;&amp;nbsp;$49.99
+                        &lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                    &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Shopping Cart Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-cart&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Shopping cart&lt;/h4&gt;
+                  &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;featured-product-thumb&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Product Image&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;featured-product-info&quot;&gt;
+                      &lt;h5 class=&quot;featured-product-title&quot;&gt;Samsung Galaxy S9 Plus&lt;/h5&gt;
+                      &lt;span class=&quot;featured-product-price&quot;&gt;1x $839.99&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;remove-product&quot;&gt;&lt;i class=&quot;fe-icon-x&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;featured-product&quot; href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;featured-product-thumb&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Product Image&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;featured-product-info&quot;&gt;
+                      &lt;h5 class=&quot;featured-product-title&quot;&gt;Samsung Gear 360 Camera&lt;/h5&gt;
+                      &lt;span class=&quot;featured-product-price&quot;&gt;1 x $68.00&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;remove-product&quot;&gt;&lt;i class=&quot;fe-icon-x&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;hr class=&quot;mt-3 mb-3&quot;&gt;
+                  &lt;span class=&quot;text-sm text-muted&quot;&gt;Subtotal:&amp;nbsp;&lt;/span&gt;
+                  &lt;strong&gt;$907.99&lt;/strong&gt;
+                  &lt;div class=&quot;d-flex justify-content-between pt-3&quot;&gt;
+                    &lt;a class=&quot;btn btn-primary btn-block btn-sm mr-2&quot; href=&quot;#&quot;&gt;View Cart&lt;/a&gt;
+                    &lt;a class=&quot;btn btn-accent btn-block btn-sm mr-2&quot; href=&quot;#&quot;&gt;Checkout&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Filter. Checkboxes Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Filter. Checkboxes&lt;/h4&gt;
+                  &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;apple&quot; checked&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;apple&quot;&gt;Apple&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(254)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;bosh&quot;&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;bosh&quot;&gt;Bosh&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(39)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;canon&quot;&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;canon&quot;&gt;Canon Inc.&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(128)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Filter. Radio Buttons Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Filter. Radio buttons&lt;/h4&gt;
+                  &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;p100&quot; name=&quot;price&quot; checked&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;p100&quot;&gt;$0 - $100&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(254)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;p300&quot; name=&quot;price&quot;&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;p300&quot;&gt;$101 - $300&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(39)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;p500&quot; name=&quot;price&quot;&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;p500&quot;&gt;$301 - $500&amp;nbsp;&lt;span class=&quot;text-muted&quot;&gt;(128)&lt;/span&gt;&lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Range Slider Widget</strong>
+                .widget
+                  h4.widget-title Range slider
+                  form(method=&quot;post&quot; data-start-min=&quot;250&quot; data-start-max=&quot;650&quot; data-min=&quot;0&quot; data-max=&quot;1000&quot; data-step=&quot;1&quot;).range-slider
+                    .ui-range-slider
+                    footer.ui-range-slider-footer
+                      .column
+                        button(type=&quot;submit&quot;).btn.btn-primary.btn-xs Filter
+                      .column
+                        .ui-range-values
+                          .ui-range-label Price:
+                          .ui-range-value-min
+                            | $<span></span>
+                            input(type=&quot;hidden&quot;)
+                          | &amp;nbsp;&ndash;&amp;nbsp;
+                          .ui-range-value-max
+                            | $<span></span>
+                            input(type=&quot;hidden&quot;)
+
+                <strong>//- Shop Categories Widget</strong>
+                .widget.widget-categories
+                  h4.widget-title Shop categories
+                  ul
+                    li
+                      a(href=&quot;#tv&quot; data-toggle=&quot;collapse&quot;)
+                        | TV, Video &amp; Audio
+                        span &amp;nbsp;(420)
+                      #tv.collapse.show
+                        ul
+                          li
+                            a(href=&quot;#&quot;)
+                              | Smart TV Sets
+                              span &amp;nbsp;(180)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Blue-Ray Players
+                              span &amp;nbsp;(132)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Sound Systems
+                              span &amp;nbsp;(47)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Home Theaters
+                              span &amp;nbsp;(61)
+                    li
+                      a(href=&quot;#headphones&quot; data-toggle=&quot;collapse&quot;).collapsed
+                        | Headphones
+                        span &amp;nbsp;(1239)
+                      #headphones.collapse
+                        ul
+                          li
+                            a(href=&quot;#&quot;)
+                              | Earbuds Headphones
+                              span &amp;nbsp;(752)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Over-Ear Headphones
+                              span &amp;nbsp;(487)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Bluetooth Headphones
+                              span &amp;nbsp;(205)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Sport &amp; Fitness
+                              span &amp;nbsp;(96)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Noise-Cancelling
+                              span &amp;nbsp;(113)
+
+                <strong>//- Featured Products. List Widget</strong>
+                .widget.widget-featured-products
+                  h4.widget-title Featured products. List
+                  a(href=&quot;#&quot;).featured-product
+                    .featured-product-thumb
+                      +image(&quot;path-to-image&quot;, &quot;Product Image&quot;)
+                    .featured-product-info
+                      h5.featured-product-title Amazon Echo Dot 2
+                      +rating-stars(4)
+                      span.featured-product-price
+                        del $62.00
+                        | &amp;nbsp;$49.99
+                  a(href=&quot;#&quot;).featured-product ...
+                  a(href=&quot;#&quot;).featured-product ...
+                
+                <strong>//- Featured Products. Carousel Widget</strong>
+                .widget.widget-featured-products-carousel
+                  h4.widget-title Featured products. Carousel
+                  .owl-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 10, &quot;loop&quot;: true }')
+                    a(href=&quot;#&quot;).featured-product
+                      .featured-product-thumb
+                        +image(&quot;path-to-image&quot;, &quot;Product Image&quot;)
+                      .featured-product-info
+                        h5.featured-product-title Amazon Echo Dot 2
+                        +rating-stars(4)
+                        span.featured-product-price
+                          del $62.00
+                          | &nbsp;$49.99
+                    a(href=&quot;#&quot;).featured-product ...
+                    a(href=&quot;#&quot;).featured-product ...
+
+                <strong>//- Shopping Cart Widget</strong>
+                .widget.widget-cart
+                  h4.widget-title Shopping cart
+                  a(href=&quot;#&quot;).featured-product
+                    .featured-product-thumb
+                      +image(&quot;path-to-image&quot;, &quot;Product Image&quot;)
+                    .featured-product-info
+                      h5.featured-product-title Samsung Galaxy S9 Plus
+                      span.featured-product-price 1x $839.99
+                    span.remove-product: i.fe-icon-x
+                  a(href=&quot;#&quot;).featured-product
+                    .featured-product-thumb
+                      +image(&quot;path-to-image&quot;, &quot;Product Image&quot;)
+                    .featured-product-info
+                      h5.featured-product-title Samsung Gear 360 Camera
+                      span.featured-product-price 1 x $68.00
+                    span.remove-product: i.fe-icon-x
+                  hr.mt-3.mb-3
+                  span.text-sm.text-muted Subtotal:&amp;nbsp;
+                  strong $907.99
+                  .d-flex.justify-content-between.pt-3
+                    a(href=&quot;#&quot;).btn.btn-primary.btn-block.btn-sm.mr-2 View Cart
+                    a(href=&quot;#&quot;).btn.btn-accent.btn-block.btn-sm.mr-2 Checkout
+                
+                <strong>//- Filter. Checkboxes Widget</strong>
+                .widget
+                  h4.widget-title Filter. Checkboxes
+                  .custom-control.custom-checkbox
+                    input(type=&quot;checkbox&quot; id=&quot;apple&quot; checked).custom-control-input
+                    label(for=&quot;apple&quot;).custom-control-label
+                      | Apple&amp;nbsp;
+                      span.text-muted (254)
+                  .custom-control.custom-checkbox
+                    input(type=&quot;checkbox&quot; id=&quot;bosh&quot;).custom-control-input
+                    label(for=&quot;bosh&quot;).custom-control-label
+                      | Bosh&amp;nbsp;
+                      span.text-muted (39)
+                  .custom-control.custom-checkbox
+                    input(type=&quot;checkbox&quot; id=&quot;canon&quot;).custom-control-input
+                    label(for=&quot;canon&quot;).custom-control-label
+                      | Canon Inc.&amp;nbsp;
+                      span.text-muted (128)
+
+                <strong>//- Filter. Radio Buttons Widget</strong>
+                .widget
+                  h4.widget-title Filter. Radio buttons
+                  .custom-control.custom-radio
+                    input(type=&quot;radio&quot; id=&quot;p100&quot; name=&quot;price&quot; checked).custom-control-input
+                    label(for=&quot;p100&quot;).custom-control-label
+                      | $0 - $100&amp;nbsp;
+                      span.text-muted (254)
+                  .custom-control.custom-radio
+                    input(type=&quot;radio&quot; id=&quot;p300&quot; name=&quot;price&quot;).custom-control-input
+                    label(for=&quot;p300&quot;).custom-control-label
+                      | $101 - $300&amp;nbsp;
+                      span.text-muted (39)
+                  .custom-control.custom-radio
+                    input(type=&quot;radio&quot; id=&quot;p500&quot; name=&quot;price&quot;).custom-control-input
+                    label(for=&quot;p500&quot;).custom-control-label
+                      | $301 - $500&amp;nbsp;
+                      span.text-muted (128)

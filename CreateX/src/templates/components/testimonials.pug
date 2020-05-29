@@ -1,0 +1,162 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Testimonials'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Testimonials Alignment Code Modal
+  include code/testimonials-alignment
+
+  //- Testimonials Inside Carousel. Single Item Code Modal
+  include code/testimonials-carousel-single
+
+  //- Testimonials Inside Carousel. Multiple Items Code Modal
+  include code/testimonials-carousel-multiple
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Alignment
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Alignment
+        a(href='#testimonials-alignment-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .row.pb-4.mb-3
+        .col-xl-4.col-sm-6.pb-2.mb-30
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Barbara Palson
+                  cite Graphic Designer
+        .col-xl-4.col-sm-6.pb-2.mb-30
+          .blockquote.testimonial.text-center
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Hinata Nakamura
+                  cite Financial Director
+        .col-xl-4.col-sm-6.pb-2.mb-30
+          .blockquote.testimonial.text-right
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud.
+            footer.testimonial-footer
+              .d-table-cell.align-middle.pr-2
+                .blockquote-footer
+                  | Michael Davis
+                  cite Co-Founder, CEO
+              .testimonial-avatar
+                +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+    
+      // Inside carousel. Single item
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inside carousel. Single item
+        a(href='#testimonials-carousel-single-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .row.pb-5
+        .col-xl-6.col-md-8
+          .owl-carousel.testimonials-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true }')
+            .blockquote.testimonial.text-center
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. At vero eos et accusamus et iusto odio dignissimos.
+              footer.testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Barbara Palson
+                    cite Graphic Designer
+            .blockquote.testimonial.text-center
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. At vero eos et accusamus et iusto odio dignissimos.
+              footer.testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Hinata Nakamura
+                    cite Financial Director
+            .blockquote.testimonial.text-center
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. At vero eos et accusamus et iusto odio dignissimos.
+              footer.testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Michael Davis
+                    cite Co-Founder, CEO
+    
+      // Inside carousel. Multiple items
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inside carousel. Multiple items
+        a(href='#testimonials-carousel-multiple-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .pb-4.mb-3
+        .owl-carousel.testimonials-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": -15, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":2},"1200":{"items":3}} }')
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Barbara Palson
+                  cite Graphic Designer
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Hinata Nakamura
+                  cite Financial Director
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Michael Davis
+                  cite Co-Founder, CEO
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/04.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Sophia Johnson
+                  cite Marketing Manager
+          .blockquote.testimonial
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/05.jpg', 'Testimonial Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Christopher Lee
+                  cite Marketing Manager

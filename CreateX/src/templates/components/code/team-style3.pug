@@ -1,0 +1,75 @@
+// Team Style 3 Code
+#team-style3-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Team Style 3 --&gt;</strong>
+                &lt;div class=&quot;team-card-style-3 mx-auto&quot;&gt;
+                  &lt;div class=&quot;team-thumb&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Team Member Picture&quot;/&gt;
+                  &lt;/div&gt;
+                  &lt;span class=&quot;team-position&quot;&gt;Lead Programmer&lt;/span&gt;
+                  &lt;h4 class=&quot;team-name&quot;&gt;William Smith&lt;/h4&gt;
+                  &lt;a class=&quot;team-contact-link&quot; href=&quot;tel:+19871625346&quot;&gt;
+                    &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;+1 (987) 162 53 46
+                  &lt;/a&gt;
+                  &lt;a class=&quot;team-contact-link&quot; href=&quot;mailto:info@example.com&quot;&gt;
+                    &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;info@example.com
+                  &lt;/a&gt;
+                  &lt;div class=&quot;team-social-bar-wrap&quot;&gt; 
+                    &lt;div class=&quot;team-social-bar&quot;&gt;
+                      &lt;a class=&quot;social-btn sb-style-1 sb-twitter&quot; href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-1 sb-github&quot; href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;socicon-github&quot;&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-1 sb-stackoverflow&quot; href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;socicon-stackoverflow&quot;&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                      &lt;a class=&quot;social-btn sb-style-1 sb-skype&quot; href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;socicon-skype&quot;&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Team Style 3</strong>
+                .team-card-style-3.mx-auto
+                  .team-thumb
+                    +image(&quot;path-to-image&quot;, &quot;Team Member Picture&quot;)
+                  span.team-position Lead Programmer
+                  h4.team-name William Smith
+                  a(href=&quot;tel:+19871625346&quot;).team-contact-link
+                    i.fe-icon-phone
+                    | &amp;nbsp;+1 (987) 162 53 46
+                  a(href=&quot;mailto:info@example.com&quot;).team-contact-link
+                    i.fe-icon-mail
+                    | &amp;nbsp;info@example.com
+                  .team-social-bar-wrap  
+                    .team-social-bar
+                      a(href=&quot;#&quot;).social-btn.sb-style-1.sb-twitter
+                        i.socicon-twitter
+                      a(href=&quot;#&quot;).social-btn.sb-style-1.sb-github
+                        i.socicon-github
+                      a(href=&quot;#&quot;).social-btn.sb-style-1.sb-stackoverflow
+                        i.socicon-stackoverflow
+                      a(href=&quot;#&quot;).social-btn.sb-style-1.sb-skype
+                        i.socicon-skype

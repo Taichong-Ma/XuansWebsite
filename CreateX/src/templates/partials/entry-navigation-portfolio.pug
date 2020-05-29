@@ -1,0 +1,27 @@
+// Entry Nanigation
+nav.entry-navigation
+  .prev-btn
+    a(href='#').label
+      i.fe-icon-arrow-left
+      | Prev <span class='d-none d-sm-inline'>project</span>
+    .post-preview
+      .post-preview-thumb
+        +image('img/portfolio/navigation/01.jpg', 'Project thumbnail')
+      .post-preview-details
+        span.post-preview-title Web App Front-End
+        span.post-preview-meta
+          i.fe-icon-user
+          | Benjamin Miller
+  a(href='portfolio-style1-boxed.html').back-btn: i.fe-icon-grid
+  .next-btn
+    a(href='#').label
+      | Next <span class='d-none d-sm-inline'>project</span>
+      i.fe-icon-arrow-right
+    .post-preview
+      .post-preview-details
+        span.post-preview-title iOS App Development
+        span.post-preview-meta
+          i.fe-icon-user
+          | Michael Brown
+      .post-preview-thumb
+        +image('img/portfolio/navigation/02.jpg', 'Project thumbnail')

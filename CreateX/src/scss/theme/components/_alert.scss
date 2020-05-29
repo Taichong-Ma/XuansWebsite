@@ -1,0 +1,71 @@
+//
+// Alert
+// --------------------------------------------------
+
+// Base class
+.alert {
+  display: block;
+  border-color: transparent;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+    clip: padding-box;
+  }
+  i {
+    display: inline-block;
+    margin-top: -.0625rem;
+    font-size: 1.1em;
+    vertical-align: middle;
+  }
+  a:not(.btn) { font-weight: 600; }
+  > *,
+  h1, h2, h3, h4, h5, h6, p, ul, ol, a {
+    &:last-child:not(.btn) { margin: 0; }
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    top: -.375rem;
+    right: -.375rem;
+    bottom: -.375rem;
+    left: -.375rem;
+    border: 1px solid transparent;
+    content: '';
+    z-index: -1;
+  }
+
+  // Alert Dismissible
+  &.alert-dismissible {
+    padding-right: $alert-padding-x;
+  }
+  .close {
+    top: .5rem;
+    right: .25rem;
+    padding: 0 .3rem;
+    font: {
+      family: feather;
+      size: $font-size-base;
+    }
+    &::before { content: '\ea04'; }
+  }
+}
+a.alert {
+  text-decoration: none !important;
+}
+
+// Color Variants
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-custom-variant(theme-color($color), rgba(theme-color($color), .1), rgba(theme-color($color), .25));
+  }
+}
+.alert-secondary {
+  @include alert-custom-variant($gray-700, rgba($gray-700, .05), $border-color);
+}
+
+// With Background Image
+.alert-image-bg {
+  border: 0;
+  &::before { display: none; }
+}

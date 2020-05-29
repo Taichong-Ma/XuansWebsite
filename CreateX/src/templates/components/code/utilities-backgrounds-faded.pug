@@ -1,0 +1,37 @@
+// Utilities: Background Faded Colors Code
+#utilities-backgrounds-faded-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Utilities: Background Faded Colors --&gt;</strong>
+                &lt;div class=&quot;text-primary bg-primary-faded p-3&quot;&gt;Primary Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-accent bg-accent-faded p-3&quot;&gt;Accent Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-info bg-info-faded p-3&quot;&gt;Info Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-success bg-success-faded p-3&quot;&gt;Success Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-warning bg-warning-faded p-3&quot;&gt;Warning Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-danger bg-danger-faded p-3&quot;&gt;Danger Faded BG&lt;/div&gt;
+                &lt;div class=&quot;text-dark bg-dark-faded p-3&quot;&gt;Dark Faded BG&lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Utilities: Background Faded Colors</strong>
+                .text-primary.bg-primary-faded.p-3 Primary Faded BG
+                .text-accent.bg-accent-faded.p-3 Accent Faded BG
+                .text-info.bg-info-faded.p-3 Info Faded BG
+                .text-success.bg-success-faded.p-3 Success Faded BG
+                .text-warning.bg-warning-faded.p-3 Warning Faded BG
+                .text-danger.bg-danger-faded.p-3 Danger Faded BG
+                .text-dark.bg-dark-faded.p-3 Dark Faded BG

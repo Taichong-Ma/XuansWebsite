@@ -1,0 +1,111 @@
+// Tabs Transition Effects Code
+#tabs-transitions-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html6' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug6' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html6' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Fade, Scale Up, Scale Down, Left --&gt;</strong>
+                &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#fade&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Fade&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#scaleup&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Scale Up&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#scaledown&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Scale Down&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#left&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Left&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content&quot;&gt;
+                  &lt;div class=&quot;tab-pane transition fade show active&quot; id=&quot;fade&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Raw denim you probably haven't heard...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade scale&quot; id=&quot;scaleup&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Food truck fixie locavore, accusamus...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade scaledown&quot; id=&quot;scaledown&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Etsy mixtape wayfarers, ethical wes...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade left&quot; id=&quot;left&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Trust fund seitan letterpress, keytar...&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Right, Top, Bottom, Flip --&gt;</strong>
+                &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#right&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Right&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#top&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Top&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#bottom&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Bottom&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#flip&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Flip&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content&quot;&gt;
+                  &lt;div class=&quot;tab-pane transition fade right show active&quot; id=&quot;right&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Raw denim you probably haven't heard...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade top&quot; id=&quot;top&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Food truck fixie locavore, accusamus...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade bottom&quot; id=&quot;bottom&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Etsy mixtape wayfarers, ethical wes...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane transition fade flip&quot; id=&quot;flip&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Trust fund seitan letterpress, keytar...&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug6' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Fade, Scale Up, Scale Down, Left</strong>
+                ul(class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;)
+                  li.nav-item: a(href=&quot;#fade&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Fade
+                  li.nav-item: a(href=&quot;#scaleup&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Scale Up
+                  li.nav-item: a(href=&quot;#scaledown&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Scale Down
+                  li.nav-item: a(href=&quot;#left&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Left
+                .tab-content
+                  div(id=&quot;fade&quot; class=&quot;tab-pane transition fade show active&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Raw denim you probably haven't heard...
+                  div(id=&quot;scaleup&quot; class=&quot;tab-pane transition fade scale&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Food truck fixie locavore, accusamus...
+                  div(id=&quot;scaledown&quot; class=&quot;tab-pane transition fade scaledown&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Etsy mixtape wayfarers, ethical wes...
+                  div(id=&quot;left&quot; class=&quot;tab-pane transition fade left&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Trust fund seitan letterpress, keytar...
+                
+                <strong>//- Right, Top, Bottom, Flip</strong>
+                ul(class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;)
+                  li.nav-item: a(href=&quot;#right&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Right
+                  li.nav-item: a(href=&quot;#top&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Top
+                  li.nav-item: a(href=&quot;#bottom&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Bottom
+                  li.nav-item: a(href=&quot;#flip&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Flip
+                .tab-content
+                  div(id=&quot;right&quot; class=&quot;tab-pane transition fade right show active&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Raw denim you probably haven't heard...
+                  div(id=&quot;top&quot; class=&quot;tab-pane transition fade top&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Food truck fixie locavore, accusamus...
+                  div(id=&quot;bottom&quot; class=&quot;tab-pane transition fade bottom&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Etsy mixtape wayfarers, ethical wes...
+                  div(id=&quot;flip&quot; class=&quot;tab-pane transition fade flip&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Trust fund seitan letterpress, keytar...

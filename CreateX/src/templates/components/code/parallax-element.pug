@@ -1,0 +1,69 @@
+// Element Parallax Code
+#parallax-element-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Text (Letters) Parallax --&gt;</strong>
+                &lt;div class=&quot;h1 text-uppercase&quot;&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : -20}'&gt;P&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : 20}'&gt;a&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : -20}'&gt;r&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : 25}'&gt;a&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : -25}'&gt;l&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : 30}'&gt;l&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : -30}'&gt;a&lt;/span&gt;
+                  &lt;span class=&quot;d-inline-block mr-2&quot; data-parallax='{&quot;y&quot; : 35}'&gt;x&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Image RotateZ CW Parallax --&gt;</strong>
+                &lt;figure class=&quot;figure d-table mx-auto&quot; data-parallax='{&quot;rotateZ&quot; : 20}'&gt;
+                  &lt;img class=&quot;figure-img mb-0&quot; src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;&gt;
+                &lt;/figure&gt;
+                
+                <strong>&lt;!-- Image Scale Parallax --&gt;</strong>
+                &lt;figure class=&quot;figure d-table mx-auto&quot; data-parallax='{&quot;scale&quot; : 0.75}'&gt;
+                  &lt;img class=&quot;figure-img mb-0&quot; src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;&gt;
+                &lt;/figure&gt;
+
+                <strong>&lt;!-- Image RotateZ CCW Parallax --&gt;</strong>
+                &lt;figure class=&quot;figure d-table mx-auto&quot; data-parallax='{&quot;rotateZ&quot; : -20}'&gt;
+                  &lt;img class=&quot;figure-img mb-0&quot; src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;&gt;
+                &lt;/figure&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Text (Letters) Parallax</strong>
+                .h1.text-uppercase
+                  span(data-parallax='{&quot;y&quot; : -20}').d-inline-block.mr-2 P
+                  span(data-parallax='{&quot;y&quot; : 20}').d-inline-block.mr-2 a
+                  span(data-parallax='{&quot;y&quot; : -20}').d-inline-block.mr-2 r
+                  span(data-parallax='{&quot;y&quot; : 25}').d-inline-block.mr-2 a
+                  span(data-parallax='{&quot;y&quot; : -25}').d-inline-block.mr-2 l
+                  span(data-parallax='{&quot;y&quot; : 30}').d-inline-block.mr-2 l
+                  span(data-parallax='{&quot;y&quot; : -30}').d-inline-block.mr-2 a
+                  span(data-parallax='{&quot;y&quot; : 35}').d-inline-block.mr-2 x
+                
+                <strong>//- Image RotateZ CW Parallax</strong>
+                figure(data-parallax='{&quot;rotateZ&quot; : 20}').figure.d-table.mx-auto
+                  img(src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;).figure-img.mb-0
+                
+                <strong>//- Image Scale Parallax</strong>
+                figure(data-parallax='{&quot;scale&quot; : 0.75}').figure.d-table.mx-auto
+                  img(src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;).figure-img.mb-0
+
+                <strong>//- Image RotateZ CCW Parallax</strong>
+                figure(data-parallax='{&quot;rotateZ&quot; : -20}').figure.d-table.mx-auto
+                  img(src=&quot;path-to-image&quot; style=&quot;width: 200px;&quot; alt=&quot;Image&quot;).figure-img.mb-0

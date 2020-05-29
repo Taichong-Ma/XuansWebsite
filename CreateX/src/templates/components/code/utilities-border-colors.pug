@@ -1,0 +1,40 @@
+// Utilities: Border Colors Code
+#utilities-border-colors-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 To alter the color of the border add color modifier class to the base class <code>border</code>. The list of color modifier classes shown in code example below.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html7' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug7' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html7' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Utilities: Border Colors --&gt;</strong>
+                &lt;div class=&quot;bg-secondary border border-primary mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-accent mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-info mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-success mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-warning mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-danger mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-dark mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-secondary border border-secondary mb-3&quot; style=&quot;width: 130px; height: 130px&quot;&gt;&lt;/div&gt;
+          div(id='pug7' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Utilities: Border Colors</strong>
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-primary.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-accent.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-info.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-success.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-warning.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-danger.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-dark.mb-3
+                div(style=&quot;width: 130px; height: 130px&quot;).bg-secondary.border.border-secondary.mb-3

@@ -1,0 +1,179 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Portfolio Cards'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Portfolio Card Style 1 (Default) Code Modal
+  include code/portfolio-style1
+
+  //- Portfolio Card Style 2 (Inside Card) Code Modal
+  include code/portfolio-style2
+
+  //- Portfolio Card List View Code Modal
+  include code/portfolio-style3
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+    
+      // Style 1 (Default)
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 1 (Default)
+        a(href='#portfolio-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4.mb-2
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/01.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                span.mr-3
+                  i.fe-icon-user
+                  | William Smith
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 12
+              h5.portfolio-title: a(href='#') iOS App UI Design
+              a(href='#').tag-link Mobile Apps
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/02.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                span.mr-3
+                  i.fe-icon-user
+                  | Benjamin Miller
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 8
+              h5.portfolio-title: a(href='#') Web App Front-End
+              a(href='#').tag-link Web Design
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/03.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                span.mr-3
+                  i.fe-icon-user
+                  | Olivia Davis
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 25
+              h5.portfolio-title: a(href='#') Company Brand Design
+              a(href='#').tag-link Branding
+    
+      
+      // Style 2 (Inside card)
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 2 (Inside card)
+        a(href='#portfolio-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/04.jpg', 'Portfolio Thumbnail')
+            .card-body
+              .portfolio-meta
+                span
+                  i.fe-icon-user
+                  | William Smith
+              h5.portfolio-title: a(href='#') iOS App Development
+            .card-footer
+              div
+                a(href='#').tag-link Mobile Apps
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 43
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/05.jpg', 'Portfolio Thumbnail')
+            .card-body
+              .portfolio-meta
+                span
+                  i.fe-icon-user
+                  | Benjamin Miller
+              h5.portfolio-title: a(href='#') Working Space Design
+            .card-footer
+              div
+                a(href='#').tag-link Interior Design
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 27
+
+        // Portfolio Item
+        .col-xl-4.col-sm-6.mb-30.pb-2
+          .card.portfolio-card
+            a(href='#').portfolio-thumb
+              +image('img/portfolio/07.jpg', 'Portfolio Thumbnail')
+            .card-body
+              .portfolio-meta
+                span
+                  i.fe-icon-user
+                  | Emma Johnson
+              h5.portfolio-title: a(href='#') Apple Package Design
+            .card-footer
+              div
+                a(href='#').tag-link Package Design
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 116
+    
+      
+      // Style 3 (List view)
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 3 (List view)
+        a(href='#portfolio-style3-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-5
+
+        // Portfolio Item
+        .card.portfolio-card.portfolio-list
+          a(href='#' style='background-image: url(../img/portfolio/01.jpg);').portfolio-thumb
+          .card-body
+            .portfolio-meta
+              span.mr-3
+                i.fe-icon-user
+                | William Smith
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 12
+            h5.portfolio-title: a(href='#') iOS App UI Design
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            a(href='#').tag-link Mobile Apps

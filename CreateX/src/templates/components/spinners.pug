@@ -1,0 +1,115 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Spinners'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Border Spinner Code Modal
+  include code/spinner-border
+
+  //- Growing Spinner Code Modal
+  include code/spinner-grow
+
+  //- Spinner Size Code Modal
+  include code/spinner-size
+
+  //- Spinner Inside Button Code Modal
+  include code/spinner-inside-button
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5
+
+      // Border spinner
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Border spinner
+        a(href='#spinner-border-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      div(role='status').spinner-border.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-muted.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-primary.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-success.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-info.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-warning.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-border.text-danger.m-2
+        span.sr-only Loading...
+      .d-inline-block.bg-dark.mx-2
+        div(role='status').spinner-border.text-light.my-2.mx-3
+          span.sr-only Loading...
+
+      // Growing spinner
+      .d-flex.flex-wrap.justify-content-between.mt-5
+        h4.mr-3 Growing spinner
+        a(href='#spinner-grow-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      div(role='status').spinner-grow.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-muted.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-primary.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-success.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-info.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-warning.m-2
+        span.sr-only Loading...
+      div(role='status').spinner-grow.text-danger.m-2
+        span.sr-only Loading...
+      .d-inline-block.bg-dark.mx-2
+        div(role='status').spinner-grow.text-light.my-2.mx-3
+          span.sr-only Loading...
+
+      // Size
+      .d-flex.flex-wrap.justify-content-between.mt-5
+        h4.mr-3 Size
+        a(href='#spinner-size-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .d-inline-block.align-middle.mr-2
+        div(role='status').spinner-border.spinner-border-sm.m-2
+          span.sr-only Loading...
+        div(role='status').spinner-grow.spinner-grow-sm.m-2
+          span.sr-only Loading...
+      .d-inline-block.align-middle
+        div(style='width: 3rem; height: 3rem;' role='status').spinner-border.m-2
+          span.sr-only Loading...
+        div(style='width: 3rem; height: 3rem;' role='status').spinner-grow.m-2
+          span.sr-only Loading...
+
+      // Inside button
+      .d-flex.flex-wrap.justify-content-between.mt-5
+        h4.mr-3 Inside button
+        a(href='#spinner-inside-button-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      button(type='button').btn.btn-primary.mr-3.mb-3
+        span(role='status' aria-hidden='true').spinner-border.spinner-border-sm.text-light.mr-2
+        | Loading...
+      button(type='button').btn.btn-primary.mb-3
+        span(role='status' aria-hidden='true').spinner-grow.spinner-grow-sm.text-light.mr-2
+        | Loading...

@@ -1,0 +1,81 @@
+// Entry Navigation Code
+#pagination-entry-navigation-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Entry Navigation --&gt;</strong>
+                &lt;nav class=&quot;entry-navigation&quot;&gt;
+                  &lt;div class=&quot;prev-btn&quot;&gt;
+                    &lt;a class=&quot;label&quot; href=&quot;#&quot;&gt;
+                      &lt;i class=&quot;fe-icon-arrow-left&quot;&gt;&lt;/i&gt;Prev &lt;span class='d-none d-sm-inline'&gt;post&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-preview&quot;&gt;
+                      &lt;div class=&quot;post-preview-thumb&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Thumbnail&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-preview-details&quot;&gt;
+                        &lt;span class=&quot;post-preview-title&quot;&gt;Technological breakthrough&lt;/span&gt;
+                        &lt;span class=&quot;post-preview-meta&quot;&gt;&lt;i class=&quot;fe-icon-calendar&quot;&gt;&lt;/i&gt;May 25, 18&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;a class=&quot;back-btn&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-grid&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                  &lt;div class=&quot;next-btn&quot;&gt;
+                    &lt;a class=&quot;label&quot; href=&quot;#&quot;&gt;Next &lt;span class='d-none d-sm-inline'&gt;post&lt;/span&gt;&lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;post-preview&quot;&gt;
+                      &lt;div class=&quot;post-preview-details&quot;&gt;
+                        &lt;span class=&quot;post-preview-title&quot;&gt;Mother nature is speaking&lt;/span&gt;
+                        &lt;span class=&quot;post-preview-meta&quot;&gt;&lt;i class=&quot;fe-icon-calendar&quot;&gt;&lt;/i&gt;Jul 30, 18&lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;post-preview-thumb&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Thumbnail&quot;/&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/nav&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Entry Navigation</strong>
+                nav.entry-navigation
+                  .prev-btn
+                    a(href=&quot;#&quot;).label
+                      i.fe-icon-arrow-left
+                      | Prev &lt;span class=&quot;d-none d-sm-inline&quot;&gt;post&lt;/span&gt;
+                    .post-preview
+                      .post-preview-thumb
+                        +image(&quot;path-to-image&quot;, &quot;Thumbnail&quot;)
+                      .post-preview-details
+                        span.post-preview-title Technological breakthrough
+                        span.post-preview-meta
+                          i.fe-icon-calendar
+                          | May 25, 18
+                  a(href=&quot;#&quot;).back-btn: i.fe-icon-grid
+                  .next-btn
+                    a(href=&quot;#&quot;).label
+                      | Next &lt;span class=&quot;d-none d-sm-inline&quot;&gt;post&lt;/span&gt;
+                      i.fe-icon-arrow-right
+                    .post-preview
+                      .post-preview-details
+                        span.post-preview-title Mother nature is speaking
+                        span.post-preview-meta
+                          i.fe-icon-calendar
+                          | Jul 30, 18
+                      .post-preview-thumb
+                        +image(&quot;path-to-image&quot;, &quot;Thumbnail&quot;)

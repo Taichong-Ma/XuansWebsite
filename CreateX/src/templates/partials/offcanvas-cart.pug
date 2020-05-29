@@ -1,0 +1,34 @@
+// Off-Canvas Shopping Cart
+#shopping-cart.offcanvas-container.is-triggered.offcanvas-container-reverse
+  span.offcanvas-close
+    i.fe-icon-x
+  .px-4
+    h6 Your Cart
+    .widget.widget-cart.pt-2
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/cart/01.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Samsung Galaxy S9 Plus
+          span.featured-product-price 1x $839.99
+        span.remove-product: i.fe-icon-x
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/cart/02.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Samsung Gear 360 Camera
+          span.featured-product-price 1 x $68.00
+        span.remove-product: i.fe-icon-x
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/cart/03.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Edifier W855BT Bluetooth
+          span.featured-product-price 1 x $99.85
+        span.remove-product: i.fe-icon-x
+      hr.mt-3.mb-3
+      span.text-sm.text-muted Subtotal:&nbsp;
+      strong $1,007.84
+      .d-flex.justify-content-between.pt-3
+        a(href='cart.html').btn.btn-primary.btn-block.btn-sm.mr-2 View Cart
+        a(href='checkout-address.html').btn.btn-accent.btn-block.mt-0.btn-sm Checkout

@@ -1,0 +1,110 @@
+//
+// Carousel (based on Owl Carousel)
+// --------------------------------------------------
+
+.owl-carousel {
+
+  // Navs
+  .owl-nav button.owl-next,
+  .owl-nav button.owl-prev {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: $carousel-navs-size;
+    height: $carousel-navs-size;
+    margin-top: -(($carousel-navs-size / 2) + 27);
+    transition: all .3s;
+    border-radius: 50%;
+    background-color: $carousel-navs-bg;
+    color: $carousel-navs-arrow-color;
+    line-height: $carousel-navs-size;
+    text-align: center;
+    box-shadow: $carousel-navs-box-shadow;
+    text-align: center;
+    opacity: .65;
+    &:hover {
+      color: $carousel-navs-hover-arrow-color;
+      opacity: 1;
+    }
+    &:focus { outline: none; }
+    &::after {
+      font: {
+        family: feather;
+        size: $carousel-navs-arrow-size;
+      }
+    }
+    &.disabled { opacity: 0; }
+  }
+  .owl-nav button.owl-prev {
+    left: 1.5rem;
+    &::after {
+      margin-left: -.125rem;
+      content: '\e92f';
+    }
+}
+  .owl-nav button.owl-next {
+    right: 1.5rem;
+    &::after {
+      margin-right: -.125rem;
+      content: '\e930';
+    }
+  }
+
+  // Dots
+  .owl-dots {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    .owl-dot {
+      display: inline-block;
+      width: $carousel-dots-size;
+      height: $carousel-dots-size;
+      margin: 0 .3125rem;
+      transition: all .25s;
+      border-radius: 50%;
+      background-color: $gray-500;
+      opacity: .4;
+      vertical-align: middle;
+      &.active {
+        transform: scale(2);
+        background-color: $primary;
+        opacity: 1;
+      }
+      &:focus { outline: none; }
+    }
+  }
+
+  // Dots Inside
+  &.dots-inside {
+    .owl-nav button.owl-next,
+    .owl-nav button.owl-prev {
+      margin-top: -($carousel-navs-size / 2);
+    }
+    .owl-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: .625rem 1rem;
+      padding-top: .375rem;
+      .owl-dot {
+        background-color: $white;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.carousel-flush {
+    .owl-dots { padding-top: 0 !important; }
+    .owl-item { padding: 0 .9375rem; }
+  }
+
+  &.controls-hidden-mobile {
+    @include media-breakpoint-down(md) {
+      .owl-nav button.owl-next,
+      .owl-nav button.owl-prev {
+        display: none;
+      }
+    }
+  }
+}

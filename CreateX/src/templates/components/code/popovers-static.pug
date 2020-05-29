@@ -1,0 +1,90 @@
+// Popovers Static Example Code
+#popovers-static-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Popovers Static Examples --&gt;</strong>
+                &lt;div class=&quot;example-popover clearfix&quot;&gt;
+
+                  <strong>&lt;!-- Popover Static (On the Top) --&gt;</strong>
+                  &lt;div class=&quot;popover bs-popover-top bs-popover-top-demo&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;popover-header&quot;&gt;Popover top&lt;/h3&gt;
+                    &lt;div class=&quot;popover-body&quot;&gt;
+                      &lt;p&gt;Sed posuere consectetur est at lobortis...&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Popover Static (On the Right) --&gt;</strong>
+                  &lt;div class=&quot;popover bs-popover-right bs-popover-right-demo&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;popover-header&quot;&gt;Popover right&lt;/h3&gt;
+                    &lt;div class=&quot;popover-body&quot;&gt;
+                      &lt;p&gt;Sed posuere consectetur est at lobortis...&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Popover Static (On the Bottom) --&gt;</strong>
+                  &lt;div class=&quot;popover bs-popover-bottom bs-popover-bottom-demo&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;popover-header&quot;&gt;Popover bottom&lt;/h3&gt;
+                    &lt;div class=&quot;popover-body&quot;&gt;
+                      &lt;p&gt;Sed posuere consectetur est at lobortis...&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Popover Static (On the Left) --&gt;</strong>
+                  &lt;div class=&quot;popover bs-popover-left bs-popover-left-demo&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;popover-header&quot;&gt;Popover left&lt;/h3&gt;
+                    &lt;div class=&quot;popover-body&quot;&gt;
+                      &lt;p&gt;Sed posuere consectetur est at lobortis...&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Popovers Static Examples</strong>
+                .example-popover.clearfix
+
+                  <strong>//- Popover Static (On the Top)</strong>
+                  .popover.bs-popover-top.bs-popover-top-demo
+                    .arrow
+                    h3.popover-header Popover top
+                    .popover-body
+                      p Sed posuere consectetur est at lobortis...
+
+                  <strong>//- Popover Static (On the Right)</strong>
+                  .popover.bs-popover-right.bs-popover-right-demo
+                    .arrow
+                    h3.popover-header Popover right
+                    .popover-body
+                      p Sed posuere consectetur est at lobortis...
+
+                  <strong>//- Popover Static (On the Bottom)</strong>
+                  .popover.bs-popover-bottom.bs-popover-bottom-demo
+                    .arrow
+                    h3.popover-header Popover bottom
+                    .popover-body
+                      p Sed posuere consectetur est at lobortis...
+
+                  <strong>//- Popover Static (On the Left)</strong>
+                  .popover.bs-popover-left.bs-popover-left-demo
+                    .arrow
+                    h3.popover-header Popover left
+                    .popover-body
+                      p Sed posuere consectetur est at lobortis...

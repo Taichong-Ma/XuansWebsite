@@ -1,0 +1,223 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Icon Box'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Icon Box: Font Icon Variant Code Modal
+  include code/icon-box-font-icon
+
+  //- Icon Box: Image Icon Variant Code Modal
+  include code/icon-box-image-icon
+
+  //- Icon Box Horizontal Layout Code Modal
+  include code/icon-box-horizontal
+
+  //- Icon Box Light Skin Code Modal
+  include code/icon-box-light-skin
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+    
+      // Font icon variant
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Font icon variant
+        a(href='#icon-box-font-icon-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.mx-auto
+            .icon-box-icon: i.fe-icon-feather
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.text-center.mx-auto
+            .icon-box-icon: i.fe-icon-bell
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.text-right.mx-auto
+            .icon-box-icon: i.fe-icon-camera
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+            
+      // Image variant
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Image variant
+        a(href='#icon-box-image-icon-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.mx-auto
+            .icon-box-image: img(src='../img/components/icon-box/01.png' alt='Image icon')
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.text-center.mx-auto
+            .icon-box-image: img(src='../img/components/icon-box/02.png' alt='Image icon')
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6
+          // Icon Box
+          .icon-box.text-right.mx-auto
+            .icon-box-image: img(src='../img/components/icon-box/03.png' alt='Image icon')
+            h3.icon-box-title Icon box title
+            p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+            
+      // Horizontal layout
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Horizontal layout
+        a(href='#icon-box-horizontal-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row
+        .col-xl-5.col-md-6
+          // Icon Box
+          .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+            .d-sm-table-cell.align-top
+              .icon-box-icon: i.fe-icon-feather
+            .d-sm-table-cell.align-top.pl-sm-4
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+        .col-xl-5.col-md-6
+          // Icon Box
+          .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-right
+            .d-sm-table-cell.align-top.pr-sm-4
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+            .d-sm-table-cell.align-top
+              .icon-box-icon: i.fe-icon-bell
+      .row.pb-5
+        .col-xl-5.col-md-6
+          // Icon Box
+          .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+            .d-sm-table-cell.align-top
+              .icon-box-image: img(src='../img/components/icon-box/01.png' alt='Image icon')
+            .d-sm-table-cell.align-top.pl-sm-4
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+        .col-xl-5.col-md-6
+          // Icon Box
+          .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-right
+            .d-sm-table-cell.align-top.pr-sm-4
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+            .d-sm-table-cell.align-top
+              .icon-box-image: img(src='../img/components/icon-box/02.png' alt='Image icon')
+
+    .bg-dark.py-5
+      .container
+        .d-flex.flex-wrap.justify-content-between.pt-2
+          h4.text-white.mr-3 Light skin
+          a(href='#icon-box-light-skin-code' data-toggle='modal').navi-link.text-white.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4
+        .row
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-icon: i.fe-icon-feather
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-icon: i.fe-icon-bell
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-icon: i.fe-icon-camera
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-image: img(src='../img/components/icon-box/01.png' alt='Image icon')
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-image: img(src='../img/components/icon-box/02.png' alt='Image icon')
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right
+          .col-lg-4.col-sm-6
+            // Icon Box
+            .icon-box.icon-box-light-skin.text-center.mx-auto
+              .icon-box-image: img(src='../img/components/icon-box/03.png' alt='Image icon')
+              h3.icon-box-title Icon box title
+              p.icon-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              a(href='#').icon-box-link
+                | Learn more
+                i.fe-icon-arrow-right

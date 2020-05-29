@@ -1,0 +1,95 @@
+// Forms Light Skin Code
+#forms-light-skin-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html9' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug9' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html9' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Input Text Light Skin --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label class=&quot;text-white opacity-60&quot; for=&quot;text-input-light&quot;&gt;Text&lt;/label&gt;
+                  &lt;input class=&quot;form-control form-control-light-skin&quot; type=&quot;text&quot; id=&quot;text-input-light&quot; value=&quot;Artisanal kale&quot;&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Textarea Light Skin --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label class=&quot;text-white opacity-60&quot; for=&quot;textarea-input-light&quot;&gt;Textarea&lt;/label&gt;
+                  &lt;textarea class=&quot;form-control form-control-light-skin&quot; id=&quot;textarea-input-light&quot; rows=&quot;5&quot;&gt;Hello World!&lt;/textarea&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Select Light Skin --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label class=&quot;text-white opacity-60&quot; for=&quot;select-input-light&quot;&gt;Select&lt;/label&gt;
+                  &lt;select class=&quot;form-control form-control-light-skin&quot; id=&quot;select-input-light&quot;&gt;
+                    &lt;option&gt;Choose option...&lt;/option&gt;
+                    &lt;option&gt;Option item 1&lt;/option&gt;
+                    &lt;option&gt;Option item 2&lt;/option&gt;
+                    &lt;option&gt;Option item 3&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- File Input Light Skin --&gt;</strong>
+                &lt;div class=&quot;custom-file form-control-light-skin&quot;&gt;
+                  &lt;input class=&quot;custom-file-input&quot; type=&quot;file&quot; id=&quot;file-input-light&quot;&gt;
+                  &lt;label class=&quot;custom-file-label&quot; for=&quot;file-input-light&quot;&gt;Choose file...&lt;/label&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Checkbox Light Skin --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;check-light&quot;&gt;
+                  &lt;label class=&quot;custom-control-label text-white&quot; for=&quot;check-light&quot;&gt;Check this checkbox&lt;/label&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Radio Button Light Skin --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;radio-light&quot; name=&quot;radio-light&quot;&gt;
+                  &lt;label class=&quot;custom-control-label text-white&quot; for=&quot;radio-light&quot;&gt;Check this radio&lt;/label&gt;
+                &lt;/div&gt;
+
+          div(id='pug9' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Input Text Light Skin</strong>
+                .form-group
+                  label(for=&quot;text-input-light&quot;).text-white.opacity-60 Text
+                  input(type=&quot;text&quot; id=&quot;text-input-light&quot; value=&quot;Artisanal kale&quot;).form-control.form-control-light-skin
+                
+                <strong>//- Textarea Light Skin</strong>
+                .form-group
+                  label(for=&quot;textarea-input-light&quot;).text-white.opacity-60 Textarea
+                  textarea(id=&quot;textarea-input-light&quot; rows=&quot;5&quot;).form-control.form-control-light-skin Hello World!
+                
+                <strong>//- Select Light Skin</strong>
+                .form-group
+                  label(for=&quot;select-input-light&quot;).text-white.opacity-60 Select
+                  select(id=&quot;select-input-light&quot;).form-control.form-control-light-skin
+                    option Choose option...
+                    option Option item 1
+                    option Option item 2
+                    option Option item 3
+                
+                <strong>//- File Input Light Skin</strong>
+                .custom-file.form-control-light-skin
+                  input(type=&quot;file&quot; id=&quot;file-input-light&quot;).custom-file-input
+                  label(for=&quot;file-input-light&quot;).custom-file-label Choose file...
+                
+                <strong>//- Checkbox Light Skin</strong>
+                .custom-control.custom-checkbox
+                  input(type=&quot;checkbox&quot; id=&quot;check-light&quot;).custom-control-input
+                  label(for=&quot;check-light&quot;).custom-control-label.text-white Check this checkbox
+                
+                <strong>//- Radio Button Light Skin</strong>
+                .custom-control.custom-radio
+                  input(type=&quot;radio&quot; id=&quot;radio-light-2&quot; name=&quot;radio-light&quot;).custom-control-input
+                  label(for=&quot;radio-light-2&quot;).custom-control-label.text-white Check this radio

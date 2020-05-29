@@ -1,0 +1,56 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Profile Settings'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Profile Settings'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-4
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Profile Settings
+      .col-lg-8.pb-5
+        form.row
+          .col-md-6
+            .form-group
+              label(for='account-fn') First Name
+              input(type='text' id='account-fn' value='Daniel' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-ln') Last Name
+              input(type='text' id='account-ln' value='Adams' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-email') E-mail Address
+              input(type='email' id='account-email' value='daniel.adams@example.com' disabled).form-control
+          .col-md-6
+            .form-group
+              label(for='account-phone') Phone Number
+              input(type='text' id='account-phone' value='+7 (805) 348 95 72' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-pass') New Password
+              input(type='password' id='account-pass').form-control
+          .col-md-6
+            .form-group
+              label(for='account-confirm-pass') Confirm Password
+              input(type='password' id='account-confirm-pass').form-control
+          .col-12
+            hr.mt-2.mb-3
+            .d-flex.flex-wrap.justify-content-between.align-items-center
+              .custom-control.custom-checkbox.d-block
+                input(type='checkbox' id='subscribe_me' checked).custom-control-input
+                label(for='subscribe_me').custom-control-label Subscribe me to Newsletter
+              button(type='button' class='btn btn-primary' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Success!' data-toast-message='Your profile updated successfuly.') Update Profile
+
+  //- footer-shop.pug template
+  include partials/footer-shop

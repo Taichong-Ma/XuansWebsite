@@ -1,0 +1,352 @@
+//
+// Social Buttons
+// --------------------------------------------------
+
+// Base class
+.social-btn {
+  display: inline-block;
+  width: $social-button-box-size;
+  height: $social-button-box-size;
+  margin: 0;
+  transition: $social-button-transition;
+  font-size: $social-button-font-size;
+  line-height: $social-button-box-size;
+  vertical-align: middle;
+  text: {
+    align: center !important;
+    decoration: none;
+  }
+}
+
+// Brand specific colors
+
+/* Amazon */
+.sb-amazon {
+  color: #ff9900 !important;
+  font-size: 1.15em;
+  &:hover, &.hover { color: #ff9900 !important; }
+}
+
+/* Airbnb */
+.sb-airbnb {
+  color: #fd5c63 !important;
+  &:hover, &.hover { color: #fd5c63 !important; }
+}
+
+/* Behance */
+.sb-behance {
+  color: #1769ff !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #1769ff !important; }
+}
+
+/* DeviantArt */
+.sb-deviantart {
+  color: #4e6252 !important;
+  font-size: 1.2em;
+  &:hover, &.hover { color: #4e6252 !important; }
+}
+
+/* Digg */
+.sb-digg {
+  color: #000000 !important;
+  font-size: 1.2em;
+  &:hover, &.hover { color: #000000 !important; }
+}
+
+/* Disqus */
+.sb-disqus {
+  color: #2e9fff !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #2e9fff !important; }
+}
+
+/* Dribbble */
+.sb-dribbble {
+  color: #ea4c89 !important;
+  &:hover, &.hover { color: #ea4c89 !important; }
+}
+
+/* Drupal */
+.sb-drupal {
+  color: #0077c0 !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #0077c0 !important; }
+}
+
+/* Facebook */
+.sb-facebook {
+  color: #3b5998 !important;
+  &:hover, &.hover { color: #3b5998 !important; }
+}
+
+/* Flickr */
+.sb-flickr {
+  color: #0063dc !important;
+  &:hover, &.hover { color: #0063dc !important; }
+}
+
+/* Foursquare */
+.sb-foursquare {
+  color: #ef4b78 !important;
+  &:hover, &.hover { color: #ef4b78 !important; }
+}
+
+/* GitHub */
+.sb-github {
+  color: #4183c4 !important;
+  &:hover, &.hover { color: #4183c4 !important; }
+}
+
+/* Google+ */
+.sb-google-plus {
+  color: #dd4b39 !important;
+  font-size: 1.2em;
+  &:hover, &.hover { color: #dd4b39 !important; }
+
+}
+
+/* Instagram */
+.sb-instagram {
+  color: #3f729b !important;
+  &:hover, &.hover { color: #3f729b !important; }
+}
+
+/* LastFM */
+.sb-lastfm {
+  color: #e31b23 !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #e31b23 !important; }
+}
+
+/* LinkedIn */
+.sb-linkedin {
+  color: #0976b4 !important;
+  &:hover, &.hover { color: #0976b4 !important; }
+}
+
+/* PayPal */
+.sb-odnoklassniki {
+  color: #ed812b !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #ed812b !important; }
+}
+
+/* PayPal */
+.sb-paypal {
+  color: #253b80 !important;
+  font-size: .9em;
+  &:hover, &.hover { color: #253b80 !important; }
+}
+
+/* Pinterest */
+.sb-pinterest {
+  color: #cc2127 !important;
+  &:hover, &.hover { color: #cc2127 !important; }
+}
+
+/* Reddit */
+.sb-reddit {
+  color: #ff4500 !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #ff4500 !important; }
+}
+
+/* Reddit */
+.sb-rss {
+  color: #f26522 !important;
+  font-size: .9em;
+  &:hover, &.hover { color: #f26522 !important; }
+}
+
+/* Skype */
+.sb-skype {
+  color: #00aff0 !important;
+  &:hover, &.hover { color: #00aff0 !important; }
+}
+
+/* SoundCloud */
+.sb-soundcloud {
+  color: #ff8800 !important;
+  font-size: 1.2em !important;
+  &:hover, &.hover { color: #ff8800 !important; }
+}
+
+/* Stack Overflow */
+.sb-stackoverflow {
+  color: #fe7a15 !important;
+  font-size: 1.1em !important;
+  &:hover, &.hover { color: #fe7a15 !important; }
+}
+
+/* Steam */
+.sb-steam {
+  color: #7da10e !important;
+  &:hover, &.hover { color: #7da10e !important; }
+}
+
+/* StumbleUpon */
+.sb-stumbleupon {
+  color: #eb4924 !important;
+  &:hover, &.hover { color: #eb4924 !important; }
+}
+
+/* Tumblr */
+.sb-tumblr {
+  color: #35465c !important;
+  &:hover, &.hover { color: #35465c !important; }
+}
+
+/* Twitch */
+.sb-twitch {
+  color: #6441a5 !important;
+  &:hover, &.hover { color: #6441a5 !important; }
+}
+
+/* Twitter */
+.sb-twitter {
+  color: #55acee !important;
+  &:hover, &.hover { color: #55acee !important; }
+}
+
+/* Vimeo */
+.sb-vimeo {
+  color: #1ab7ea !important;
+  &:hover, &.hover { color: #1ab7ea !important; }
+}
+
+/* Vine */
+.sb-vine {
+  color: #00b488 !important;
+  &:hover, &.hover { color: #00b488 !important; }
+}
+
+/* VKontakte */
+.sb-vk {
+  color: #45668e !important;
+  font-size: 1.1em;
+  &:hover, &.hover { color: #45668e !important; }
+}
+
+/* WordPress */
+.sb-wordpress {
+  color: #21759b !important;
+  &:hover, &.hover { color: #21759b !important; }
+}
+
+/* XING */
+.sb-xing {
+  color: #026466 !important;
+  &:hover, &.hover { color: #026466 !important; }
+}
+
+/* Yahoo! */
+.sb-yahoo {
+  color: #400191 !important;
+  font-size: 1.1em !important;
+  &:hover, &.hover { color: #400191 !important; }
+}
+
+/* Yelp */
+.sb-yelp {
+  color: #af0606 !important;
+  &:hover, &.hover { color: #af0606 !important; }
+
+}
+
+/* YouTube */
+.sb-youtube {
+  color: #e52d27 !important;
+  &:hover, &.hover { color: #e52d27 !important; }
+}
+
+// Light Skin (Base)
+.sb-light-skin { color: $white !important; }
+
+// Style 1
+.sb-style-1 {
+  &:hover, &.hover {
+    background-color: $white;
+    box-shadow: $social-btn-box-shadow;
+  }
+  &:active {
+    transition: all .15s;
+    background-color: $gray-100;
+    box-shadow: none;
+  }
+}
+
+// Default margins for all style except of Style 1
+.sb-style-2,
+.sb-style-3,
+.sb-style-4,
+.sb-style-5,
+.sb-style-6,
+.sb-style-7 {
+  margin: {
+    right: $social-button-margin-x;
+    bottom: $social-button-margin-y;
+  }
+}
+
+// Style 2, 3, 4, 5
+.sb-style-2,
+.sb-style-3,
+.sb-style-4,
+.sb-style-5 {
+  border-radius: 50%;
+  background-color: $gray-100;
+  &.sb-light-skin {
+    background-color: rgba($white, .1);
+  }
+  &:hover, &.hover {
+    background-color: $white;
+    box-shadow: $social-btn-box-shadow;
+  }
+}
+.sb-style-4,
+.sb-style-5 {
+  background-color: lighten($gray-500, 28%);
+  color: $white !important;
+}
+
+// Style 6, 7
+.sb-style-6,
+.sb-style-7 {
+  border: 3px solid $border-color;
+  border-radius: 50%;
+  line-height: ($social-button-box-size - .3125);
+  &.sb-light-skin {
+    border-color: rgba($white, .18);
+  }
+  &:hover, &.hover {
+    border-color: transparent;
+    background-color: $white;
+    box-shadow: $social-btn-box-shadow;
+  }
+}
+.sb-style-3,
+.sb-style-5,
+.sb-style-7 { border-radius: 0; }
+
+// Alignment
+.text-center {
+  .sb-style-2, .sb-style-3,
+  .sb-style-4, .sb-style-5,
+  .sb-style-6, .sb-style-7 {
+    margin: {
+      right: ($social-button-margin-x / 2);
+      bottom: ($social-button-margin-y / 2);
+    }
+  }
+}
+.text-right {
+  .sb-style-2, .sb-style-3,
+  .sb-style-4, .sb-style-5,
+  .sb-style-6, .sb-style-7 {
+    margin: {
+      right: 0;
+      left: $social-button-margin-x;
+    }
+  }
+}

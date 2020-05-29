@@ -1,0 +1,134 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Help Topics'
+
+//- Page Content
+block content
+
+  // Hero
+  section.bg-no-repeat.bg-center.bg-cover(style='background-image: url(img/pages/help-hero-bg.jpg);')
+    .container.py-5
+      .row.justify-content-center.py-5
+        .col-lg-7.col-md-8.col-sm-11
+          .wizard
+            .wizard-body
+              h1.h3.text-center.pb-2 How can we help?
+              form(method='get').input-group.mb-2
+                .input-group-prepend
+                  .input-group-text.bg-primary.text-white
+                    i.fe-icon-search
+                input(type='text' placeholder='Ask your question...').form-control
+              p.text-center.m-0.text-sm Ask a question or select from the topics below.
+  
+  // Topics
+  section.container.pt-5.pb-4.mb-3
+    h2.h4.block-title.mb-4.text-center Select a topic
+    .row.pt-2
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/01.png' style='width: 80px;' alt='Managing Account').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Managing Account
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/02.png' style='width: 80px;' alt='Working with Dashboard').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Working with Dashboard
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/03.png' style='width: 80px;' alt='Payment Methods').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Payment Methods
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/04.png' style='width: 80px;' alt='Delivery Information').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Delivery Information
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/05.png' style='width: 80px;' alt='Refund Policy').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Refund Policy
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-2
+        a(href='help-single-topic.html').card
+          img(src='img/pages/help-icons/06.png' style='width: 80px;' alt='Affiliate Program').d-block.mx-auto.mt-4
+          .card-body.text-center
+            h3.card-title Affiliate Program
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | View Topic&nbsp;
+              i.fe-icon-arrow-right
+  
+  // FAQ
+  section.container.pb-5.mb-1
+    h2.h4.block-title.mb-4.text-center F.A.Q
+    .row.pt-3
+      .col-sm-6
+        ul.list-icon.text-xl
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link How long will delivery take?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link What payment methods do you accept?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link Do you ship internationally?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link Do I need an account to place an order?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link How can I track my order?
+      .col-sm-6
+        ul.list-icon.text-xl
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link What are the product refund conditions?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link Do you have discounts for returning customers?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link How do your referral program work?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link Where I can view and download invoices for my orders?
+          li.border-bottom.pb-2
+            i.fe-icon-file-text.text-muted
+            a(href='help-single-topic.html').text-lg.navi-link Do you provide technical support after the purchase?
+  
+  // Submit Request
+  section.container.pb-5.mb-3
+    div(style='background-image: url(img/pages/help-section-bg.jpg)').alert.alert-image-bg.text-center.py-5.px-4
+      h2.h4.block-title.mb-4 Haven't found the answer? We can help.
+      p.pb-3 Contact us and we’ll get back to you as soon as possible.
+      a(href='help-submit-request.html').btn.btn-primary Submit a Request
+
+  //- footer-default.pug template
+  include partials/footer-default

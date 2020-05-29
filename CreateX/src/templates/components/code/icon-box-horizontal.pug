@@ -1,0 +1,75 @@
+// Icon Box Horizontal Code
+#icon-box-horizontal-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Horizontal Layout Icon on the Left --&gt;</strong>
+                &lt;div class=&quot;icon-box icon-box-horizontal d-sm-table text-center text-sm-left&quot;&gt;
+                  &lt;div class=&quot;d-sm-table-cell align-top&quot;&gt;
+                    &lt;div class=&quot;icon-box-icon&quot;&gt;
+                      &lt;i class=&quot;fe-icon-feather&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;d-sm-table-cell align-top pl-sm-4&quot;&gt;
+                    &lt;h3 class=&quot;icon-box-title&quot;&gt;Icon box title&lt;/h3&gt;
+                    &lt;p class=&quot;icon-box-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;icon-box-link&quot; href=&quot;#&quot;&gt;
+                      Learn more
+                      &lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Horizontal Layout Image on the Right --&gt;</strong>
+                &lt;div class=&quot;icon-box icon-box-horizontal d-sm-table text-center text-sm-right&quot;&gt;
+                  &lt;div class=&quot;d-sm-table-cell align-top pr-sm-4&quot;&gt;
+                    &lt;h3 class=&quot;icon-box-title&quot;&gt;Icon box title&lt;/h3&gt;
+                    &lt;p class=&quot;icon-box-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;icon-box-link&quot; href=&quot;#&quot;&gt;
+                      Learn more
+                      &lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;d-sm-table-cell align-top&quot;&gt;
+                    &lt;div class=&quot;icon-box-image&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Image icon&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Horizontal Layout Icon on the Left</strong>
+                .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left
+                  .d-sm-table-cell.align-top
+                    .icon-box-icon: i.fe-icon-feather
+                  .d-sm-table-cell.align-top.pl-sm-4
+                    h3.icon-box-title Icon box title
+                    p.icon-box-text Lorem ipsum dolor sit amet...
+                    a(href=&quot;#&quot;).icon-box-link
+                      | Learn more
+                      i.fe-icon-arrow-right
+
+                <strong>//- Horizontal Layout Image on the Right</strong>
+                .icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-right
+                  .d-sm-table-cell.align-top.pr-sm-4
+                    h3.icon-box-title Icon box title
+                    p.icon-box-text Lorem ipsum dolor sit amet...
+                    a(href=&quot;#&quot;).icon-box-link
+                      | Learn more
+                      i.fe-icon-arrow-right
+                  .d-sm-table-cell.align-top
+                    .icon-box-image: img(src=&quot;path-to-image&quot; alt=&quot;Image icon&quot;)

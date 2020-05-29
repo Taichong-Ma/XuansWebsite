@@ -1,0 +1,51 @@
+// Media Object Order (Position) Code
+#media-object-order-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Media on the Left --&gt;</strong>
+                &lt;div class=&quot;media&quot;&gt;
+                  &lt;img class=&quot;d-flex mr-3&quot; src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;&gt;
+                  &lt;div class=&quot;media-body&quot;&gt;
+                    &lt;h6 class=&quot;mt-0 mb-1&quot;&gt;Media heading&lt;/h6&gt;
+                    &lt;span class=&quot;d-block text-muted&quot;&gt;Cras sit amet nibh libero, in gravida nulla...&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Media on the Right --&gt;</strong>
+                &lt;div class=&quot;media&quot;&gt;
+                  &lt;div class=&quot;media-body text-right&quot;&gt;
+                    &lt;h6 class=&quot;mt-0 mb-1&quot;&gt;Media heading&lt;/h6&gt;
+                    &lt;span class=&quot;d-block text-muted&quot;&gt;Cras sit amet nibh libero, in gravida nulla...&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;img class=&quot;d-flex ml-3&quot; src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Media on the Left</strong>
+                .media
+                  img(src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;).d-flex.mr-3
+                  .media-body
+                    h6.mt-0.mb-1 Media heading
+                    span.d-block.text-muted Cras sit amet nibh libero, in gravida nulla...
+                
+                <strong>//- Media on the Right</strong>
+                .media
+                  .media-body.text-right
+                    h6.mt-0.mb-1 Media heading
+                    span.d-block.text-muted Cras sit amet nibh libero, in gravida nulla...
+                  img(src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;).d-flex.ml-3

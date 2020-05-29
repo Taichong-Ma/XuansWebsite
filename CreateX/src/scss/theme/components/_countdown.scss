@@ -1,0 +1,129 @@
+//
+// Countdown
+// --------------------------------------------------
+
+// Base class
+.countdown {
+  .countdown-item {
+    display: inline-block;
+    margin: {
+      right: .9em;
+      bottom: .6em;
+    }
+    text-align: center;
+    &:last-child { margin-right: 0 !important; }
+  }
+  .countdown-value {
+    font: {
+      family: $headings-font-family;
+      weight: 700;
+    }
+  }
+  .countdown-label {
+    padding-top: .25rem;
+    color: $gray-500;
+    font: {
+      family: $font-family-base;
+      size: $font-size-sm;
+      weight: 600;
+    }
+    text-transform: uppercase;
+  }
+  &.h4, &.h5, &.h6, &.lead,
+  &.text-xl, &.text-lg, &.text-md,
+  &.text-sm, &.text-xs {
+    .countdown-label { font-size: $font-size-xs; }
+  }
+}
+
+// Style 1
+.countdown-style-1 {
+  .countdown-item {
+    margin: {
+      right: .6em;
+      bottom: .5em;
+    }
+  }
+  .countdown-value {
+    position: relative;
+    min-width: 56px;
+    padding: .625rem;
+    background-color: $white;
+    box-shadow: $dropdown-box-shadow;
+  }
+  .countdown-label { padding-top: 7px; }
+  &.countdown-light-skin .countdown-value {
+    background-color: rgba($white, .12);
+    box-shadow: none;
+  }
+}
+
+// Style 2
+.countdown-style-2 {
+  .countdown-item {
+    margin: {
+      right: .7em;
+      bottom: .5em;
+    }
+  }
+  .countdown-value {
+    position: relative;
+    min-width: 56px;
+    padding: .3125rem .625rem;
+    z-index: 1;
+    &::before, &::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      z-index: -1;
+    }
+    &::before {
+      top: .375rem;
+      left: .375rem;
+      border: 1px solid $border-color;
+      background-color: $gray-100;
+    }
+    &::after {
+      top: 0;
+      left: 0;
+      border: 1px solid $border-color;
+      background-color: $white;
+    }
+  }
+  .countdown-label { padding-top: 11px; }
+  &.countdown-light-skin {
+    .countdown-value {
+      color: $headings-color;
+      &::before { opacity: .2; }
+      &::after { border-color: $white; }
+    }
+  }
+}
+
+// Style 3
+.countdown-style-3 {
+  .countdown-value {
+    position: relative;
+    min-width: 35px;
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 16px;
+      height: 2px;
+      margin-left: -8px;
+      background-color: $primary;
+      content: '';
+    }
+  }
+  .countdown-label { padding-top: .625rem; }
+}
+
+// Light Skin
+.countdown-light-skin {
+  .countdown-value { color: $white; }
+  .countdown-label { color: rgba($white, .5); }
+}

@@ -1,0 +1,148 @@
+//
+// Steps
+// --------------------------------------------------
+
+.step {
+  position: relative;
+  .step-number {
+    padding-bottom: .625rem;
+    color: $white;
+    font: {
+      family: $headings-font-family;
+      size: ($font-size-base * 8.625);
+      weight: 900;
+    }
+    line-height: 1;
+    text-shadow: 0 .625rem 1.5rem rgba($gray-700, .14);
+  }
+  .step-title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 1.25rem;
+    font: {
+      size: $font-size-xl;
+      weight: 700;
+    }
+    &::after { @extend %divider; }
+  }
+  .step-text {
+    margin: 0;
+    padding-top: 1.625rem;
+    color: $gray-500;
+    font-size: $font-size-md;
+  }
+  .step-link {
+    display: inline-block;
+    margin-top: ($spacer / 2);
+    padding: ($spacer * .625) 0;
+    transform: translateY(-5px);
+    transition: all .3s;
+    color: $primary;
+    font: {
+      size: $font-size-sm;
+      weight: bold;
+    }
+    letter-spacing: .1em;
+    text-decoration: none;
+    opacity: 0;
+    > i {
+      display: inline-block;
+      margin-left: ($spacer / 8);
+      transition: all .25s;
+      font-size: 1.2em;
+      vertical-align: middle;
+    }
+    &:hover > i { transform: translateX(3px); }
+  }
+  &:hover {
+    .step-link {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &.text-center {
+    .step-title::after {
+      left: 50%;
+      margin-left: -18px;
+    }
+  }
+
+  // With Icon
+  &.step-with-icon {
+    padding-top: 4.375rem;
+    text-align: center;
+    .step-number {
+      position: absolute;
+      top: 0;
+      right: -.3125rem;
+      font-size: ($font-size-base * 11);
+    }
+    .step-icon {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin: {
+        right: auto;
+        bottom: ($spacer * 1.75);
+        left: auto;
+      }
+      border-radius: 50%;
+      color: $primary;
+      font-size: ($font-size-base * 2.3);
+      line-height: 140px;
+      text-align: center;
+      z-index: 5;
+      > img {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        max-width: 48px;
+        margin-left: -24px;
+        transform: translateY(-50%);
+      }
+      &::before, &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        border-radius: 50%;
+        content: '';
+      }
+      &::before {
+        transform: scale(0);
+        background-color: rgba($primary, .1);
+        opacity: 0;
+      }
+      &::after { border: 1px dashed rgba($primary, .3); }
+    }
+    .step-title::after {
+      left: 50%;
+      margin-left: -18px;
+    }
+    &:hover .step-icon {
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+      &::after {
+        top: -40%;
+        left: -40%;
+        width: 180%;
+        height: 180%;
+      }
+    }
+  }
+  &.step-light-skin {
+    .step-number {
+      color: rgba($white, .1);
+      text-shadow: none;
+    }
+    .step-title { color: $white; }
+    .step-text { color: rgba($white, .5); }
+  }
+}

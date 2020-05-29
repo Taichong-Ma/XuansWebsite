@@ -1,0 +1,230 @@
+// Modal Variations Code
+#modal-variations-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Modal Variations --&gt;</strong>
+
+                <strong>&lt;!-- Small Modal --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalSmall&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog modal-sm&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;...&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Default Modal --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalDefault&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Large Modal --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalLarge&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Extra Large Modal --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalXL&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog modal-xl&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Modal with Scrolling Content --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalScroll&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog modal-dialog-scrollable&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Vertically Centered Modal --&gt;</strong>
+                &lt;div class=&quot;modal fade&quot; id=&quot;modalCentered&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+                  &lt;div class=&quot;modal-dialog modal-dialog-centered&quot; role=&quot;document&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                      &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
+                        &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Buttons to Trigger Modals --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalSmall&quot;&gt;Small Modal&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalDefault&quot;&gt;Default Modal&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalLarge&quot;&gt;Large Modal&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalXL&quot;&gt;Extra Large Modal&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalScroll&quot;&gt;Scrolling Content&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary mb-3&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalCentered&quot;&gt;Vertically Centered Modal&lt;/button&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Modal Variations</strong>
+
+                <strong>//- Small Modal</strong>
+                div(id=&quot;modalSmall&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog.modal-sm(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p ...
+
+                <strong>//- Default Modal</strong>
+                div(id=&quot;modalDefault&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p Modal body text goes here.
+                      .modal-footer
+                        button(type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot; data-dismiss=&quot;modal&quot;) Close
+                        button(type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;) Save changes
+
+                <strong>//- Large Modal</strong>
+                div(id=&quot;modalLarge&quot; tabindex='-1' role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog.modal-lg(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p Modal body text goes here.
+                      .modal-footer
+                        button(type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot; data-dismiss=&quot;modal&quot;) Close
+                        button(type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;) Save changes
+
+                <strong>//- Extra Large Modal</strong>
+                div(id=&quot;modalXL&quot; tabindex='-1' role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog.modal-xl(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p Modal body text goes here.
+                      .modal-footer
+                        button(type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot; data-dismiss=&quot;modal&quot;) Close
+                        button(type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;) Save changes
+
+                <strong>//- Modal with Scrolling Content</strong>
+                div(id=&quot;modalScroll&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog.modal-dialog-scrollable(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p Modal body text goes here.
+                      .modal-footer
+                        button(type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot; data-dismiss=&quot;modal&quot;) Close
+                        button(type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;) Save changes
+
+                <strong>//- Vertically Centered Modal</strong>
+                div(id=&quot;modalCentered&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;).modal.fade
+                  .modal-dialog.modal-dialog-centered(role=&quot;document&quot;)
+                    .modal-content
+                      .modal-header
+                        h4.modal-title Modal title
+                        button(type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;)
+                          span(aria-hidden=&quot;true&quot;) &times;
+                      .modal-body
+                        p Modal body text goes here.
+                      .modal-footer
+                        button(type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot; data-dismiss=&quot;modal&quot;) Close
+                        button(type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;) Save changes
+
+                <strong>//- Buttons to Trigger Modals</strong>
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalSmall&quot;) Small Modal
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalDefault&quot;) Default Modal
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalLarge&quot;) Large Modal
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalXL&quot;) Extra Large Modal
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalScroll&quot;) Scrolling Content
+                button(type=&quot;button&quot; class=&quot;btn btn-secondary mb-3&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalCentered&quot;) Vertically Centered Modal

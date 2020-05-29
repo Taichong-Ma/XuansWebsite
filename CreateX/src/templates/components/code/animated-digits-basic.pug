@@ -1,0 +1,75 @@
+// Animated Digits Basic Version Code
+#animated-digits-basic-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Let Aligned (Default) --&gt;</strong>
+                &lt;div class=&quot;animated-digits&quot; data-number=&quot;350&quot;&gt;
+                  &lt;h5 class=&quot;animated-digits-digit&quot;&gt;&lt;span&gt;0&lt;/span&gt;+&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text&quot;&gt;Totally satisfied clients&lt;/p&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Center Aligned --&gt;</strong>
+                &lt;div class=&quot;animated-digits text-center&quot; data-number=&quot;92&quot;&gt;
+                  &lt;h5 class=&quot;animated-digits-digit&quot;&gt;&lt;span&gt;0&lt;/span&gt;%&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text&quot;&gt;Positive feedback&lt;/p&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Right Aligned --&gt;</strong>
+                &lt;div class=&quot;animated-digits text-right&quot; data-number=&quot;28&quot;&gt;
+                  &lt;h5 class=&quot;animated-digits-digit&quot;&gt;$&lt;span&gt;0&lt;/span&gt;&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text&quot;&gt;Average cost per hour&lt;/p&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Light Skin --&gt;</strong>
+                &lt;div class=&quot;animated-digits&quot; data-number=&quot;350&quot;&gt;
+                  &lt;h5 class=&quot;animated-digits-digit text-white&quot;&gt;&lt;span&gt;0&lt;/span&gt;+&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text text-white opacity-60&quot;&gt;Totally satisfied clients&lt;/p&gt;
+                &lt;/div&gt;                
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Let Aligned (Default)</strong>
+                .animated-digits(data-number=&quot;350&quot;)
+                  h5.animated-digits-digit
+                    span 0
+                    | +
+                  p.animated-digits-text
+                    | Totally satisfied clients
+
+                <strong>//- Center Aligned</strong>
+                .animated-digits.text-center(data-number=&quot;92&quot;)
+                  h5.animated-digits-digit
+                    span 0
+                    | %
+                  p.animated-digits-text
+                    | Positive feedback
+
+                <strong>//- Right Aligned</strong>
+                .animated-digits.text-right(data-number=&quot;28&quot;)
+                  h5.animated-digits-digit
+                    | $
+                    span 0
+                  p.animated-digits-text
+                    | Average cost per hour
+
+                <strong>//- Light Skin</strong>
+                .animated-digits(data-number=&quot;350&quot;)
+                  h5.animated-digits-digit.text-white
+                    span 0
+                    | +
+                  p.animated-digits-text.text-white.opacity-60
+                    | Totally satisfied clients

@@ -1,0 +1,63 @@
+// Carousel: One item + Arrows + Dots outside + Loop Code
+#carousel-oneitem-dots-outside-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p You can alter carousel look and behaviour via flexible data API 
+          code data-owl-carousel = {}
+          | :
+        ul.list-unstyled
+          li
+            code "items": 1
+            span.text-gray  How many items to display
+          li
+            code "nav": true/false
+            span.text-gray  Enable/disable control arrows
+          li
+            code "dots": true/false
+            span.text-gray  Enable/disable dots control
+          li
+            code "loop": true/false
+            span.text-gray  Enable/disable infinite loop
+          li
+            code "autoplay": true/false
+            span.text-gray  Enable/disable automatic slides transition
+          li
+            code "autoplayTimeout": 3000
+            span.text-gray  Timeou between transition. Value in ms | 1000ms = 1s
+          li
+            code "margin": 30
+            span.text-gray  Space between carousel items (in px)
+          li
+            code "autoHeight": true/false
+            span.text-gray  Enable/disable smooth height transition. If items have different height
+          li
+            code "responsive": {"0": {"items": 1}, "768": {"items": 2}, ...}
+            span.text-gray  How many items to display on each screen size
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Carousel: One item + Arrows + Dots outside + Loop --&gt;</strong>
+                &lt;div class=&quot;owl-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true }'&gt;
+                  &lt;img src=&quot;path-to-image&quot; alt=&quot;Carousel Image&quot;/&gt;
+                  &lt;img src=&quot;path-to-image&quot; alt=&quot;Carousel Image&quot;/&gt;
+                  &lt;img src=&quot;path-to-image&quot; alt=&quot;Carousel Image&quot;/&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Carousel: One item + Arrows + Dots outside + Loop</strong>
+                .owl-carousel(data-owl-carousel='{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true }')
+                  +image(&quot;path-to-image&quot;, &quot;Carousel Image&quot;)
+                  +image(&quot;path-to-image&quot;, &quot;Carousel Image&quot;)
+                  +image(&quot;path-to-image&quot;, &quot;Carousel Image&quot;)

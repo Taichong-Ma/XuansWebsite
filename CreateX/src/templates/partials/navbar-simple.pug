@@ -1,0 +1,25 @@
+//- offcanvas-menu.pug template
+include offcanvas-menu
+
+// Navbar: Simple
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header.navbar-wrapper.navbar-boxed.navbar-sticky
+  .container
+    .d-table-cell.align-middle.pr-md-3
+      a(href='index.html').navbar-brand.mr-1
+        +image('img/logo/logo-dark.png', 'CreateX')
+    .d-table-cell.w-100.align-middle.pl-md-3
+      .navbar.justify-content-end.justify-content-lg-between
+        //- search.pug template
+        include search
+        //- menu-main.pug template
+        include menu
+        div
+          ul.navbar-buttons.d-inline-block.align-middle
+            li.d-block.d-lg-none
+              a(href='#mobile-menu' data-toggle='offcanvas')
+                i.fe-icon-menu
+            li
+              a(href='#' data-toggle='search')
+                i.fe-icon-search
+          a(href='https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/' target='_blank').btn.btn-gradient.ml-3.d-none.d-xl-inline-block Buy Now

@@ -1,0 +1,66 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'My Wishlist'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Wishlist'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-4
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Wishlist
+      .col-lg-8.pb-5
+    
+        // Item
+        .cart-item.d-md-flex.justify-content-between
+          span.remove-item
+            i.fe-icon-x
+          .px-3.my-3
+            a(href='shop-single.html').cart-item-product
+              .cart-item-product-thumb
+                img(src='img/shop/cart/01.jpg' alt='Product')
+              .cart-item-product-info
+                h4.cart-item-product-title Canon EOS M50 Mirrorless Camera
+                .text-lg.text-body.font-weight-medium.pb-1 $910.00
+                span Availability: <span class='text-success font-weight-medium'>In Stock</span>
+        
+        // Item
+        .cart-item.d-md-flex.justify-content-between
+          span.remove-item
+            i.fe-icon-x
+          .px-3.my-3
+            a(href='shop-single.html').cart-item-product
+              .cart-item-product-thumb
+                img(src='img/shop/cart/02.jpg' alt='Product')
+              .cart-item-product-info
+                h4.cart-item-product-title Apple iPhone X 256 GB Space Gray
+                .text-lg.text-body.font-weight-medium.pb-1 $1,450.00
+                span Availability: <span class='text-warning font-weight-medium'>2 - 3 Weeks</span>
+        
+        // Item
+        .cart-item.d-md-flex.justify-content-between
+          span.remove-item
+            i.fe-icon-x
+          .px-3.my-3
+            a(href='shop-single.html').cart-item-product
+              .cart-item-product-thumb
+                img(src='img/shop/cart/03.jpg' alt='Product')
+              .cart-item-product-info
+                h4.cart-item-product-title HP LaserJet Pro Laser Printer
+                .text-lg.text-body.font-weight-medium.pb-1 $188.50
+                span Availability: <span class='text-success font-weight-medium'>In Stock</span>
+        .custom-control.custom-checkbox
+          input(type='checkbox' checked)#inform-me.custom-control-input
+          label(for='inform-me').custom-control-label Inform me when item from my wishlist is available
+
+  //- footer-shop.pug template
+  include partials/footer-shop

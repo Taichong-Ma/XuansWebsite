@@ -1,0 +1,52 @@
+// Footer
+footer.d-lg-flex.align-items-center.bg-dark
+  .w-100.py-5.px-4
+    .mx-auto.text-center(style='max-width: 340px;')
+      h6.text-sm.font-weight-medium.text-white.text-uppercase.text-center Want to hire us?
+      ul.list-unstyled.text-white
+        li <span class='opacity-60'>Call:</span> +1 (212) 477 690 000
+        li <span class='opacity-60'>Email:</span> info@example.com
+      .widget.pt-3.mb-4
+        a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#').social-btn.sb-style-6.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#').social-btn.sb-style-6.sb-behance.sb-light-skin
+          i.socicon-behance
+      p.m-0.text-sm.text-white <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-white opacity-60 p-0' target='_blank'>by Createx Studio</a>
+  div(style='background-color: #30363d;').w-100.py-5.px-4
+    .widget.widget-gallery.mb-0.mx-auto(style='max-width: 250px;')
+      .d-flex.justify-content-between
+        a(href='../img/components/gallery/01.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-2.mr-2
+          +image('img/widgets/gallery/th01.jpg', 'Gallery Image')
+        a(href='../img/components/gallery/02.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-2.mr-2
+          +image('img/widgets/gallery/th02.jpg', 'Gallery Image')
+        a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-2
+          +image('img/widgets/gallery/th03.jpg', 'Gallery Image')
+      .d-flex.justify-content-between
+        a(href='../img/components/gallery/04.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-2.mr-2
+          +image('img/widgets/gallery/th04.jpg', 'Gallery Image')
+        a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-2.mr-2
+          +image('img/widgets/gallery/th05.jpg', 'Gallery Image')
+        a(href='../img/components/gallery/06.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-2
+          +image('img/widgets/gallery/th06.jpg', 'Gallery Image')
+      .pt-1
+        a(href='#').btn.btn-gradient.btn-block
+          i.fe-icon-instagram
+          | &nbsp;View our Instagram
+  .w-100.py-5.px-4
+    .mx-auto(style='max-width: 340px;')
+      h6.text-sm.font-weight-medium.text-white.text-uppercase.text-center Subscription
+      p.text-sm.text-white.opacity-60.text-center.pb-1 To receive latest works and inspiration from our portfolio.
+      form(action='https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=29ca296126' method='post' target='_blank' novalidate)
+        .input-group
+          input(type='email' name='EMAIL' placeholder="Email address").form-control.form-control-light-skin
+          .input-group-append
+            button(type='submit').btn.btn-primary Sign Up
+        // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+        div(style='position: absolute; left: -5000px;' aria-hidden='true')
+          input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')

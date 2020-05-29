@@ -1,0 +1,369 @@
+//
+// Navbar
+// --------------------------------------------------
+
+// Navbar Brand
+// --------------------------------------------------
+.navbar-brand {
+  display: block;
+  width: $navbar-brand-width;
+  color: $headings-color;
+  text-decoration: none;
+  > img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Navbar Wrapper
+// --------------------------------------------------
+.navbar-wrapper {
+  display: table;
+  position: relative;
+  width: 100%;
+  padding: 0 30px;
+  border-bottom: 1px solid $border-color;
+  background-color: $white;
+  z-index: $zindex-navbar;
+
+  // Search box
+  .search-box { margin-top: -1px; }
+
+  // Dropdown inside navbar
+  .dropdown-menu {
+    position: absolute;
+    margin: 0;
+    &.right-aligned {
+      right: 0;
+      left: auto;
+    }
+  }
+  .dropdown-toggle,
+  .mega-dropdown-toggle {
+    position: relative;
+    &::after { opacity: .65; }
+    &:hover {
+      > .dropdown-menu {
+        display: block;
+        animation: dropdown-slide-down .3s;
+      }
+      .navbar-link {
+        color: $gray-800;
+        opacity: 1;
+      }
+      &::after { opacity: 1; }
+    } 
+  }
+  .mega-dropdown-toggle { position: static !important; }
+  @include media-breakpoint-down(lg) {
+    padding: 0 15px;
+  }
+  @include media-breakpoint-down(md) {
+    .navbar { position: static; }
+    .navbar-brand { width: $navbar-brand-width-md; }
+  }
+}
+
+// Navbar Buttons
+// --------------------------------------------------
+.navbar-buttons {
+  margin: 0;
+  padding: 0;
+  transition: box-shadow .3s;
+  list-style: none;
+  box-shadow: $navbar-btn-box-shadow;
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  > li {
+    display: block;
+    position: relative;
+    margin: 0;
+    float: left;
+    > a {
+      display: block;
+      width: ($btn-height + 8);
+      height: $btn-height;
+      transition: all .3s;
+      border-right: 1px solid rgba($border-color, .6);
+      color: $gray-800;
+      font-size: $font-size-xl;
+      line-height: $btn-height;
+      text: {
+        align: center;
+        decoration: none;
+      }
+    }
+    &:last-child > a {
+      width: ($btn-height + 7);
+      padding-right: .1875rem;
+      border-right: 0;
+    }
+    .badge {
+      position: absolute;
+      top: -.25rem;
+      right: -.375rem;
+    }
+  }
+  &:hover {
+    box-shadow: none;
+    > li > a { border-color: transparent; }
+    > li:hover > a {
+      box-shadow: $navbar-btn-box-shadow;
+    }
+  }
+  > li > a:active {
+    transition: all .1s;
+    background-color: $gray-100;
+    box-shadow: none !important;
+  }
+}
+
+// Navbar / Footer Link
+// --------------------------------------------------
+.navbar-link,
+.footer-link {
+  display: inline-block;
+  padding: .5rem 0;
+  transition: color .25s;
+  color: rgba($gray-800, .65);
+  font-size: $font-size-sm;
+  text-decoration: none;
+  > i, > img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  > i {
+    margin-right: .3125rem;
+    font-size: 1.1em;
+  }
+  > img {
+    width: 20px;
+    margin: {
+      top: -.0625rem;
+      right: .375rem;
+    }
+  }
+  &:hover { color: $gray-800; }
+}
+
+// Navbar Nav
+// --------------------------------------------------
+.navbar-nav {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  .nav-link {
+    display: block;
+    position: relative;
+    height: $btn-height;
+    padding: 0 .9375rem;
+    transition: color .3s;
+    color: $nav-link-color;
+    font: {
+      size: ($font-size-base * .8125);
+      weight: $nav-link-font-weight;
+    }
+    letter-spacing: $nav-link-letter-spacing;
+    line-height: $btn-height;
+    text: {
+      transform: $nav-link-text-transform;
+      decoration: none;
+    }
+  }
+
+  .nav-item {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    &.dropdown-toggle::after { display: none; }
+    &.active {
+      .nav-link {
+        color: $nav-link-activer-color;
+        &::before {
+          display: block;
+          position: absolute;
+          top: -($navbar-padding-y + .0625);
+          left: 1rem;
+          width: calc(100% - 32px);
+          height: 1px;
+          background-color: $nav-link-activer-color;
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+// Topbar
+// --------------------------------------------------
+.navbar-top {
+  padding: .4375rem 0;
+  border-bottom: 1px solid $border-color;
+  .dropdown-item { text-transform: none; }
+  .social-btn {
+    width: 28px;
+    height: 28px;
+    margin: {
+      right: .4375rem;
+      bottom: 0;
+    }
+    line-height: 28px;
+  }
+}
+
+// Boxed / Floating Header
+// --------------------------------------------------
+.navbar-boxed,
+.navbar-floating {
+  display: block;
+  padding: 0;
+  > .container { display: table; }
+  .navbar-nav > .nav-item > .nav-link::before { top: -($navbar-padding-y); }
+}
+.navbar-floating:not(.navbar-ghost) {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0 30px;
+  border: 0;
+  background: none;
+  > .container {
+    display: block;
+    padding: 0 20px;
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+  }
+  .search-box {
+    height: calc(100% - 1px);
+    margin-top: 0;
+  }
+  &.navbar-stuck > .container { box-shadow: none; }
+  @include media-breakpoint-down(md) {
+    position: relative;
+    top: 0;
+    padding: 0;
+  }
+}
+
+// Ghost Header
+// --------------------------------------------------
+.navbar-ghost {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0 25px;
+  z-index: $zindex-navbar;
+
+  .container { position: relative; }
+
+  .search-trigger,
+  .menu-trigger {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -.8125rem;
+    transition: all .3s;
+    color: $gray-700;
+    text-decoration: none;
+    > i {
+      display: inline-block;
+      font-size: ($font-size-base * 1.3125);
+      vertical-align: middle;
+    }
+    &:hover { color: $primary; }
+    &.text-white:hover { opacity: .6; }
+  }
+  .search-trigger {
+    left: 15px;
+  }
+  .menu-trigger {
+    right: 15px;
+    font: {
+      size: $font-size-sm;
+      weight: 600;
+    }
+    letter-spacing: $btn-letter-spacing;
+    text-transform: uppercase;
+    > span {
+      display: inline-block;
+      margin-top: .125rem;
+      vertical-align: middle;
+    }
+    > i { margin-left: .5rem; }
+  }
+  @include media-breakpoint-down(sm) {
+    .navbar-brand { margin-left: -25px; }
+  }
+}
+
+// Simple Ghost Header
+.navbar-simple-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  .navbar { position: static; }
+  .search-box {
+    .search-close { right: 0; }
+    &::before { left: 15px; }
+    > .easy-autocomplete>input,
+    > input {
+      padding-left: 42px;
+    }
+  }
+  .navbar-buttons {
+    box-shadow: none;
+    > li > a {
+      border-right-color: rgba($white, .18);
+      background-color: rgba($white, .1);
+      color: $white;
+      &:hover { background-color: rgba($white, .15); }
+    }
+  }
+  .navbar-nav > .nav-item {
+    > .nav-link { color: rgba($white, .65); }
+    &:hover, &.active {
+      > .nav-link {
+        color: $white;
+        &::before {
+          height: 2px;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Sticky Navbar
+// --------------------------------------------------
+@include media-breakpoint-down(md) {
+  body { padding-top: 0 !important; }
+}
+@include media-breakpoint-up(lg) {
+  .navbar-sticky.navbar-stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    animation: dropdown-slide-down .25s;
+    .navbar-top { display: none !important; }
+    &.navbar-boxed,
+    &.navbar-floating:not(.navbar-ghost) { padding: 0; }
+    &.navbar-floating > .container {
+      padding: 0 15px;
+    }
+    &.navbar-ghost-white,
+    &.navbar-simple-ghost { background-color: $gray-800; }
+  }
+}

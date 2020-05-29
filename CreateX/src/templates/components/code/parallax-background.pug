@@ -1,0 +1,42 @@
+// Background Image Parallax Code
+#parallax-background-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Background Image Parallax --&gt;</strong>
+                &lt;div class=&quot;bg-parallax py-5&quot;&gt;
+                  &lt;span class=&quot;bg-overlay&quot; style=&quot;opacity: .3;&quot;&gt;&lt;/span&gt;
+                  &lt;div class=&quot;bg-parallax-img&quot; data-parallax='{&quot;y&quot; : -100}'&gt;
+                    &lt;img src=&quot;path-to-background-image&quot; alt=&quot;Parallax Background&quot;/&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;bg-parallax-content px-4 py-5 mx-auto mt-4 mb-2 text-center&quot; style=&quot;max-width: 600px;&quot;&gt;
+                    &lt;h2 class=&quot;text-white&quot;&gt;Some cool title here!&lt;/h2&gt;
+                    &lt;p class=&quot;text-white opacity-80 pb-3&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-gradient&quot; href=&quot;#&quot;&gt;CTA Button&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Background Image Parallax</strong>
+                .bg-parallax.py-5
+                  span(style=&quot;opacity: .3;&quot;).bg-overlay
+                  .bg-parallax-img(data-parallax='{&quot;y&quot; : -100}')
+                    +image(&quot;path-to-background-image&quot;, &quot;Parallax Background&quot;)
+                  div(style=&quot;max-width: 600px;&quot;).bg-parallax-content.px-4.py-5.mx-auto.mt-4.mb-2.text-center
+                    h2.text-white Some cool title here!
+                    p.text-white.opacity-80.pb-3 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    a(href=&quot;#&quot;).btn.btn-gradient CTA Button

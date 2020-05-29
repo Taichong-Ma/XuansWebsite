@@ -1,0 +1,62 @@
+// Navbar: Ghost White
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header.navbar-ghost.navbar-ghost-white.navbar-floating
+  .container.text-center
+    a(href='#fs-search' data-toggle='fullscreen-overlay').search-trigger.text-white: i.fe-icon-search
+    a(href='#fs-menu' data-toggle='fullscreen-overlay').menu-trigger.text-white
+      span Menu
+      i.fe-icon-menu
+    a(href='index.html').navbar-brand.d-inline-block
+      +image('img/logo/logo-light.png', 'CreateX')
+
+// Full Screen Search
+#fs-search.fs-overlay-wrapper(style='background-image: url(img/fs-overlay-bg.png);')
+  span.fs-overlay-close: i.fe-icon-x
+  .fs-overlay-inner
+    .fs-overlay-content
+      .container
+        form.input-group
+          .input-group-prepend
+            .input-group-text
+              i.fe-icon-search
+          input(type='text' placeholder='Search site...').form-control
+
+// Full Screen Menu
+#fs-menu.fs-overlay-wrapper(style='background-image: url(img/fs-overlay-bg.png);')
+  span.fs-overlay-close: i.fe-icon-x
+  .fs-overlay-inner
+    .fs-overlay-content
+      .container
+        .row
+          .col-sm-6
+            ul.list-unstyled
+              li.mb-0: a(href='index.html').dropdown-item.lead.py-2 Home
+              li.mb-0: a(href='portfolio-style1-boxed.html').dropdown-item.lead.py-2 Portfolio
+              li.mb-0: a(href='blog-grid-rs.html').dropdown-item.lead.py-2 Blog
+              li.mb-0: a(href='shop-boxed-ls.html').dropdown-item.lead.py-2 Shop
+              li.mb-0: a(href='account-orders.html').dropdown-item.lead.py-2 Account
+              li.mb-0: a(href='about-us-v1.html').dropdown-item.lead.py-2 Pages
+              li.mb-0: a(href='components.html').dropdown-item.lead.py-2 Components
+          .col-sm-6.d-none.d-sm-block.pt-3
+            h6 Contacts
+            ul.list-icon.mb-4.pb-2
+              li
+                i.fe-icon-map-pin.text-muted
+                | 1260 Broadway, New York
+              li
+                i.fe-icon-phone.text-muted
+                | 001 800 390 25
+              li
+                i.fe-icon-mail.text-muted
+                | info@example.com
+            h6.pb-2 Social
+            a(href='#').social-btn.sb-style-6.sb-facebook
+              i.socicon-facebook
+            a(href='#').social-btn.sb-style-6.sb-dribbble
+              i.socicon-dribbble
+            a(href='#').social-btn.sb-style-6.sb-twitter
+              i.socicon-twitter
+            a(href='#').social-btn.sb-style-6.sb-linkedin
+              i.socicon-linkedin
+            a(href='#').social-btn.sb-style-6.sb-youtube
+              i.socicon-youtube

@@ -1,0 +1,17 @@
+// Pagination
+nav.pagination
+  a(href='#').prev-btn
+    i.fe-icon-chevron-left
+    | Prev
+  ul.pages
+    li.d-block.d-sm-none.w-100 2 / 18
+    li.d-none.d-sm-inline-block: a(href='#') 1
+    li.d-none.d-sm-inline-block.active: a(href='#') 2
+    li.d-none.d-sm-inline-block: a(href='#') 3
+    li.d-none.d-sm-inline-block: a(href='#') 4
+    li.d-none.d-sm-inline-block: a(href='#') 5
+    li.d-none.d-sm-inline-block ...
+    li.d-none.d-sm-inline-block: a(href='#') 18
+  a(href='#').next-btn
+    | Next
+    i.fe-icon-chevron-right

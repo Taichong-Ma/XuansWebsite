@@ -1,0 +1,56 @@
+// Progress Style 3 Code
+#progress-style3-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 Use background utility classes to change the appearance of individual progress bars. For example, to dispaly Info (blue) color progress bar add <code>bg-info</code> class to individual <code>progress-bar</code>.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Progress Primary (Style 3) --&gt;</strong>
+                &lt;span class=&quot;progress-label&quot;&gt;
+                  &lt;i class=&quot;fe-icon-globe&quot;&gt;&lt;/i&gt;
+                  Web Development
+                &lt;/span&gt;
+                &lt;div class=&quot;progress progress-style-3&quot;&gt;
+                  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 60%;&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;progress-label text-right&quot;&gt;60%&lt;/span&gt;
+
+                <strong>&lt;!-- Progress Light Skin (Style 3) --&gt;</strong>
+                &lt;span class=&quot;progress-label text-white&quot;&gt;
+                  &lt;i class=&quot;fe-icon-globe&quot;&gt;&lt;/i&gt;
+                  Web Development
+                &lt;/span&gt;
+                &lt;div class=&quot;progress progress-style-3 progress-light-skin&quot;&gt;
+                  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 60%;&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;progress-label text-right text-white&quot;&gt;60%&lt;/span&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Progress Primary (Style 3)</strong>
+                span.progress-label
+                  i.fe-icon-globe
+                  | Web Development
+                .progress.progress-style-3
+                  .progress-bar(role=&quot;progressbar&quot; style=&quot;width: 60%;&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;)
+                span.progress-label.text-right 60%
+
+                <strong>//- Progress Light Skin (Style 3)</strong>
+                span.progress-label.text-white
+                  i.fe-icon-globe
+                  | Web Development
+                .progress.progress-style-3.progress-light-skin
+                  .progress-bar(role=&quot;progressbar&quot; style=&quot;width: 60%;&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;)
+                span.progress-label.text-right.text-white 60%

@@ -1,0 +1,8 @@
+[ 
+  {"name": "Computers & Accessories", "type": "category", "badge": "success", "link": "#"}, 
+  {"name": "Xboxe One S White", "type": "product", "badge": "warning", "link": "#"}, 
+  {"name": "Amazone Echo Dot 2", "type": "product", "badge": "warning", "link": "#"}, 
+  {"name": "My First Post: Hello World!", "type": "post", "badge": "info", "link": "#"}, 
+  {"name": "TV, Video & Adudio", "type": "category", "badge": "success", "link": "#"}, 
+  {"name": "My Second Post: Technolody Today", "type": "post", "badge": "info", "link": "#"}
+]

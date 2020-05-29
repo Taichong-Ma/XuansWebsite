@@ -1,0 +1,90 @@
+// Border Spinner Code
+#spinner-border-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Default Color --&gt;</strong>
+                &lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Muted Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-muted&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+
+                <strong>&lt;!-- Primary Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-primary&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Success Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-success&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Info Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-info&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Warning Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-warning&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Danger Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-danger&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Light Spinner --&gt;</strong>
+                &lt;div class=&quot;spinner-border text-light&quot; role=&quot;status&quot;&gt;
+                  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Default Color</strong>
+                div(role=&quot;status&quot;).spinner-border
+                  span.sr-only Loading...
+
+                <strong>//- Muted Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-muted
+                  span.sr-only Loading...
+
+                <strong>//- Primary Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-primary
+                  span.sr-only Loading...
+
+                <strong>//- Success Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-success
+                  span.sr-only Loading...
+
+                <strong>//- Info Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-info
+                  span.sr-only Loading...
+
+                <strong>//- Warning Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-warning
+                  span.sr-only Loading...
+
+                <strong>//- Danger Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-danger
+                  span.sr-only Loading...
+
+                <strong>//- Light Spinner</strong>
+                div(role=&quot;status&quot;).spinner-border.text-light
+                  span.sr-only Loading...

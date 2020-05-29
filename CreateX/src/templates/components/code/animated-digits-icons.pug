@@ -1,0 +1,55 @@
+// Animated Digits with Icons Code
+#animated-digits-icons-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Square Icon --&gt;</strong>
+                &lt;div class=&quot;animated-digits&quot; data-number=&quot;350&quot;&gt;
+                  &lt;span class=&quot;animated-digits-icon&quot;&gt;
+                    &lt;i class=&quot;fe-icon-users&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;h5 class=&quot;animated-digits-digit&quot;&gt;&lt;span&gt;0&lt;/span&gt;+&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text&quot;&gt;Totally satisfied clients&lt;/p&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Circle Icon --&gt;</strong>
+                &lt;div class=&quot;animated-digits&quot; data-number=&quot;92&quot;&gt;
+                  &lt;span class=&quot;animated-digits-icon rounded-circle&quot;&gt;
+                    &lt;i class=&quot;fe-icon-thumbs-up&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;h5 class=&quot;animated-digits-digit&quot;&gt;&lt;span&gt;0&lt;/span&gt;%&lt;/h5&gt;
+                  &lt;p class=&quot;animated-digits-text&quot;&gt;Positive feedback&lt;/p&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Square Icon</strong>
+                .animated-digits(data-number=&quot;350&quot;)
+                  span.animated-digits-icon: i.fe-icon-users
+                  h5.animated-digits-digit
+                    span 0
+                    | +
+                  p.animated-digits-text
+                    | Totally satisfied clients
+
+                <strong>//- Circle Icon</strong>
+                .animated-digits(data-number=&quot;92&quot;)
+                  span.animated-digits-icon.rounded-circle: i.fe-icon-thumbs-up
+                  h5.animated-digits-digit
+                    span 0
+                    | %
+                  p.animated-digits-text
+                    | Positive feedback

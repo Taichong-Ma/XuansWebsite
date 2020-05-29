@@ -1,0 +1,220 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Animated Digits'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Animated Digits Basic Version Code Modal
+  include code/animated-digits-basic
+
+  //- Animated Digits with Icons Code Modal
+  include code/animated-digits-icons
+
+  //- Animated Digits Inside Cards Code Modal
+  include code/animated-digits-cards
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Basic version
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Basic version
+        a(href='#animated-digits-basic-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4
+        .col-md-3.col-sm-6.mb-30
+          .animated-digits(data-number='350')
+            h5.animated-digits-digit
+              span 0
+              | +
+            p.animated-digits-text
+              | Totally satisfied clients
+        .col-md-3.col-sm-6.mb-30
+          .animated-digits.text-center(data-number='92')
+            h5.animated-digits-digit
+              span 0
+              | %
+            p.animated-digits-text
+              | Positive feedback
+        .col-md-3.col-sm-6.mb-30
+          .animated-digits.text-center(data-number='1446')
+            h5.animated-digits-digit
+              span 0
+            p.animated-digits-text
+              | Completed projects
+        .col-md-3.col-sm-6.mb-30
+          .animated-digits.text-right(data-number='28')
+            h5.animated-digits-digit
+              | $
+              span 0
+            p.animated-digits-text
+              | Average cost per hour
+      .p-4.bg-dark
+        .row
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits(data-number='350')
+              h5.animated-digits-digit.text-white
+                span 0
+                | +
+              p.animated-digits-text.text-white.opacity-60
+                | Totally satisfied clients
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-center(data-number='92')
+              h5.animated-digits-digit.text-white
+                span 0
+                | %
+              p.animated-digits-text.text-white.opacity-60
+                | Positive feedback
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-center(data-number='1446')
+              h5.animated-digits-digit.text-white
+                span 0
+              p.animated-digits-text.text-white.opacity-60
+                | Completed projects
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-right(data-number='28')
+              h5.animated-digits-digit.text-white
+                | $
+                span 0
+              p.animated-digits-text.text-white.opacity-60
+                | Average cost per hour
+    
+      // With icons
+      .py-5.my-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 With icons
+          a(href='#animated-digits-icons-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .row
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits(data-number='350')
+              span.animated-digits-icon: i.fe-icon-users
+              h5.animated-digits-digit
+                span 0
+                | +
+              p.animated-digits-text
+                | Totally satisfied clients
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-center(data-number='92')
+              span.animated-digits-icon.rounded-circle: i.fe-icon-thumbs-up
+              h5.animated-digits-digit
+                span 0
+                | %
+              p.animated-digits-text
+                | Positive feedback
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-center(data-number='1446')
+              span.animated-digits-icon: i.fe-icon-check-square
+              h5.animated-digits-digit
+                span 0
+              p.animated-digits-text
+                | Completed projects
+          .col-md-3.col-sm-6.mb-30
+            .animated-digits.text-right(data-number='28')
+              span.animated-digits-icon.rounded-circle: i.fe-icon-clock
+              h5.animated-digits-digit
+                | $
+                span 0
+              p.animated-digits-text
+                | Average cost per hour
+    
+      // Inside card
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inside card
+        a(href='#animated-digits-cards-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.mb-2(data-number='350')
+                h5.animated-digits-digit
+                  span 0
+                  | +
+                p.animated-digits-text
+                  | Totally satisfied clients
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-center.mb-2(data-number='92')
+                h5.animated-digits-digit
+                  span 0
+                  | %
+                p.animated-digits-text
+                  | Positive feedback
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-center.mb-2(data-number='1446')
+                h5.animated-digits-digit
+                  span 0
+                p.animated-digits-text
+                  | Completed projects
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-right.mb-2(data-number='28')
+                h5.animated-digits-digit
+                  | $
+                  span 0
+                p.animated-digits-text
+                  | Average cost per hour
+      .row.pb-4
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.mb-2(data-number='350')
+                span.animated-digits-icon: i.fe-icon-users
+                h5.animated-digits-digit
+                  span 0
+                  | +
+                p.animated-digits-text
+                  | Totally satisfied clients
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-center.mb-2(data-number='92')
+                span.animated-digits-icon.rounded-circle: i.fe-icon-thumbs-up
+                h5.animated-digits-digit
+                  span 0
+                  | %
+                p.animated-digits-text
+                  | Positive feedback
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-center.mb-2(data-number='1446')
+                span.animated-digits-icon: i.fe-icon-check-square
+                h5.animated-digits-digit
+                  span 0
+                p.animated-digits-text
+                  | Completed projects
+        .col-xl-3.col-sm-6.mb-30.pb-3
+          .card
+            .card-body
+              .animated-digits.text-right.mb-2(data-number='28')
+                span.animated-digits-icon.rounded-circle: i.fe-icon-clock
+                h5.animated-digits-digit
+                  | $
+                  span 0
+                p.animated-digits-text
+                  | Average cost per hour

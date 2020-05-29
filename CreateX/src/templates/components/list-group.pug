@@ -1,0 +1,218 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'List Group'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- List Group Basic Example Code Modal
+  include code/list-group-basic
+
+  //- List Group Link Example Code Modal
+  include code/list-group-link
+
+  //- List Group with Icons Code Modal
+  include code/list-group-icons
+
+  //- List Group with Badges Code Modal
+  include code/list-group-badges
+
+  //- Horizontal List Group Code Modal
+  include code/list-group-horizontal
+
+  //- Actionable Horizontal List Group Code Modal
+  include code/list-group-horizontal-actionable
+
+  //- List Group Contextual Classes Code Modal
+  include code/list-group-contextual
+
+  //- List Group Custom Content Code Modal
+  include code/list-group-custom
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-5
+      .row.pb-4
+
+        // Basic example
+        .col-md-6.mb-30.pb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Basic example
+            a(href='#list-group-basic-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          ul.list-group
+            li.list-group-item Cras justo odio
+            li.list-group-item.active Dapibus ac facilisis (active)
+            li.list-group-item Morbi leo risus
+            li.list-group-item Porta ac consectetur ac
+            li.list-group-item.disabled Vestibulum at eros (disabled)
+
+        // Link example
+        .col-md-6.mb-30.pb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Link example
+            a(href='#list-group-link-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          nav.list-group
+            a(href='#').list-group-item Cras justo odio
+            a(href='#').list-group-item.active Dapibus ac facilisis (active)
+            a(href='#').list-group-item Morbi leo risus
+            a(href='#').list-group-item Porta ac consectetur ac
+            a(href='#').list-group-item.disabled Vestibulum at eros (disabled)
+      
+      .row.pb-4
+
+        // With icons
+        .col-md-6.mb-30.pb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 With icons
+            a(href='#list-group-icons-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          nav.list-group
+            a(href='#').list-group-item
+              i.fe-icon-airplay.text-muted
+              | Cras justo odio
+            a(href='#').list-group-item.active
+              i.fe-icon-anchor.text-muted
+              | Dapibus ac facilisis (active)
+            a(href='#').list-group-item
+              i.fe-icon-bell.text-muted
+              | Morbi leo risus
+            a(href='#').list-group-item
+              i.fe-icon-camera.text-muted
+              | Porta ac consectetur ac
+            a(href='#').list-group-item
+              i.fe-icon-headphones.text-muted
+              | Vestibulum at eros
+        
+        // With badges
+        .col-md-6.mb-30.pb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 With badges
+            a(href='#list-group-badges-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          nav.list-group
+            a(href='#').list-group-item.d-flex.justify-content-between.align-items-center
+              | Cras justo odio
+              span.badge.badge-pill.badge-secondary 3
+            a(href='#').list-group-item.d-flex.justify-content-between.align-items-center.active
+              | Dapibus ac facilisis (active)
+              span.badge.badge-pill.badge-accent 4
+            a(href='#').list-group-item.d-flex.justify-content-between.align-items-center
+              | Morbi leo risus
+              span.badge.badge-pill.badge-info 6
+            a(href='#').list-group-item.d-flex.justify-content-between.align-items-center
+              | Porta ac consectetur ac
+              span.badge.badge-pill.badge-danger 5
+            a(href='#').list-group-item.d-flex.justify-content-between.align-items-center
+              | Vestibulum at eros
+              span.badge.badge-pill.badge-success 9
+      
+      // Horizontal version
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Horizontal version
+        a(href='#list-group-horizontal-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      ul.list-group.list-group-horizontal-sm.mb-3
+        li.list-group-item Cras justo odio
+        li.list-group-item Dapibus ac facilisis in
+        li.list-group-item Morbi leo risus
+      ul.list-group.list-group-horizontal-sm
+        li.list-group-item.flex-fill.text-center Cras justo odio
+        li.list-group-item.flex-fill.text-center Dapibus ac facilisis in
+        li.list-group-item.flex-fill.text-center Morbi leo risus
+      
+      // Actionable horizontal version
+      .d-flex.flex-wrap.justify-content-between.pt-5.mt-3
+        h4.mr-3 Actionable horizontal version
+        a(href='#list-group-horizontal-actionable-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .list-group.list-group-horizontal-sm
+        a(href='#').list-group-item.list-group-item-action.active.text-center Active item here
+        a(href='#').list-group-item.list-group-item-action.text-center Dapibus ac facilisis in
+        a(href='#').list-group-item.list-group-item-action.text-center Morbi leo risus
+      
+      // Contextual classes
+      .d-flex.flex-wrap.justify-content-between.pt-5.mt-3
+        h4.mr-3 Contextual classes
+        a(href='#list-group-contextual-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4
+        .col-md-6.mb-30.pb-2
+          ul.list-group
+            li.list-group-item Dapibus ac facilisis in
+            li.list-group-item.list-group-item-primary A simple primary list group item
+            li.list-group-item.list-group-item-secondary A simple secondary list group item
+            li.list-group-item.list-group-item-accent A simple accent list group item
+            li.list-group-item.list-group-item-info A simple info list group item
+            li.list-group-item.list-group-item-success A simple success list group item
+            li.list-group-item.list-group-item-warning A simple warning list group item
+            li.list-group-item.list-group-item-danger A simple danger list group item
+            li.list-group-item.list-group-item-light A simple light list group item
+            li.list-group-item.list-group-item-dark A simple dark list group item
+        .col-md-6.mb-30.pb-2
+          nav.list-group
+            a(href='#').list-group-item Dapibus ac facilisis in
+            a(href='#').list-group-item.list-group-item-primary A simple primary list group item
+            a(href='#').list-group-item.list-group-item-secondary A simple secondary list group item
+            a(href='#').list-group-item.list-group-item-accent A simple accent list group item
+            a(href='#').list-group-item.list-group-item-info A simple info list group item
+            a(href='#').list-group-item.list-group-item-success A simple success list group item
+            a(href='#').list-group-item.list-group-item-warning A simple warning list group item
+            a(href='#').list-group-item.list-group-item-danger A simple danger list group item
+            a(href='#').list-group-item.list-group-item-light A simple light list group item
+            a(href='#').list-group-item.list-group-item-dark A simple dark list group item
+      
+      // Custom content
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Custom content
+        a(href='#list-group-custom-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row
+        .col-md-6
+          .list-group
+            a(href='#' class='list-group-item flex-column align-items-start active')
+              .d-flex.flex-wrap.w-100.justify-content-between
+                h6 List group item heading
+                small.d-block.text-muted.text-sm.mb-2 3 days ago
+              p.text-md.text-body Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit. Excepteur sint occaecat cupidatat.
+              small.text-muted.text-sm Donec id elit non mi porta.
+            a(href='#' class='list-group-item flex-column align-items-start')
+              .d-flex.flex-wrap.w-100.justify-content-between
+                h6 List group item heading
+                small.d-block.text-muted.text-sm.mb-2 3 days ago
+              p.text-md.text-body Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit. Excepteur sint occaecat cupidatat.
+              small.text-muted.text-sm Donec id elit non mi porta.
+            a(href='#' class='list-group-item flex-column align-items-start')
+              .d-flex.flex-wrap.w-100.justify-content-between
+                h6 List group item heading
+                small.d-block.text-muted.text-sm.mb-2 3 days ago
+              p.text-md.text-body Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit. Excepteur sint occaecat cupidatat.
+              small.text-muted.text-sm Donec id elit non mi porta.

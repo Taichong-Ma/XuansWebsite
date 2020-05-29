@@ -1,0 +1,40 @@
+// Card Footer Code
+#card-footer-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Card with Footer --&gt;</strong>
+                &lt;div class=&quot;card text-center&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h4 class=&quot;card-title&quot;&gt;Special title treatment&lt;/h4&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-primary btn-sm mt-2&quot; href=&quot;#&quot;&gt;Go Somewhere&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;p class=&quot;text-muted font-weight-bold&quot;&gt;Card footer text&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Card with Footer</strong>
+                .card.text-center
+                  .card-body
+                    h4.card-title Special title treatment
+                    p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    a(href=&quot;#&quot;).btn.btn-primary.btn-sm.mt-2 Go Somewhere
+                  .card-footer
+                    p.text-muted.font-weight-bold Card footer text

@@ -1,0 +1,81 @@
+// Input Group Button Addons Code
+#input-group-button-addons-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Button Addon on the Left --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Button on the left&quot;&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Multiple Button Addons --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;input class=&quot;form-control border-right-0&quot; type=&quot;text&quot; placeholder=&quot;Buttons on the right&quot;&gt;
+                  &lt;div class=&quot;input-group-append&quot;&gt;
+                    &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;fe-icon-edit text-lg&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button class=&quot;btn btn-success&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;fe-icon-check-circle text-lg&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button class=&quot;btn btn-danger&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;fe-icon-trash-2 text-lg&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Dropdown Addon on the Right --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Dropdown on the right&quot;&gt;
+                  &lt;div class=&quot;input-group-append&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown&lt;/button&gt;
+                    &lt;nav class=&quot;dropdown-menu&quot;&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                    &lt;/nav&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Button Addon on the Left</strong>
+                .input-group
+                  .input-group-prepend
+                    button(type=&quot;button&quot;).btn.btn-primary Button
+                  input(type=&quot;text&quot; placeholder=&quot;Button on the left&quot;).form-control
+                .input-group.form-group
+                  input(type=&quot;text&quot; placeholder=&quot;Button on the right&quot;).form-control
+                  .input-group-append
+                    button(type=&quot;button&quot;).btn.btn-primary Button
+                
+                <strong>//- Multiple Button Addons</strong>
+                .input-group
+                  input(type=&quot;text&quot; placeholder=&quot;Buttons on the right&quot;).form-control.border-right-0
+                  .input-group-append
+                    button(type=&quot;button&quot;).btn.btn-secondary
+                      i.fe-icon-edit.text-lg
+                    button(type=&quot;button&quot;).btn.btn-success
+                      i.fe-icon-check-circle.text-lg
+                    button(type=&quot;button&quot;).btn.btn-danger
+                      i.fe-icon-trash-2.text-lg
+
+                <strong>//- Dropdown Addon on the Right</strong>
+                .input-group
+                  input(type=&quot;text&quot; placeholder=&quot;Dropdown on the right&quot;).form-control
+                  .input-group-append
+                    button(type=&quot;button&quot; data-toggle=&quot;dropdown&quot;).btn.btn-primary.dropdown-toggle Dropdown
+                    nav.dropdown-menu
+                      a(href=&quot;#&quot;).dropdown-item Action
+                      a(href=&quot;#&quot;).dropdown-item Another action
+                      a(href=&quot;#&quot;).dropdown-item Something else here

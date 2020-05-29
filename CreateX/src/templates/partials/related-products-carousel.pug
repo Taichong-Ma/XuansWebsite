@@ -1,0 +1,121 @@
+// Related Products Carousel
+h3.h4.text-center.pb-4 You May Also Like
+.owl-carousel.carousel-flush(data-owl-carousel='{ "nav": false, "dots": true,"responsive": {"0":{"items":1},"576":{"items":2},"768":{"items":3},"991":{"items":4},"1200":{"items":4}} }')
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head.d-flex.justify-content-between.align-items-center
+      span.badge.badge-danger Sale
+      +rating-stars(4)
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/01.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Smart home
+      h5.product-title: a(href='shop-single.html') Amazon Echo Dot (2nd Generation)
+      span.product-price
+        del $62.00
+        | $49.99
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head.text-right
+      +rating-stars(3)
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/11.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Headphones
+      h5.product-title: a(href='shop-single.html') Edifier W855BT Bluetooth Headphones
+      span.product-price $99.75
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head
+      span.badge.badge-secondary Out of Stock
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/03.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Computers, laptops
+      h5.product-title: a(href='shop-single.html') Microsoft Surface Pro 4 Tablet
+      span.product-price.text-muted $1,049.10
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='shop-single.html'): i.fe-icon-arrow-right
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head.text-right
+      +rating-stars(4)
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/09.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Action cameras
+      h5.product-title: a(href='shop-single.html') Samsung Gear 360 Camera
+      span.product-price $74.00
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head.text-right
+      +rating-stars(0)
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/04.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Smartphones
+      h5.product-title: a(href='shop-single.html') Apple iPhone X 64GB Space Gray
+      span.product-price $939.99
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+  // Product
+  .product-card.mx-auto.mb-5
+    .product-head.d-flex.justify-content-between.align-items-center
+      span.badge.badge-success Popular
+      +rating-stars(5)
+    a(href='shop-single.html').product-thumb
+      +image('img/shop/06.jpg', 'Product Thumbnail')
+    .product-card-body
+      a(href='shop-categories.html').product-meta Video Games
+      h5.product-title: a(href='shop-single.html') Microsoft Xbox One S White
+      span.product-price $298.99
+    .product-buttons-wrap
+      .product-buttons
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+        .product-button
+          a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart

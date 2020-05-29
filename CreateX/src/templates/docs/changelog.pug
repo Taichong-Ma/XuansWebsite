@@ -1,0 +1,32 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Changelog'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      h5 <span class='text-accent'>1.1</span> - <span class='font-weight-medium'>March 19, 2019</span>
+      ul.pb-3
+        li <span class='font-weight-bold'>NEW:</span> Corporate Website Homepage
+        li <span class='font-weight-bold'>UPDATED:</span> Bootstrap to latest version 4.3.1
+        li <span class='font-weight-bold'>UPDATED:</span> Node.js packages to latest stable versions
+        li <span class='font-weight-bold'>IMPROVED:</span> Re-wrote theme.js from scratch to be maintainable and easy to read
+        li <span class='font-weight-bold'>FIXED:</span> Modal component border issue and added new scrolling content version
+        li <span class='font-weight-bold'>FIXED:</span> Background image parallax on large screens
+        li <span class='font-weight-bold'>FIXED:</span> Broken path to the map marker on the page Contact v.1
+      hr
+      h5.pt-30 <span class='text-accent'>1.0</span> - <span class='font-weight-medium'>February 5, 2019</span>
+      ul
+        li Initial release

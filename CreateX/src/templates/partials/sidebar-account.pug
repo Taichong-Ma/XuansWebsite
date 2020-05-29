@@ -1,0 +1,39 @@
+// Account Sidebar
+
+.author-card.pb-3
+  .author-card-cover(style='background-image: url(img/widgets/author/cover.jpg);')
+    a(href='#' data-toggle='tooltip' title='You currently have 290 Reward points to spend').btn.btn-light.btn-sm
+      i.fe-icon-award.text-md
+      | &nbsp;290 points
+  .author-card-profile
+    .author-card-avatar
+      +image('img/account/user-ava.jpg', 'Daniel Adams')
+    .author-card-details
+      h5.author-card-name.text-lg Daniel Adams
+      span.author-card-position Joined February 06, 2017
+.wizard
+  nav.list-group.list-group-flush
+    a(href='account-orders.html')&attributes((menuTitle === 'Orders List') ? {'class': 'list-group-item active'} : {'class': 'list-group-item'})
+      .d-flex.justify-content-between.align-items-center
+        div
+          i.fe-icon-shopping-bag.mr-1.text-muted
+          .d-inline-block.font-weight-medium.text-uppercase Orders List
+        span.badge.badge-secondary 6
+    a(href='account-profile.html')&attributes((menuTitle === 'Profile Settings') ? {'class': 'list-group-item active'} : {'class': 'list-group-item'})
+      i.fe-icon-user.text-muted
+      | Profile Settings
+    a(href='account-address.html')&attributes((menuTitle === 'Contact / Shipping Address') ? {'class': 'list-group-item active'} : {'class': 'list-group-item'})
+      i.fe-icon-map-pin.text-muted
+      | Addresses
+    a(href='account-wishlist.html')&attributes((menuTitle === 'Wishlist') ? {'class': 'list-group-item active'} : {'class': 'list-group-item'})
+      .d-flex.justify-content-between.align-items-center
+        div
+          i.fe-icon-heart.mr-1.text-muted
+          .d-inline-block.font-weight-medium.text-uppercase My Wishlist
+        span.badge.badge-secondary 3
+    a(href='account-tickets.html')&attributes((menuTitle === 'My Tickets' || menuTitle === 'Single Ticket') ? {'class': 'list-group-item active'} : {'class': 'list-group-item'})
+      .d-flex.justify-content-between.align-items-center
+        div
+          i.fe-icon-tag.mr-1.text-muted
+          .d-inline-block.font-weight-medium.text-uppercase My Tickets
+        span.badge.badge-secondary 4

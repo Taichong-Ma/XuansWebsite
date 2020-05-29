@@ -1,0 +1,44 @@
+// Social Icons Style 3 Code
+#socials-style3-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.font-weight-medium.mb-3 To add social icon use following markup:
+        pre.text-md
+          code.
+            &lt;a href=&quot;#&quot; class=&quot;social-btn sb-style-<strong>number</strong> sb-<strong>brandName</strong>&quot;&gt;
+              &lt;i class=&quot;socicon-<strong>brandName</strong>&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        p.font-weight-medium.mb-3 Examples with tooltips enabled:
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Social Icon (Style 3) --&gt;</strong>
+                &lt;a class=&quot;social-btn sb-style-3 sb-facebook&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;
+                  &lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+
+                <strong>&lt;!-- Social Icon Light Skin (Style 3) --&gt;</strong>
+                &lt;a class=&quot;social-btn sb-style-3 sb-facebook sb-light-skin&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;
+                  &lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Social Icon (Style 3)</strong>
+                a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;).social-btn.sb-style-3.sb-facebook
+                  i.socicon-facebook
+
+                <strong>//- Social Icon Light Skin (Style 3)</strong>
+                a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;).social-btn.sb-style-3.sb-facebook.sb-light-skin
+                  i.socicon-facebook

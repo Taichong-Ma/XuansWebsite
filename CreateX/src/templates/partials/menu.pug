@@ -1,0 +1,315 @@
+// Main Menu
+ul.navbar-nav.d-none.d-lg-block
+
+  // Home
+  li()&attributes((parentMenu === 'Home') ? {'class': 'nav-item mega-dropdown-toggle active'} : {'class': 'nav-item mega-dropdown-toggle'})
+    a(href='index.html').nav-link Home
+    .dropdown-menu.mega-dropdown
+      .d-flex
+        .column
+          .widget.widget-custom-menu
+            ul
+              li.dropdown-header.font-weight-medium.text-warning.border-warning.text-uppercase.pl-0
+                i.fe-icon-briefcase
+                | &nbsp;&nbsp;Portfolio
+              li()&attributes((menuTitle === 'Digital Agency') ? {'class': 'active'} : '')
+                a(href='home-digital-agency.html') Digital Agency
+              li()&attributes((menuTitle === 'Architectural Agency') ? {'class': 'active'} : '')
+                a(href='#').disabled-link
+                  | Architectural Agency
+                  span.badge.badge-secondary Soon
+              li()&attributes((menuTitle === "Freelancer's Portfolio") ? {'class': 'active'} : '')
+                a(href='home-freelancer-portfolio.html') Freelancer's Portfolio
+              li()&attributes((menuTitle === "Photographer's Portfolio") ? {'class': 'active'} : '')
+                a(href='home-photographer-portfolio.html') Photographer's Portfolio
+              li.dropdown-header.font-weight-medium.text-success.border-top-0.border-success.text-uppercase.pt-4.pl-0
+                i.fe-icon-shopping-bag
+                | &nbsp;&nbsp;E-Commerce
+              li()&attributes((menuTitle === 'Online Shop v.1') ? {'class': 'active'} : '')
+                a(href='home-shop-v1.html') Online Shop v.1
+              li()&attributes((menuTitle === 'Online Shop v.2') ? {'class': 'active'} : '')
+                a(href='home-shop-v2.html') Online Shop v.2
+        .column
+          .widget.widget-custom-menu
+            ul
+              li.dropdown-header.font-weight-medium.text-info.border-info.text-uppercase.pl-0
+                i.fe-icon-edit
+                | &nbsp;&nbsp;Blog
+              li()&attributes((menuTitle === 'Corporate Blog') ? {'class': 'active'} : '')
+                a(href='home-corporate-blog.html') Corporate Blog
+              li()&attributes((menuTitle === 'Personal Blog') ? {'class': 'active'} : '')
+                a(href='home-personal-blog.html') Personal Blog
+              li.dropdown-header.font-weight-medium.text-accent.border-top-0.border-accent.text-uppercase.pt-4.pl-0
+                i.fe-icon-home
+                | &nbsp;&nbsp;Landing Pages
+              li()&attributes((menuTitle === 'Mobile App Showcase') ? {'class': 'active'} : '')
+                a(href='home-mobile-app-showcase.html') Mobile App Showcase
+              li()&attributes((menuTitle === 'Web App Showcase (SAAS)') ? {'class': 'active'} : '')
+                a(href='home-web-app-showcase.html') Web App Showcase (SAAS)
+              li()&attributes((menuTitle === 'Product Promo Page') ? {'class': 'active'} : '')
+                a(href='#').disabled-link
+                  | Product Promo Page
+                  span.badge.badge-secondary Soon
+              li()&attributes((menuTitle === 'Conference Landing') ? {'class': 'active'} : '')
+                a(href='home-conference-landing.html') Conference Landing
+        .column
+          .widget.widget-custom-menu
+            ul
+              li.dropdown-header.font-weight-medium.text-danger.border-danger.text-uppercase.pl-0
+                i.fe-icon-dollar-sign
+                | &nbsp;&nbsp;Business
+              li()&attributes((menuTitle === 'Corporate Website') ? {'class': 'active'} : '')
+                a(href='home-corporate-website.html')
+                  | Corporate Website
+                  span.badge.badge-danger
+                    span.text-white New
+              li()&attributes((menuTitle === 'Digital Marketing & SEO') ? {'class': 'active'} : '')
+                a(href='home-marketing-seo.html') Digital Marketing &amp; SEO
+              li()&attributes((menuTitle === 'Venture Capital Investments') ? {'class': 'active'} : '')
+                a(href='home-capital-investments.html') Venture Capital Investments
+              li()&attributes((menuTitle === 'Startup Homepage') ? {'class': 'active'} : '')
+                a(href='#').disabled-link
+                  | Startup Homepage
+                  span.badge.badge-secondary Soon
+              li(style='color: #8a5ed5; border-color: #8a5ed5;').dropdown-header.font-weight-medium.border-top-0.text-uppercase.pt-4.pl-0
+                i.fe-icon-menu
+                | &nbsp;&nbsp;Directory &amp; Listings
+              li()&attributes((menuTitle === 'Real Estate Listing') ? {'class': 'active'} : '')
+                a(href='#').disabled-link
+                  | Real Estate Listing
+                  span.badge.badge-secondary Soon
+              li()&attributes((menuTitle === 'Jobs Board') ? {'class': 'active'} : '')
+                a(href='#').disabled-link
+                  | Jobs Board
+                  span.badge.badge-secondary Soon
+
+  // Portfolio
+  li()&attributes((parentMenu === 'Portfolio') ? {'class': 'nav-item dropdown-toggle active'} : {'class': 'nav-item dropdown-toggle'})
+    a(href='portfolio-style1-boxed.html').nav-link Portfolio
+    ul.dropdown-menu
+      li()&attributes((menuTitle === 'Style 1 Boxed Layout' || menuTitle === 'Style 1 Full Width Layout') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='portfolio-style1-boxed.html') Style 1 Grid
+        ul.dropdown-menu
+          li()&attributes((menuTitle === 'Style 1 Boxed Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style1-boxed.html') Style 1 Boxed Layout
+          li()&attributes((menuTitle === 'Style 1 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style1-fw.html') Style 1 Full Width Layout
+      li()&attributes((menuTitle === 'Style 2 Boxed Layout' || menuTitle === 'Style 2 Full Width Layout') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='portfolio-style2-boxed.html') Style 2 Grid
+        ul.dropdown-menu
+          li()&attributes((menuTitle === 'Style 2 Boxed Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style2-boxed.html') Style 2 Boxed Layout
+          li()&attributes((menuTitle === 'Style 2 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style2-fw.html') Style 2 Full Width Layout
+      li()&attributes((menuTitle === 'List View') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='portfolio-list.html') List View
+      li()&attributes((menuTitle === 'Side Gallery Grid' || menuTitle === 'Side Gallery List' || menuTitle === 'Wide Slider' || menuTitle === 'Wide Gallery') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='portfolio-single-side-gallery-grid.html') Single Project
+        ul.dropdown-menu
+          li()&attributes((menuTitle === 'Side Gallery Grid') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-single-side-gallery-grid.html') Side Gallery Grid
+          li()&attributes((menuTitle === 'Side Gallery List') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-single-side-gallery-list.html') Side Gallery List
+          li()&attributes((menuTitle === 'Wide Slider') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-single-wide-slider.html') Wide Slider
+          li()&attributes((menuTitle === 'Wide Gallery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-single-wide-gallery.html') Wide Gallery
+
+  // Blog
+  li()&attributes((parentMenu === 'Blog') ? {'class': 'nav-item mega-dropdown-toggle active'} : {'class': 'nav-item mega-dropdown-toggle'})
+    a(href='blog-grid-rs.html').nav-link Blog
+    .dropdown-menu.mega-dropdown
+      .d-flex
+        .column
+          .widget.widget-custom-menu
+            h4.widget-title Blog Layouts
+            ul
+              li()&attributes((menuTitle === 'Grid Right Sidebar') ? {'class': 'active'} : '')
+                a(href='blog-grid-rs.html') Grid Right Sidebar
+              li()&attributes((menuTitle === 'Grid Left Sidebar') ? {'class': 'active'} : '')
+                a(href='blog-grid-ls.html') Grid Left Sidebar
+              li()&attributes((menuTitle === 'Grid No Sidebar') ? {'class': 'active'} : '')
+                a(href='blog-grid-ns.html') Grid No Sidebar
+        .column
+          .widget.widget-custom-menu
+            h4.widget-title Single Post Formats
+            ul
+              li()&attributes((menuTitle === 'Post Gallery') ? {'class': 'active'} : '')
+                a(href='blog-single-gallery.html') Post Gallery
+              li()&attributes((menuTitle === 'Post Image Carousel') ? {'class': 'active'} : '')
+                a(href='blog-single-carousel.html') Post Image Carousel
+              li()&attributes((menuTitle === 'Post Video') ? {'class': 'active'} : '')
+                a(href='blog-single-video.html') Post Video
+              li()&attributes((menuTitle === 'Post Audio') ? {'class': 'active'} : '')
+                a(href='blog-single-audio.html') Post Audio
+              li()&attributes((menuTitle === 'Post Quotation') ? {'class': 'active'} : '')
+                a(href='blog-single-quotation.html') Post Quotation
+              li()&attributes((menuTitle === 'Post Link') ? {'class': 'active'} : '')
+                a(href='blog-single-link.html') Post Link
+        .column(style='width: 280px;')
+          .widget.widget-featured-posts
+            h4.widget-title  Recent posts
+            a(href='blog-single-gallery.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/01.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 22/04/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 21
+                .featured-post-title Getting to another level of design and functionality.
+            a(href='blog-single-carousel.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/02.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 30/05/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 17
+                .featured-post-title Cherry 5 WordPress Framework Sneaky Peaks.
+            a(href='blog-single-video.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/03.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 11/06/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 8
+                .featured-post-title Multiple skins &amp; easy demo data import.
+  
+  // Shop
+  li()&attributes((parentMenu === 'Shop') ? {'class': 'nav-item mega-dropdown-toggle active'} : {'class': 'nav-item mega-dropdown-toggle'})
+    a(href='shop-boxed-ls.html').nav-link Shop
+    .dropdown-menu.mega-dropdown
+      .d-flex
+        .column
+          .widget.widget-custom-menu
+            h4.widget-title Shop Layouts
+            ul
+              li()&attributes((menuTitle === 'Boxed Left Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-boxed-ls.html') Boxed Left Sidebar
+              li()&attributes((menuTitle === 'Boxed Right Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-boxed-rs.html') Boxed Right Sidebar
+              li()&attributes((menuTitle === 'Boxed Filters Top') ? {'class': 'active'} : '')
+                a(href='shop-boxed-ft.html') Boxed Filters Top
+              li()&attributes((menuTitle === 'Boxed No Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-boxed-ns.html') Boxed No Sidebar
+              li()&attributes((menuTitle === 'Full Width Left Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-fw-ls.html') Full Width Left Sidebar
+              li()&attributes((menuTitle === 'Full Width Right Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-fw-rs.html') Full Width Right Sidebar
+              li()&attributes((menuTitle === 'Full Width Filters Top') ? {'class': 'active'} : '')
+                a(href='shop-fw-ft.html') Full Width Filters Top
+              li()&attributes((menuTitle === 'Full Width No Sidebar') ? {'class': 'active'} : '')
+                a(href='shop-fw-ns.html') Full Width No Sidebar
+        .column
+          .widget.widget-custom-menu
+            h4.widget-title Shop Pages
+            ul
+              li()&attributes((menuTitle === 'Shop Categories') ? {'class': 'active'} : '')
+                a(href='shop-categories.html') Shop Categories
+              li()&attributes((menuTitle === 'Product Page') ? {'class': 'active'} : '')
+                a(href='shop-single.html') Product Page
+              li()&attributes((menuTitle === 'Cart') ? {'class': 'active'} : '')
+                a(href='cart.html') Cart
+              li()&attributes((menuTitle === 'Checkout - Address') ? {'class': 'active'} : '')
+                a(href='checkout-address.html') Checkout - Address
+              li()&attributes((menuTitle === 'Checkout - Shipping') ? {'class': 'active'} : '')
+                a(href='checkout-shipping.html') Checkout - Shipping
+              li()&attributes((menuTitle === 'Checkout - Payment') ? {'class': 'active'} : '')
+                a(href='checkout-payment.html') Checkout - Payment
+              li()&attributes((menuTitle === 'Checkout - Review') ? {'class': 'active'} : '')
+                a(href='checkout-review.html') Checkout - Review
+              li()&attributes((menuTitle === 'Checkout - Complete') ? {'class': 'active'} : '')
+                a(href='checkout-complete.html') Checkout - Complete
+        .column.p-0.mr-0.ml-3(style='width: 320px;')
+          a(href='shop-single.html').d-block
+            +image('img/shop/mega-menu.jpg', 'Samsung Galaxy S9').d-block.w-100
+  
+  // Account
+  li()&attributes((parentMenu === 'Account') ? {'class': 'nav-item dropdown-toggle active'} : {'class': 'nav-item dropdown-toggle'})
+    a(href='account-orders.html').nav-link Account
+    ul.dropdown-menu
+      li()&attributes((menuTitle === 'Login / Register') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-login.html') Login / Register
+      li()&attributes((menuTitle === 'Password Recovery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-password-recovery.html') Password Recovery
+      li()&attributes((menuTitle === 'Orders List') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-orders.html') Orders List
+      li()&attributes((menuTitle === 'Profile Settings') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-profile.html') Profile Settings
+      li()&attributes((menuTitle === 'Contact / Shipping Address') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-address.html') Contact / Shipping Address
+      li()&attributes((menuTitle === 'Wishlist') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-wishlist.html') Wishlist
+      li()&attributes((menuTitle === 'My Tickets') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-tickets.html') My Tickets
+      li()&attributes((menuTitle === 'Single Ticket') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='account-single-ticket.html') Single Ticket
+
+  // Pages
+  li()&attributes((parentMenu === 'Pages') ? {'class': 'nav-item dropdown-toggle active'} : {'class': 'nav-item dropdown-toggle'})
+    a(href='#').nav-link Pages
+    ul.dropdown-menu
+      li()&attributes((menuTitle === 'About Us v.1' || menuTitle === 'About Us v.2') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='about-us-v1.html') About Us
+        ul.dropdown-menu
+          li&attributes((menuTitle === 'About Us v.1') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='about-us-v1.html') About Us v.1
+          li&attributes((menuTitle === 'About Us v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='about-us-v2.html') About Us v.2
+      li()&attributes((menuTitle === 'Contacts v.1' || menuTitle === 'Contacts v.2') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='contacts-v1.html') Contacts
+        ul.dropdown-menu
+          li&attributes((menuTitle === 'Contacts v.1') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='contacts-v1.html') Contacts v.1
+          li&attributes((menuTitle === 'Contacts v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='contacts-v2.html') Contacts v.2
+      li()&attributes((menuTitle === 'Help Topics' || menuTitle === 'Single Topic' || menuTitle === 'Submit a Request') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='help-topics.html') Help Center
+        ul.dropdown-menu
+          li&attributes((menuTitle === 'Help Topics') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='help-topics.html') Help Topics
+          li&attributes((menuTitle === 'Single Topic') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='help-single-topic.html') Single Topic
+          li&attributes((menuTitle === 'Submit a Request') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='help-submit-request.html') Submit a Request
+      li()&attributes((menuTitle === 'Services Landing' || menuTitle === 'Single Service Page') ? {'class': 'dropdown-item has-children active'} : {'class': 'dropdown-item has-children'})
+        a(href='services.html') Services
+        ul.dropdown-menu
+          li&attributes((menuTitle === 'Services Landing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='services.html') Services Landing
+          li&attributes((menuTitle === 'Single Service Page') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='services-single.html') Single Service Page
+      li()&attributes((menuTitle === 'Pricing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='pricing.html') Pricing
+      li()&attributes((pageTitle === 'Product Comparison') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='product-comparison.html') Product Comparison
+      li()&attributes((pageTitle === 'Order Tracking') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='order-tracking.html') Order Tracking
+      li()&attributes((menuTitle === 'Search Results') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='search-results.html') Search Results
+      li.dropdown-item.has-children
+        a(href='coming-soon-light.html') Coming Soon
+        ul.dropdown-menu
+          li.dropdown-item: a(href='coming-soon-light.html') Coming Soon Light
+          li.dropdown-item: a(href='coming-soon-dark.html') Coming Soon Dark
+      li()&attributes((menuTitle === '404 Not Found') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+        a(href='404.html') 404 Not Found
+      li.dropdown-item
+        a(href='docs/dev-setup.html').text-accent
+          i.d-inline-block.fe-icon-file-text.align-middle.mr-1
+          | Documentation
+  
+  // Components
+  li()&attributes((pageTitle === 'Components') ? {'class': 'nav-item active'} : {'class': 'nav-item'})
+    a(href='components.html').nav-link Components

@@ -1,0 +1,27 @@
+// Off-Canvas Toggle
+a(href='#sidebarComponents' data-toggle='offcanvas').offcanvas-toggle
+  i.fe-icon-sidebar
+
+// Off-Canvas Container
+#sidebarComponents.offcanvas-container.is-static
+  span.offcanvas-close
+    i.fe-icon-x
+  .d-flex.align-items-center.px-4
+    a(href='../index.html').navbar-brand.mr-2
+      img(src='../img/logo/logo-dark.png' alt='CreateX')
+    .bg-accent.py-1.px-2.text-white.text-sm: strong Docs
+  .offcanvas-scrollable-area(style='top: 105px; height: calc(100% - 105px);')
+    +components-menu([
+      {'link': 'dev-setup.html', 'title': 'Dev Environment Setup'},
+      {'link': 'working-with-gulp.html', 'title': 'Working With Gulp'},
+      {'link': 'project-structure.html', 'title': 'Project Structure'},
+      {'link': 'using-preprocessors.html', 'title': 'Using Preprocessors (Pug & Sass)'},
+      {'link': 'autoprefixer.html', 'title': 'Browser Support (Autoprefixer)'},
+      {'link': 'global-colors.html', 'title': 'Global Colors'},
+      {'link': 'components.html', 'title': 'Components'},
+      {'link': 'utilities.html', 'title': 'Utility Classes'},
+      {'link': 'font-icons.html', 'title': 'Font Icons'},
+      {'link': 'google-maps.html', 'title': 'Google Maps API'},
+      {'link': 'credits.html', 'title': 'Sources and Credits'},
+      {'link': 'changelog.html', 'title': 'Changelog'}
+    ], pageTitle)

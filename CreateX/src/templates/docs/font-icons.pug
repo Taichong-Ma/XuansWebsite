@@ -1,0 +1,64 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Font Icons'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      p.font-weight-medium: u CreateX includes 2 main packs of font icons:
+      ul.pb-4
+        li <span class='font-weight-medium'>Fetaher Icons</span> -  for user interface.
+        li <span class='font-weight-medium'>Socicon Icons</span> -  for social network links.
+      .d-flex.flex-wrap.justify-content-between.align-items-center.pb-2
+        h6.mr-2.mb-0 Adding Feather Icons:
+        a(href='https://feathericons.com/' target='_blank').font-weight-medium.py-2 List of Feather Icons
+      pre.text-md.mb-4
+        | &lt;i class="fe-icon-<strong>iconName</strong>"&gt;&lt;/i&gt;
+      .d-flex.flex-wrap.justify-content-between.align-items-center.pt-2.pb-2
+        h6.mr-2.mb-0 Adding Socicon Icons:
+        a(href='http://www.socicon.com/chart.php' target='_blank').font-weight-medium.py-2 List of Socicon Icons
+      pre.text-md.mb-4
+        code.
+          &lt;a href=&quot;#&quot; class=&quot;social-btn sb-style-<strong>number</strong> sb-<strong>brandName</strong>&quot;&gt;
+            &lt;i class=&quot;socicon-<strong>brandName</strong>&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+      ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+        li.nav-item
+          a(href='#html' class='nav-link active' data-toggle='tab' role='tab') HTML
+        li.nav-item
+          a(href='#pug' class='nav-link' data-toggle='tab' role='tab') Pug
+      .tab-content
+        div(id='html' class='tab-pane fade show active' role='tabpanel')
+          pre.text-md
+            code.
+              <strong>&lt;!-- Social Icon (Style 1) --&gt;</strong>
+              &lt;a class=&quot;social-btn sb-style-1 sb-facebook&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;
+                &lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+
+              <strong>&lt;!-- Social Icon Light Skin (Style 1) --&gt;</strong>
+              &lt;a class=&quot;social-btn sb-style-1 sb-facebook sb-light-skin&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;
+                &lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;
+              &lt;/a&gt;
+        div(id='pug' class='tab-pane fade' role='tabpanel')
+          pre.text-md
+            code.
+              <strong>//- Social Icon (Style 1)</strong>
+              a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;).social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+
+              <strong>//- Social Icon Light Skin (Style 1)</strong>
+              a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;).social-btn.sb-style-1.sb-facebook.sb-light-skin
+                i.socicon-facebook

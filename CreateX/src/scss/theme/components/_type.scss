@@ -1,0 +1,309 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: {
+    top: 0;
+    bottom: $headings-margin-bottom;
+  }
+  color: $headings-color;
+  font-weight: $headings-font-weight;
+  letter-spacing: .021em;
+  small {
+    display: block;
+    padding-top: 3px;
+    color: $gray-500;
+  }
+}
+h1, .h1 { line-height: $h1-line-height; }
+h2, .h2 { line-height: $h2-line-height; }
+h3, .h3 { line-height: $h3-line-height; }
+h4, .h4 { line-height: $h4-line-height; }
+h5, .h5 { line-height: $h5-line-height; }
+h6, .h6 { line-height: $h6-line-height; }
+
+.display-1, .display-2,
+.display-3, .display-4 {
+  margin-bottom: $headings-margin-bottom;
+  letter-spacing: .021em;
+}
+.display-404 {
+  color: $white;
+  font-size: $display404-size;
+  line-height: $display404-line-height;
+  text-shadow: 12px 12px 30px rgba($gray-800, .13);
+}
+
+// Responsive Typography
+@include media-breakpoint-down(md) {
+  .display-1 { font-size: $display1-size * .65; }
+  .display-2 { font-size: $display2-size * .7; }
+  .display-3 { font-size: $display3-size * .7; }
+  .display-4 { font-size: $display4-size * .85; }
+  .display-404 { font-size: $display404-size * .85; }
+}
+@include media-breakpoint-down(sm) {
+  h1, .h1 { font-size: $h1-font-size * .8; }
+  h2, .h2 { font-size: $h2-font-size * .85; }
+  h3, .h3 { font-size: $h3-font-size * .9; }
+  .display-404 { font-size: $display404-size * .6; }
+}
+@include media-breakpoint-down(xs) {
+  h1, .h1 { font-size: $h1-font-size * .65; }
+  .display-404 { font-size: $display404-size * .4; }
+}
+
+
+// Predefined text sizes
+.lead { font-size: $lead-font-size !important; }
+.text-xl { font-size: $font-size-xl !important; }
+.text-lg { font-size: $font-size-lg !important; }
+.text-md { font-size: $font-size-md !important; }
+.text-sm { font-size: $font-size-sm !important; }
+.text-xs { font-size: $font-size-xs !important; }
+
+
+// Special Links
+// -------------------------
+
+// Navi Link
+.navi-link {
+  transition: all .25s;
+  color: $body-color;
+  font-weight: 600;
+  text-decoration: none;
+  > i {
+    display: inline-block;
+    margin-top: -1px;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  &:hover { color: $nav-link-hover-color; }
+  &.text-white:hover { opacity: .6; }
+}
+
+// Disabled Link
+.navbar ul > li > a.disabled-link,
+.mobile-menu ul > li > a.disabled-link,
+.disabled-link {
+  color: $link-disabled-color !important;
+  cursor: default;
+  pointer-events: none;
+  &:hover { color: $link-disabled-color !important; }
+}
+.navbar ul > li:hover > a.disabled-link {
+  color: $link-disabled-color !important;
+}
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  margin: {
+    top: 0;
+    bottom: $spacer;
+  }
+  padding-left: ($spacer * 1.125);
+  li {
+    margin-bottom: ($spacer / 2.6);
+    &:last-child { margin-bottom: 0; }
+  }
+  ul, ol { margin-bottom: 0; }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  > li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: {
+      right: ($spacer / 3.2);
+      left: ($spacer / 3.2);
+    }
+  }
+}
+
+// Icon list
+.list-icon {
+  padding: 0;
+  list-style: none;
+  > li {
+    position: relative;
+    padding-left: 22px;
+    > i {
+      display: block;
+      position: absolute;
+      left: 0;
+      font-size: 1.1em;
+      line-height: inherit;
+    }
+  }
+  &.lead > li { padding-left: 33px; }
+  &.text-xl > li { padding-left: 26px; }
+  &.text-lg > li { padding-left: 25px; }
+  &.text-sm > li { padding-left: 18px; }
+  &.text-xs > li { padding-left: 15px; }
+}
+
+
+// Blockquote
+// -------------------------
+
+.blockquote {
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  padding: ($spacer * 1.875) ($spacer * 1.5) ($spacer * 1.25);
+  background-color: $white;
+  box-shadow: $box-shadow;
+  &::before {
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: ($spacer * 1.5);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: $blockquote-mark-bg;
+    color: $blockquote-mark-color;
+    font: {
+      family: $headings-font-family;
+      size: $blockquote-mark-size;
+    }
+    line-height: 39px;
+    text-align: center;
+    content: '“';
+  }
+  > p { margin-bottom: 0; }
+  .blockquote-footer {
+    position: relative;
+    margin-top: ($spacer * .75);
+    padding-top: ($spacer / 2);
+    font: {
+      family: $headings-font-family;
+      size: $font-size-md;
+      weight: bold;
+    }
+    cite {
+      display: block;
+      color: $gray-500;
+      font: {
+        family: $font-family-base;
+        size: $font-size-sm;
+        weight: 600;
+        style: normal;
+      }
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 2px;
+      background-color: $primary;
+      content: '';
+    }
+  }
+  &.text-right {
+    &::before {
+      right: ($spacer * 1.5);
+      left: auto;
+    }
+    .blockquote-footer::before {
+      right: 0;
+      left: auto;
+    }
+  }
+  &.text-center {
+    &::before {
+      left: 50%;
+      margin-left: -13px;
+    }
+    .blockquote-footer::before {
+      left: 50%;
+      margin-left: -8px;
+    }
+  }
+}
+
+
+// Description list
+// -------------------------
+
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $spacer;
+}
+dt, dd { line-height: $line-height-base; }
+dt {
+  margin-bottom: 6px;
+  @extend h6;
+  font-size: $font-size-lg;
+}
+dd {
+  margin: {
+    bottom: $spacer;
+    left: 0;
+  }
+  padding-bottom: $spacer;
+  border-bottom: 1px solid $border-color;
+  color: $gray-500;
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+.dl-with-icon {
+  dt {
+    position: relative;
+    padding-left: ($spacer * 1.75);
+    > i {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      font-size: 1.1em;
+    }
+  }
+  dd { padding-left: ($spacer * 1.75); }
+}
+
+
+// Drop caps
+// -------------------------
+
+.drop-cap {
+  &:first-child::first-letter {
+    padding: {
+      right: ($spacer / 2);
+      left: ($spacer / 4);
+    }
+    float: left;
+    font: {
+      family: $headings-font-family;
+      size: ($font-size-base * 3.75);
+      weight: bold;
+    }
+    line-height: ($font-size-base * 3.75);
+  }
+  &.text-muted, &.text-dark, &.text-primary,
+  &.text-accent, &.text-info, &.text-success,
+  &.text-warning, &.text-danger {
+    color: $body-color !important;
+  }
+  &.text-muted:first-child::first-letter { color: $text-muted !important; }
+  &.text-dark:first-child::first-letter { color: $gray-800 !important; }
+  &.text-primary:first-child::first-letter { color: theme-color("primary") !important; }
+  &.text-accent:first-child::first-letter { color: theme-color("accent") !important; }
+  &.text-info:first-child::first-letter { color: theme-color("info") !important; }
+  &.text-success:first-child::first-letter { color: theme-color("success") !important; }
+  &.text-warning:first-child::first-letter { color: theme-color("warning") !important; }
+  &.text-danger:first-child::first-letter { color: theme-color("danger") !important; }
+}

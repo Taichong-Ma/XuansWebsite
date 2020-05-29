@@ -1,0 +1,398 @@
+// Widgets: General Code
+#widgets-general-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Search Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Search&lt;/h4&gt;
+                  &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;div class=&quot;input-group-prepend&quot;&gt;
+                      &lt;div class=&quot;input-group-text&quot;&gt;
+                        &lt;i class=&quot;fe-icon-search&quot;&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Search site...&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Custom Menu Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-custom-menu&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Custom menu&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#about&quot; data-toggle=&quot;collapse&quot;&gt;About Us&lt;/a&gt;
+                      &lt;div class=&quot;collapse show&quot; id=&quot;about&quot;&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Our mission&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Our team&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;We are hiring&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;collapsed&quot; href=&quot;#help&quot; data-toggle=&quot;collapse&quot;&gt;Help &amp;amp; Info&lt;/a&gt;
+                      &lt;div class=&quot;collapse&quot; id=&quot;help&quot;&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help center&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Support&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Terms &amp;amp; Conditions&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Gallery V.1 Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-gallery&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Gallery v.1&lt;/h4&gt;
+                  &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
+                    &lt;a class=&quot;gallery-item mb-2 mr-2&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item mb-2 mr-2&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item type-video mb-2&quot; href=&quot;https://www.youtube.com/watch?v=VideoID&amp;amp;amp;autoplay=1&amp;amp;amp;rel=0&amp;amp;amp;controls=0&amp;amp;amp;showinfo=0&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
+                    &lt;a class=&quot;gallery-item mb-2 mr-2&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item type-video mb-2 mr-2&quot; href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item mb-2&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;pt-1&quot;&gt;
+                    &lt;a class=&quot;btn btn-gradient btn-block&quot; href=&quot;#&quot;&gt;
+                      &lt;i class=&quot;fe-icon-instagram&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;View our Instagram
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Gallery V.2 Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-gallery&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Gallery v.1&lt;/h4&gt;
+                  &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://www.youtube.com/watch?v=VideoID&amp;amp;amp;autoplay=1&amp;amp;amp;rel=0&amp;amp;amp;controls=0&amp;amp;amp;showinfo=0&quot; data-fancybox=&quot;gallery2&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item type-video&quot; href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery2&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;gallery-item&quot; href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery2&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}'&gt;
+                      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Gallery Image&quot;/&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;pt-2&quot;&gt;
+                    &lt;a class=&quot;btn btn-gradient btn-block&quot; href=&quot;#&quot;&gt;
+                      &lt;i class=&quot;fe-icon-instagram&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;View our Instagram
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Contacts V.1 Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-contacts&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Contacts v.1&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-map-pin&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Find us&lt;/span&gt;
+                      &lt;a href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;&gt;1260 Broadway, New York&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Call us&lt;/span&gt;
+                      &lt;a href=&quot;tel:00180039025&quot;&gt;001 800 390 25&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Write us&lt;/span&gt;
+                      &lt;a href=&quot;mailto:info@example.com&quot;&gt;info@example.com&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Contacts V.2 Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-contacts&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Contacts v.1&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-map-pin icon-style-2&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Find us&lt;/span&gt;
+                      &lt;a href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;&gt;1260 Broadway, New York&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-phone icon-style-2&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Call us&lt;/span&gt;
+                      &lt;a href=&quot;tel:00180039025&quot;&gt;001 800 390 25&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-mail icon-style-2&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Write us&lt;/span&gt;
+                      &lt;a href=&quot;mailto:info@example.com&quot;&gt;info@example.com&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Subscription (MailChimp) Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-subscribe&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Subscription&lt;/h4&gt;
+                  &lt;form action=&quot;link-to-your-mailchimp-subscription-list&quot; method=&quot;post&quot; target=&quot;_blank&quot; novalidate&gt;
+                    &lt;div class=&quot;input-group&quot;&gt;
+                      &lt;input class=&quot;form-control&quot; type=&quot;email&quot; name=&quot;EMAIL&quot; placeholder=&quot;Email address&quot;&gt;
+                      &lt;div class=&quot;input-group-append&quot;&gt;
+                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Sign Up&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;small class=&quot;form-text text-muted pt-1&quot;&gt;Enter email to receive a newsletter about new products and updates&lt;/small&gt;
+                    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+                    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;
+                      &lt;input type=&quot;text&quot; name=&quot;b_c7103e2c981361a6639545bd5_1194bb7544&quot; tabindex=&quot;-1&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/form&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Google Map Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Google map&lt;/h4&gt;
+                  &lt;div class=&quot;google-map&quot; data-height=&quot;200&quot; data-address=&quot;New York, USA&quot; data-zoom=&quot;9&quot; data-disable-controls=&quot;true&quot; data-scrollwheel=&quot;true&quot; data-marker=&quot;path-to-image&quot; data-marker-title=&quot;We are here!&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Image Carousel Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Image carousel&lt;/h4&gt;
+                  &lt;div class=&quot;owl-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true }'&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;/&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;/&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;/&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Testimonials Carousel Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-testimonials-carousel&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Testimonials carousel&lt;/h4&gt;
+                  &lt;div class=&quot;owl-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true }'&gt;
+                    &lt;div class=&quot;blockquote testimonial&quot;&gt;...&lt;/div&gt;
+                    &lt;div class=&quot;blockquote testimonial&quot;&gt;...&lt;/div&gt;
+                    &lt;div class=&quot;blockquote testimonial&quot;&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Social Networks Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Social networks&lt;/h4&gt;
+                  &lt;a class=&quot;social-btn sb-style-6 sb-facebook&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;
+                    &lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;social-btn sb-style-6 sb-dribbble&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Dribbble&quot;&gt;
+                    &lt;i class=&quot;socicon-dribbble&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;social-btn sb-style-6 sb-twitter&quot; href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Twitter&quot;&gt;
+                    &lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- CTA Button Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;CTA Button&lt;/h4&gt;
+                  &lt;a class=&quot;btn btn-style-2 btn-primary btn-block&quot; href=&quot;#&quot;&gt;Call to Action&lt;/a&gt;
+                  &lt;small class=&quot;form-text text-muted pt-2&quot;&gt;Some description goes here to convince the user to click this button.&lt;/small&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Search Widget</strong>
+                .widget
+                  h4.widget-title Search
+                  .input-group
+                    .input-group-prepend
+                      .input-group-text
+                        i.fe-icon-search
+                    input(type=&quot;text&quot; placeholder=&quot;Search site...&quot;).form-control
+                
+                <strong>//- Custom Menu Widget</strong>
+                .widget.widget-custom-menu
+                  h4.widget-title Custom menu
+                  ul
+                    li
+                      a(href=&quot;#about&quot; data-toggle=&quot;collapse&quot;) About Us
+                      #about.collapse.show
+                        ul
+                          li: a(href=&quot;#&quot;) Our mission
+                          li: a(href=&quot;#&quot;) Our team
+                          li: a(href=&quot;#&quot;) We are hiring
+                    li: a(href=&quot;#&quot;) Privacy Policy
+                    li
+                      a(href=&quot;#help&quot; data-toggle=&quot;collapse&quot;).collapsed Help &amp; Info
+                      #help.collapse
+                        ul
+                          li: a(href=&quot;#&quot;) Help center
+                          li: a(href=&quot;#&quot;) Support
+                    li: a(href=&quot;#&quot;) Terms &amp; Conditions
+                
+                <strong>//- Gallery V.1 Widget</strong>
+                .widget.widget-gallery
+                  h4.widget-title Gallery v.1
+                  .d-flex.justify-content-between
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.mb-2.mr-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.mb-2.mr-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;https://www.youtube.com/watch?v=VideoID&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video.mb-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .d-flex.justify-content-between
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.mb-2.mr-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video.mb-2.mr-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item.mb-2
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .pt-1
+                    a(href=&quot;#&quot;).btn.btn-gradient.btn-block
+                      i.fe-icon-instagram
+                      | &amp;nbsp;View our Instagram
+                
+                <strong>//- Gallery V.2 Widget</strong>
+                .widget.widget-gallery
+                  h4.widget-title Gallery v.1
+                  .d-flex.justify-content-between
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;https://www.youtube.com/watch?v=VideoID&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .d-flex.justify-content-between
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;https://vimeo.com/VideoID?color=ac32e4&quot; data-fancybox=&quot;gallery1&quot; data-width=&quot;1000&quot; data-height=&quot;563&quot;).gallery-item.type-video
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                    a(href=&quot;path-to-big-image&quot; data-fancybox=&quot;gallery1&quot; data-options='{&quot;caption&quot;: &quot;Gallery Image Caption&quot;}').gallery-item
+                      +image(&quot;path-to-thumbnail-image&quot;, &quot;Gallery Image&quot;)
+                  .pt-2
+                    a(href=&quot;#&quot;).btn.btn-gradient.btn-block
+                      i.fe-icon-instagram
+                      | &amp;nbsp;View our Instagram
+
+                <strong>//- Contacts V.1 Widget</strong>
+                .widget.widget-contacts
+                  h4.widget-title Contacts v.1
+                  ul
+                    li
+                      i.fe-icon-map-pin
+                      span Find us
+                      a(href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;) 1260 Broadway, New York
+                    li
+                      i.fe-icon-phone
+                      span Call us
+                      a(href=&quot;tel:00180039025&quot;) 001 800 390 25
+                    li
+                      i.fe-icon-mail
+                      span Write us
+                      a(href=&quot;mailto:info@example.com&quot;) info@example.com
+                
+                <strong>//- Contacts V.2 Widget</strong>
+                .widget.widget-contacts
+                  h4.widget-title Contacts v.1
+                  ul
+                    li
+                      i.fe-icon-map-pin.icon-style-2
+                      span Find us
+                      a(href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;) 1260 Broadway, New York
+                    li
+                      i.fe-icon-phone.icon-style-2
+                      span Call us
+                      a(href=&quot;tel:00180039025&quot;) 001 800 390 25
+                    li
+                      i.fe-icon-mail.icon-style-2
+                      span Write us
+                      a(href=&quot;mailto:info@example.com&quot;) info@example.com
+                
+                <strong>//- Subscription (MailChimp) Widget</strong>
+                .widget.widget-subscribe
+                  h4.widget-title Subscription
+                  form(action=&quot;link-to-your-mailchimp-subscription-list&quot; method=&quot;post&quot; target=&quot;_blank&quot; novalidate)
+                    .input-group
+                      input(type=&quot;email&quot; name=&quot;EMAIL&quot; placeholder=&quot;Email address&quot;).form-control
+                      .input-group-append
+                        button(type=&quot;submit&quot;).btn.btn-primary Sign Up
+                    small.form-text.text-muted.pt-1 Enter email to receive a newsletter about new products and updates
+                    // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    div(style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;)
+                      input(type=&quot;text&quot; name=&quot;b_c7103e2c981361a6639545bd5_1194bb7544&quot; tabindex=&quot;-1&quot;)
+                
+                <strong>//- Google Map Widget</strong>
+                .widget
+                  h4.widget-title Google map
+                  .google-map(
+                    data-height = &quot;200&quot;,
+                    data-address = &quot;New York, USA&quot;,
+                    data-zoom = &quot;9&quot;,
+                    data-disable-controls = &quot;true&quot;,
+                    data-scrollwheel = &quot;true&quot;,
+                    data-marker = &quot;path-to-image&quot;,
+                    data-marker-title = &quot;We are here!&quot;
+                  )
+                
+                <strong>//- Image Carousel Widget</strong>
+                .widget
+                  h4.widget-title Image carousel
+                  .owl-carousel(data-owl-carousel='{  &quot;nav &quot;: false,  &quot;dots &quot;: true }')
+                    +image( &quot;path-to-image&quot;, &quot;Image &quot;)
+                    +image( &quot;path-to-image&quot;, &quot;Image &quot;)
+                    +image( &quot;path-to-image&quot;, &quot;Image &quot;)
+
+                <strong>//- Testimonials Carousel Widget</strong>
+                .widget.widget-testimonials-carousel
+                  h4.widget-title Testimonials carousel
+                  .owl-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true }')
+                    .blockquote.testimonial ...
+                    .blockquote.testimonial ...
+                    .blockquote.testimonial ...
+                
+                <strong>//- Social Networks Widget</strong>
+                .widget
+                  h4.widget-title Social networks
+                  a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;).social-btn.sb-style-6.sb-facebook
+                    i.socicon-facebook
+                  a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Dribbble&quot;).social-btn.sb-style-6.sb-dribbble
+                    i.socicon-dribbble
+                  a(href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Twitter&quot;).social-btn.sb-style-6.sb-twitter
+                    i.socicon-twitter
+
+                <strong>//- CTA Button Widget</strong>
+                .widget
+                  h4.widget-title CTA Button
+                  a(href=&quot;#&quot;).btn.btn-style-2.btn-primary.btn-block Call to Action
+                  small.form-text.text-muted.pt-2 Some description goes here to convince the user to click this button. 

@@ -1,0 +1,22 @@
+//
+// Placeholders
+// --------------------------------------------------
+
+// Divider
+%divider {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 1px;
+  width: 36px;
+  height: 2px;
+  @extend .bg-gradient;
+  content: '';
+}
+
+// Absolute Alignment Center
+%center-xy {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}

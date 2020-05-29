@@ -1,0 +1,72 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Single Post'
+  - var pageSubTitle = 'Post Format: <strong>Gallery</strong>'
+  - var pageTitleBgImage ='img/page-title/blog-pattern.jpg'
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Post Gallery'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-grid-rs.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-3
+    .row
+
+      // Post Content
+      .col-lg-9
+
+        //- single-post-meta.pug template
+        include partials/single-post-meta
+
+        // Gallery
+        .row.pb-1
+          .col-md-4.col-sm-6
+            a(href='img/components/gallery/10.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+              +image('img/components/gallery/th10.jpg', 'Gallery Image')
+          .col-md-4.col-sm-6
+            a(href='img/components/gallery/02.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+              +image('img/components/gallery/th02.jpg', 'Gallery Image')
+          .col-md-4.col-sm-6
+            a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-30
+              +image('img/components/gallery/th03.jpg', 'Gallery Image')
+          .col-md-4.col-sm-6
+            a(href='img/components/gallery/04.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+              +image('img/components/gallery/th04.jpg', 'Gallery Image')
+          .col-md-4.col-sm-6
+            a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-30
+              +image('img/components/gallery/th05.jpg', 'Gallery Image')
+          .col-md-4.col-sm-6
+            a(href='img/components/gallery/06.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+              +image('img/components/gallery/th06.jpg', 'Gallery Image')
+        
+        p.pb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        h4 Modern Architecture: Trends and Look Back
+        p.pb-4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+        .blockquote.mb-4
+          p.text-muted At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+          footer.blockquote-footer
+            | Barbara Wilson
+            cite Architect, Designer
+        p.pb-4 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+        //- single-post-share.pug template
+        include partials/single-post-share
+
+        //- single-post-author.pug template
+        include partials/single-post-author
+
+        //- entry-navigation-blog.pug template
+        include partials/entry-navigation-blog
+
+      .col-lg-3
+        //- sidebar-blog.pug template
+        include partials/sidebar-blog-single
+
+  //- post-comments.pug template
+  include partials/post-comments
+
+  //- footer-blog.pug template
+  include partials/footer-blog

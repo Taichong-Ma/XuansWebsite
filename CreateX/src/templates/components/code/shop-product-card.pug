@@ -1,0 +1,86 @@
+// Shop: Product Card Code
+#shop-product-card-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Product Card --&gt;</strong>
+                &lt;div class=&quot;product-card mx-auto&quot;&gt;
+                  &lt;div class=&quot;product-head d-flex justify-content-between align-items-center&quot;&gt;
+                    &lt;span class=&quot;badge badge-danger&quot;&gt;Sale&lt;/span&gt;
+                    &lt;div class=&quot;rating-stars&quot;&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;a class=&quot;product-thumb&quot; href=&quot;#&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Product Thumbnail&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;div class=&quot;product-card-body&quot;&gt;
+                    &lt;a class=&quot;product-meta&quot; href=&quot;#&quot;&gt;Smart home&lt;/a&gt;
+                    &lt;h5 class=&quot;product-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Amazon Echo Dot (2nd Generation)&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;span class=&quot;product-price&quot;&gt;
+                      &lt;del&gt;$62.00&lt;/del&gt;$49.99
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;product-buttons-wrap&quot;&gt;
+                    &lt;div class=&quot;product-buttons&quot;&gt;
+                      &lt;div class=&quot;product-button&quot;&gt;
+                        &lt;a href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to your wishlist!&quot;&gt;
+                          &lt;i class=&quot;fe-icon-heart&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;product-button&quot;&gt;
+                        &lt;a href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to comparison table!&quot;&gt;
+                          &lt;i class=&quot;fe-icon-repeat&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;product-button&quot;&gt;
+                        &lt;a href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;success&quot; data-toast-icon=&quot;fe-icon-check-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to cart successfuly!&quot;&gt;
+                          &lt;i class=&quot;fe-icon-shopping-cart&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Product Card</strong>
+                .product-card.mx-auto
+                  .product-head.d-flex.justify-content-between.align-items-center
+                    span.badge.badge-danger Sale
+                    +rating-stars(4)
+                  a(href=&quot;#&quot;).product-thumb
+                    +image(&quot;path-to-image&quot;, &quot;Product Thumbnail&quot;)
+                  .product-card-body
+                    a(href=&quot;#&quot;).product-meta Smart home
+                    h5.product-title: a(href=&quot;#&quot;) Amazon Echo Dot (2nd Generation)
+                    span.product-price
+                      del $62.00
+                      | $49.99
+                  .product-buttons-wrap
+                    .product-buttons
+                      .product-button
+                        a(href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to your wishlist!&quot;): i.fe-icon-heart
+                      .product-button
+                        a(href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to comparison table!&quot;): i.fe-icon-repeat
+                      .product-button
+                        a(href=&quot;#&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;success&quot; data-toast-icon=&quot;fe-icon-check-circle&quot; data-toast-title=&quot;Product&quot; data-toast-message=&quot;added to cart successfuly!&quot;): i.fe-icon-shopping-cart

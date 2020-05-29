@@ -1,0 +1,38 @@
+//
+// Animated Digits
+// --------------------------------------------------
+
+.animated-digits {
+  display: table;
+  position: relative;
+  padding-bottom: 1.125rem;
+  &::after { @extend %divider; }
+  .animated-digits-digit {
+    display: block;
+    margin: 0;
+    font: {
+      family: $animated-digit-font-family;
+      size: $animated-digit-font-size;
+      weight: $animated-digit-font-weight;
+    }
+  }
+  .animated-digits-text {
+    margin: 0;
+    margin-top: -.3125rem;
+  }
+  .animated-digits-icon {
+    display: inline-block;
+    width: $animated-digit-icon-size;
+    height: $animated-digit-icon-size;
+    margin-bottom: ($spacer * .3125);
+    background-color: $animated-digit-icon-bg;
+    color: $animated-digit-icon-color;
+    font-size: $animated-digit-icon-font-size;
+    line-height: ($animated-digit-icon-size + 4);
+    text-align: center;
+  }
+  &.text-white {
+    &::after { background: $white !important; }
+  }
+}
+.card .animated-digits { display: block; }

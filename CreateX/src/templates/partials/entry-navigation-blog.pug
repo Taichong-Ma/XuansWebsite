@@ -1,0 +1,27 @@
+// Entry Nanigation
+nav.entry-navigation
+  .prev-btn
+    a(href='#').label
+      i.fe-icon-arrow-left
+      | Prev <span class='d-none d-sm-inline'>post</span>
+    .post-preview
+      .post-preview-thumb
+        +image('img/blog/navigation/02.jpg', 'Blog post thumbnail')
+      .post-preview-details
+        span.post-preview-title Technological breakthrough
+        span.post-preview-meta
+          i.fe-icon-calendar
+          | May 25, 18
+  a()&attributes(isNestedFile ? {'href': '#'} : {'href': 'blog-grid-rs.html'}).back-btn: i.fe-icon-grid
+  .next-btn
+    a(href='#').label
+      | Next <span class='d-none d-sm-inline'>post</span>
+      i.fe-icon-arrow-right
+    .post-preview
+      .post-preview-details
+        span.post-preview-title Mother nature is speaking
+        span.post-preview-meta
+          i.fe-icon-calendar
+          | Jul 30, 18
+      .post-preview-thumb
+        +image('img/blog/navigation/01.jpg', 'Blog post thumbnail')

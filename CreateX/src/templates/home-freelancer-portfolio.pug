@@ -1,0 +1,231 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = "Freelancer's Portfolio"
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/freelancer-portfolio/hero-bg.png);').bg-center.bg-repeat-y.box-shadow
+    .container
+      .row
+        .col-md-6.bg-secondary.order-md-2.pt-md-5.overflow-hidden
+          .mt-5.pt-5
+            img(src='img/homepages/freelancer-portfolio/portrait.jpg' alt='Martin Garrix' data-parallax='{"scale" : 1.15}').d-block.mx-auto
+        .col-md-6.bg-white.order-md-1.py-md-5.overflow-hidden
+          .mt-md-5.py-5.text-center.text-md-left
+            h2.h3.text-body.pt-md-5.pb-3
+              span.d-block.font-family-body.font-weight-light.pb-2 Hello!
+              span.d-block.font-family-body.font-weight-light I am <span class='font-weight-bold'>Martin Garrix</span>
+            h1(data-parallax='{"x" : 50}').mb-4.mb-md-5
+              img(src='img/homepages/freelancer-portfolio/title.png' width='495' alt='UX/UI Designer').d-block.mx-auto.mx-md-0
+              span.d-none UX/UI Designer
+            .pt-3
+              a(href='#contacts' data-parallax='{"y" : 25}').scroll-to.btn.btn-style-4.btn-primary.mr-3.mb-3 Hire me
+              a(href='#works' data-parallax='{"y" : -25}').scroll-to.btn.btn-style-4.btn-gradient.btn-icon-right.mb-3
+                i.fe-icon-arrow-down.text-md
+                | See my works
+            .pt-4.pt-md-5
+              a(href='#').social-btn.sb-style-6.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-parallax='{"y" : -25}').social-btn.sb-style-6.sb-dribbble
+                i.socicon-dribbble
+              a(href='#' data-parallax='{"y" : 25}').social-btn.sb-style-6.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-parallax='{"y" : -25}').social-btn.sb-style-6.sb-instagram
+                i.socicon-instagram
+              a(href='#' data-parallax='{"y" : 25}').social-btn.sb-style-6.sb-behance
+                i.socicon-behance
+  
+  // About
+  section.container.py-5
+    .row.justify-content-center
+      .col-lg-6.col-md-8.pt-3.text-center
+        span.d-block.text-lg.mb-2 Few words about me
+        h2.h3.block-title.mb-3 Design and Craft
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-3: i.fe-icon-play
+        span.video-player-label.text-muted Click to watch video about me!
+    hr.mt-5
+  
+  // Process
+  section.container.pb-4
+    h2.h3.block-title.text-center.pt-2 How I work
+    .row.py-2
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 1
+          .step-icon: img(src='img/icons/user-data.svg' alt='Gathering User Data')
+          h3.step-title Gathering User Data
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='#').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 2
+          .step-icon: img(src='img/icons/prototyping.svg' alt='Prototyping (Wireframes)')
+          h3.step-title Prototyping (Wireframes)
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='#').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 3
+          .step-icon: img(src='img/icons/ui-design.svg' alt='Pixel-perfect UI Design')
+          h3.step-title Pixel-perfect UI Design
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='#').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 4
+          .step-icon: img(src='img/icons/coding.svg' alt='Development (Coding)')
+          h3.step-title Development (Coding)
+          p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='#').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+
+  // Portfolio
+  section(data-offset-top='105')#works.pb-5.mb-4
+    div(style='max-width: 1300px;').bg-white.mx-auto.px-3.px-xl-5.pt-4.pb-5.box-shadow
+      h2.h3.block-title.text-center
+        | My latest works
+        small Hand-picked collection of my most prominent works
+      .row.pt-4
+        
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+              +image('img/portfolio/01.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 12
+              h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') iOS App UI Design
+              a(href='#').tag-link Mobile Apps
+
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+              +image('img/portfolio/02.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 8
+              h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Web App Front-End
+              a(href='#').tag-link Web Design
+
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-wide-slider.html').portfolio-thumb
+              +image('img/portfolio/03.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 25
+              h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Company Brand Design
+              a(href='#').tag-link Branding
+
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+              +image('img/portfolio/04.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 43
+              h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') iOS App Development
+              a(href='#').tag-link Mobile Apps
+
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+              +image('img/portfolio/05.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 27
+              h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') Working Space Design
+              a(href='#').tag-link Interior Design
+
+        // Portfolio Item
+        .col-md-4.col-sm-6.mb-30
+          .portfolio-card
+            a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+              +image('img/portfolio/07.jpg', 'Portfolio Thumbnail')
+            .portfolio-card-body
+              .portfolio-meta
+                a(href='#')
+                  i.fe-icon-heart.text-accent
+                  | 116
+              h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Apple Package Design
+              a(href='#').tag-link Package Design
+      .text-center.pt-2
+        a(href='portfolio-style1-boxed.html').btn.btn-style-4.btn-gradient.btn-icon-right
+          i.fe-icon-arrow-right.text-md
+          | View all works
+
+  // Contacts
+  section(style='background-image: url(img/homepages/freelancer-portfolio/contacts-bg.png);' data-offset-top='-10')#contacts.bg-secondary.bg-cover.bg-no-repeat.pt-5.pb-4
+    .container.py-2
+      h2.h3.block-title.text-center
+        | Contact me
+        small I'll be glad to answer all your questions. I normally respond within 2 - 3 business days.
+      form(novalidate).needs-validation.pt-4.pb-5
+        .row
+          .col-md-4.col-sm-6.form-group
+            label(for='cont-name') Your Name <span class='text-danger font-weight-medium'>*</span>
+            input(type='text' id='cont-name' placeholder='John Doe' required).form-control
+            .invalid-feedback Please fill in your name!
+          .col-md-4.col-sm-6.form-group
+            label(for='cont-email') Email Address <span class='text-danger font-weight-medium'>*</span>
+            input(type='email' id='cont-email' placeholder='johndoe@example.com' required).form-control
+            .invalid-feedback Please provide valid email address!
+          .col-md-4.form-group
+            label(for='cont-subject') Subject
+            input(type='email' id='cont-subject' placeholder='Title of your message').form-control
+        .form-group
+          label(for='cont-message') Message <span class='text-danger font-weight-medium'>*</span>
+          textarea(id='cont-message' rows='8' placeholder='Type your message...' required).form-control
+          .invalid-feedback Please type your message!
+        .text-center
+          button(type='submit').btn.btn-style-4.btn-icon-left.btn-gradient
+            i.fe-icon-mail.text-md
+            | Send Message
+      hr
+      .d-md-flex.justify-content-between.align-items-center.pt-4.text-center.text-md-left
+        div.order-2
+          a(href='#').social-btn.sb-style-6.sb-facebook
+            i.socicon-facebook
+          a(href='#').social-btn.sb-style-6.sb-dribbble
+            i.socicon-dribbble
+          a(href='#').social-btn.sb-style-6.sb-twitter
+            i.socicon-twitter
+          a(href='#').social-btn.sb-style-6.sb-instagram
+            i.socicon-instagram
+          a(href='#').social-btn.sb-style-6.sb-behance
+            i.socicon-behance
+        p.m-0.text-sm.order-1 <span class='opacity-80'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block navi-link opacity-80 p-0' target='_blank'>by Createx Studio</a>

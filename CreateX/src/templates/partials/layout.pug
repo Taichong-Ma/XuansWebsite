@@ -1,0 +1,68 @@
+//- Include config.pug file that holds all variables
+block config
+  include ../helpers/config
+
+//- Mixins - reusable code snippets
+include ../helpers/mixins
+
+doctype html
+html(lang="en")
+
+  //- head.pug template
+  include head 
+  
+  // Body
+  body()&attributes((typeof(bodyBgImage) !== 'undefined') ? {'style': 'background-image: url(' + bodyBgImage + ');'} : '')
+
+    //- modal-example.pug template
+    if isModalExample
+      include modal-example
+      
+    //- modal-review.pug template
+    if isModalReview
+      include modal-review
+      
+    //- modal-order.pug template
+    if isModalOrder
+      include modal-order
+      
+    //- modal-ticket.pug template
+    if isModalTicket
+      include modal-ticket
+
+    //- navbar-{name}.pug template
+    if (navbarTemplate === 'navbar-default')
+      include navbar-default
+    else if (navbarTemplate === 'navbar-simple')
+      include navbar-simple
+    else if (navbarTemplate === 'navbar-simple-wide')
+      include navbar-simple-wide
+    else if (navbarTemplate === 'navbar-simple-ghost')
+      include navbar-simple-ghost
+    else if (navbarTemplate === 'navbar-floating')
+      include navbar-floating
+    else if (navbarTemplate === 'navbar-ghost')
+      include navbar-ghost
+    else if (navbarTemplate === 'navbar-ghost-white')
+      include navbar-ghost-white
+    else
+
+    //- page-title.pug template
+    if isPageTitle
+      include page-title
+
+    // Page Content
+    block content
+    
+    // Back To Top Button
+    a(href='#').scroll-to-top-btn
+      i.fe-icon-chevron-up
+
+    // Backdrop
+    .site-backdrop
+    
+    // JavaScript (jQuery) libraries, plugins and custom scripts
+    script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
+    if isCardScript
+      script()&attributes(isNestedFile ? {'src': '../js/card.min.js'} : {'src': 'js/card.min.js'})
+    script()&attributes(isNestedFile ? {'src': '../js/theme.min.js'} : {'src': 'js/theme.min.js'})

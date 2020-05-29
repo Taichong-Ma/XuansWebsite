@@ -1,0 +1,549 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Corporate Blog'
+
+//- Page Content
+block content
+
+  // Featured Posts Slider
+  section.featured-posts-slider.d-lg-flex
+    .column
+      .owl-carousel.post-preview-img-carousel(data-owl-carousel='{ "nav": false, "dots": false, "loop": true, "mouseDrag": false, "touchDrag": false, "pullDrag": false }')
+        a(href='blog-single-gallery.html' style='background-image: url(img/homepages/corporate-blog/hero-slide01.jpg);').post-preview-img
+        a(href='blog-single-gallery.html' style='background-image: url(img/homepages/corporate-blog/hero-slide02.jpg);').post-preview-img
+        a(href='blog-single-gallery.html' style='background-image: url(img/homepages/corporate-blog/hero-slide03.jpg);').post-preview-img
+    .column
+      .owl-carousel.post-cards-carousel(data-owl-carousel='{ "nav": true, "dots": false, "loop": true, "autoHeight": true }')
+        .blog-card
+          .card-body
+            h2.post-title
+              a(href='blog-single-gallery.html') Modern Architecture in 10 Slides. New Trends and Look Back.
+            p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum...
+            a(href='#').tag-link Architecture
+            a(href='#').tag-link Design
+            .card-footer.mt-4.px-0
+              a(href='blog-single-gallery.html').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th01.jpg', 'Post Author')
+                .post-author-name Sara Palson
+              .post-meta
+                a(href='blog-single-gallery.html#comments')
+                  i.fe-icon-message-square
+                  | 21
+                span
+                  i.fe-icon-clock
+                  | Oct 16, 2018
+        .blog-card
+          .card-body
+            h2.post-title
+              a(href='blog-single-gallery.html') Around the World in 80 Days. Collection of Photographs.
+            p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum...
+            a(href='#').tag-link Travelling
+            a(href='#').tag-link Lifestyle
+            .card-footer.mt-4.px-0
+              a(href='blog-single-gallery.html').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th04.jpg', 'Post Author')
+                .post-author-name Emanuel Ortega
+              .post-meta
+                a(href='blog-single-gallery.html#comments')
+                  i.fe-icon-message-square
+                  | 37
+                span
+                  i.fe-icon-clock
+                  | Sep 05, 2018
+        .blog-card
+          .card-body
+            h2.post-title
+              a(href='blog-single-gallery.html') All next-generation sport cars from top auto companies coming in 2019. 
+            p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum...
+            a(href='#').tag-link Automotive
+            a(href='#').tag-link Sport
+            .card-footer.mt-4.px-0
+              a(href='blog-single-gallery.html').post-author
+                .post-author-avatar
+                  +image('img/blog/authors/th03.jpg', 'Post Author')
+                .post-author-name Jessica Jones
+              .post-meta
+                a(href='blog-single-gallery.html#comments')
+                  i.fe-icon-message-square
+                  | 9
+                span
+                  i.fe-icon-clock
+                  | Aug 13, 2018
+
+  // Popular Categories
+  section.container.py-5.mt-5
+    h2.h4.block-title.text-center.pt-4.mt-2 Popular categories
+    .row.pt-4
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 48 posts
+            img(src='img/homepages/corporate-blog/category01.jpg' alt='Technology').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Technology
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 17 posts
+            img(src='img/homepages/corporate-blog/category02.jpg' alt='Political News').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Political News
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 54 posts
+            img(src='img/homepages/corporate-blog/category03.jpg' alt='Business').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Business
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 33 posts
+            img(src='img/homepages/corporate-blog/category04.jpg' alt='Travelling').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Travelling
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 9 posts
+            img(src='img/homepages/corporate-blog/category05.jpg' alt='Architecture').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Architecture
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 25 posts
+            img(src='img/homepages/corporate-blog/category06.jpg' alt='Design & Art').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Design &amp; Art
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 98 posts
+            img(src='img/homepages/corporate-blog/category07.jpg' alt='TV & Movies').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 TV &amp; Movies
+      .col-lg-3.col-md-4.col-sm-6
+        a(href='blog-grid-rs.html').d-block.text-decoration-none.mb-4
+          figure.figure
+            span.badge.badge-secondary 21 posts
+            img(src='img/homepages/corporate-blog/category08.jpg' alt='Video Games').figure-img
+            figcaption.figure-caption.h6.text-lg.text-center.mb-2 Video Games
+
+  // 2 Sidebar Section with Posts
+  section.bg-secondary.pt-5
+    .container.py-md-3
+      .row
+        
+        // List of Posts
+        .col-lg-5.col-md-7.order-md-2.pb-5
+          .mb-30
+            .card.blog-card.mb-2
+              .card-body
+                span.post-format
+                  i.fe-icon-mic
+                h5.post-title
+                  a(href='blog-single-audio.html') Deep Purple "Smoke on the Water". Song History and Records.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam aute irure dolor in reprehenderit in voluptate.
+                a(href='#').tag-link Music
+                a(href='#').tag-link Classic Rock
+              .card-footer
+                a(href='blog-single-audio.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th06.jpg', 'Post Author')
+                  .post-author-name Silvia Clark
+                .post-meta
+                  a(href='blog-single-audio.html#comments')
+                    i.fe-icon-message-square
+                    | 3
+                  span
+                    i.fe-icon-clock
+                    | Jul 15, 2018
+          .mb-30
+            .card.blog-card.mb-2
+              a(href='blog-single-carousel.html').post-thumb
+                +image('img/blog/01.jpg', 'Post Thumbnail')
+              .card-body
+                h5.post-title
+                  a(href='blog-single-carousel.html') The Real Truth About Space
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...
+                a(href='#').tag-link Space
+                a(href='#').tag-link Technology
+              .card-footer
+                a(href='blog-single-carousel.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th01.jpg', 'Post Author')
+                  .post-author-name Sara Palson
+                .post-meta
+                  a(href='blog-single-carousel.html#comments')
+                    i.fe-icon-message-square
+                    | 21
+                  span
+                    i.fe-icon-clock
+                    | Sep 03, 2018
+          .mb-30
+            .card.blog-card.mb-2
+              .card-body
+                span.post-format
+                  i.fe-icon-video
+                h5.post-title
+                  a(href='blog-single-video.html') The Most Anticipated Movies of 2018.
+                p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam...
+                a(href='#').tag-link Movies
+                a(href='#').tag-link Trailers
+              .card-footer
+                a(href='blog-single-video.html').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th02.jpg', 'Post Author')
+                  .post-author-name Mark Peterson
+                .post-meta
+                  a(href='blog-single-video.html#comments')
+                    i.fe-icon-message-square
+                    | 31
+                  span
+                    i.fe-icon-clock
+                    | Jul 29, 2018
+          .text-center
+            a(href='#').btn.btn-primary
+              i.fe-icon-rotate-cw
+              | &nbsp;Load More
+
+        // Sidebar
+        .col-lg-4.col-md-5.order-md-1
+          
+          // Trending Now
+          .widget.widget-featured-posts
+            h4.widget-title Trending Now
+            a(href='blog-single-gallery.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/04.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 22/07/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 21
+                .featured-post-title Getting to another level of design and functionality.
+            a(href='blog-single-carousel.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/02.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 30/06/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 17
+                .featured-post-title Popular Cherry 5 WordPress Framework Sneaky Peaks.
+            a(href='blog-single-link.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/07.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 11/06/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 220
+                .featured-post-title Google Analytics Academy. Learn with free online courses.
+            a(href='blog-single-audio.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/05.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 27/05/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 76
+                .featured-post-title Super fast CPU are now available for sale in US and Europe.
+            a(href='blog-single-video.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/06.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 14/05/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 8
+                .featured-post-title Multiple skins &amp; easy demo data import.
+            a(href='blog-single-gallery.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/08.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 14/05/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 8
+                .featured-post-title We live in a digital era. Lets adapt.
+          
+          // Popular in Travelling
+          .widget.widget-featured-posts
+            h4.widget-title Popular in Travelling
+            a(href='blog-single-gallery.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/09.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 13/07/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 24
+                .featured-post-title The 10 best Sahara Desert tours &amp; trips 2018 / 2019.
+            a(href='blog-single-carousel.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/10.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 19/06/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 15
+                .featured-post-title Top 5 destinations around the world with clear blue sea.
+            a(href='blog-single-video.html').featured-post
+              .featured-post-thumb
+                +image('img/widgets/blog/11.jpg', 'Post Thumbnail')
+              .featured-post-info
+                .featured-post-meta
+                  span.text-primary.opacity-70
+                    i.fe-icon-clock
+                    | 10/06/2018
+                  span.ml-3
+                    i.fe-icon-message-square
+                    | 8
+                .featured-post-title Individual tours to mountains with guide.
+        
+        // Sidebar
+        .col-lg-3.d-none.d-lg-block.order-md-3
+          .widget.mb-30
+            h4.widget-title Partner Ads
+            .border.p-1
+              .bg-white.py-4.px-3.text-center
+                i.d-block.fe-icon-info.lead.text-primary.mb-3.mt-2
+                h5.h6.block-title.mb-4 Your Ads can be displayed here
+                a(href='#').btn.btn-gradient.btn-sm.mb-3 Contact us
+          a(href='#').d-block.mb-30: img(src='img/homepages/corporate-blog/banner1.jpg' alt='Add Banner')
+          a(href='#').d-block.box-shadow: img(src='img/homepages/corporate-blog/banner2.jpg' alt='Add Banner')
+          
+  // Editor's Picks
+  section.container.py-5
+    h2.h4.block-title.text-center.mt-2 Editor's picks
+    .owl-carousel.carousel-flush.pt-3(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-carousel.html') My First Post About Technology. This Is How...
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Business
+            a(href='#').tag-link Technology
+          .card-footer
+            a(href='blog-single-carousel.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th04.jpg', 'Post Author')
+              .post-author-name Emanuel Ortega
+            .post-meta
+              a(href='blog-single-carousel.html#comments')
+                i.fe-icon-message-square
+                | 21
+              span
+                i.fe-icon-clock
+                | Sep 03, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-audio.html') Deep Purple "Smoke on the Water". Song History.
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Music
+            a(href='#').tag-link Classic Rock
+          .card-footer
+            a(href='blog-single-audio.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th06.jpg', 'Post Author')
+              .post-author-name Silvia Clark
+            .post-meta
+              a(href='blog-single-audio.html#comments')
+                i.fe-icon-message-square
+                | 3
+              span
+                i.fe-icon-clock
+                | Jul 15, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-video.html') The List of Most Anticipated Movies of 2018.
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Movies
+            a(href='#').tag-link Trailers
+          .card-footer
+            a(href='blog-single-video.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th01.jpg', 'Post Author')
+              .post-author-name Sara Palson
+            .post-meta
+              a(href='blog-single-video.html#comments')
+                i.fe-icon-message-square
+                | 31
+              span
+                i.fe-icon-clock
+                | Jul 29, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-carousel.html') My Second Post About Technology. This Is Why...
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Business
+            a(href='#').tag-link Technology
+          .card-footer
+            a(href='blog-single-carousel.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th04.jpg', 'Post Author')
+              .post-author-name Emanuel Ortega
+            .post-meta
+              a(href='blog-single-carousel.html#comments')
+                i.fe-icon-message-square
+                | 44
+              span
+                i.fe-icon-clock
+                | May 17, 2018
+
+  // YouTube CTA
+  section.bg-secondary.py-5
+    .container-fluid
+      .row.justify-content-center.align-items-center
+        .col-xl-6.col-md-7
+          img(src='img/homepages/corporate-blog/youtube-channel.jpg' alt='YouTube Channel').d-block
+        .col-xl-4.col-md-5.text-center.text-md-left
+          a(href='#').video-player-button.my-3.mr-3: i.fe-icon-play
+          span.video-player-label.text-muted Click me to go to channel!
+          h2.h3.mt-2 Watch us on YouTube
+          p.text-muted.d-none.d-lg-block Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+  // Top Autors
+  section.container.py-5
+    h2.h4.block-title.text-center.mt-2 This month top authors
+    .row.pt-3
+      // Author
+      .col-lg-3.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/05.jpg', 'Author Picture')
+          h4.team-name Emanuel Ortega
+          a(href='tel:+19871625346').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (987) 162 53 46
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-github
+                i.socicon-github
+              a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                i.socicon-stackoverflow
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+      // Author
+      .col-lg-3.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/06.jpg', 'Author Picture')
+          h4.team-name Samantha Palson
+          a(href='tel:+57872336590').team-contact-link
+            i.fe-icon-phone
+            | &nbsp; +5 (787) 233 65 90
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+      // Author
+      .col-lg-3.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/07.jpg', 'Author Picture')
+          h4.team-name Emma Johnson
+          a(href='tel:+13907765843').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (390) 776 58 43
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+              a(href='#').social-btn.sb-style-1.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-1.sb-dribbble
+                i.socicon-dribbble
+      // Author
+      .col-lg-3.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/08.jpg', 'Author Picture')
+          h4.team-name William Smith
+          a(href='tel:+72056557984').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+7 (205) 655 79 84
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+
+  // Mobile App CTA
+  section.bg-secondary.pt-3
+    .container
+      .row.justify-content-center.align-items-center
+        .col-md-6.text-center.text-md-left.pb-4
+          h2.h3.mt-2.py-3.py-lg-0 CreateX Blog App
+          p.text-muted.d-none.d-lg-block.pb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          a(href='#').market-btn.apple-btn.mr-3.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title App Store
+          a(href='#').market-btn.google-btn.mr-3.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title Google Play
+        .col-md-6
+          img(src='img/homepages/corporate-blog/mobile-app.jpg' alt='Mobile App').d-block.mx-auto
+
+  //- footer-blog.pug template
+  include partials/footer-blog

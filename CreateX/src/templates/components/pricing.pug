@@ -1,0 +1,217 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Pricing'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Pricing Style 1 (Default) Code Modal
+  include code/pricing-style1
+
+  //- Pricing Style 2 (Inside Card) Code Modal
+  include code/pricing-style2
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+    
+      // Style 1 (Default)
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 1 (Default)
+        a(href='#pricing-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+
+      .pricing-plans.pb-5.mb-2
+        ul.nav.nav-tabs.nav-tabs-style-3.pricing-tabs.justify-content-end
+          li.nav-item
+            a(href='#' class='nav-link active' data-toggle='price' data-period='monthly') Monthly
+          li.nav-item
+            a(href='#' class='nav-link' data-toggle='price' data-period='yearly')
+              | Yearly&nbsp;
+              sup -20%
+        .row
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .pricing-card
+              span.badge.badge-success Best Offer
+              .pricing-card-body
+                img(src='../img/pricing/01.png' alt='Starter Plan').pricing-card-image
+                h5 Starter
+                .pricing-card-price.monthly.active <span>$</span>40
+                .pricing-card-price.yearly <span>$</span>32
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>4GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Community support
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>5 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>2GB</strong>
+              .pricing-card-button
+                a(href='#').btn.btn-style-5.btn-primary Buy Now
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .pricing-card.border-primary
+              span.badge.badge-warning Most Popular
+              .pricing-card-body
+                img(src='../img/pricing/02.png' alt='Team Plan').pricing-card-image
+                h5 Team
+                .pricing-card-price.monthly.active <span>$</span>70
+                .pricing-card-price.yearly <span>$</span>56
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>16GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>10 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>5GB</strong>
+              .pricing-card-button
+                a(href='#').btn.btn-style-5.btn-gradient Buy Now
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .pricing-card
+              span.badge.badge-danger Rich Features
+              .pricing-card-body
+                img(src='../img/pricing/03.png' alt='Premium Plan').pricing-card-image
+                h5 Premium
+                .pricing-card-price.monthly.active <span>$</span>100
+                .pricing-card-price.yearly <span>$</span>80
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>Unlimited</strong>
+              .pricing-card-button
+                a(href='#').btn.btn-style-5.btn-primary Buy Now
+    
+      
+      // Style 2 (Inside card)
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 2 (Inside card)
+        a(href='#pricing-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+
+      .pricing-plans.pb-5.mb-2
+        ul.nav.nav-tabs.nav-tabs-style-3.pricing-tabs.justify-content-end
+          li.nav-item
+            a(href='#' class='nav-link active' data-toggle='price' data-period='monthly') Monthly
+          li.nav-item
+            a(href='#' class='nav-link' data-toggle='price' data-period='yearly')
+              | Yearly&nbsp;
+              sup -20%
+        .row
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .card.pricing-card
+              .card-body.text-center
+                span.badge.badge-success Best Offer
+                h5.pt-3 Starter
+                .pricing-card-price.monthly.active <span>$</span>40
+                .pricing-card-price.yearly <span>$</span>32
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>4GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Community support
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>5 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>2GB</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-primary Buy Now
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .card.pricing-card.border.border-primary
+              .card-body.text-center
+                span.badge.badge-warning Most Popular
+                h5.pt-3 Team
+                .pricing-card-price.monthly.active <span>$</span>70
+                .pricing-card-price.yearly <span>$</span>56
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>16GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>10 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>5GB</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-gradient Buy Now
+
+          // Pricing Plan
+          .col-xl-4.col-sm-6.mb-30.pb-3
+            .card.pricing-card
+              .card-body.text-center
+                span.badge.badge-danger Rich Features
+                h5.pt-3 Premium
+                .pricing-card-price.monthly.active <span>$</span>100
+                .pricing-card-price.yearly <span>$</span>80
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>Unlimited</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-primary Buy Now

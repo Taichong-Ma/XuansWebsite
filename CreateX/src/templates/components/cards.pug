@@ -1,0 +1,426 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Cards'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Card No Image Code Modal
+  include code/card-no-image
+
+  //- Card Top Image Code Modal
+  include code/card-top-image
+
+  //- Card Bottom Image Code Modal
+  include code/card-bottom-image
+
+  //- Card with Header Code Modal
+  include code/card-header
+
+  //- Card with Footer Code Modal
+  include code/card-footer
+
+  //- Card Alignment Code Modal
+  include code/card-alignment
+
+  //- Card with Tabs Code Modal
+  include code/card-tabs
+
+  //- Card with Pills Code Modal
+  include code/card-pills
+
+  //- Card with List Group Code Modal
+  include code/card-list-group
+
+  //- Card Borders Code Modal
+  include code/card-border
+
+  //- Card Layout: Group Code Modal
+  include code/card-layout-group
+
+  //- Card Layout: Deck Code Modal
+  include code/card-layout-deck
+
+  //- Card Layout: Columns Code Modal
+  include code/card-layout-columns
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4.mb-2
+      .row.pb-4
+
+        // No image
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 No image
+            a(href='#card-no-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          .card
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              a(href='#').btn.btn-sm.btn-primary.mt-2 Go Somewhere
+
+        // Image on top
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Image on top
+            a(href='#card-top-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          .card
+            img(src='../img/components/cards/01.jpg' alt='Card image')
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              a(href='#').btn.btn-sm.btn-gradient.mt-2 Go Somewhere
+
+        // Image on bottom      
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Image on bottom
+            a(href='#card-bottom-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Code
+          hr.pb-4
+          .card
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              a(href='#').btn.btn-sm.btn-accent.mt-2 Go Somewhere
+            img(src='../img/components/cards/02.jpg' alt='Card image')
+      
+      .row.pb-4
+
+        // Card header
+        .col-sm-6.mb-30.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Card header
+            a(href='#card-header-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          .card.text-center
+            .card-header
+              p.text-muted.font-weight-bold Card header text
+            .card-body
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+              a(href='#').btn.btn-primary.btn-sm.mt-2 Go Somewhere
+
+        // Card footer
+        .col-sm-6.mb-30.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Card footer
+            a(href='#card-footer-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          .card.text-center
+            .card-body
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+              a(href='#').btn.btn-primary.btn-sm.mt-2 Go Somewhere
+            .card-footer
+              p.text-muted.font-weight-bold Card footer text
+      
+      // Content alignment
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Content alignment
+        a(href='#card-alignment-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              a(href='#').btn.btn-sm.btn-primary.mt-2 Go Somewhere
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card.text-center
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              a(href='#').btn.btn-sm.btn-primary.mt-2 Go Somewhere
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card.text-right
+            .card-body
+              h4.card-title Card title here
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              a(href='#').btn.btn-sm.btn-primary.mt-2 Go Somewhere
+      
+      // Navigation: Tabs
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Navigation: Tabs
+        a(href='#card-tabs-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-header
+              ul(class='nav nav-tabs' role='tablist')
+                li.nav-item
+                  a(href='#' class='nav-link active' data-toggle='tab' role='tab')
+                    i.fe-icon-home
+                    | &nbsp;Home
+                li.nav-item
+                  a(href='#' class='nav-link' data-toggle='tab' role='tab')
+                    i.fe-icon-user
+                    | &nbsp;Profile
+                li.nav-item
+                  a(href='#' class='nav-link' data-toggle='tab' role='tab')
+                    i.fe-icon-settings
+                    | &nbsp;Settings
+            .card-body.text-center
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-header
+              ul(class='nav nav-tabs nav-tabs-style-3' role='tablist')
+                li.nav-item
+                  a(href='#' class='nav-link active' data-toggle='tab' role='tab')
+                    i.fe-icon-home
+                    | &nbsp;Home
+                li.nav-item
+                  a(href='#' class='nav-link' data-toggle='tab' role='tab')
+                    i.fe-icon-user
+                    | &nbsp;Profile
+                li.nav-item
+                  a(href='#' class='nav-link' data-toggle='tab' role='tab')
+                    i.fe-icon-settings
+                    | &nbsp;Settings
+            .card-body.text-center
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+      
+      // Navigation: Pills
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Navigation: Pills
+        a(href='#card-pills-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-header
+              ul.nav.nav-pills
+                li.nav-item: a(href='#' class='nav-link active') Active
+                li.nav-item: a(href='#' class='nav-link') Link
+                li.nav-item: a(href='#' class='nav-link disabled') Disabled
+            .card-body.text-center
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-header
+              ul.nav.nav-pills.nav-pills-style-2
+                li.nav-item: a(href='#' class='nav-link active') Active
+                li.nav-item: a(href='#' class='nav-link') Link
+                li.nav-item: a(href='#' class='nav-link disabled') Disabled
+            .card-body.text-center
+              h4.card-title Special title treatment
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+      
+      // List goup inside card
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 List goup inside card
+        a(href='#card-list-group-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            ul.list-group.list-group-flush
+              li.list-group-item Cras justo odio
+              li.list-group-item.active Dapibus ac facilisis (active)
+              li.list-group-item Vestibulum at eros
+              li.list-group-item Porta ac consectetur ac
+            .card-body
+              a(href='#').btn.btn-sm.btn-primary Go Somewhere
+        .col-md-6.mb-30.pb-4
+          .card
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            nav.list-group.list-group-flush
+              a(href='#').list-group-item Cras justo odio
+              a(href='#').list-group-item.active Dapibus ac facilisis (active)
+              a(href='#').list-group-item Vestibulum at eros
+              a(href='#').list-group-item Porta ac consectetur ac
+            .card-body
+              a(href='#').btn.btn-sm.btn-primary Go Somewhere
+      
+      // Border utilities
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Border utilities
+        a(href='#card-border-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .row
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-primary
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-accent
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-info
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-success
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+      .row.pb-4
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-warning
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-danger
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-dark
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        .col-lg-3.col-sm-6.mb-30.pb-3
+          .card.border.border-secondary
+            .card-body
+              h4.card-title Card title
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+      
+      // Layout: Cards group
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Layout: Cards group
+        a(href='#card-layout-group-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .card-group.pb-5
+        .card.mb-30
+          img(src='../img/components/cards/01.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          img(src='../img/components/cards/03.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This card has supporting text below as a natural lead-in to additional content.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          img(src='../img/components/cards/02.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+      
+      // Layout: Cards deck
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Layout: Cards deck
+        a(href='#card-layout-deck-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .card-deck.pb-5
+        .card.mb-30
+          img(src='../img/components/cards/01.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          img(src='../img/components/cards/03.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This card has supporting text below as a natural lead-in to additional content.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          img(src='../img/components/cards/02.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+          .card-footer.text-muted.text-sm
+            span.opacity-75 Last updated 3 mins ago
+      
+      // Layout: Cards columns
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Layout: Cards columns
+        a(href='#card-layout-columns-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .card-columns.pb-5
+        .card.mb-30
+          img(src='../img/components/cards/01.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          .card-body
+            h4.card-title Card title here
+            p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+        .card.mb-30
+          img(src='../img/components/cards/02.jpg' alt='Card image')
+          .card-body
+            h4.card-title Card title here
+            p.card-text This card has supporting text below as a natural lead-in to additional content.
+            span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+        .card.border.border-primary.mb-30.text-center
+          .card-body
+            p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            span.text-muted.text-sm.opacity-75 Last updated 3mins ago
+        .card.mb-30
+          img(src='../img/components/cards/03.jpg' alt='Card image').card-img-top
+        .card.border.border-info.mb-30
+          .card-body
+            p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            span.text-muted.text-sm.opacity-75 Last updated 3mins ago
+        .card.border.mb-30
+          .card-body
+            h4.card-title Card title here
+            p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            span.text-muted.text-sm.opacity-75 Last updated 3mins ago

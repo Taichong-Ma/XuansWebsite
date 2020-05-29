@@ -1,0 +1,50 @@
+// Block Title with Icon Code
+#block-title-icon-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Square Icon + Subtitle --&gt;</strong>
+                &lt;h4 class=&quot;block-title&quot;&gt;
+                  &lt;span class=&quot;block-title-icon&quot;&gt;
+                    &lt;i class=&quot;fe-icon-bell&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  Title with subtitle
+                  &lt;small&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/small&gt;
+                &lt;/h4&gt;
+
+                <strong>&lt;!-- Circle Icon + Subtitle --&gt;</strong>
+                &lt;h4 class=&quot;block-title&quot;&gt;
+                  &lt;span class=&quot;block-title-icon rounded-circle&quot;&gt;
+                    &lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  Title with subtitle
+                  &lt;small&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/small&gt;
+                &lt;/h4&gt;
+
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Square Icon + Subtitle</strong>
+                h4.block-title
+                  span.block-title-icon: i.fe-icon-bell
+                  | Title with subtitle
+                  small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                
+                <strong>//- Circle Icon + Subtitle</strong>
+                h4.block-title
+                  span.block-title-icon.rounded-circle: i.fe-icon-clock
+                  | Title with subtitle
+                  small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

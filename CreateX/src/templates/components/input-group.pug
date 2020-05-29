@@ -1,0 +1,260 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Input Group'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Input Group Addon Position Code Modal
+  include code/input-group-addon-position
+
+  //- Input Group Addon Types Code Modal
+  include code/input-group-addon-types
+
+  //- Input Group Multiple Inputs Code Modal
+  include code/input-group-multiple-inputs
+
+  //- Input Group Multiple Addons Code Modal
+  include code/input-group-multiple-addons
+
+  //- Input Group Button Addons Code Modal
+  include code/input-group-button-addons
+
+  //- Input Group Light Skin Code Modal
+  include code/input-group-light-skin
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-4
+
+      // Addon position
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Addon position
+        a(href='#input-group-addon-position-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-md-4
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fe-icon-lock
+            input(type='password' placeholder='Password').form-control
+        .col-md-4
+          .input-group.form-group
+            input(type='text' placeholder="Recipient's e-mail").form-control
+            .input-group-append
+              span.input-group-text @example.com
+        .col-md-4
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fe-icon-dollar-sign
+            input(type='text' placeholder="Amount").form-control
+            .input-group-append
+              span.input-group-text .00
+
+      // Different types
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Different types
+        a(href='#input-group-addon-types-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-md-6
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fe-icon-message-square
+            textarea(placeholder='Type your message here...' rows='6').form-control
+        .col-md-6
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text Options
+            select.form-control
+              option Choose one...
+              option One
+              option Two
+              option Three
+              option Four
+              option Five
+          .input-group.form-group
+            .input-group-prepend
+              .input-group-text
+                .custom-control.custom-checkbox
+                  input(type='checkbox' id='ex-check-1').custom-control-input
+                  label(for='ex-check-1').custom-control-label
+            input(type='text' placeholder="Checkbox here").form-control
+          .input-group.form-group
+            .input-group-prepend
+              .input-group-text
+                .custom-control.custom-radio
+                  input(type='radio' id='ex-radio-1' name='radio').custom-control-input
+                  label(for='ex-radio-1').custom-control-label
+            input(type='text' placeholder="Radio button here").form-control
+      
+      .row
+
+        // Multiple inputs
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Multiple inputs
+            a(href='#input-group-multiple-inputs-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text First &amp; last name
+            input(type='text' placeholder="First name").form-control
+            input(type='text' placeholder="Last name").form-control
+
+        // Multiple addons
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Multiple addons
+            a(href='#input-group-multiple-addons-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fe-icon-dollar-sign
+              span.input-group-text .00
+            input(type='text' placeholder="Amount").form-control
+          .input-group.form-group
+            input(type='text' placeholder="Amount").form-control
+            .input-group-append
+              span.input-group-text
+                i.fe-icon-dollar-sign
+              span.input-group-text .00
+
+      // Button addons
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3
+          | Button addons &nbsp;
+          span.d-inline-block.font-family-body.text-md.font-weight-normal.text-muted Applicable to all button styles.
+        a(href='#input-group-button-addons-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row
+        .col-md-6
+          .input-group.form-group
+            .input-group-prepend
+              button(type='button').btn.btn-primary Button
+            input(type='text' placeholder="Button on the left").form-control
+          .input-group.form-group
+            input(type='text' placeholder="Button on the right").form-control
+            .input-group-append
+              button(type='button').btn.btn-primary Button
+        .col-md-6
+          .input-group.form-group
+            .input-group-prepend
+              button(type='button' data-toggle='dropdown').btn.btn-primary.dropdown-toggle Dropdown
+              nav.dropdown-menu
+                a(href='#').dropdown-item Action
+                a(href='#').dropdown-item Another action
+                a(href='#').dropdown-item Something else here
+            input(type='text' placeholder="Dropdown on the left").form-control
+          .input-group.form-group
+            input(type='text' placeholder="Dropdown on the right").form-control
+            .input-group-append
+              button(type='button' data-toggle='dropdown').btn.btn-primary.dropdown-toggle Dropdown
+              nav.dropdown-menu
+                a(href='#').dropdown-item Action
+                a(href='#').dropdown-item Another action
+                a(href='#').dropdown-item Something else here
+      .row.mb-2
+        .col-md-9
+          .input-group
+            input(type='text' placeholder="Buttons on the right").form-control.border-right-0
+            .input-group-append
+              button(type='button').btn.btn-secondary
+                i.fe-icon-edit.text-lg
+              button(type='button').btn.btn-success
+                i.fe-icon-check-circle.text-lg
+              button(type='button').btn.btn-danger
+                i.fe-icon-trash-2.text-lg
+
+    // Light Skin
+    .bg-dark.py-5
+      .container.py-2.mb-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.text-white.mr-3 Input group light version
+          a(href='#input-group-light-skin-code' data-toggle='modal').navi-link.font-weight-bold.text-white.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4.mb-1
+        .row.pb-2
+          .col-lg-10
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Addon left
+              .col-10
+                .input-group.input-group-light-skin
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fe-icon-lock
+                  input(type='password' placeholder='Password').form-control
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Addon right
+              .col-10
+                .input-group.input-group-light-skin
+                  input(type='text' placeholder="Recipient's e-mail").form-control
+                  .input-group-append
+                    span.input-group-text @example.com
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Addon both sides
+              .col-10
+                .input-group.input-group-light-skin
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fe-icon-dollar-sign
+                  input(type='text' placeholder="Amount").form-control
+                  .input-group-append
+                    span.input-group-text .00
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Select addon
+              .col-10
+                .input-group.input-group-light-skin
+                  .input-group-prepend
+                    span.input-group-text Options
+                  select.form-control
+                    option Choose one...
+                    option One
+                    option Two
+                    option Three
+                    option Four
+                    option Five
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Button addon
+              .col-10
+                .input-group.input-group-light-skin
+                  input(type='text' placeholder="Button on the right").form-control
+                  .input-group-append
+                    button(type='button').btn.btn-primary Button
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Dropdown addon
+              .col-10
+                .input-group.input-group-light-skin
+                  .input-group-prepend
+                    button(type='button' data-toggle='dropdown').btn.btn-primary.dropdown-toggle Dropdown
+                    nav.dropdown-menu
+                      a(href='#').dropdown-item Action
+                      a(href='#').dropdown-item Another action
+                      a(href='#').dropdown-item Something else here
+                  input(type='text' placeholder="Dropdown on the right").form-control

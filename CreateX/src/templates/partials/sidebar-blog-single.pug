@@ -1,0 +1,139 @@
+// Single Post Sidebar
+
+// Off-Canvas Toggle
+a(href='#blog-single-sidebar' data-toggle='offcanvas').offcanvas-toggle
+  i.fe-icon-sidebar
+
+// Off-Canvas Container
+aside#blog-single-sidebar.offcanvas-container
+  .offcanvas-scrollable-area.px-4.pt-5.px-lg-0.pt-lg-0
+    span.offcanvas-close
+      i.fe-icon-x
+
+    // Categories
+    .widget.widget-categories
+      h4.widget-title Categories
+      ul
+        li
+          a(href='#technology' data-toggle='collapse')
+            | Software &amp; Technology
+            span &nbsp;(45)
+          #technology.collapse.show
+            ul
+              li
+                a(href='#')
+                  | Gadgets reviews
+                  span &nbsp;(22)
+              li
+                a(href='#')
+                  | Robotics &amp; AI
+                  span &nbsp;(10)
+              li
+                a(href='#')
+                  | Technological trends
+                  span &nbsp;(13)
+        li
+          a(href='#design' data-toggle='collapse').collapsed
+            | Digital design
+            span &nbsp;(76)
+          #design.collapse
+            ul
+              li
+                a(href='#')
+                  | Web design
+                  span &nbsp;(31)
+              li
+                a(href='#')
+                  | Mobile UI and UX
+                  span &nbsp;(28)
+              li
+                a(href='#')
+                  | Design tools reviews
+                  span &nbsp;(17)
+        li
+          a(href='#architecture' data-toggle='collapse').collapsed
+            | Architecture
+            span &nbsp;(32)
+          #architecture.collapse
+            ul
+              li
+                a(href='#')
+                  | Modern trends
+                  span &nbsp;(23)
+              li
+                a(href='#')
+                  | History of architecture
+                  span &nbsp;(9)
+        li
+          a(href='#')
+            | Marketing &amp; Management
+            span &nbsp;(24)
+        li
+          a(href='#')
+            | Hobby &amp; Lifestyle
+            span &nbsp;(18)
+
+    // Recent Comments
+    .widget.widget-recent-comments
+      h4.widget-title Recent comments
+      a(href='#').recent-comment
+        span.recent-comment-meta Jane Portman on
+        .recent-comment-title The App of The Future
+      a(href='#').recent-comment
+        span.recent-comment-meta William Smith on
+        .recent-comment-title Cherry 5 WordPress Framework
+      a(href='#').recent-comment
+        span.recent-comment-meta Emma Johnson on
+        .recent-comment-title Another Level of Design
+        
+    // Related Posts
+    .widget.widget-featured-posts
+      h4.widget-title  Related posts
+      a(href='#').featured-post
+        .featured-post-thumb
+          +image('img/widgets/blog/01.jpg', 'Post Thumbnail')
+        .featured-post-info
+          .featured-post-meta
+            span.text-primary.opacity-70
+              i.fe-icon-clock
+              | 22/04/2018
+            span.ml-3
+              i.fe-icon-message-square
+              | 21
+          .featured-post-title Getting to another level of design and functionality.
+      a(href='#').featured-post
+        .featured-post-thumb
+          +image('img/widgets/blog/02.jpg', 'Post Thumbnail')
+        .featured-post-info
+          .featured-post-meta
+            span.text-primary.opacity-70
+              i.fe-icon-clock
+              | 30/05/2018
+            span.ml-3
+              i.fe-icon-message-square
+              | 17
+          .featured-post-title Cherry 5 WordPress Framework Sneaky Peaks.
+      a(href='#').featured-post
+        .featured-post-thumb
+          +image('img/widgets/blog/03.jpg', 'Post Thumbnail')
+        .featured-post-info
+          .featured-post-meta
+            span.text-primary.opacity-70
+              i.fe-icon-clock
+              | 11/06/2018
+            span.ml-3
+              i.fe-icon-message-square
+              | 8
+          .featured-post-title Multiple skins &amp; easy demo data import.
+
+    // Tag Cloud
+    .widget
+      h4.widget-title Tag cloud
+      a(href='#').tag-link Technology
+      a(href='#').tag-link Software
+      a(href='#').tag-link Digital
+      a(href='#').tag-link Croudfunding
+      a(href='#').tag-link Social
+      a(href='#').tag-link.active Freelance
+      a(href='#').tag-link Marketing
+      a(href='#').tag-link Management

@@ -1,0 +1,85 @@
+//
+// Full Screen Overlay
+// --------------------------------------------------
+
+.fs-overlay-wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: $fs-overlay-padding-y $fs-overlay-padding-x;
+  transition: $fs-overlay-transition;
+  background: {
+    position: center;
+    color: $fs-overlay-bg;
+    repeat: no-repeat;
+    size: cover;
+  }
+  opacity: 0;
+  visibility: hidden;
+  z-index: $zindex-fs-overlay;
+  &.in-view {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.fs-overlay-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+.fs-overlay-content {
+  display: table-cell;
+  transform: translateY(15px);
+  transition: all .3s .25s;
+  opacity: 0;
+  vertical-align: middle;
+  .input-group { box-shadow: $card-box-shadow; }
+  .input-group-text {
+    padding: {
+      right: 0;
+      left: 20px;
+    }
+    background: none;
+    font-size: $lead-font-size;
+  }
+  .form-control {
+    height: 80px;
+    border: 0;
+    font-size: $font-size-xl;
+    &:hover { border-color: $border-color !important; }
+    &:focus { box-shadow: none !important; }
+  }
+}
+.in-view .fs-overlay-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.fs-overlay-close {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  transition: all .3s;
+  border-radius: 50%;
+  background-color: $white;
+  font-size: ($font-size-base * 1.375);
+  line-height: 53px;
+  text-align: center;
+  box-shadow: $fs-overlay-close-box-shadow;
+  cursor: pointer;
+  > i {
+    display: inline-block;
+    transition: all .3s;
+  }
+  &:hover {
+    background-color: $gray-100;
+    box-shadow: none;
+    > i { transform: rotate(90deg); }
+  }
+}

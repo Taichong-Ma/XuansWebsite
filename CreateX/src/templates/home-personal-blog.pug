@@ -1,0 +1,411 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-simple'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Personal Blog'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/personal-blog/hero-bg.jpg);').position-relative.bg-center.bg-norepeat.bg-cover.pt-sm-5.pb-5
+    .bg-overlay.bg-gradient
+    .container.bg-parallax-content.py-5.mb-4.text-center
+      h1.h2.text-white.pt-4 Hi! I'm James Smith - blogger.
+      ul.text-lg.list-inline.text-white.opacity-75
+        li.mx-2.font-weight-medium
+          i.d-inline-block.fe-icon-map-pin.align-middle
+          | &nbsp;New York
+        li.mx-2.font-weight-medium
+          i.d-inline-block.fe-icon-mail.align-middle
+          | &nbsp;jamessmith@example.com
+      p.text-lg.font-weight-medium.text-white.py-2 I write pretty much about everything actual and interesting. Find main topics below.
+      .d-inline-block.align-middle.mx-2.mb-3
+        img(src='img/homepages/personal-blog/followers.png' width='126' alt='Followers').d-block
+      span.d-inline-block.align-middle.text-white.font-weight-medium.opacity-80.mb-3 12k followers
+      a(href='#').btn.btn-light.btn-sm.mx-3.mb-3
+        i.fe-icon-user-plus
+        | &nbsp;Follow
+  .container.bg-parallax-content(style='margin-top: -80px;').pb-3
+    figure(style='width: 170px;').figure.d-block.rounded-circle.p-2.mx-auto
+      img(src='img/homepages/personal-blog/author-avatar.jpg' alt='James Smith').d-block.w-100.rounded-circle
+
+  // Categories
+  section.container.py-4
+    h2.h3.block-title.text-center I write about
+    .row.py-3
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-hard-drive
+          h3.icon-box-title Technology &amp; Gadgets
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-camera
+          h3.icon-box-title Photography &amp; Cameras
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-briefcase
+          h3.icon-box-title Travelling &amp; Destinations
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-activity
+          h3.icon-box-title Finance &amp; Stocks
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-tv
+          h3.icon-box-title TV &amp; Movies
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+      .col-md-4.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-mic
+          h3.icon-box-title Music &amp; Singers
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          a(href='blog-grid-rs.html').icon-box-link
+            | Read posts
+            i.fe-icon-arrow-right
+
+  // Popular Posts (Grid)
+  section(style='background-color: #f7f8f8;').pt-5.pb-5
+    .container.pt-2.pb-3
+      h2.h3.block-title.text-center
+        | Popular posts
+        small Carefully selected collection of my best content
+      .isotope-grid.cols-3.pt-3
+        .gutter-sizer
+        .grid-sizer
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            a(href='blog-single-carousel.html').post-thumb
+              +image('img/blog/01.jpg', 'Post Thumbnail')
+            .card-body.pt-3
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Sep 03, 2018
+                a(href='blog-single-carousel.html#comments')
+                  i.fe-icon-message-square
+                  | 21
+              h5.post-title
+                a(href='blog-single-carousel.html') The Real Truth About Space
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque...
+              a(href='#').tag-link Space
+              a(href='#').tag-link Technology
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            a(href='blog-single-gallery.html').post-thumb
+              +image('img/blog/04.jpg', 'Post Thumbnail')
+            .card-body.pt-3
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Aug 26, 2018
+                a(href='blog-single-gallery.html#comments')
+                  i.fe-icon-message-square
+                  | 19
+              h5.post-title
+                a(href='blog-single-gallery.html') Modern Architecture in 10 Slides. New Trends.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Design
+              a(href='#').tag-link Architecture
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .card-body.pt-3
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Sep 03, 2018
+                a(href='blog-single-carousel.html#comments')
+                  i.fe-icon-message-square
+                  | 21
+              h5.post-title
+                a(href='blog-single-carousel.html') My First Post About Technology. This Is How...
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Business
+              a(href='#').tag-link Technology
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .card-body(style='background-image: url(img/blog/03.jpg);')
+              span.post-format.bg-gradient
+                i.font-family-heading.h4.text-white.pt-1 “
+              .post-meta.pb-2
+                span.text-white.ml-0
+                  i.fe-icon-clock
+                  | Aug 13, 2018
+                a(href='blog-single-quotation.html#comments').text-white
+                  i.fe-icon-message-square
+                  | 7
+              h5.post-title
+                a(href='blog-single-quotation.html').text-white When I do good, I feel good. When I do bad, I feel bad. That’s my religion.
+              p.text-white Abraham Lincoln
+              a(href='#').tag-link Business Wisdom
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .embed-responsive.embed-responsive-16by9
+              iframe(src='https://player.vimeo.com/video/262037152?color=ac32e4&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+            .card-body.pt-2
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Jul 29, 2018
+                a(href='blog-single-video.html#comments')
+                  i.fe-icon-message-square
+                  | 31
+              h5.post-title
+                a(href='blog-single-video.html') We Live in a Digital Era.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+              a(href='#').tag-link Technology
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .card-body
+              span.post-format
+                i.fe-icon-mic
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Jul 15, 2018
+                a(href='blog-single-audio.html#comments')
+                  i.fe-icon-message-square
+                  | 3
+              h5.post-title
+                a(href='blog-single-audio.html') Deep Purple "Smoke on the Water". Song History and Records.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Music
+              a(href='#').tag-link Classic Rock
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            a(href='blog-single-gallery.html').post-thumb
+              +image('img/blog/02.jpg', 'Post Thumbnail')
+            .card-body.pt-3
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Aug 26, 2018
+                a(href='blog-single-gallery.html#comments')
+                  i.fe-icon-message-square
+                  | 19
+              h5.post-title
+                a(href='blog-single-gallery.html') Around the World in 80 Days. Collection of Photographs.
+              p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              a(href='#').tag-link Travelling
+              a(href='#').tag-link Lifestyle
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .card-body
+              span.post-format
+                i.fe-icon-link
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Aug 07, 2018
+                a(href='blog-single-link.html#comments')
+                  i.fe-icon-message-square
+                  | 5
+              h5.post-title.post-title-link
+                a(href='#') Google Analytics Academy. Learn with free online courses.
+              a(href='#').tag-link Business
+              a(href='#').tag-link Marketing
+        
+        // Post
+        .grid-item
+          .card.blog-card.mb-2
+            .card-body
+              span.post-format
+                i.fe-icon-video
+              .post-meta.pb-2
+                span.ml-0
+                  i.fe-icon-clock
+                  | Jul 29, 2018
+                a(href='blog-single-video.html#comments')
+                  i.fe-icon-message-square
+                  | 31
+              h5.post-title
+                a(href='blog-single-video.html') The List of Most Anticipated Movies of 2018.
+              a(href='#').tag-link Movies
+              a(href='#').tag-link Trailers
+      .text-center
+        a(href='blog-grid-rs.html').btn.btn-style-2.btn-primary Read More Posts
+
+  // Partner Posts (Carousel)
+  section.container.pt-5.pb-4.mb-2
+    h2.h3.block-title.text-center.pt-2
+      | Partner posts
+      small Carefully selected content from my best partners
+    .owl-carousel.carousel-flush.pt-3(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-carousel.html') My First Post About Technology. This Is How...
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Business
+            a(href='#').tag-link Technology
+          .card-footer
+            a(href='blog-single-carousel.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th04.jpg', 'Post Author')
+              .post-author-name Emanuel Ortega
+            .post-meta
+              a(href='blog-single-carousel.html#comments')
+                i.fe-icon-message-square
+                | 21
+              span
+                i.fe-icon-clock
+                | Sep 03, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-audio.html') Deep Purple "Smoke on the Water". Song History.
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Music
+            a(href='#').tag-link Classic Rock
+          .card-footer
+            a(href='blog-single-audio.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th06.jpg', 'Post Author')
+              .post-author-name Silvia Clark
+            .post-meta
+              a(href='blog-single-audio.html#comments')
+                i.fe-icon-message-square
+                | 3
+              span
+                i.fe-icon-clock
+                | Jul 15, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-video.html') The List of Most Anticipated Movies of 2018.
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Movies
+            a(href='#').tag-link Trailers
+          .card-footer
+            a(href='blog-single-video.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th01.jpg', 'Post Author')
+              .post-author-name Sara Palson
+            .post-meta
+              a(href='blog-single-video.html#comments')
+                i.fe-icon-message-square
+                | 31
+              span
+                i.fe-icon-clock
+                | Jul 29, 2018
+      .mb-30.pb-4
+        .card.blog-card
+          .card-body
+            h5.post-title
+              a(href='blog-single-carousel.html') My Second Post About Technology. This Is Why...
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a(href='#').tag-link Business
+            a(href='#').tag-link Technology
+          .card-footer
+            a(href='blog-single-carousel.html').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th04.jpg', 'Post Author')
+              .post-author-name Emanuel Ortega
+            .post-meta
+              a(href='blog-single-carousel.html#comments')
+                i.fe-icon-message-square
+                | 44
+              span
+                i.fe-icon-clock
+                | May 17, 2018
+
+  // Contact
+  section.bg-center.bg-no-repeat.bg-cover.py-3(style='background-image: url(img/homepages/personal-blog/contact-bg.png);')
+    .container.py-5
+      .row
+        .col-lg-3.col-md-4.text-center.text-md-left.pb-3
+          h2.h3 <span class='font-weight-normal'>Text me for</span> cooperation
+          p.text-muted.text-sm I'll be glad to answer all your questions. I normally respond within 2 - 3 business days.
+        form(novalidate).col-lg-9.col-md-8.needs-validation
+          .row
+            .col-sm-6.form-group
+              input(type='text' placeholder='Your Name' required).form-control
+              .invalid-tooltip Please fill in your name!
+            .col-sm-6.form-group
+              input(type='email' placeholder='Your Email' required).form-control
+              .invalid-tooltip Please provide valid email address!
+          .form-group
+            textarea(rows='6' placeholder='Type your message...' required).form-control
+            .invalid-tooltip Please type your message!
+          .text-right
+            button(type='submit').btn.btn-style-2.btn-primary Send Message
+
+  // Footer
+  footer(style='background-color: #30363d;').pt-5
+    
+    // Subscription
+    .container
+      h6.text-white.text-center Subscribe to Newsletter
+      .row.justify-content-center.pb-4.mb-3
+        .col-xl-6.col-lg-7.col-md-9
+          form(action='https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=29ca296126' method='post' target='_blank' novalidate)
+            .input-group
+              input(type='email' name='EMAIL' placeholder="Email address").form-control.form-control-light-skin
+              .input-group-append
+                button(type='submit').btn.btn-primary Sign Up
+            small.form-text.text-white.opacity-50.pt-1.text-center Enter email to receive a newsletter with new posts daily.
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;' aria-hidden='true')
+              input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+
+      // Follow Me
+      h6.text-white.text-center Follow Me
+      .text-center.pt-2.pb-4.mb-2
+        a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#').social-btn.sb-style-6.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#').social-btn.sb-style-6.sb-youtube.sb-light-skin
+          i.socicon-youtube
+        a(href='#').social-btn.sb-style-6.sb-instagram.sb-light-skin
+          i.socicon-instagram
+      hr.hr-light
+      .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+        div.order-2
+          a(href='#').footer-link.text-white About
+          a(href='#').footer-link.text-white.ml-3 Help &amp; Info
+          a(href='#').footer-link.text-white.ml-3 Privacy Policy
+        p.m-0.text-sm.text-white.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-white opacity-60 p-0' target='_blank'>by Createx Studio</a>

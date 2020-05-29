@@ -1,0 +1,107 @@
+// Testimonials Inside Carousel. Single Item Code
+#testimonials-carousel-single-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Testimonials Inside Carousel. Single Item --&gt;</strong>
+                &lt;div class=&quot;owl-carousel testimonials-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true }'&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial text-center&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Barbara Palson
+                          &lt;cite&gt;Graphic Designer&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial text-center&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Hinata Nakamura
+                          &lt;cite&gt;Financial Director&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial text-center&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Michael Davis
+                          &lt;cite&gt;Co-Founder, CEO&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Testimonials Inside Carousel. Single Item</strong>
+                .owl-carousel.testimonials-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true }')
+
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial.text-center
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Barbara Palson
+                          cite Graphic Designer
+
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial.text-center
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Hinata Nakamura
+                          cite Financial Director
+
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial.text-center
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Michael Davis
+                          cite Co-Founder, CEO

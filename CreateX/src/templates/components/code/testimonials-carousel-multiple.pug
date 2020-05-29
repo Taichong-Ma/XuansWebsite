@@ -1,0 +1,161 @@
+// Testimonials Inside Carousel. Multiple Items Code
+#testimonials-carousel-multiple-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Testimonials Inside Carousel. Multiple Items --&gt;</strong>
+                &lt;div class=&quot;owl-carousel testimonials-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;margin&quot;: -15, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 4000, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;630&quot;:{&quot;items&quot;:2},&quot;991&quot;:{&quot;items&quot;:2},&quot;1200&quot;:{&quot;items&quot;:3}} }'&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Barbara Palson
+                          &lt;cite&gt;Graphic Designer&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Hinata Nakamura
+                          &lt;cite&gt;Financial Director&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Michael Davis
+                          &lt;cite&gt;Co-Founder, CEO&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Sophia Johnson
+                          &lt;cite&gt;Marketing Manager&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Testimonial --&gt;</strong>
+                  &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                      &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                        &lt;div class=&quot;blockquote-footer&quot;&gt;
+                          Christopher Lee
+                          &lt;cite&gt;Marketing Manager&lt;/cite&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/footer&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Testimonials Inside Carousel. Multiple Items</strong>
+                .owl-carousel.testimonials-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;margin&quot;: -15, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 4000, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;630&quot;:{&quot;items&quot;:2},&quot;991&quot;:{&quot;items&quot;:2},&quot;1200&quot;:{&quot;items&quot;:3}} }')
+
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Barbara Palson
+                          cite Graphic Designer
+                  
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Hinata Nakamura
+                          cite Financial Director
+
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Michael Davis
+                          cite Co-Founder, CEO
+                        
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Sophia Johnson
+                          cite Marketing Manager
+                  
+                  <strong>//- Testimonial</strong>
+                  .blockquote.testimonial
+                    p Lorem ipsum dolor sit amet...
+                    footer.testimonial-footer
+                      .testimonial-avatar
+                        +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                      .d-table-cell.align-middle.pl-2
+                        .blockquote-footer
+                          | Christopher Lee
+                          cite Marketing Manager

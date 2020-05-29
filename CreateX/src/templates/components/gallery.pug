@@ -1,0 +1,199 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Gallery'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Gallery Default Grid Code Modal
+  include code/gallery-default-grid
+
+  //- Gallery with Captions Code Modal
+  include code/gallery-with-captions
+
+  //- Gallery Default Grid No Gutters Code Modal
+  include code/gallery-default-grid-ng
+
+  //- Gallery Masonry Grid Code Modal
+  include code/gallery-masonry-grid
+
+  //- Gallery Masonry Grid No Gutters Code Modal
+  include code/gallery-masonry-grid-ng
+
+  //- Gallery inside Carousel Code Modal
+  include code/gallery-carousel
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Default grid with gutters
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Default grid with gutters
+        a(href='#gallery-default-grid-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/01.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+            +image('img/components/gallery/th01.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/02.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+            +image('img/components/gallery/th02.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-30
+            +image('img/components/gallery/th03.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/04.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+            +image('img/components/gallery/th04.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery1' data-width="1000" data-height="563").gallery-item.type-video.mb-30
+            +image('img/components/gallery/th05.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/06.jpg' data-fancybox='gallery1' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+            +image('img/components/gallery/th06.jpg', 'Gallery Image')
+    
+      // With captions
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With captions
+        a(href='#gallery-with-captions-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-md-4.col-sm-6
+          figure.figure.mb-30
+            a(href='../img/components/gallery/01.jpg' data-fancybox='gallery2' data-options='{"caption": "Gallery Image Caption"}').gallery-item.figure-img
+              +image('img/components/gallery/th01.jpg', 'Gallery Image')
+            figcaption.figure-caption Image caption (left)
+        .col-md-4.col-sm-6
+          figure.figure.mb-30
+            a(href='../img/components/gallery/02.jpg' data-fancybox='gallery2' data-options='{"caption": "Gallery Image Caption"}').gallery-item.figure-img
+              +image('img/components/gallery/th02.jpg', 'Gallery Image')
+            figcaption.figure-caption.text-center Image caption (center)
+        .col-md-4.col-sm-6
+          figure.figure.mb-30
+            a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery2' data-width="1000" data-height="563").gallery-item.type-video.figure-img
+              +image('img/components/gallery/th03.jpg', 'Gallery Image')
+            figcaption.figure-caption.text-right Image caption (right)
+    
+      // Default grid no gutters
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Default grid no gutters
+        a(href='#gallery-default-grid-ng-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.no-gutters.pb-5.mb-30
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/01.jpg' data-fancybox='gallery3' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th01.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/02.jpg' data-fancybox='gallery3' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th02.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery3' data-width="1000" data-height="563").gallery-item.type-video
+            +image('img/components/gallery/th03.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/04.jpg' data-fancybox='gallery3' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th04.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery3' data-width="1000" data-height="563").gallery-item.type-video
+            +image('img/components/gallery/th05.jpg', 'Gallery Image')
+        .col-md-4.col-sm-6
+          a(href='../img/components/gallery/06.jpg' data-fancybox='gallery3' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th06.jpg', 'Gallery Image')
+    
+      // Masonry grid with gutters
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Masonry grid with gutters
+        a(href='#gallery-masonry-grid-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5
+        .isotope-grid.cols-3
+          .gutter-sizer
+          .grid-sizer
+          .grid-item
+            a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery4' data-width="1000" data-height="563").gallery-item.type-video
+              +image('img/components/gallery/th08.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/02.jpg' data-fancybox='gallery4' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th02.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/06.jpg' data-fancybox='gallery4' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th09.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/01.jpg' data-fancybox='gallery4' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th07.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/04.jpg' data-fancybox='gallery4' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th04.jpg', 'Gallery Image')
+          .grid-item
+            a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery4' data-width="1000" data-height="563").gallery-item.type-video
+              +image('img/components/gallery/th03.jpg', 'Gallery Image')
+    
+      // Masonry grid no gutters
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Masonry grid no gutters
+        a(href='#gallery-masonry-grid-ng-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-30
+        .isotope-grid.grid-no-gutters.cols-3
+          .gutter-sizer
+          .grid-sizer
+          .grid-item
+            a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery5' data-width="1000" data-height="563").gallery-item.type-video
+              +image('img/components/gallery/th08.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/02.jpg' data-fancybox='gallery5' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th02.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/06.jpg' data-fancybox='gallery5' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th09.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/01.jpg' data-fancybox='gallery5' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th07.jpg', 'Gallery Image')
+          .grid-item
+            a(href='../img/components/gallery/04.jpg' data-fancybox='gallery5' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+              +image('img/components/gallery/th04.jpg', 'Gallery Image')
+          .grid-item
+            a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery5' data-width="1000" data-height="563").gallery-item.type-video
+              +image('img/components/gallery/th03.jpg', 'Gallery Image')
+      
+      // Inside carousel
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inside carousel
+        a(href='#gallery-carousel-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5
+        .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "center": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          a(href='../img/components/gallery/01.jpg' data-fancybox='gallery6' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th01.jpg', 'Gallery Image')
+          a(href='../img/components/gallery/02.jpg' data-fancybox='gallery6' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th02.jpg', 'Gallery Image')
+          a(href='https://www.youtube.com/watch?v=VE30ntVVfvAk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='gallery6' data-width="1000" data-height="563").gallery-item.type-video
+            +image('img/components/gallery/th03.jpg', 'Gallery Image')
+          a(href='../img/components/gallery/04.jpg' data-fancybox='gallery6' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th04.jpg', 'Gallery Image')
+          a(href='https://vimeo.com/25141497?color=ac32e4' data-fancybox='gallery6' data-width="1000" data-height="563").gallery-item.type-video
+            +image('img/components/gallery/th05.jpg', 'Gallery Image')
+          a(href='../img/components/gallery/06.jpg' data-fancybox='gallery6' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+            +image('img/components/gallery/th06.jpg', 'Gallery Image')

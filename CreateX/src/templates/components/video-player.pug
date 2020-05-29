@@ -1,0 +1,57 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Video Player'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Standalone Video Player Button Code Modal
+  include code/player-standalone
+
+  //- Video Player Button on Top of Image Code Modal
+  include code/player-image
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Standalone play button
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Standalone play button
+        a(href='#player-standalone-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-sm-6.mb-4
+          a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-3: i.fe-icon-play
+          span.video-player-label.text-muted Click me to watch video!
+        .col-sm-6.mb-4
+          .bg-dark.px-4.py-3
+            a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-3: i.fe-icon-play
+            span.video-player-label.text-white.opacity-60 Click me to watch video!
+    
+      // On top of the image
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 On top of the image
+        a(href='#player-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .pb-5
+        div(style='background-image: url(../img/components/video-player/video-bg.jpg);').bg-no-repeat.bg-center.bg-cover.px-4.py-5.text-center
+          .py-5
+            a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3: i.fe-icon-play
+            br
+            span.video-player-label.text-white.opacity-60 Click me to watch video!

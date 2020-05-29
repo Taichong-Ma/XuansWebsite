@@ -1,0 +1,68 @@
+// Card Alignment Code
+#card-alignment-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html6' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug6' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html6' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Left Aligned (Default) --&gt;</strong>
+                &lt;div class=&quot;card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-sm btn-primary mt-2&quot; href=&quot;#&quot;&gt;Go Somewhere&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Center Aligned --&gt;</strong>
+                &lt;div class=&quot;card text-center&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-sm btn-primary mt-2&quot; href=&quot;#&quot;&gt;Go Somewhere&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Right Aligned --&gt;</strong>
+                &lt;div class=&quot;card text-right&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-sm btn-primary mt-2&quot; href=&quot;#&quot;&gt;Go Somewhere&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+          div(id='pug6' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Left Aligned (Default)</strong>
+                .card
+                  .card-body
+                    h4.card-title Card title here
+                    p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    a(href=&quot;#&quot;).btn.btn-sm.btn-primary.mt-2 Go Somewhere
+
+                <strong>//- Center Aligned</strong>
+                .card.text-center
+                  .card-body
+                    h4.card-title Card title here
+                    p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    a(href=&quot;#&quot;).btn.btn-sm.btn-primary.mt-2 Go Somewhere
+
+                <strong>//- Right Aligned</strong>
+                .card.text-right
+                  .card-body
+                    h4.card-title Card title here
+                    p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    a(href=&quot;#&quot;).btn.btn-sm.btn-primary.mt-2 Go Somewhere

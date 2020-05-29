@@ -1,0 +1,60 @@
+// Portfolio Card Style 2 (Inside Card) Code
+#portfolio-style2-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Portfolio Card Style 2 (Inside Card) --&gt;</strong>
+                &lt;div class=&quot;card portfolio-card&quot;&gt;
+                  &lt;a class=&quot;portfolio-thumb&quot; href=&quot;#&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Portfolio Thumbnail&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;div class=&quot;portfolio-meta&quot;&gt;
+                      &lt;span&gt;&lt;i class=&quot;fe-icon-user&quot;&gt;&lt;/i&gt;Benjamin Miller&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h5 class=&quot;portfolio-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;Working Space Design&lt;/a&gt;
+                    &lt;/h5&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;card-footer&quot;&gt;
+                    &lt;div&gt;
+                      &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Interior Design&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;portfolio-meta&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-heart text-accent&quot;&gt;&lt;/i&gt;27&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Portfolio Card Style 2 (Inside Card)</strong>
+                .card.portfolio-card
+                  a(href=&quot;#&quot;).portfolio-thumb
+                    +image(&quot;path-to-image&quot;, &quot;Portfolio Thumbnail&quot;)
+                  .card-body
+                    .portfolio-meta
+                      span
+                        i.fe-icon-user
+                        | Benjamin Miller
+                    h5.portfolio-title: a(href=&quot;#&quot;) Working Space Design
+                  .card-footer
+                    div
+                      a(href=&quot;#&quot;).tag-link Interior Design
+                    .portfolio-meta
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-heart.text-accent
+                        | 27

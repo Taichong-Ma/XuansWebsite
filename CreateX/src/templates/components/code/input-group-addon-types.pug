@@ -1,0 +1,103 @@
+// Input Group Addon Types Code
+#input-group-addon-types-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Icon Addon (Textarea) --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Type your message here...&quot; rows=&quot;6&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Text Addon (Select) --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;Options&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;select class=&quot;form-control&quot;&gt;
+                    &lt;option&gt;Choose one...&lt;/option&gt;
+                    &lt;option&gt;One&lt;/option&gt;
+                    &lt;option&gt;Two&lt;/option&gt;
+                    &lt;option&gt;Three&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Checkbox Addon (Text Input) --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;div class=&quot;input-group-text&quot;&gt;
+                      &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                        &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-1&quot;&gt;
+                        &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-1&quot;&gt;&lt;/label&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Checkbox here&quot;&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Radio Button Addon (Text Input) --&gt;</strong>
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;div class=&quot;input-group-text&quot;&gt;
+                      &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                        &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-1&quot; name=&quot;radio&quot;&gt;
+                        &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-1&quot;&gt;&lt;/label&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Radio button here&quot;&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Icon Addon (Textarea)</strong>
+                .input-group
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fe-icon-message-square
+                  textarea(placeholder=&quot;Type your message here...&quot; rows=&quot;6&quot;).form-control
+                
+                <strong>//- Text Addon (Select)</strong>
+                .input-group
+                  .input-group-prepend
+                    span.input-group-text Options
+                  select.form-control
+                    option Choose one...
+                    option One
+                    option Two
+                    option Three
+                    option Four
+                    option Five
+                
+                <strong>//- Checkbox Addon (Text Input)</strong>
+                .input-group
+                  .input-group-prepend
+                    .input-group-text
+                      .custom-control.custom-checkbox
+                        input(type=&quot;checkbox&quot; id=&quot;ex-check-1&quot;).custom-control-input
+                        label(for=&quot;ex-check-1&quot;).custom-control-label
+                  input(type=&quot;text&quot; placeholder=&quot;Checkbox here&quot;).form-control
+                
+                <strong>//- Radio Button Addon (Text Input)</strong>
+                .input-group
+                  .input-group-prepend
+                    .input-group-text
+                      .custom-control.custom-radio
+                        input(type=&quot;radio&quot; id=&quot;ex-radio-1&quot; name=&quot;radio&quot;).custom-control-input
+                        label(for=&quot;ex-radio-1&quot;).custom-control-label
+                  input(type=&quot;text&quot; placeholder=&quot;Radio button here&quot;).form-control

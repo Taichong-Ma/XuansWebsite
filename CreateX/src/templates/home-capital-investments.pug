@@ -1,0 +1,469 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-simple-wide'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Venture Capital Investments'
+
+//- Page Content
+block content
+
+  // Hero
+  section.bg-parallax.bg-dark.py-5
+    span(style='opacity: .65;').bg-overlay
+    .bg-parallax-img(data-parallax='{"y" : -100}')
+      img(src='img/homepages/capital-investments/hero-bg.jpg' alt='Background Image')
+    .container.bg-parallax-content.py-sm-5.my-3.my-md-5.text-center
+      .row.justify-content-center
+        .col-xl-9
+          h1.display-4.text-white We invest in people<span class='text-primary'>.</span> We invest in ideas<span class='text-primary'>.</span> We invest in future<span class='text-primary'>.</span>
+          p.lead.text-white.opacity-80.pb-sm-5 We have been searching for great ideas since 2005
+          .d-inline-block.align-middle.mx-3
+            a(href='https://player.vimeo.com/video/262686279?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.my-3.mr-3: i.fe-icon-play
+            span.video-player-label.text-white.opacity-80.font-weight-medium Watch video
+          .d-none.d-sm-inline-block.align-middle.mx-3
+            a(href='#cases').scroll-to.btn.btn-style-5.btn-primary
+              | See Latest Cases&nbsp;
+              i.fe-icon-arrow-down
+
+  section#cases.bg-secondary.pb-5
+  
+    // Featured Cases Slider
+    .featured-posts-slider.d-lg-flex
+      .column
+        .owl-carousel.post-preview-img-carousel(data-owl-carousel='{ "nav": false, "dots": false, "loop": true, "mouseDrag": false, "touchDrag": false, "pullDrag": false }')
+          a(href='#' style='background-image: url(img/homepages/capital-investments/featured-slide01.jpg);').post-preview-img
+          a(href='#' style='background-image: url(img/homepages/capital-investments/featured-slide02.jpg);').post-preview-img
+          a(href='#' style='background-image: url(img/homepages/capital-investments/featured-slide03.jpg);').post-preview-img
+      .column
+        .owl-carousel.post-cards-carousel(data-owl-carousel='{ "nav": true, "dots": false, "loop": true, "autoHeight": true }')
+          .blog-card
+            .card-body
+              h2.post-title
+                a(href='#') Alice Band. High performant fully autonomous VR headset.
+              p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.
+              p.text-muted.d-none.d-sm-block At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              a(href='#').tag-link Virtual Reality
+              .card-footer.mt-4.px-0
+                a(href='#').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th01.jpg', 'Investor Avatar')
+                  .post-author-name Sara Palson, Investor in charge
+                .post-meta
+                  span
+                    i.fe-icon-briefcase
+                    | $5.6M
+                  span
+                    i.fe-icon-clock
+                    | Oct 16, 2018
+          .blog-card
+            .card-body
+              h2.post-title
+                a(href='#') Neo Mobile App. Control your IoT devices right from one place.
+              p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.
+              p.text-muted.d-none.d-sm-block At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              a(href='#').tag-link Internet of Things
+              .card-footer.mt-4.px-0
+                a(href='#').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th04.jpg', 'Investor Avatar')
+                  .post-author-name Emanuel Ortega, Investor in charge
+                .post-meta
+                  span
+                    i.fe-icon-briefcase
+                    | $3.2M
+                  span
+                    i.fe-icon-clock
+                    | Sep 05, 2018
+          .blog-card
+            .card-body
+              h2.post-title
+                a(href='#') Akira Android Robot. The incredibly life-like robot for home routine.
+              p.text-muted.d-none.d-sm-block Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.
+              p.text-muted.d-none.d-sm-block At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              a(href='#').tag-link Robotics
+              .card-footer.mt-4.px-0
+                a(href='#').post-author
+                  .post-author-avatar
+                    +image('img/blog/authors/th03.jpg', 'Investor Avatar')
+                  .post-author-name Jessica Jones, Investor in charge
+                .post-meta
+                  span
+                    i.fe-icon-briefcase
+                    | $7.0M
+                  span
+                    i.fe-icon-clock
+                    | Aug 13, 2018
+  
+    // Portfolio
+    .container.pt-5.mt-5.pb-4
+      h2.h3.block-title.text-center.pt-5.mt-2
+        | We invest in technology
+        small See the list of our most successful cases
+      .row.pt-4
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/01.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/03.jpg' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/02.jpg' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/04.jpg' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/05.jpg' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/06.jpg' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/07.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/08.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/09.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/10.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/11.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/12.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/13.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/14.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/15.png' width='163' alt='Client').d-block.mx-auto
+        .col-md-3.col-sm-4.col-6.mb-30.d-block.d-sm-none.d-md-block
+          a(href='#').d-block.bg-white.box-shadow.px-2.mx-auto
+            img(src='img/homepages/capital-investments/clients/16.png' width='163' alt='Client').d-block.mx-auto
+      p.text-lg.text-muted.text-center.py-4 …and discover what comes next.
+      .owl-carousel(data-owl-carousel='{ "nav": false, "dots": false, "loop": true, "margin": 30, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":2},"768":{"items":4},"991":{"items":5},"1200":{"items":6}} }')
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/17.png' alt='Client').d-block.w-100.opacity-90
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/18.png' alt='Client').d-block.w-100.opacity-90
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/19.png' alt='Client').d-block.w-100.opacity-90
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/20.png' alt='Client').d-block.w-100.opacity-90
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/21.png' alt='Client').d-block.w-100.opacity-90
+        a(href='#' style='width: 165px !important;').d-block.gray-to-color.mx-auto
+          img(src='img/homepages/capital-investments/clients/22.png' alt='Client').d-block.w-100.opacity-90
+
+  // Team
+  section.container.py-5
+    h2.h3.block-title.text-center.pt-3
+      | Investment team
+      small Professional who know what to do and how to do it…
+    .row.pt-4
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/08.jpg', 'Team Member Picture')
+          span.team-position CEO, Co-Founder
+          h4.team-name James McCorvinus
+          a(href='tel:+72056557984').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+7 (205) 655 79 84
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/06.jpg', 'Team Member Picture')
+          span.team-position Financial Director
+          h4.team-name Amanda Palson
+          a(href='tel:+57872336590').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+5 (787) 233 65 90
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/07.jpg', 'Team Member Picture')
+          span.team-position Marketing Director
+          h4.team-name Emma Johnson
+          a(href='tel:+19871625346').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (987) 162 53 46
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/09.jpg', 'Team Member Picture')
+          span.team-position Investment Specialist
+          h4.team-name William Smith
+          a(href='tel:+13907765843').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (390) 776 58 43
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/11.jpg', 'Team Member Picture')
+          span.team-position Investment Specialist
+          h4.team-name Olivia Davis
+          a(href='tel:+57872336590').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+5 (787) 233 65 90
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/10.jpg', 'Team Member Picture')
+          span.team-position Investment Specialist
+          h4.team-name Hinata Nakamura
+          a(href='tel:+72056557984').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+7 (205) 655 79 84
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/12.jpg', 'Team Member Picture')
+          span.team-position Investment Specialist
+          h4.team-name Benjamin Miller
+          a(href='tel:+13907765843').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (390) 776 58 43
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-github
+                i.socicon-github
+              a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                i.socicon-stackoverflow
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+      .col-xl-3.col-md-4.col-sm-6.mb-30.pb-2
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/05.jpg', 'Team Member Picture')
+          span.team-position Investment Specialist
+          h4.team-name Emanuel Ortega
+          a(href='tel:+57872336590').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+5 (787) 233 65 90
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+    .text-center.py-3
+      a(href='#').btn.btn-style-6.btn-primary View Whole Team
+
+  // Numbers + CTA
+  section.bg-secondary.py-5
+    .container.pt-2.pb-4
+      h2.h3.block-title.text-center.pt-3
+        | Proven customer benefits
+        small These numbers are the measure of our success
+      .row.pt-4
+        .col-lg-3.col-sm-6.mb-30
+          .bg-white.box-shadow.p-4
+            .animated-digits.text-center.mx-auto.my-3(data-number='900')
+              h5.animated-digits-digit
+                span 0
+                | +
+              p.animated-digits-text
+                | Successful cases
+        .col-lg-3.col-sm-6.mb-30
+          .bg-white.box-shadow.p-4
+            .animated-digits.text-center.mx-auto.my-3(data-number='30')
+              h5.animated-digits-digit: span 0
+              p.animated-digits-text
+                | Offices around the world
+        .col-lg-3.col-sm-6.mb-30
+          .bg-white.box-shadow.p-4
+            .animated-digits.text-center.mx-auto.my-3(data-number='217')
+              h5.animated-digits-digit: span 0
+              p.animated-digits-text
+                | Professionals working for you
+        .col-lg-3.col-sm-6.mb-30
+          .bg-white.box-shadow.p-4
+            .animated-digits.text-center.mx-auto.my-3(data-number='25')
+              h5.animated-digits-digit: span 0
+              p.animated-digits-text
+                | Languages we speak
+      .row.justify-content-center.pt-5
+        .col-lg-8.col-md-10.text-center
+          h2.h3 Interested to become a partner?
+          p.py-3 Duis congue quis magna quis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tempor dapibus magna, a commodo neque tempus ut. Sed at lacus id mauris viverra volutpat ornare ut risus. Cras faucibus dolor vel rhoncus consequat.
+          a(href='#').btn.btn-style-5.btn-gradient Submit a Business Plan
+
+  // News (Blog)
+  section.container.py-5.mb-2
+    h2.h3.block-title.text-center.pt-2
+      | Hot news
+      small The latest posts from our blog
+    .owl-carousel.carousel-flush.pt-3(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+
+      // Post
+      .mb-30.pb-3
+        .card.blog-card
+          a(href='blog-single-gallery.html').post-thumb
+            +image('img/blog/06.jpg', 'Post Thumbnail')
+          .card-body
+            h5.post-title
+              a(href='blog-single-gallery.html') Winning Tactics For Smart &amp; Successful Investment
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+          .card-footer
+            a(href='#').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th05.jpg', 'Post Author')
+              .post-author-name Rick Murray
+            .post-meta
+              a(href='#')
+                i.fe-icon-message-square
+                | 16
+              span
+                i.fe-icon-clock
+                | Nov 03, 2018
+
+      // Post
+      .mb-30.pb-3
+        .card.blog-card
+          a(href='blog-single-carousel.html').post-thumb
+            +image('img/blog/07.jpg', 'Post Thumbnail')
+          .card-body
+            h5.post-title
+              a(href='blog-single-carousel.html') The Beginner’s Guide to Modern Investment
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+          .card-footer
+            a(href='#').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th01.jpg', 'Post Author')
+              .post-author-name Sara Palson
+            .post-meta
+              a(href='#')
+                i.fe-icon-message-square
+                | 23
+              span
+                i.fe-icon-clock
+                | Oct 19, 2018
+
+      // Post
+      .mb-30.pb-3
+        .card.blog-card
+          a(href='blog-single-gallery.html').post-thumb
+            +image('img/blog/08.jpg', 'Post Thumbnail')
+          .card-body
+            h5.post-title
+              a(href='blog-single-gallery.html') Venture Investment Process: Tips &amp; Tricks
+            p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+          .card-footer
+            a(href='#').post-author
+              .post-author-avatar
+                +image('img/blog/authors/th04.jpg', 'Post Author')
+              .post-author-name Emanuel Ortega
+            .post-meta
+              a(href='#')
+                i.fe-icon-message-square
+                | 37
+              span
+                i.fe-icon-clock
+                | Oct 05, 2018
+    .text-center.py-3
+      a(href='blog-grid-rs.html').btn.btn-style-6.btn-primary View All Posts
+
+  //- footer-default.pug template
+  include partials/footer-default

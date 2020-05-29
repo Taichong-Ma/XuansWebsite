@@ -1,0 +1,61 @@
+// List Group with Badges Code
+#list-group-badges-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- List Group with Badges --&gt;</strong>
+                &lt;nav class=&quot;list-group&quot;&gt;
+                  &lt;a class=&quot;list-group-item d-flex justify-content-between align-items-center&quot; href=&quot;#&quot;&gt;
+                    Cras justo odio
+                    &lt;span class=&quot;badge badge-pill badge-secondary&quot;&gt;3&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;list-group-item d-flex justify-content-between align-items-center active&quot; href=&quot;#&quot;&gt;
+                    Dapibus ac facilisis (active)
+                    &lt;span class=&quot;badge badge-pill badge-accent&quot;&gt;4&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;list-group-item d-flex justify-content-between align-items-center&quot; href=&quot;#&quot;&gt;
+                    Morbi leo risus
+                    &lt;span class=&quot;badge badge-pill badge-info&quot;&gt;6&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;list-group-item d-flex justify-content-between align-items-center&quot; href=&quot;#&quot;&gt;
+                    Porta ac consectetur ac
+                    &lt;span class=&quot;badge badge-pill badge-danger&quot;&gt;5&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;list-group-item d-flex justify-content-between align-items-center&quot; href=&quot;#&quot;&gt;
+                    Vestibulum at eros
+                    &lt;span class=&quot;badge badge-pill badge-success&quot;&gt;9&lt;/span&gt;
+                  &lt;/a&gt;
+                &lt;/nav&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- List Group with Badges</strong>
+                nav.list-group
+                  a(href=&quot;#&quot;).list-group-item.d-flex.justify-content-between.align-items-center
+                    | Cras justo odio
+                    span.badge.badge-pill.badge-secondary 3
+                  a(href=&quot;#&quot;).list-group-item.d-flex.justify-content-between.align-items-center.active
+                    | Dapibus ac facilisis (active)
+                    span.badge.badge-pill.badge-accent 4
+                  a(href=&quot;#&quot;).list-group-item.d-flex.justify-content-between.align-items-center
+                    | Morbi leo risus
+                    span.badge.badge-pill.badge-info 6
+                  a(href=&quot;#&quot;).list-group-item.d-flex.justify-content-between.align-items-center
+                    | Porta ac consectetur ac
+                    span.badge.badge-pill.badge-danger 5
+                  a(href=&quot;#&quot;).list-group-item.d-flex.justify-content-between.align-items-center
+                    | Vestibulum at eros
+                    span.badge.badge-pill.badge-success 9

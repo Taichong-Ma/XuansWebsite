@@ -1,0 +1,74 @@
+// Media Object List Based Code
+#media-object-list-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Media Objects List --&gt;</strong>
+                &lt;ul class=&quot;list-unstyled&quot;&gt;
+
+                  <strong>&lt;!-- Square Media (Default) --&gt;</strong>
+                  &lt;li class=&quot;media mb-4&quot;&gt;
+                    &lt;img class=&quot;d-flex mr-3&quot; src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;&gt;
+                    &lt;div class=&quot;media-body&quot;&gt;
+                      &lt;h6 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h6&gt;
+                      &lt;span class=&quot;d-block text-muted&quot;&gt;Cras sit amet nibh libero, in gravida nulla...&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+
+                  <strong>&lt;!-- Rounded Media --&gt;</strong>
+                  &lt;li class=&quot;media mb-4&quot;&gt;
+                    &lt;img class=&quot;d-flex rounded mr-3&quot; src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;&gt;
+                    &lt;div class=&quot;media-body&quot;&gt;
+                      &lt;h6 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h6&gt;
+                      &lt;span class=&quot;d-block text-muted&quot;&gt;Cras sit amet nibh libero, in gravida nulla...&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+
+                  <strong>&lt;!-- Circle Media --&gt;</strong>
+                  &lt;li class=&quot;media mb-4&quot;&gt;
+                    &lt;img class=&quot;d-flex rounded-circle mr-3&quot; src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;&gt;
+                    &lt;div class=&quot;media-body&quot;&gt;
+                      &lt;h6 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h6&gt;
+                      &lt;span class=&quot;d-block text-muted&quot;&gt;Cras sit amet nibh libero, in gravida nulla...&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Media Objects List</strong>
+                ul.list-unstyled
+
+                  <strong>//- Square Media (Default)</strong>
+                  li.media.mb-4
+                    img(src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;).d-flex.mr-3
+                    .media-body
+                      h6.mt-0.mb-1 List-based media object
+                      span.d-block.text-muted Cras sit amet nibh libero, in gravida nulla...
+
+                  <strong>//- Rounded Media</strong>
+                  li.media.mb-4
+                    img(src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;).d-flex.rounded.mr-3
+                    .media-body
+                      h6.mt-0.mb-1 List-based media object
+                      span.d-block.text-muted Cras sit amet nibh libero, in gravida nulla...
+
+                  <strong>//- Circle Media</strong>
+                  li.media.mb-4
+                    img(src=&quot;path-to-image&quot; width=&quot;64&quot; alt=&quot;Media&quot;).d-flex.rounded-circle.mr-3
+                    .media-body
+                      h6.mt-0.mb-1 List-based media object
+                      span.d-block.text-muted Cras sit amet nibh libero, in gravida nulla...

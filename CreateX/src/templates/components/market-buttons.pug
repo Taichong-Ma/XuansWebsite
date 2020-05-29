@@ -1,0 +1,103 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Market Buttons'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Market Buttons Default Code Modal
+  include code/market-buttons-default
+
+  //- Market Buttons Dark Code Modal
+  include code/market-buttons-dark
+
+  //- Market Buttons Light Skin Code Modal
+  include code/market-buttons-light-skin
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+      
+      // Default
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Default
+          a(href='#market-buttons-default-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#').market-btn.apple-btn.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title App Store
+        a(href='#').market-btn.google-btn.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Google Play
+        a(href='#').market-btn.windows-btn.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Windows Store
+        a(href='#').market-btn.amazon-btn.mr-3.mb-3
+          span.mb-subtitle Order now at
+          span.mb-title Amazon.com
+        a(href='#').market-btn.blackberry-btn.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Blackberry Store
+      
+      // Dark version
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Dark version
+          a(href='#market-buttons-dark-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#').market-btn.apple-btn.market-btn-dark.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title App Store
+        a(href='#').market-btn.google-btn.market-btn-dark.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Google Play
+        a(href='#').market-btn.windows-btn.market-btn-dark.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Windows Store
+        a(href='#').market-btn.amazon-btn.market-btn-dark.mr-3.mb-3
+          span.mb-subtitle Order now at
+          span.mb-title Amazon.com
+        a(href='#').market-btn.blackberry-btn.market-btn-dark.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Blackberry Store
+
+    // Light skin
+    .bg-dark.py-5
+      .container.py-3
+        .d-flex.flex-wrap.justify-content-between
+          h4.text-white.mr-3 Light skin
+          a(href='#market-buttons-light-skin-code' data-toggle='modal').navi-link.text-white.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4.mb-1
+        a(href='#').market-btn.apple-btn.market-btn-light-skin.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title App Store
+        a(href='#').market-btn.google-btn.market-btn-light-skin.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Google Play
+        a(href='#').market-btn.windows-btn.market-btn-light-skin.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Windows Store
+        a(href='#').market-btn.amazon-btn.market-btn-light-skin.mr-3.mb-3
+          span.mb-subtitle Order now at
+          span.mb-title Amazon.com
+        a(href='#').market-btn.blackberry-btn.market-btn-light-skin.mr-3.mb-3
+          span.mb-subtitle Download on the
+          span.mb-title Blackberry Store

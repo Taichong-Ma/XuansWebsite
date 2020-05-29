@@ -1,0 +1,105 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Wizard'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Wizard Code Modal
+  include code/wizard
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-3
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Basic example
+        a(href='#wizard-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .wizard
+        .wizard-steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between
+          a(href='#').wizard-step
+            i.fe-icon-check-circle.text-success
+            | 1. Personal Details
+          .wizard-step.active 2. Billing Address
+          a(href='#').wizard-step 3. Contact Details
+          a(href='#').wizard-step 4. Payment Method
+        .wizard-body
+          h3.h5.pb-2 Billing Address
+          .row
+            .col-sm-6
+              .form-group
+                label(for='wizard-fn').text-muted First Name
+                input(type='text')#wizard-fn.form-control
+            .col-sm-6
+              .form-group
+                label(for='wizard-ln').text-muted Last Name
+                input(type='text')#wizard-ln.form-control
+          .row
+            .col-sm-6
+              .form-group
+                label(for='wizard-email').text-muted E-mail Address
+                input(type='email')#wizard-email.form-control
+            .col-sm-6
+              .form-group
+                label(for='wizard-phone').text-muted Phone Number
+                input(type='text')#wizard-phone.form-control
+          .row
+            .col-sm-6
+              .form-group
+                label(for='wizard-company').text-muted Company
+                input(type='text')#wizard-company.form-control
+            .col-sm-6
+              .form-group
+                label(for='wizard-country').text-muted Country
+                select#wizard-country.form-control
+                  option Choose country
+                  option Australia
+                  option Canada
+                  option France
+                  option Germany
+                  option Switzerland
+                  option USA
+          .row
+            .col-sm-6
+              .form-group
+                label(for='wizard-city').text-muted Country
+                select#wizard-city.form-control
+                  option Choose city
+                  option Amsterdam
+                  option Berlin
+                  option Geneve
+                  option New York
+                  option Paris
+            .col-sm-6
+              .form-group
+                label(for='wizard-zip').text-muted ZIP Code
+                input(type='text')#wizard-zip.form-control
+          .row
+            .col-sm-6
+              .form-group
+                label(for='wizard-address-1').text-muted Address 1
+                input(type='text')#wizard-address-1.form-control
+            .col-sm-6
+              .form-group
+                label(for='wizard-address-2').text-muted Address 2
+                input(type='text')#wizard-address-2.form-control
+        .wizard-footer.d-flex.justify-content-between
+          a(href='#').btn.btn-secondary.my-2
+            i.fe-icon-arrow-left
+            span.d-none.d-sm-inline-block Back
+          a(href='#').btn.btn-primary.my-2
+            span.d-none.d-sm-inline-block Continue
+            i.fe-icon-arrow-right

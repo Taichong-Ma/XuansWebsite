@@ -1,0 +1,560 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Tables'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Table Basic Example Code Modal
+  include code/tables-basic
+
+  //- Table Inverted Colors Code Modal
+  include code/tables-invert
+
+  //- Table Head Options Code Modal
+  include code/tables-head
+
+  //- Table Striped Rows Code Modal
+  include code/tables-striped
+
+  //- Bordered Table Code Modal
+  include code/tables-bordered
+
+  //- Table Hoverable Rows Code Modal
+  include code/tables-hoverable
+
+  //- Table Contextual Colors Code Modal
+  include code/tables-contextual
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-1
+
+      // Basic example
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Basic example
+        a(href='#tables-basic-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+                tr
+                  th(scope='row') 4
+                  td Jane
+                  td Birkins
+                  td Support
+                  td +3 774 28 50
+
+      // Invert the colors
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Invert the colors
+        a(href='#tables-invert-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table.table-dark
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+                tr
+                  th(scope='row') 4
+                  td Jane
+                  td Birkins
+                  td Support
+                  td +3 774 28 50
+
+      // Table head options
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Table head options
+        a(href='#tables-head-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table
+              thead.thead-dark
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+          .table-responsive
+            table.table
+              thead.thead-light
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+
+      // Striped rows
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Striped rows
+        a(href='#tables-striped-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+          .table-responsive
+            table.table.table-dark.table-striped
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+
+      // Bordered table
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Bordered table
+        a(href='#tables-bordered-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table.table-bordered
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+            table.table.table-bordered.table-dark
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+
+      // Hoverable rows
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Hoverable rows
+        a(href='#tables-hoverable-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table.table-hover
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+            table.table.table-hover.table-dark
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Position
+                  th Phone
+              tbody
+                tr
+                  th(scope='row') 1
+                  td John
+                  td Doe
+                  td CEO, Founder
+                  td +3 555 68 70
+                tr
+                  th(scope='row') 2
+                  td Anna
+                  td Cabana
+                  td Designer
+                  td +3 434 65 93
+                tr
+                  th(scope='row') 3
+                  td Kale
+                  td Thornton
+                  td Developer
+                  td +3 285 42 88
+
+      // Contextual colors
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Contextual colors
+        a(href='#tables-contextual-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-xl-9.col-md-11
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th #
+                  th Class
+                  th Heading
+                  th Heading
+              tbody
+                tr.table-active
+                  th(scope='row') 1
+                  td Active
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-primary
+                  th(scope='row') 1
+                  td Primary
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-secondary
+                  th(scope='row') 1
+                  td Secondary
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-accent
+                  th(scope='row') 1
+                  td Accent
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-success
+                  th(scope='row') 3
+                  td Success
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 4
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-info
+                  th(scope='row') 5
+                  td Info
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 6
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-warning
+                  th(scope='row') 7
+                  td Warning
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 8
+                  td Default
+                  td Column content
+                  td Column content
+                tr.table-danger
+                  th(scope='row') 9
+                  td Danger
+                  td Column content
+                  td Column content
+          .table-responsive
+            table.table.table-dark
+              thead
+                tr
+                  th #
+                  th Column heading
+                  th Column heading
+                  th Column heading
+              tbody
+                tr.bg-primary
+                  th(scope='row') 1
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-accent
+                  th(scope='row') 1
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-gradient
+                  th(scope='row') 1
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 2
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-success
+                  th(scope='row') 3
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 4
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-info
+                  th(scope='row') 5
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 6
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-warning
+                  th(scope='row') 7
+                  td Column content
+                  td Column content
+                  td Column content
+                tr
+                  th(scope='row') 8
+                  td Column content
+                  td Column content
+                  td Column content
+                tr.bg-danger
+                  th(scope='row') 9
+                  td Column content
+                  td Column content
+                  td Column content

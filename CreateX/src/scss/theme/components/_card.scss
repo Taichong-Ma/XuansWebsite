@@ -1,0 +1,72 @@
+//
+// Card
+// --------------------------------------------------
+
+.card {
+  border: 0;
+  box-shadow: $card-box-shadow;
+  text-decoration: none;
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: -.625rem;
+    left: 1.25rem;
+    width: calc(100% - 2.5rem);
+    height: 2.1875rem;
+    background-color: $card-bg;
+    box-shadow: $card-outer-box-shadow;
+    content: '';
+    z-index: -1;
+  }
+  > img {
+    display: block;
+    width: 100%;
+  }
+}
+.card-header,
+.card-footer {
+  padding: {
+    top: ($card-spacer-y / 2);
+    bottom: ($card-spacer-y / 2);
+  }
+  h1, h2, h3, h4, h5, h6, p,
+  .h1, .h2, .h3, .h4, .h5, .h6 { margin: 0; }
+}
+.card-header .nav-tabs { padding-bottom: 0; }
+.card-title {
+  margin: 0;
+  font: {
+    family: $headings-font-family;
+    size: $font-size-xl;
+    weight: $headings-font-weight;
+  }
+  > a {
+    transition: color .3s;
+    color: $headings-color;
+    text-decoration: none;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.card-text {
+  padding-top: ($spacer * .75);
+  color: $gray-500;
+}
+
+// Contacts Widget Inside
+.card .widget-contacts {
+  margin-bottom: ($spacer * .375);
+  ul > li {
+    padding: {
+      top: .375rem !important;
+      bottom: .375rem !important;
+    }
+    border-top: 0;
+    > i { top: .5rem !important; }
+  }
+}
+
+// IE 11 Fix
+// Core Bootstrap issue https://github.com/twbs/bootstrap/issues/21885
+.card * { min-height: .01px; }

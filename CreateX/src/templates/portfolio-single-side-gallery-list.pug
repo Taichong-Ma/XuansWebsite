@@ -1,0 +1,80 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Single Project'
+  - var pageSubTitle = 'Page Layout: <strong>Side Gallery List</strong>'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var parentMenu = 'Portfolio'
+  - var menuTitle = 'Side Gallery List'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Portfolio', 'link': 'portfolio-style1-boxed.html'}]
+
+//- Page Content
+block content
+  .container.pb-5
+    .row
+
+      // Project Gallery
+      .col-lg-8.mb-3
+        .post-meta.pb-3
+          span.text-sm.ml-0
+            i.fe-icon-clock
+            | Sep 16, 2018
+          a(href='#').text-sm
+            i.fe-icon-bookmark
+            | Mobile Apps
+        a(href='img/portfolio/single/01.jpg' data-fancybox='sideGallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+          +image('img/portfolio/single/th01.jpg', 'Gallery Image')
+        a(href='img/portfolio/single/02.jpg' data-fancybox='sideGallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+          +image('img/portfolio/single/th02.jpg', 'Gallery Image')
+        a(href='https://www.youtube.com/watch?v=n5Q3txBg828&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0' data-fancybox='sideGallery' data-width="1000" data-height="563").gallery-item.type-video.mb-30
+          +image('img/portfolio/single/th03.jpg', 'Gallery Image')
+        a(href='img/portfolio/single/03.jpg' data-fancybox='sideGallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+          +image('img/portfolio/single/th04.jpg', 'Gallery Image')
+        a(href='img/portfolio/single/04.jpg' data-fancybox='sideGallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item.mb-30
+          +image('img/portfolio/single/th05.jpg', 'Gallery Image')
+  
+      // Project Details
+      .col-lg-4
+        .widget
+          h2.widget-title Client
+          ul.list-unstyled.mb-0
+            li
+              span.text-muted Name:
+              span.font-weight-medium &nbsp; International Company Ltd.
+            li
+              span.text-muted Services:
+              span.font-weight-medium &nbsp; Mobile UX/UI Design, App Development
+            li
+              span.text-muted Website:
+              a(href='#').navi-link.font-weight-medium &nbsp; www.example.com
+        .widget
+          h2.widget-title Objective
+          p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        .widget
+          h2.widget-title Tools &amp; Technologies
+          p.text-muted Sketch App, Proto.io, React Native, Redux
+        .widget
+          h2.widget-title Challenge
+          p.text-muted.mb-0 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+        .widget.mb-4
+          h2.widget-title Download
+          a(href='#').market-btn.apple-btn.mr-3.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title App Store
+          a(href='#').market-btn.google-btn.mr-3.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title Google Play
+    
+    //- portfolio-share.pug template
+    include partials/portfolio-share
+    
+    //- entry-navigation-portfolio.pug template
+    include partials/entry-navigation-portfolio
+    
+    //- related-projects-carousel.pug template
+    include partials/related-projects-carousel
+
+  //- footer-portfolio.pug template
+  include partials/footer-portfolio

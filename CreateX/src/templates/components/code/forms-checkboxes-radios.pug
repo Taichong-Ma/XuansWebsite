@@ -1,0 +1,119 @@
+// Forms Checkboxes and Radios Code
+#forms-checkboxes-radios-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Checkboxes --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-1&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-1&quot;&gt;Check this checkbox&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-2&quot; checked&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-2&quot;&gt;Uncheck this checkbox&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-3&quot; disabled&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-3&quot;&gt;Disabled checkbox&lt;/label&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Radio Buttons --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-1&quot; name=&quot;radio&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-1&quot;&gt;Toggle this radio&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-2&quot; name=&quot;radio&quot; checked&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-2&quot;&gt;Toggle this radio&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-3&quot; name=&quot;radio&quot; disabled&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-3&quot;&gt;Disabled radio&lt;/label&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Inline Checkboxes --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-checkbox custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-4&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-4&quot;&gt;Check this checkbox&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-checkbox custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-5&quot; checked&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-5&quot;&gt;Uncheck this checkbox&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-checkbox custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;ex-check-6&quot; disabled&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-check-6&quot;&gt;Disabled checkbox&lt;/label&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Inline Radio Buttons --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-radio custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-4&quot; name=&quot;radio2&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-4&quot;&gt;Toggle this radio&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-radio custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-5&quot; name=&quot;radio2&quot; checked&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-5&quot;&gt;Toggle this radio&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;custom-control custom-radio custom-control-inline&quot;&gt;
+                  &lt;input class=&quot;custom-control-input&quot; type=&quot;radio&quot; id=&quot;ex-radio-6&quot; name=&quot;radio2&quot; disabled&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;ex-radio-6&quot;&gt;Disabled radio&lt;/label&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Checkboxes</strong>
+                .custom-control.custom-checkbox
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-1&quot;).custom-control-input
+                  label(for=&quot;ex-check-1&quot;).custom-control-label Check this checkbox
+                .custom-control.custom-checkbox
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-2&quot; checked).custom-control-input
+                  label(for=&quot;ex-check-2&quot;).custom-control-label Uncheck this checkbox
+                .custom-control.custom-checkbox
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-3&quot; disabled).custom-control-input
+                  label(for=&quot;ex-check-3&quot;).custom-control-label Disabled checkbox
+                
+                <strong>//- Radio Buttons</strong>
+                .custom-control.custom-radio
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-1&quot; name=&quot;radio&quot;).custom-control-input
+                  label(for=&quot;ex-radio-1&quot;).custom-control-label Toggle this radio
+                .custom-control.custom-radio
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-2&quot; name=&quot;radio&quot; checked).custom-control-input
+                  label(for=&quot;ex-radio-2&quot;).custom-control-label Toggle this radio
+                .custom-control.custom-radio
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-3&quot; name=&quot;radio&quot; disabled).custom-control-input
+                  label(for=&quot;ex-radio-3&quot;).custom-control-label Disabled radio
+                
+                <strong>//- Inline Checkboxes</strong>
+                .custom-control.custom-checkbox.custom-control-inline
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-4&quot;).custom-control-input
+                  label(for=&quot;ex-check-4&quot;).custom-control-label Check this checkbox
+                .custom-control.custom-checkbox.custom-control-inline
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-5&quot; checked).custom-control-input
+                  label(for=&quot;ex-check-5&quot;).custom-control-label Uncheck this checkbox
+                .custom-control.custom-checkbox.custom-control-inline
+                  input(type=&quot;checkbox&quot; id=&quot;ex-check-6&quot; disabled).custom-control-input
+                  label(for=&quot;ex-check-6&quot;).custom-control-label Disabled checkbox
+                
+                <strong>//- Inline Radio Buttons</strong>
+                .custom-control.custom-radio.custom-control-inline
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-4&quot; name=&quot;radio2&quot;).custom-control-input
+                  label(for=&quot;ex-radio-4&quot;).custom-control-label Toggle this radio
+                .custom-control.custom-radio.custom-control-inline
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-5&quot; name=&quot;radio2&quot; checked).custom-control-input
+                  label(for=&quot;ex-radio-5&quot;).custom-control-label Toggle this radio
+                .custom-control.custom-radio.custom-control-inline
+                  input(type=&quot;radio&quot; id=&quot;ex-radio-6&quot; name=&quot;radio2&quot; disabled).custom-control-input
+                  label(for=&quot;ex-radio-6&quot;).custom-control-label Disabled radio

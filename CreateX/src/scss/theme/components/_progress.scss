@@ -1,0 +1,121 @@
+//
+// Progress Bar
+// --------------------------------------------------
+
+// Style 1 (default)
+.progress {
+  overflow: visible;
+  &.progress-light-skin { background-color: $progress-light-bg !important; }
+}
+.progress-bar {
+  padding-left: .625rem;
+  transition: width 1s ease;
+  font: {
+    size: $font-size-sm;
+    weight: 600;
+  }
+  text-align: left;
+  box-shadow: $progress-bar-box-shadow;
+}
+
+// Icon
+.progress-bar,
+.progress-label {
+  i {
+    display: inline-block;
+    margin: {
+      top: -1px;
+      right: 6px;
+    }
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  .text-white {
+    color: $white;
+    i { color: rgba($white, .5); }
+  }
+}
+
+
+// Progress Label (for usage with Style 2 and 3)
+.progress-label {
+  display: block;
+  padding: ($spacer / 2) 0;
+  font: {
+    size: $progress-outer-label-size;
+    weight: 600;
+  }
+  i { color: $progress-outer-label-color; }
+}
+
+// Style 2, 3
+.progress-style-2,
+.progress-style-3 {
+  display: block;
+  position: relative;
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+.progress-style-2 {
+  height: 2px;
+  background-color: darken($gray-100, 4%);
+  .progress-bar {
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      content: '';
+    }
+    &::before {
+      top: -3px;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      background-color: inherit;
+    }
+    &::after {
+      top: -.4375rem;
+      right: -.25rem;
+      width: 16px;
+      height: 16px;
+      border: 1px solid darken($border-color, 6%);
+      z-index: -1;
+    }
+    &.bg-gradient::before { background-color: $accent; }
+  }
+  &.progress-light-skin {
+    .progress-bar {
+      z-index: 1;
+      &::after { border-color: rgba($white, .25); }
+    }
+  }
+}
+.progress-style-3 {
+  height: 4px;
+  background-color: darken($gray-100, 1%);
+}
+
+// Animated fill
+.progress-animate-fill {
+  .progress-bar {
+    width: 0;
+    &::before,
+    &::after {
+      transition: opacity .4s ease;
+      opacity: 0;
+    }
+  }
+  &.progress-in-view {
+    .progress-bar {
+      &::before,
+      &::after { opacity: 1; }
+    }
+  }
+}

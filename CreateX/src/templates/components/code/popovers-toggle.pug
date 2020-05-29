@@ -1,0 +1,31 @@
+// Popovers Toggle on Click/Hover Code
+#popovers-toggle-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Popover Toggle on Click --&gt;</strong>
+                &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; title=&quot;Popover on click&quot; data-content=&quot;Vivamus sagittis lacus...&quot;&gt;Toggle popover on click&lt;/button&gt;
+                
+                <strong>&lt;!-- Popovers Toggle on Hover --&gt;</strong>
+                &lt;button class=&quot;btn btn-accent&quot; type=&quot;button&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; data-trigger=&quot;hover&quot; title=&quot;Popover on hover&quot; data-content=&quot;Vivamus sagittis lacus...&quot;&gt;Toggle popover on hover&lt;/button&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Popover Toggle on Click</strong>
+                button(type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; title=&quot;Popover on click&quot; data-content=&quot;Vivamus sagittis lacus...&quot;) Toggle popover on click
+                
+                <strong>//- Popovers Toggle on Hover</strong>
+                button(type=&quot;button&quot; class=&quot;btn btn-accent&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; data-trigger=&quot;hover&quot; title=&quot;Popover on hover&quot; data-content=&quot;Vivamus sagittis lacus...&quot;) Toggle popover on hover

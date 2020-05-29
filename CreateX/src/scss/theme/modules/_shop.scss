@@ -1,0 +1,387 @@
+//
+// Shop specific styles
+// --------------------------------------------------
+
+// Product Card
+.product-card {
+  position: relative;
+  max-width: $product-card-max-width;
+  padding: {
+    top: .75rem;
+    bottom: 2.625rem;
+  }
+  transition: all .35s;
+  border: 1px solid $border-color;
+  .product-head {
+    padding: 0 .9375rem .5rem;
+    .badge { margin: 0; }
+  }
+  .product-thumb {
+    display: block;
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .product-card-body {
+    padding: 0 1.25rem;
+    text-align: center;
+  }
+  .product-meta {
+    display: block;
+    padding: .75rem 0 .125rem;
+    transition: color .25s;
+    color: $product-meta-color;
+    font: {
+      size: $font-size-sm;
+      weight: 600;
+    }
+    text-decoration: none;
+    &:hover { color: $product-meta-hover-color; }
+  }
+  .product-title {
+    margin-bottom: ($spacer / 2);
+    font-size: $product-title-font-size;
+    font-weight: bold;
+    > a {
+      transition: color .3s;
+      color: $product-title-color;
+      text-decoration: none;
+      &:hover { color: $product-title-hover-color; }
+    }
+  }
+  .product-price {
+    display: block;
+    color: $body-color;
+    font: {
+      family: $headings-font-family;
+      weight: normal;
+    }
+    > del {
+      margin-right: .375rem;
+      color: $product-meta-color;
+    }
+  }
+  .product-buttons-wrap {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+  }
+  .product-buttons {
+    display: table;
+    margin: auto;
+    background-color: $product-button-bg;
+    box-shadow: $product-button-box-shadow;
+  }
+  .product-button {
+    display: table-cell;
+    position: relative;
+    width: $product-button-width;
+    height: $product-button-height;
+    border-right: 1px solid rgba($border-color, .6);
+    &:last-child { border-right: 0; }
+    > a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .3s;
+      color: $product-button-color;
+      font-size: $product-button-font-size;
+      line-height: $product-button-height;
+      text: {
+        align: center;
+        decoration: none;
+      }
+      &:hover {
+        background-color: $product-button-hover-bg;
+        color: $product-button-hover-color;
+      }
+    }
+  }
+  &:hover {
+    border-color: transparent;
+    box-shadow: $card-box-shadow;
+  }
+}
+
+// Product Category Card
+.product-category-card {
+  display: block;
+  max-width: $shop-category-card-max-width;
+  text: {
+    align: center;
+    decoration: none !important;
+  }
+  .product-category-card-thumb {
+    display: table;
+    width: 100%;
+    box-shadow: $card-box-shadow;
+  }
+  .product-category-card-body {
+    padding: 1.25rem;
+    padding-bottom: 1.75rem;
+  }
+  .main-img,
+  .thumblist {
+    display: table-cell;
+    padding: .9375rem;
+    vertical-align: middle;
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .main-img {
+    width: 65%;
+    padding-right: 10px;
+  }
+  .thumblist {
+    width: 35%;
+    padding-left: 10px;
+    > img:first-child { margin-bottom: ($spacer * .375); }
+  }
+  .product-category-card-meta {
+    display: block;
+    padding-bottom: .5625rem;
+    color: $shop-category-meta-color;
+    font: {
+      size: ($font-size-base * .6875);
+      weight: 600;
+    }
+  }
+  .product-category-card-title {
+    margin-bottom: 0;
+    transition: color .3s;
+    color: $product-title-color;
+    font-size: $font-size-xl;
+  }
+  &:hover .product-category-card-title { color: $product-title-hover-color; }
+}
+
+// Product Gallery
+.product-gallery {
+  position: relative;
+  padding: 2.75rem 1rem 0;
+  box-shadow: $card-box-shadow;
+  .gallery-item {
+    &::before { display: none !important; }
+    &::after { box-shadow: $gallery-hover-box-shadow; }
+  }
+  .badge {
+    position: absolute;
+    z-index: 5;
+  }
+  .badge {
+    top: 1rem;
+    left: 1rem;
+    margin-left: 0;
+  }
+  .product-thumbnails {
+    display: block;
+    margin: 0 -1rem;
+    padding: ($spacer * .75);
+    border-top: 1px solid $border-color;
+    list-style: none;
+    text-align: center;
+    > li {
+      display: inline-block;
+      margin: ($spacer * .625) ($spacer * .1875);
+      vertical-align: middle;
+      > a {
+        display: block;
+        width: 94px;
+        transition: all .25s;
+        border: 1px solid transparent;
+        background-color: $white;
+        opacity: .75;
+        > img { display: block; }
+      }
+      &:hover > a { opacity: 1; }
+      &.active > a {
+        border-color: $primary;
+        cursor: default;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Product Meta
+.product-meta {
+  padding-bottom: .625rem;
+  > a, > i {
+    display: inline-block;
+    margin-right: .3125rem;
+    color: $product-meta-color;
+    vertical-align: middle;
+  }
+  > i { margin-top: .125rem; }
+  > a {
+    transition: color .25s;
+    font: {
+      size: ($font-size-base * .8125);
+      weight: 600;
+    }
+    text-decoration: none;
+    &:hover { color: $product-meta-hover-color; }
+  }
+}
+
+// Cart
+.cart-item {
+  position: relative;
+  margin-bottom: ($spacer * 1.875);
+  padding: 0 3.125rem 0 .625rem;
+  background-color: $white;
+  box-shadow: $card-box-shadow;
+  .cart-item-label {
+    display: block;
+    margin-bottom: 15px;
+    color: $gray-500;
+    font: {
+      size: ($font-size-base * .8125);
+      weight: 600;
+    }
+    text-transform: uppercase;
+  }
+  .cart-item-product {
+    display: table;
+    width: 420px;
+    text-decoration: none;
+  }
+  .cart-item-product-thumb,
+  .cart-item-product-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .cart-item-product-thumb {
+    width: $cart-product-thumb-width;
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .cart-item-product-info {
+    padding: {
+      top: .3125rem;
+      left: .9375rem;
+    }
+    > span {
+      display: block;
+      margin-bottom: ($spacer * .125);
+      color: $body-color;
+      font-size: $font-size-sm;
+    }
+  }
+  .cart-item-product-title {
+    margin-bottom: ($spacer / 2);
+    transition: color, .3s;
+    color: $headings-color;
+    font: {
+      size: $font-size-base;
+      weight: bold;
+    }
+  }
+  .cart-item-product:hover {
+    .cart-item-product-title { color: $product-title-hover-color; }
+  }
+  .count-input {
+    display: inline-block;
+    width: 85px;
+  }
+  .remove-item { right: -.625rem !important; }
+  @include media-breakpoint-down(md) {
+    .cart-item-product { width: auto; }
+    padding-right: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-right: .625rem;
+    padding-bottom: .9375rem;
+    .cart-item-product {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .cart-item-product-thumb,
+    .cart-item-product-info { display: block; }
+    .cart-item-product-thumb { margin: 0 auto .625rem; }
+    .cart-item-product-info { padding-left: 0; }
+    .cart-item-label { margin-bottom: .5rem; }
+  }
+}
+
+// Comparison Table
+.comparison-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  table {
+    min-width: 750px;
+    table-layout: fixed;
+  }
+  .comparison-item {
+    position: relative;
+    margin-bottom: ($spacer * .625);
+    padding: .75rem .75rem 1.125rem;
+    background-color: $white;
+    text-align: center;
+    box-shadow: $card-box-shadow;
+    .comparison-item-thumb {
+      display: block;
+      width: 80px;
+      margin: {
+        right: auto;
+        bottom: .75rem;
+        left: auto;
+      }
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .comparison-item-title {
+      display: block;
+      margin-bottom: ($spacer * .875);
+      transition: color .25s;
+      color: $gray-700;
+      font: {
+        size: $font-size-md;
+        weight: 600;
+      }
+      text-decoration: none;
+      &:hover { color: $primary; }
+    }
+  }
+}
+
+// Remove Buttom
+.remove-item {
+  display: block;
+  position: absolute;
+  top: -.3125rem;
+  right: -.3125rem;
+  width: 22px;
+  height: 22px;
+  padding-left: .0625rem;
+  border-radius: 50%;
+  background-color: $danger;
+  color: $white;
+  line-height: 23px;
+  text-align: center;
+  box-shadow: 0 .1875rem .75rem 0 rgba($danger, .5);
+  cursor: pointer;
+}
+
+// Interactive Credit Card
+.card-wrapper {
+  margin: 1.875rem -.9375rem;
+  @include media-breakpoint-down(xs) {
+    .jp-card-container { width: 260px !important; }
+    .jp-card { min-width: 250px !important; }
+  }
+}

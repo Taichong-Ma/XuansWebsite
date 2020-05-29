@@ -1,0 +1,104 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Single Topic'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Single Topic'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/pages/help-hero-bg.jpg'
+
+//- Page Content
+block content
+  
+  // Main Container
+  section.container.pb-5.mb-2
+    .row
+
+      // Sidebar
+      .col-xl-3.col-lg-4
+        // Off-Canvas Toggle
+        a(href='#help-sidebar' data-toggle='offcanvas').offcanvas-toggle
+          i.fe-icon-sidebar
+        // Off-Canvas Container
+        aside#help-sidebar.offcanvas-container
+          .offcanvas-scrollable-area.px-4.pt-5.px-lg-0.pt-lg-0
+            span.offcanvas-close
+              i.fe-icon-x
+          nav.list-group
+            a(href='#').list-group-item.active Most Popular Questions
+            a(href='#').list-group-item Managing Account
+            a(href='#').list-group-item Working With Dashboard
+            a(href='#').list-group-item Available Payment Methods
+            a(href='#').list-group-item Delivery Information
+            a(href='#').list-group-item Order Tracking Instructions
+            a(href='#').list-group-item Refund Policy
+            a(href='#').list-group-item Offers And Discounts
+            a(href='#').list-group-item Reward Points
+            a(href='#').list-group-item Affiliate Program
+            a(href='#').list-group-item Service Terms &amp; Conditions
+      
+      // Content
+      .col-xl-9.col-lg-8
+        div(id='accordion' class='accordion' role='tablist')
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseOne' data-toggle='collapse') What payment methods do you accept?
+            div(id='collapseOne' class='collapse show' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, harum. Asperiores mollitia sed ullam quae blanditiis explicabo, reprehenderit sint rerum, labore, fugit obcaecati laboriosam nulla voluptatem inventore nobis esse nemo.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseTwo' class='collapsed' data-toggle='collapse') How long will delivery take?
+            div(id='collapseTwo' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseThree' class='collapsed' data-toggle='collapse') Do you ship internationally?
+            div(id='collapseThree' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseFour' class='collapsed' data-toggle='collapse') Do I need an account to place an order?
+            div(id='collapseFour' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseFive' class='collapsed' data-toggle='collapse') Do you have discounts for returning customers?
+            div(id='collapseFive' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseSix' class='collapsed' data-toggle='collapse') How can I track my order?
+            div(id='collapseSix' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          .card
+            .card-header(role='tab')
+              h6: a(href='#collapseSeven' class='collapsed' data-toggle='collapse') What are the product refund conditions?
+            div(id='collapseSeven' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                p.mb-0 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+  
+  // Submit Request
+  section.container.pb-5.mb-3
+    div(style='background-image: url(img/pages/help-section-bg.jpg)').alert.alert-image-bg.text-center.py-5.px-4
+      h2.h4.block-title.mb-4 Haven't found the answer? We can help.
+      p.pb-3 Contact us and we’ll get back to you as soon as possible.
+      a(href='help-submit-request.html').btn.btn-primary Submit a Request
+
+  //- footer-default.pug template
+  include partials/footer-default

@@ -1,0 +1,34 @@
+// Default Map Code
+#maps-default-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-0 To be able to use Google Maps on your website you have to <strong>register Maps Javascript API key (Make sure to enable Geocoding API as well).</strong><br>Please follow the link below for the instructions.
+        a(href='https://developers.google.com/maps/documentation/javascript/get-api-key' target='_blank').d-block.mb-4 https://developers.google.com/maps/documentation/javascript/get-api-key
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Default Map --&gt;</strong>
+                &lt;div class=&quot;google-map&quot; data-height=&quot;270&quot; data-address=&quot;New York, USA&quot; data-zoom=&quot;9&quot; data-disable-controls=&quot;true&quot; data-scrollwheel=&quot;true&quot; data-marker-title=&quot;We are here!&quot;&gt;&lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Default Map</strong>
+                .google-map(
+                  data-height = &quot;270&quot;,
+                  data-address = &quot;New York, USA&quot;,
+                  data-zoom = &quot;9&quot;,
+                  data-disable-controls = &quot;true&quot;,
+                  data-scrollwheel = &quot;true&quot;,
+                  data-marker-title = &quot;We are here!&quot;
+                )

@@ -1,0 +1,111 @@
+//
+// Search Box
+// --------------------------------------------------
+
+.search-box,
+.search-box > input,
+.search-box > .easy-autocomplete > input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-box {
+  transition: all .3s;
+  background-color: $search-box-bg;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  &::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -.875rem;
+    font: {
+      family: feather;
+      size: ($font-size-base * 1.25);
+    }
+    content: '\e9c1';
+    z-index: 5;
+  }
+  > .easy-autocomplete > input,
+  > input {
+    padding: {
+      right: 1.875rem;
+      left: 2rem;
+    }
+    border: 0;
+    color: $body-color;
+    font-size: $font-size-base;
+    -webkit-appearance: none;
+    &:focus { outline: none; }
+  }
+  .search-close {
+    position: absolute;
+    top: 50%;
+    right: -.3125rem;
+    width: 50px;
+    height: 50px;
+    margin-top: -1.5rem;
+    color: $body-color;
+    font-size: ($font-size-base * 1.25);
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
+  }
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  @include media-breakpoint-down(md) {
+    &::before { left: .75rem; }
+    > .easy-autocomplete > input,
+    > input {
+      padding: {
+        right: 2.5rem;
+        left: 2.5rem;
+      }
+      font-size: $font-size-md;
+    }
+    .search-close { right: 0; }
+  }
+}
+
+// Search Autocomplete
+.easy-autocomplete {
+  width: 100% !important;
+}
+
+.easy-autocomplete-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background-color: $white;
+  box-shadow: $autocomplete-box-shadow;
+  > ul {
+    display: none;
+    margin: 0;
+    margin-top: .0625rem;
+    padding: .625rem 1.5rem 1.25rem;
+    list-style: none;
+    li { margin: 0; }
+  }
+}
+
+.eac-item > a {
+  display: inline-block;
+  padding: .3125rem 0;
+  color: $body-color;
+  font-size: $font-size-md;
+  text-decoration: none;
+  &:hover > .ac-title {
+    text-decoration: underline;
+  }
+}

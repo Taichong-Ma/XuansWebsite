@@ -1,0 +1,43 @@
+// Forms Inline Code
+#forms-inline-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Inline Form --&gt;</strong>
+                &lt;form class=&quot;form-inline&quot;&gt;
+                  &lt;label class=&quot;sr-only&quot;&gt;Name&lt;/label&gt;
+                  &lt;input class=&quot;form-control mb-3 mr-sm-4&quot; type=&quot;text&quot; placeholder=&quot;John Doe&quot;&gt;
+                  &lt;label class=&quot;sr-only&quot;&gt;Username&lt;/label&gt;
+                  &lt;input class=&quot;form-control mb-3 mr-sm-4&quot; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+                  &lt;div class=&quot;custom-control custom-checkbox mb-3 mr-4&quot;&gt;
+                    &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;inline-form-check-1&quot;&gt;
+                    &lt;label class=&quot;custom-control-label&quot; for=&quot;inline-form-check-1&quot;&gt;Remember me&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;btn btn-primary mb-3&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Inline Form</strong>
+                form.form-inline
+                  label.sr-only Name
+                  input(type=&quot;text&quot; placeholder=&quot;John Doe&quot;).form-control.mb-3.mr-sm-4
+                  label.sr-only Username
+                  input(type=&quot;text&quot; placeholder=&quot;Username&quot;).form-control.mb-3.mr-sm-4
+                  .custom-control.custom-checkbox.mb-3.mr-4
+                    input(type=&quot;checkbox&quot; id=&quot;inline-form-check-1&quot;).custom-control-input
+                    label(for=&quot;inline-form-check-1&quot;).custom-control-label Remember me
+                  button(type=&quot;submit&quot;).btn.btn-primary.mb-3 Submit

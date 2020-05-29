@@ -1,0 +1,63 @@
+//
+// Pricing
+// --------------------------------------------------
+
+// Default style
+.pricing-card:not(.card) {
+  position: relative;
+  padding: {
+    top: .75rem;
+    right: 1.25rem;
+    bottom: 2.625rem;
+    left: 1.25rem;
+  }
+  transition: all .35s;
+  border: 1px solid $border-color;
+  .pricing-card-body { text-align: center; }
+  &:hover {
+    border-color: transparent !important;
+    box-shadow: $card-box-shadow;
+  }
+}
+.pricing-card-image {
+  display: block;
+  width: $pricing-image-size;
+  margin: .75rem auto;
+  margin-bottom: 1.5rem;
+}
+.pricing-card-price {
+  color: $headings-color;
+  font: {
+    family: $headings-font-family;
+    size: $h1-font-size;
+    weight: bold;
+  }
+  line-height: 1;
+  > span {
+    display: inline-block;
+    margin: {
+      top: .125rem;
+      right: .3125rem;
+    }
+    font: {
+      size: .4em;
+      weight: normal;
+    }
+    vertical-align: top;
+  }
+  &.monthly,
+  &.yearly {
+    display: none;
+    &.active { display: block; }
+  }
+}
+.pricing-card-button {
+  position: absolute;
+  bottom: -($btn-height / 2);
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+// Badge inside Pricing card
+.pricing-card .badge { margin-left: -.3125rem; }

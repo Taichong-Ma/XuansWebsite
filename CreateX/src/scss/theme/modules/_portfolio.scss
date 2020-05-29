@@ -1,0 +1,106 @@
+//
+// Portfolio specific styles
+// --------------------------------------------------
+
+.portfolio-card:not(.card) {
+  transition: box-shadow .3s;
+  text-align: center;
+  .portfolio-card-body {
+    padding: ($spacer * 1.25);
+  }
+}
+.no-touchevents {
+  .portfolio-card:not(.card):hover {
+    box-shadow: $card-box-shadow;
+    .portfolio-thumb { box-shadow: none; }
+  }
+}
+.portfolio-thumb {
+  display: block;
+  transition: box-shadow .3s;
+  box-shadow: $box-shadow;
+  user-select: none;
+  > img {
+    display: block;
+    width: 100%;
+  }
+}
+.portfolio-meta {
+  padding-bottom: .5625rem;
+  color: $portfolio-meta-color;
+  font: {
+    size: $portfolio-meta-font-size;
+    weight: 600;
+  }
+  i {
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 1.1em;
+    vertical-align: middle;
+  }
+  > a {
+    color: $portfolio-meta-color;
+    text-decoration: none;
+  }
+}
+.portfolio-title {
+  margin-bottom: ($spacer * .75);
+  font-size: $portfolio-title-font-size;
+  > a {
+    transition: color .3s;
+    color: $portfolio-title-color;
+    text-decoration: none;
+    &:hover { color: $portfolio-title-hover-color; }
+  }
+}
+.card.portfolio-card {
+  .portfolio-thumb { box-shadow: none; }
+  .portfolio-title { margin-bottom: 0; }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: {
+      right: 1.5rem;
+      left: 1.5rem;
+    }
+    .portfolio-meta { padding-bottom: 0; }
+  }
+}
+.portfolio-list {
+  display: table;
+  width: 100%;
+  .portfolio-thumb,
+  .card-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .portfolio-thumb {
+    width: 46%;
+    min-height: 240px;
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+  .card-body {
+    padding: {
+      top: 4.5rem;
+      bottom: 4.5rem;
+      left: 2.25rem;
+    }
+  }
+  .portfolio-title {
+    margin-bottom: ($spacer * .75) !important;
+  }
+  @include media-breakpoint-down(xs) {
+    display: block;
+    .portfolio-thumb,
+    .card-body {
+      display: block;
+      width: 100%;
+    }
+    .card-body { padding: 1.5rem; }
+  }
+}

@@ -1,0 +1,215 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Product Page'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Product Page'
+  - var isModalReview = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.mb-2
+    .row
+
+      // Product Gallery
+      .col-md-6.pb-5
+        .product-gallery
+          span.badge.badge-danger.text-md.font-weight-normal Sale
+          .product-carousel.owl-carousel
+            a(href='img/shop/single/01.jpg' data-fancybox='gallery1' data-hash='one').gallery-item
+              img(src='img/shop/single/01.jpg' alt='Product')
+            a(href='img/shop/single/02.jpg' data-fancybox='gallery1' data-hash='two').gallery-item
+              img(src='img/shop/single/02.jpg' alt='Product')
+            a(href='img/shop/single/03.jpg' data-fancybox='gallery1' data-hash='three').gallery-item
+              img(src='img/shop/single/03.jpg' alt='Product')
+            a(href='img/shop/single/04.jpg' data-fancybox='gallery1' data-hash='four').gallery-item
+              img(src='img/shop/single/04.jpg' alt='Product')
+          ul.product-thumbnails
+            li.active
+              a(href='#one'): img(src='img/shop/single/th01.jpg' alt='Product')
+            li
+              a(href='#two'): img(src='img/shop/single/th02.jpg' alt='Product')
+            li
+              a(href='#three'): img(src='img/shop/single/th03.jpg' alt='Product')
+            li
+              a(href='#four'): img(src='img/shop/single/th04.jpg' alt='Product')
+            li
+              a(href='https://www.youtube.com/embed/CjNjcrQZtd8' data-fancybox data-width='960' data-height='640').navi-link.text-sm
+                i.fe-icon-video.text-lg.d-block.mb-1
+                | Watch Video
+
+      // Product Info
+      .col-md-6.pb-5
+        .product-meta
+          i.fe-icon-bookmark
+          a(href='#') Drones,
+          a(href='#') Action cameras
+        h2.h3.font-weight-bold GoPro Karma Camera Drone
+        h3.h4.font-weight-light
+          del.text-muted $958.00
+          | &nbsp;$899.00
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo...<a href='#details' class='scroll-to'>More info</a>
+        .row.mt-4
+          .col-sm-6
+            .form-group
+              label(for='size') Choose color
+              select(id='size').form-control
+                option White/Gray/Black
+                option Black
+                option Black/White/Red
+          .col-sm-6
+            .form-group
+              label(for='color') Battery capacity
+              select(id='color').form-control
+                option 5100 mAh
+                option 6200 mAh
+                option 8000 mAh
+        .row.align-items-end.pb-4
+          .col-sm-4
+            .form-group.mb-0
+              label(for='quantity') Quantity
+              select(id='quantity').form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+          .col-sm-8
+            .pt-4.hidden-sm-up
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-block.m-0
+              i.fe-icon-shopping-cart
+              |  Add to Cart
+        .pt-1.mb-4
+          span.text-medium SKU:
+          |  #21457832
+        hr.mb-2
+        .d-flex.flex-wrap.justify-content-between.align-items-center
+          .mt-2.mb-2
+            button(data-toast data-toast-type='info' data-toast-position='topRight' data-toast-icon='fe-icon-info' data-toast-title='Product' data-toast-message='added to your wishlist!').btn.btn-danger.btn-sm.my-2.mr-1
+              i.fe-icon-heart
+              | &nbsp;Wishlist
+            button(data-toast data-toast-type='info' data-toast-position='topRight' data-toast-icon='fe-icon-info' data-toast-title='Product' data-toast-message='added to comparison table!').btn.btn-info.btn-sm.my-2
+              i.fe-icon-repeat
+              | &nbsp;Compare
+          .mt-2.mb-2
+            span.text-muted.d-inline-block.align-middle.mb-2 Share:&nbsp;&nbsp;
+            .d-inline-block
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-3.sb-facebook.my-1
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-3.sb-twitter.my-1
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-3.sb-instagram.my-1
+                i.socicon-instagram
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-3.sb-google-plus.my-1.mr-0
+                i.socicon-googleplus
+  
+  // Product Details
+  #details.bg-secondary.pt-5.pb-4
+    .container.py-2
+      .row
+        .col-md-6
+          h3.h6 Details
+          p.mb-4.pb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+          h3.h6 Features
+          ul.list-icon.mb-4.pb-2
+            li
+              i.fe-icon-check.text-success
+              | Capture 4K30 Video and 12MP Photos
+            li
+              i.fe-icon-check.text-success
+              | Game-Style Controller with Touchscreen
+            li
+              i.fe-icon-check.text-success
+              | View Live Camera Feed
+            li
+              i.fe-icon-check.text-success
+              | Full Control of HERO6 Black
+            li
+              i.fe-icon-check.text-success
+              | Use App for Dedicated Camera Operation
+        .col-md-6
+          h3.h6 Specifications
+          ul.list-unstyled.mb-4.pb-2
+            li <strong>Weight:</strong> 35.5oz (1006g)
+            li <strong>Maximum Speed:</strong> 	35 mph (15 m/s)
+            li <strong>Maximum Distance:</strong> 	Up to 9,840ft (3,000m)
+            li <strong>Operating Frequency:</strong> 2.4GHz
+            li <strong>Manufacturer:</strong> GoPro, USA
+          h3.h6 Shipping Options:
+          ul.list-unstyled.mb-4.pb-2
+            li <strong>Courier:</strong> 2 - 4 days, $22.50
+            li <strong>Local Shipping:</strong> up to one week, $10.00
+            li <strong>UPS Ground Shipping:</strong> 4 - 6 days, $18.00
+            li <strong>Unishop Global Export:</strong> 3 - 4 days, $25.00
+  
+  // Reviews
+  .container.pt-5
+    .row.pt-2
+      .col-md-4.pb-5.mb-3
+        .card.border-default
+          .card-body
+            .text-center
+              .d-inline.align-baseline.display-4.mr-1 4.2
+              .d-inline.align-baseline.text-sm.text-warning.mr-2
+                +rating-stars(4)
+            .pt-3
+              span.progress-label 5 stars <span class='text-muted'>- 38</span>
+              .progress.progress-style-3.mb-3
+                .progress-bar.bg-warning(role='progressbar' style='width: 75%;' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+              span.progress-label 4 stars <span class='text-muted'>- 10</span>
+              .progress.progress-style-3.mb-3
+                .progress-bar.bg-warning(role='progressbar' style='width: 20%;;' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+              span.progress-label 3 stars <span class='text-muted'>- 3</span>
+              .progress.progress-style-3.mb-3
+                .progress-bar.bg-warning(role='progressbar' style='width: 7%;' aria-valuenow='7' aria-valuemin='0' aria-valuemax='100')
+              span.progress-label 2 stars <span class='text-muted'>- 1</span>
+              .progress.progress-style-3.mb-3
+                .progress-bar.bg-warning(role='progressbar' style='width: 3%;' aria-valuenow='3' aria-valuemin='0' aria-valuemax='100')
+              span.progress-label 1 star <span class='text-muted'>- 0</span>
+              .progress.progress-style-3.mb-3
+                .progress-bar.bg-warning(role='progressbar' style='width: 0;' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+            .pt-3
+              a(href='#' data-toggle='modal' data-target='#leaveReview').btn.btn-warning.btn-block Leave a Review
+      .col-md-8.pb-5.mb-3
+        .d-flex.flex-wrap.justify-content-between.pb-2
+          h3.h4 Latest Reviews
+          a(href='#').btn.btn-primary.btn-sm View All Reviews
+        // Review
+        .blockquote.comment.mb-4
+          .d-sm-flex.mb-2
+            h6.text-lg.mb-0 My husband love his new...
+            span.d-none.d-sm-inline.mx-3.text-muted.opacity-50 |
+            +rating-stars(4)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud...
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/01.jpg', 'Review Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Barbara Palson
+                cite August 12, 2018 at 3:10PM
+        // Review
+        .blockquote.comment
+          .d-sm-flex.mb-2
+            h6.text-lg.mb-0 Awesome quality for the price
+            span.d-none.d-sm-inline.mx-3.text-muted.opacity-50 |
+            +rating-stars(5)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore...
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/02.jpg', 'Review Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Hinata Nakamura
+                cite July 25, 2018 at 11:50AM
+
+  .container.pt-3.pb-5
+    //- related-products-carousel.pug template           
+    include partials/related-products-carousel
+
+  //- footer-shop.pug template
+  include partials/footer-shop

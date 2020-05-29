@@ -1,0 +1,25 @@
+// Code Inline Code
+#code-inline-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Inline Code --&gt;</strong>
+                &lt;p class=&quot;text-lg&quot;&gt;Wrap inline snippets of code with &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;. Be sure to escape HTML angle brackets.&lt;/p&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Inline Code</strong>
+                p.text-lg Wrap inline snippets of code with &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;. Be sure to escape HTML angle brackets.

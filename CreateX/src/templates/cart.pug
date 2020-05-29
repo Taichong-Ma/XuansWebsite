@@ -1,0 +1,135 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Cart'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Cart'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-2
+
+    // Alert
+    .alert.alert-info.alert-dismissible.fade.show.text-center.mb-30
+      span(data-dismiss='alert').close
+      i.fe-icon-award
+      | &nbsp;&nbsp;With this purchase you will earn <strong>2,549</strong> Reward Points.
+    
+    // Cart Item
+    .cart-item.d-md-flex.justify-content-between
+      span.remove-item
+        i.fe-icon-x
+      .px-3.my-3
+        a(href='shop-single.html').cart-item-product
+          .cart-item-product-thumb
+            img(src='img/shop/cart/01.jpg' alt='Product')
+          .cart-item-product-info
+            h4.cart-item-product-title Canon EOS M50 Mirrorless Camera
+            span <strong>Type:</strong> Mirrorless
+            span <strong>Color:</strong> Black
+      .px-3.my-3.text-center
+        .cart-item-label Quantity
+        .count-input
+          select.form-control
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+      .px-3.my-3.text-center
+        .cart-item-label Subtotal
+        span.text-xl.font-weight-medium $910.00
+      .px-3.my-3.text-center
+        .cart-item-label Discount
+        span.text-xl.font-weight-medium $35.00
+    
+    // Cart Item
+    .cart-item.d-md-flex.justify-content-between
+      span.remove-item
+        i.fe-icon-x
+      .px-3.my-3
+        a(href='shop-single.html').cart-item-product
+          .cart-item-product-thumb
+            img(src='img/shop/cart/02.jpg' alt='Product')
+          .cart-item-product-info
+            h4.cart-item-product-title Apple iPhone X 256 GB Space Gray
+            span <strong>Memory:</strong> 256GB
+            span <strong>Color:</strong> Space Gray
+      .px-3.my-3.text-center
+        .cart-item-label Quantity
+        .count-input
+          select.form-control
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+      .px-3.my-3.text-center
+        .cart-item-label Subtotal
+        span.text-xl.font-weight-medium $1,450.00
+      .px-3.my-3.text-center
+        .cart-item-label Discount
+        span.text-xl.font-weight-medium —
+    
+    // Cart Item
+    .cart-item.d-md-flex.justify-content-between
+      span.remove-item
+        i.fe-icon-x
+      .px-3.my-3
+        a(href='shop-single.html').cart-item-product
+          .cart-item-product-thumb
+            img(src='img/shop/cart/03.jpg' alt='Product')
+          .cart-item-product-info
+            h4.cart-item-product-title HP LaserJet Pro Laser Printer
+            span <strong>Type:</strong> Laser
+            span <strong>Color:</strong> White
+      .px-3.my-3.text-center
+        .cart-item-label Quantity
+        .count-input
+          select.form-control
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+      .px-3.my-3.text-center
+        .cart-item-label Subtotal
+        span.text-xl.font-weight-medium $188.50
+      .px-3.my-3.text-center
+        .cart-item-label Discount
+        span.text-xl.font-weight-medium —
+    
+    // Coupon + Subtotal
+    .d-sm-flex.justify-content-between.align-items-center.text-center.text-sm-left
+      form.form-inline.py-2
+        label.sr-only Coupon code
+        input(type='text' placeholder='Coupon code' required).form-control.form-control-sm.my-2.mr-3
+        button(type='submit').btn.btn-secondary.btn-sm.my-2.mx-auto.mx-sm-0 Apply Coupon
+      .py-2
+        span.d-inline-block.align-middle.text-sm.text-muted.font-weight-medium.text-uppercase.mr-2 Subtotal:
+        span.d-inline-block.align-middle.text-xl.font-weight-medium $2,513.50
+    
+    // Buttons
+    hr.my-2
+    .row.pt-3.pb-5.mb-2
+      .col-sm-6.mb-3
+        a(href='#').btn.btn-secondary.btn-block
+          i.fe-icon-refresh-ccw
+          | &nbsp;Update Cart
+      .col-sm-6.mb-3
+        a(href='checkout-address.html').btn.btn-primary.btn-block
+          i.fe-icon-credit-card
+          | &nbsp;Checkout
+
+    //- related-products-carousel.pug template           
+    include partials/related-products-carousel
+
+  //- footer-shop.pug template
+  include partials/footer-shop

@@ -1,0 +1,46 @@
+// Default Bootstrap Toast Code
+#toasts-bootstrap-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 To learn more about Bootstrap toast component, please see <a href='https://getbootstrap.com/docs/4.2/components/toasts/' target='_blank'>official documentation</a>.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Default Bootstrap Toast --&gt;</strong>
+                &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-autohide=&quot;false&quot;&gt;
+                  &lt;div class=&quot;toast-header&quot;&gt;
+                    &lt;div class=&quot;d-inline-block align-middle bg-primary rounded-circle mr-2&quot;&gt;&lt;/div&gt;
+                    &lt;strong&gt;Bootstrap&lt;/strong&gt;
+                    &lt;small&gt;11 mins ago&lt;/small&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;ml-2 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                      &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;toast-body&quot;&gt;
+                    Hello, world! This is a toast message.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Default Bootstrap Toast</strong>
+                div(role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-autohide=&quot;false&quot;).toast.fade.show
+                  .toast-header
+                    div(style=&quot;width: 1.25rem; height: 1.25rem;&quot;).d-inline-block.align-middle.bg-primary.rounded-circle.mr-2
+                    strong.mr-auto Bootstrap
+                    small 11 mins ago
+                    button(type=&quot;button&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;).ml-2.close
+                      span(aria-hidden=&quot;true&quot;) &amp;times;
+                  .toast-body
+                    | Hello, world! This is a toast message.

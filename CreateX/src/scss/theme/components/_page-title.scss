@@ -1,0 +1,87 @@
+//
+// Page Title
+// --------------------------------------------------
+
+.page-title {
+  min-height: 250px;
+  margin-bottom: ($spacer * 3.5);
+  padding: {
+    top: ($spacer * 1.875);
+    bottom: ($spacer * 1.875);
+  }
+  background: {
+    position: center center;
+    color: $gray-100;
+    repeat: no-repeat;
+  }
+  .page-title-heading {
+    font-size: ($font-size-base * 2.75);
+    letter-spacing: .034em;
+    line-height: 1.2;
+    text-shadow: 0 .625rem 1.5rem rgba($black, .2);
+    text-transform: uppercase;
+    word-break: break-all;
+  }
+  .page-title-subheading {
+    display: inline-block;
+    padding: 10px 15px;
+    background: darken($gray-100, 3%);
+  }
+  &.bg-dark .page-title-subheading {
+    background: darken($gray-800, 3%);
+  }
+  &.page-title-lg { min-height: 450px; }
+  &.page-title-indent-left {
+    padding-left: ($offcanvas-width + 15);
+  }
+  &.page-title-indent-right {
+    padding-right: ($offcanvas-width + 15);
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 150px;
+    margin-bottom: ($spacer * 2.625);
+    .page-title-heading {
+      font-size: floor(($font-size-base * 2.2));
+    }
+    &.page-title-lg { min-height: 250px; }
+  }
+  @media (max-width: 1480px) {
+    &.page-title-indent-left {
+      padding-left: (($offcanvas-width + 15) - 50);
+    }
+    &.page-title-indent-right {
+      padding-right: (($offcanvas-width + 15) - 50);
+    }
+  }
+}
+
+// Breadcrumb
+.breadcrumb {
+  font: {
+    size: $breadcrumb-font-size;
+    weight: $nav-link-font-weight;
+  }
+  text-transform: uppercase;
+  .breadcrumb-item {
+    position: relative;
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: ($breadcrumb-font-size * 2);
+      margin-top: -($breadcrumb-font-size * 1.3);
+      padding: 0;
+      background-color: $breadcrumb-divider-color;
+      transform: rotate(33deg);
+    }
+    > a {
+      text-decoration: none;
+      letter-spacing: .08em;
+    }
+    & + .breadcrumb-item {
+      margin-left: $breadcrumb-item-padding;
+    }
+  }
+}

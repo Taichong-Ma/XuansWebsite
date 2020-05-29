@@ -1,0 +1,314 @@
+// Widgets: Blog Code
+#widgets-blog-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Author Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-author&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;About author&lt;/h4&gt;
+                  &lt;div class=&quot;author-card&quot;&gt;
+                    &lt;div class=&quot;author-card-cover&quot; style=&quot;background-image: url(path-to-cover-image);&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;author-card-profile&quot;&gt;
+                      &lt;div class=&quot;author-card-avatar&quot;&gt;
+                        &lt;img src=&quot;path-to-author-image&quot; alt=&quot;Post Author&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;author-card-details&quot;&gt;
+                        &lt;h5 class=&quot;author-card-name&quot;&gt;Sara Palson&lt;/h5&gt;
+                        &lt;span class=&quot;author-card-position&quot;&gt;Marketing Director&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;author-card-info&quot;&gt;Sed ut perspiciatis unde omnis...&lt;/p&gt;
+                    &lt;div class=&quot;author-card-social-bar-wrap&quot;&gt;
+                      &lt;div class=&quot;author-card-social-bar&quot;&gt;
+                        &lt;a class=&quot;social-btn sb-style-1 sb-facebook&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-1 sb-pinterest&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-pinterest&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-1 sb-twitter&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot;social-btn sb-style-1 sb-linkedin&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;socicon-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Blog Categories Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-categories&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Blog categories&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#technology&quot; data-toggle=&quot;collapse&quot;&gt;Software &amp;amp; Technology&lt;span&gt;&amp;nbsp;(45)&lt;/span&gt;&lt;/a&gt;
+                      &lt;div class=&quot;collapse show&quot; id=&quot;technology&quot;&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Gadgets reviews&lt;span&gt;&amp;nbsp;(22)&lt;/span&gt;&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Robotics &amp;amp; AI&lt;span&gt;&amp;nbsp;(10)&lt;/span&gt;&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Technological trends&lt;span&gt;&amp;nbsp;(13)&lt;/span&gt;&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;Marketing &amp;amp; Management&lt;span&gt;&amp;nbsp;(24)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;Hobby &amp;amp; Lifestyle&lt;span&gt;&amp;nbsp;(18)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Archives Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-categories&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Archives&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;fe-icon-book text-muted&quot;&gt;&lt;/i&gt;
+                        August 2018
+                        &lt;span&gt;&amp;nbsp;(34)&lt;/span&gt;
+                      &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;fe-icon-book text-muted&quot;&gt;&lt;/i&gt;
+                        July 2018
+                        &lt;span&gt;&amp;nbsp;(28)&lt;/span&gt;
+                      &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;
+                        &lt;i class=&quot;fe-icon-book text-muted&quot;&gt;&lt;/i&gt;
+                        June 2018
+                        &lt;span&gt;&amp;nbsp;(47)&lt;/span&gt;
+                      &lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Recent Posts. List Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-featured-posts&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt; Recent posts. List&lt;/h4&gt;
+                  &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;featured-post-thumb&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Thumbnail&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;featured-post-info&quot;&gt;
+                      &lt;div class=&quot;featured-post-meta&quot;&gt;
+                        &lt;span class=&quot;text-primary opacity-70&quot;&gt;
+                          &lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;
+                          22/04/2018
+                        &lt;/span&gt;
+                        &lt;span class=&quot;ml-3&quot;&gt;
+                          &lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;
+                          21
+                        &lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;featured-post-title&quot;&gt;Getting to another level of design and functionality.&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                  &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Recent Posts. Carousel Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-featured-posts-carousel&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Recent posts. Carousel&lt;/h4&gt;
+                  &lt;div class=&quot;owl-carousel&quot; data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 10, &quot;loop&quot;: true }'&gt;
+                    &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;
+                      &lt;div class=&quot;featured-post-thumb&quot;&gt;
+                        &lt;img src=&quot;path-to-image&quot; alt=&quot;Post Thumbnail&quot;/&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;featured-post-info&quot;&gt;
+                        &lt;div class=&quot;featured-post-meta&quot;&gt;
+                          &lt;span class=&quot;text-primary opacity-70&quot;&gt;
+                            &lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;
+                            22/04/2018
+                          &lt;/span&gt;
+                          &lt;span class=&quot;ml-3&quot;&gt;
+                            &lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;
+                            21
+                          &lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;featured-post-title&quot;&gt;Getting to another level of design and functionality.&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                    &lt;a class=&quot;featured-post&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Recent Comments Widget --&gt;</strong>
+                &lt;div class=&quot;widget widget-recent-comments&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Recent comments&lt;/h4&gt;
+                  &lt;a class=&quot;recent-comment&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;recent-comment-meta&quot;&gt;Jane Portman on&lt;/span&gt;
+                    &lt;div class=&quot;recent-comment-title&quot;&gt;The App of The Future&lt;/div&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;recent-comment&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;recent-comment-meta&quot;&gt;William Smith on&lt;/span&gt;
+                    &lt;div class=&quot;recent-comment-title&quot;&gt;Cherry 5 WordPress Framework&lt;/div&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;recent-comment&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;recent-comment-meta&quot;&gt;Emma Johnson on&lt;/span&gt;
+                    &lt;div class=&quot;recent-comment-title&quot;&gt;Another Level of Design&lt;/div&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Tag Cloud Widget --&gt;</strong>
+                &lt;div class=&quot;widget&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Tag cloud&lt;/h4&gt;
+                  &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Technology&lt;/a&gt;
+                  &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Software&lt;/a&gt;
+                  &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Croudfunding&lt;/a&gt;
+                  &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Social&lt;/a&gt;
+                  &lt;a class=&quot;tag-link active&quot; href=&quot;#&quot;&gt;Freelance&lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Author Widget</strong>
+                .widget.widget-author
+                  h4.widget-title About author
+                  .author-card
+                    .author-card-cover(style=&quot;background-image: url(path-to-cover-image);&quot;)
+                    .author-card-profile
+                      .author-card-avatar
+                        +image(&quot;path-to-author-image&quot;, &quot;Post Author&quot;)
+                      .author-card-details
+                        h5.author-card-name Sara Palson
+                        span.author-card-position Marketing Director
+                    p.author-card-info Sed ut perspiciatis unde omnis...
+                    .author-card-social-bar-wrap
+                      .author-card-social-bar
+                        a(href=&quot;#&quot;).social-btn.sb-style-1.sb-facebook
+                          i.socicon-facebook
+                        a(href=&quot;#&quot;).social-btn.sb-style-1.sb-pinterest
+                          i.socicon-pinterest
+                        a(href=&quot;#&quot;).social-btn.sb-style-1.sb-twitter
+                          i.socicon-twitter
+                        a(href=&quot;#&quot;).social-btn.sb-style-1.sb-linkedin
+                          i.socicon-linkedin
+
+                <strong>//- Blog Categories Widget</strong>
+                .widget.widget-categories
+                  h4.widget-title Blog categories
+                  ul
+                    li
+                      a(href=&quot;#technology&quot; data-toggle=&quot;collapse&quot;)
+                        | Software &amp; Technology
+                        span &amp;nbsp;(45)
+                      #technology.collapse.show
+                        ul
+                          li
+                            a(href=&quot;#&quot;)
+                              | Gadgets reviews
+                              span &amp;nbsp;(22)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Robotics &amp; AI
+                              span &amp;nbsp;(10)
+                          li
+                            a(href=&quot;#&quot;)
+                              | Technological trends
+                              span &amp;nbsp;(13)
+                    li
+                      a(href=&quot;#&quot;)
+                        | Marketing &amp; Management
+                        span &amp;nbsp;(24)
+                    li
+                      a(href=&quot;#&quot;)
+                        | Hobby &amp; Lifestyle
+                        span &amp;nbsp;(18)
+                
+                <strong>//- Archives Widget</strong>
+                .widget.widget-categories
+                  h4.widget-title Archives
+                  ul
+                    li
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-book.text-muted
+                        | August 2018
+                        span &amp;nbsp;(34)
+                    li
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-book.text-muted
+                        | July 2018
+                        span &amp;nbsp;(28)
+                    li
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-book.text-muted
+                        | June 2018
+                        span &amp;nbsp;(47)
+                
+                <strong>//- Recent Posts. List Widget</strong>
+                .widget.widget-featured-posts
+                  h4.widget-title Recent posts. List
+                  a(href=&quot;#&quot;).featured-post
+                    .featured-post-thumb
+                      +image(&quot;path-to-image&quot;, &quot;Post Thumbnail&quot;)
+                    .featured-post-info
+                      .featured-post-meta
+                        span.text-primary.opacity-70
+                          i.fe-icon-clock
+                          | 22/04/2018
+                        span.ml-3
+                          i.fe-icon-message-square
+                          | 21
+                      .featured-post-title Getting to another level of design and functionality.
+                  a(href=&quot;#&quot;).featured-post ...
+                  a(href=&quot;#&quot;).featured-post ...
+
+                <strong>//- Recent Posts. Carousel Widget</strong>
+                .widget.widget-featured-posts-carousel
+                  h4.widget-title Recent posts. Carousel
+                  .owl-carousel(data-owl-carousel='{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 10, &quot;loop&quot;: true }')
+                    a(href=&quot;#&quot;).featured-post
+                      .featured-post-thumb
+                        +image(&quot;path-to-image&quot;, &quot;Post Thumbnail&quot;)
+                      .featured-post-info
+                        .featured-post-meta
+                          span.text-primary.opacity-70
+                            i.fe-icon-clock
+                            | 22/04/2018
+                          span.ml-3
+                            i.fe-icon-message-square
+                            | 21
+                        .featured-post-title Getting to another level of design and functionality.
+                    a(href=&quot;#&quot;).featured-post ...
+                    a(href=&quot;#&quot;).featured-post ...
+
+                <strong>//- Recent Comments Widget</strong>
+                .widget.widget-recent-comments
+                  h4.widget-title Recent comments
+                  a(href=&quot;#&quot;).recent-comment
+                    span.recent-comment-meta Jane Portman on
+                    .recent-comment-title The App of The Future
+                  a(href=&quot;#&quot;).recent-comment
+                    span.recent-comment-meta William Smith on
+                    .recent-comment-title Cherry 5 WordPress Framework
+                  a(href=&quot;#&quot;).recent-comment
+                    span.recent-comment-meta Emma Johnson on
+                    .recent-comment-title Another Level of Design
+                
+                <strong>//- Tag Cloud Widget</strong>
+                .widget
+                  h4.widget-title Tag cloud
+                  a(href=&quot;#&quot;).tag-link Technology
+                  a(href=&quot;#&quot;).tag-link Software
+                  a(href=&quot;#&quot;).tag-link Croudfunding
+                  a(href=&quot;#&quot;).tag-link Social
+                  a(href=&quot;#&quot;).tag-link.active Freelance

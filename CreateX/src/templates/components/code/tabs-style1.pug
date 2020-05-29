@@ -1,0 +1,143 @@
+// Tabs Style 1 (Default) Code
+#tabs-style1-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Tabs Style 1 (Default) --&gt;</strong>
+                &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#home1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+                      &lt;i class=&quot;fe-icon-home&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;Home
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#profile1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+                      &lt;i class=&quot;fe-icon-user&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;Profile
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                    &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;&gt;Dropdown&lt;/a&gt;
+                    &lt;div class=&quot;dropdown-menu&quot;&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#messages1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#settings1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content&quot;&gt;
+                  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home1&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Raw denim you probably haven't heard ...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile1&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Food truck fixie locavore, accusamus...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;messages1&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Etsy mixtape wayfarers, ethical wes anderson tofu...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;settings1&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Trust fund seitan letterpress, keytar raw...&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Bordered Tabs Style 1 (Default) --&gt;</strong>
+                &lt;ul class=&quot;nav nav-tabs nav-tabs-bordered&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#home2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+                      &lt;i class=&quot;fe-icon-home&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;Home
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#profile2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+                      &lt;i class=&quot;fe-icon-user&quot;&gt;&lt;/i&gt;
+                      &amp;nbsp;Profile
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                    &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;&gt;Dropdown&lt;/a&gt;
+                    &lt;div class=&quot;dropdown-menu&quot;&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#messages2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+                      &lt;a class=&quot;dropdown-item&quot; href=&quot;#settings2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content border&quot;&gt;
+                  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home2&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Raw denim you probably haven't heard ...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile2&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Food truck fixie locavore, accusamus...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;messages2&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Etsy mixtape wayfarers, ethical wes anderson tofu...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;settings2&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p class=&quot;text-muted&quot;&gt;Trust fund seitan letterpress, keytar raw...&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Tabs Style 1 (Default)</strong>
+                ul(class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;)
+                  li.nav-item
+                    a(href=&quot;#home1&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;)
+                      i.fe-icon-home
+                      | &amp;nbsp;Home
+                  li.nav-item
+                    a(href=&quot;#profile1&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;)
+                      i.fe-icon-user
+                      | &amp;nbsp;Profile
+                  li.nav-item.dropdown
+                    a(href=&quot;#&quot; class=&quot;nav-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;) Dropdown
+                    .dropdown-menu
+                      a(href=&quot;#messages1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Messages
+                      a(href=&quot;#settings1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Settings
+                .tab-content
+                  div(id=&quot;home1&quot; class=&quot;tab-pane fade show active&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Raw denim you probably haven't heard ...
+                  div(id=&quot;profile1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Food truck fixie locavore, accusamus...
+                  div(id=&quot;messages1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Etsy mixtape wayfarers, ethical wes anderson tofu...
+                  div(id=&quot;settings1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Trust fund seitan letterpress, keytar raw...
+
+                <strong>//- Bordered Tabs Style 1 (Default)</strong>
+                ul(class=&quot;nav nav-tabs nav-tabs-bordered&quot; role=&quot;tablist&quot;)
+                  li.nav-item
+                    a(href=&quot;#home1&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;)
+                      i.fe-icon-home
+                      | &amp;nbsp;Home
+                  li.nav-item
+                    a(href=&quot;#profile1&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;)
+                      i.fe-icon-user
+                      | &amp;nbsp;Profile
+                  li.nav-item.dropdown
+                    a(href=&quot;#&quot; class=&quot;nav-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;) Dropdown
+                    .dropdown-menu
+                      a(href=&quot;#messages1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Messages
+                      a(href=&quot;#settings1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Settings
+                .tab-content.border
+                  div(id=&quot;home1&quot; class=&quot;tab-pane fade show active&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Raw denim you probably haven't heard ...
+                  div(id=&quot;profile1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Food truck fixie locavore, accusamus...
+                  div(id=&quot;messages1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Etsy mixtape wayfarers, ethical wes anderson tofu...
+                  div(id=&quot;settings1&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p.text-muted Trust fund seitan letterpress, keytar raw...

@@ -1,0 +1,110 @@
+// Alert Color Variations Code
+#alert-colors-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Secondary Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-secondary alert-dismissible fade show&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;h3&gt;Hello World!&lt;/h3&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus sint optio explicabo eum perspiciatis ipsam adipisci, excepturi repellendus debitis &lt;a href='#'&gt;fugit laborum quae&lt;/a&gt;, aspernatur ex neque hic nihil, reiciendis veritatis.&lt;/p&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Primary Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-primary alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-bell&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Primary alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Accent Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-accent alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-clock&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Accent alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Info Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-info alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-info&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Info alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Success Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-success alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-check-square&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Success alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Warning Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-warning alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-alert-triangle&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Warning alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Danger Alert --&gt;</strong>
+                &lt;div class=&quot;alert alert-danger alert-dismissible fade show text-center&quot;&gt;
+                  &lt;span class=&quot;alert-close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;fe-icon-slash&quot;&gt;&lt;/i&gt;
+                  &amp;nbsp;&amp;nbsp;&lt;strong&gt;Danger alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href='#'&gt;quaerat mollitia.&lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Secondary Alert</strong>
+                .alert.alert-secondary.alert-dismissible.fade.show
+                  span(data-dismiss=&quot;alert&quot;).close
+                  h3 Hello World!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus sint optio explicabo eum perspiciatis ipsam adipisci, excepturi repellendus debitis &lt;a href=&quot;#&quot;&gt;fugit laborum quae&lt;/a&gt;, aspernatur ex neque hic nihil, reiciendis veritatis.
+                
+                <strong>//- Primary Alert</strong>
+                .alert.alert-primary.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-bell
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Primary alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;
+                
+                <strong>//- Accent Alert</strong>
+                .alert.alert-accent.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-clock
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Accent alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;
+                
+                <strong>//- Info Alert</strong>
+                .alert.alert-info.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-info
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Info alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;
+                
+                <strong>//- Success Alert</strong>
+                .alert.alert-success.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-check-square
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Success alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;
+                
+                <strong>//- Warning Alert</strong>
+                .alert.alert-warning.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-alert-triangle
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Warning alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;
+                
+                <strong>//- Danger Alert</strong>
+                .alert.alert-danger.alert-dismissible.fade.show.text-center
+                  span(data-dismiss=&quot;alert&quot;).close
+                  i.fe-icon-slash
+                  | &amp;nbsp;&amp;nbsp;&lt;strong&gt;Danger alert:&lt;/strong&gt; Deserunt praesentium laboriosam &lt;a href=&quot;#&quot;&gt;quaerat mollitia.&lt;/a&gt;

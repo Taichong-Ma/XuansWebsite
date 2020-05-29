@@ -1,0 +1,89 @@
+// Off-Canvas Toggle
+a(href='#sidebarComponents' data-toggle='offcanvas').offcanvas-toggle
+  i.fe-icon-sidebar
+
+// Off-Canvas Container
+#sidebarComponents.offcanvas-container.is-static
+  span.offcanvas-close
+    i.fe-icon-x
+  .d-flex.align-items-center.px-4
+    a(href='../index.html').navbar-brand.mr-2
+      img(src='../img/logo/logo-dark.png' alt='CreateX')
+    .bg-gradient.py-1.px-2.text-white.text-sm: strong UI Kit
+  div(data-filter='#components-list').py-4.px-4.mt-2
+    .input-group.form-group
+      .input-group-prepend
+        .input-group-text
+          i.fe-icon-search
+      input(type='text' placeholder='Search components').form-control
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-all' name='compFilter' value='all' checked).custom-control-input
+      label(for='filter-all').custom-control-label ALL
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-ab' name='compFilter' value='ab').custom-control-input
+      label(for='filter-ab').custom-control-label A-B
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-cf' name='compFilter' value='cf').custom-control-input
+      label(for='filter-cf').custom-control-label C-F
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-gl' name='compFilter' value='gl').custom-control-input
+      label(for='filter-gl').custom-control-label G-L
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-mp' name='compFilter' value='mp').custom-control-input
+      label(for='filter-mp').custom-control-label M-P
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-rs' name='compFilter' value='rs').custom-control-input
+      label(for='filter-rs').custom-control-label R-S
+    .custom-control.custom-radio.custom-control-inline
+      input(type='radio' id='filter-tw' name='compFilter' value='tw').custom-control-input
+      label(for='filter-tw').custom-control-label T-W
+  .offcanvas-scrollable-area(style='top: 239px; height: calc(100% - 250px);')
+    +components-menu([
+      {'link': 'accordion.html', 'data': 'ab', 'title': 'Accordion'},
+      {'link': 'alerts.html', 'data': 'ab', 'title': 'Alerts'},
+      {'link': 'animated-digits.html', 'data': 'ab', 'title': 'Animated Digits'},
+      {'link': 'block-title.html', 'data': 'ab', 'title': 'Block Title'},
+      {'link': 'blog-post-cards.html', 'data': 'ab', 'title': 'Blog Post Cards'},
+      {'link': 'buttons.html', 'data': 'ab', 'title': 'Buttons'},
+      {'link': 'cards.html', 'data': 'cf', 'title': 'Cards'},
+      {'link': 'carousel.html', 'data': 'cf', 'title': 'Carousel'},
+      {'link': 'code.html', 'data': 'cf', 'title': 'Code'},
+      {'link': 'contacts-card.html', 'data': 'cf', 'title': 'Contacts Card'},
+      {'link': 'countdown.html', 'data': 'cf', 'title': 'Countdown'},
+      {'link': 'dropdowns.html', 'data': 'cf', 'title': 'Dropdowns'},
+      {'link': 'forms.html',  'data': 'cf','title': 'Forms'},
+      {'link': 'gallery.html', 'data': 'gl', 'title': 'Gallery'},
+      {'link': 'google-maps.html', 'data': 'gl', 'title': 'Google Maps'},
+      {'link': 'icon-box.html', 'data': 'gl', 'title': 'Icon Box'},
+      {'link': 'images.html', 'data': 'gl', 'title': 'Images & Figures'},
+      {'link': 'input-group.html', 'data': 'gl', 'title': 'Input Group'},
+      {'link': 'jumbotron.html', 'data': 'gl', 'title': 'Jumbotron'},
+      {'link': 'list-group.html', 'data': 'gl', 'title': 'List Group'},
+      {'link': 'market-buttons.html', 'data': 'mp', 'title': 'Market Buttons'},
+      {'link': 'media.html', 'data': 'mp', 'title': 'Media Object'},
+      {'link': 'modal.html', 'data': 'mp', 'title': 'Modal'},
+      {'link': 'navbar.html', 'data': 'mp', 'title': 'Navbar'},
+      {'link': 'pagination.html', 'data': 'mp', 'title': 'Pagination'},
+      {'link': 'parallax-scrolling.html', 'data': 'mp', 'title': 'Parallax Scrolling'},
+      {'link': 'pills.html', 'data': 'mp', 'title': 'Pills'},
+      {'link': 'portfolio-cards.html', 'data': 'mp', 'title': 'Portfolio Cards'},
+      {'link': 'pricing.html', 'data': 'mp', 'title': 'Pricing'},
+      {'link': 'progress-bar.html', 'data': 'mp', 'title': 'Progress Bar'},
+      {'link': 'responsive-embed.html', 'data': 'rs', 'title': 'Responsive Embed'},
+      {'link': 'reviews-comments.html', 'data': 'rs', 'title': 'Reviews & Comments'},
+      {'link': 'shop-components.html', 'data': 'rs', 'title': 'Shop Components'},
+      {'link': 'social-buttons.html', 'data': 'rs', 'title': 'Social Buttons'},
+      {'link': 'spinners.html', 'data': 'rs', 'title': 'Spinners'},
+      {'link': 'steps.html', 'data': 'rs', 'title': 'Steps'},
+      {'link': 'tables.html', 'data': 'tw', 'title': 'Tables'},
+      {'link': 'tabs.html', 'data': 'tw', 'title': 'Tabs'},
+      {'link': 'team.html', 'data': 'tw', 'title': 'Team'},
+      {'link': 'testimonials.html', 'data': 'tw', 'title': 'Testimonials'},
+      {'link': 'toasts.html', 'data': 'tw', 'title': 'Toast Notifications'},
+      {'link': 'tooltips-popovers.html', 'data': 'tw', 'title': 'Tooltips & Popovers'},
+      {'link': 'typography.html', 'data': 'tw', 'title': 'Typography'},
+      {'link': 'utilities.html', 'data': 'tw', 'title': 'Utilities'},
+      {'link': 'video-player.html', 'data': 'tw', 'title': 'Video Player'},
+      {'link': 'widgets.html', 'data': 'tw', 'title': 'Widgets'},
+      {'link': 'wizard.html', 'data': 'tw', 'title': 'Wizard'}
+    ], pageTitle)

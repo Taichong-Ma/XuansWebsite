@@ -1,0 +1,32 @@
+// Forms Help Text Code
+#forms-help-text-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html6' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug6' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html6' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Form Help Text --&gt;</strong>
+                &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;help-text-input&quot;&gt;Password&lt;/label&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;password&quot; id=&quot;help-text-input&quot; placeholder=&quot;Your password here&quot;&gt;
+                  &lt;small class=&quot;form-text text-muted&quot;&gt;Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.&lt;/small&gt;
+                &lt;/div&gt;
+          div(id='pug6' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Form Help Text</strong>
+                .form-group
+                  label(for=&quot;help-text-input&quot;) Password
+                  input(type=&quot;password&quot; id=&quot;help-text-input&quot; placeholder=&quot;Your password here&quot;).form-control
+                  small.form-text.text-muted Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.

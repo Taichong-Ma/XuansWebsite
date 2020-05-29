@@ -1,0 +1,37 @@
+// Image Thumbnail Shapes Code
+#images-thumb-shapes-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Default Thumbnail --&gt;</strong>
+                &lt;img class=&quot;img-thumbnail&quot; src=&quot;path-to-image&quot; alt=&quot;Thumbnail square&quot;&gt;
+
+                <strong>&lt;!-- Rounded Thumbnail --&gt;</strong>
+                &lt;img class=&quot;img-thumbnail rounded&quot; src=&quot;path-to-image&quot; alt=&quot;Thumbnail rounded&quot;&gt;
+
+                <strong>&lt;!-- Circle Thumbnail --&gt;</strong>
+                &lt;img class=&quot;img-thumbnail rounded-circle&quot; src=&quot;path-to-image&quot; alt=&quot;Thumbnail circle&quot;&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Default Thumbnail</strong>
+                img(src=&quot;path-to-image&quot; alt=&quot;Thumbnail square&quot;).img-thumbnail
+
+                <strong>//- Rounded Thumbnail</strong>
+                img(src=&quot;path-to-image&quot; alt=&quot;Thumbnail rounded&quot;).img-thumbnail.rounded
+
+                <strong>//- Circle Thumbnail</strong>
+                img(src=&quot;path-to-image&quot; alt=&quot;Thumbnail circle&quot;).img-thumbnail.rounded-circle

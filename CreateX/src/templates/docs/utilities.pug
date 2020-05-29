@@ -1,0 +1,22 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Utility Classes'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      .alert.alert-secondary.mb-4
+        p.font-weight-medium Bootstrap includes dozens of utilities - classes with a single purpose to reduce the frequency of highly repetitive declarations.
+      p Along with <a href='https://getbootstrap.com/docs/4.1/utilities/borders/' class='font-weight-medium' target='_blank'>default Bootstrap 4 utility classes</a> CreateX introduces its own. They all live inside <code>Createx/src/scss/theme/_utilities.scss</code> file.

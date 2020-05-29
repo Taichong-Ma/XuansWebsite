@@ -1,0 +1,131 @@
+// Card Layout: Deck Code
+#card-layout-columns-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html13' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug13' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html13' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Cards Layout: Columns --&gt;</strong>
+                &lt;div class=&quot;card-columns&quot;&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card mb-30&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Card image&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;This is a wider card...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3 mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card mb-30&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3 mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card mb-30&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Card image&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;This card has supporting...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3 mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card border border-primary mb-30 text-center&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card mb-30&quot;&gt;
+                    &lt;img class=&quot;card-img-top&quot; src=&quot;path-to-image&quot; alt=&quot;Card image&quot;&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card border border-info mb-30&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Card --&gt;</strong>
+                  &lt;div class=&quot;card border mb-30&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;h4 class=&quot;card-title&quot;&gt;Card title here&lt;/h4&gt;
+                      &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                      &lt;span class=&quot;text-muted text-sm opacity-75&quot;&gt;Last updated 3mins ago&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug13' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Cards Layout: Columns</strong>
+                .card-columns
+
+                  <strong>//- Card</strong>
+                  .card.mb-30
+                    img(src='path-to-image' alt='Card image')
+                    .card-body
+                      h4.card-title Card title here
+                      p.card-text This is a wider card...
+                      span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+                  
+                  <strong>//- Card</strong>
+                  .card.mb-30
+                    .card-body
+                      h4.card-title Card title here
+                      p.card-text Lorem ipsum dolor sit amet...
+                      span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+                  
+                  <strong>//- Card</strong>
+                  .card.mb-30
+                    img(src='path-to-image' alt='Card image')
+                    .card-body
+                      h4.card-title Card title here
+                      p.card-text This card has supporting...
+                      span.text-muted.text-sm.opacity-75 Last updated 3 mins ago
+                  
+                  <strong>//- Card</strong>
+                  .card.border.border-primary.mb-30.text-center
+                    .card-body
+                      p.card-text Lorem ipsum dolor sit amet...
+                      span.text-muted.text-sm.opacity-75 Last updated 3mins ago
+                  
+                  <strong>//- Card</strong>
+                  .card.mb-30
+                    img(src='path-to-image' alt='Card image').card-img-top
+                  
+                  <strong>//- Card</strong>
+                  .card.border.border-info.mb-30
+                    .card-body
+                      p.card-text Lorem ipsum dolor sit amet...
+                      span.text-muted.text-sm.opacity-75 Last updated 3mins ago
+                  
+                  <strong>//- Card</strong>
+                  .card.border.mb-30
+                    .card-body
+                      h4.card-title Card title here
+                      p.card-text Lorem ipsum dolor sit amet...
+                      span.text-muted.text-sm.opacity-75 Last updated 3mins ago

@@ -1,0 +1,37 @@
+// Alert with Background Image Code
+#alert-image-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Alert with Background Image --&gt;</strong>
+                &lt;div class=&quot;alert alert-image-bg alert-dismissible fade show text-center py-5&quot; style=&quot;background-image: url(path-to-image)&quot;&gt;
+                  &lt;span class=&quot;alert-close text-white&quot; data-dismiss=&quot;alert&quot;&gt;&lt;/span&gt;
+                  &lt;i class=&quot;d-blocki fe-icon-clock text-white my-3&quot; style=&quot;font-size: 50px;&quot;&gt;&lt;/i&gt;
+                  &lt;div class=&quot;h3 text-medium text-white text-shadow&quot;&gt;Check our Limited Offers.&lt;/div&gt;
+                  &lt;div class=&quot;h4 text-white font-weight-normal text-shadow&quot;&gt;Save up to 50%&lt;/div&gt;
+                  &lt;div class=&quot;py-3&quot;&gt;&lt;a class=&quot;btn btn-gradient&quot; href=&quot;#&quot;&gt;View Offers&lt;/a&gt;&lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Alert with Background Image</strong>
+                div(style=&quot;background-image: url(path-to-image)&quot;).alert.alert-image-bg.alert-dismissible.fade.show.text-center.py-5
+                  span(data-dismiss=&quot;alert&quot;).close.text-white
+                  i(style=&quot;font-size: 50px;&quot;).d-blocki.fe-icon-clock.text-white.my-3
+                  .h3.text-medium.text-white.text-shadow Check our Limited Offers.
+                  .h4.text-white.font-weight-normal.text-shadow Save up to 50%
+                  div.py-3
+                    a(href=&quot;#&quot;).btn.btn-gradient View Offers

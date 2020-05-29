@@ -1,0 +1,58 @@
+//
+// Input Group
+// ----------------------------------------------------
+
+.input-group-text {
+  border: 0;
+  font: {
+    size: $font-size-md;
+    weight: 600;
+  }
+  > i { font-size: 1.1em; }
+  .custom-control {
+    height: $custom-control-indicator-size;
+    min-height: auto;
+    margin-bottom: 0;
+    padding: 0;
+    .custom-control-label {
+      width: $custom-control-indicator-size;
+      height: $custom-control-indicator-size;
+      &::before, &::after {
+        top: 0;
+        left: 0;
+      }
+      &::before {
+        border: 1px solid darken($border-color, 5%);
+        background-color: $white;
+      }
+    }
+    .custom-control-input:checked {
+      & ~ .custom-control-label::before { border-color: $custom-control-indicator-checked-bg; }
+    }
+  }
+}
+.input-group-prepend,
+.input-group-append {
+  margin: 0 !important;
+  .input-group-text + .input-group-text,
+  .btn + .btn { margin-left: .125rem; }
+}
+
+// Light Skin
+.input-group-light-skin {
+  .form-control {
+    border-color: $border-light-color;
+    background-color: transparent;
+    color: $white;
+    @include placeholder(rgba($white, .5));
+    &:hover { border-color: rgba($white, .3) !important; }
+    &:focus {
+      border-color: rgba($white, .1) !important;
+      background-color: rgba($white, .1);
+    }
+  }
+  .input-group-text {
+    background-color: rgba($white, .1);
+    color: $white;
+  }
+}

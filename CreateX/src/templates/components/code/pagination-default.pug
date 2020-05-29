@@ -1,0 +1,53 @@
+// Pagination Code
+#pagination-default-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Pagination --&gt;</strong>
+                &lt;nav class=&quot;pagination&quot;&gt;
+                  &lt;a class=&quot;prev-btn&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-chevron-left&quot;&gt;&lt;/i&gt;Prev&lt;/a&gt;
+                  &lt;ul class=&quot;pages&quot;&gt;
+                    &lt;li class=&quot;d-block d-sm-none w-100&quot;&gt;2 / 18&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;...&lt;/li&gt;
+                    &lt;li class=&quot;d-none d-sm-inline-block&quot;&gt;&lt;a href=&quot;#&quot;&gt;18&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;a class=&quot;next-btn&quot; href=&quot;#&quot;&gt;Next&lt;i class=&quot;fe-icon-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/nav&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Pagination</strong>
+                nav.pagination
+                  a(href=&quot;#&quot;).prev-btn
+                    i.fe-icon-chevron-left
+                    | Prev
+                  ul.pages
+                    li.d-block.d-sm-none.w-100 2 / 18
+                    li.d-none.d-sm-inline-block: a(href=&quot;#&quot;) 1
+                    li.d-none.d-sm-inline-block.active: a(href=&quot;#&quot;) 2
+                    li.d-none.d-sm-inline-block: a(href=&quot;#&quot;) 3
+                    li.d-none.d-sm-inline-block: a(href=&quot;#&quot;) 4
+                    li.d-none.d-sm-inline-block: a(href=&quot;#&quot;) 5
+                    li.d-none.d-sm-inline-block ...
+                    li.d-none.d-sm-inline-block: a(href=&quot;#&quot;) 18
+                  a(href=&quot;#&quot;).next-btn
+                    | Next
+                    i.fe-icon-chevron-right

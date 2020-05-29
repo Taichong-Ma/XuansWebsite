@@ -1,0 +1,22 @@
+//
+// Badge
+// --------------------------------------------------
+
+.badge {
+  margin: {
+    top: -.1875rem;
+    left: .4375rem;;
+  }
+  padding: {
+    top: .2em;
+    bottom: .3em;
+  }
+  border-radius: $badge-border-radius;
+  vertical-align: middle;
+  &:not(.badge-light) { color: $white; }
+  &.badge-pill { border-radius: $badge-pill-border-radius; }
+}
+.badge-secondary {
+  border: 1px solid $border-color;
+  color: $body-color !important;
+}

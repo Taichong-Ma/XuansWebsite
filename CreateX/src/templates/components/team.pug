@@ -1,0 +1,517 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Team'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Team Style 1 Code Modal
+  include code/team-style1
+
+  //- Team Style 2 Code Modal
+  include code/team-style2
+
+  //- Team Style 3 Code Modal
+  include code/team-style3
+
+  //- Team Style 4 Code Modal
+  include code/team-style4
+
+  //- Team Style 5 Code Modal
+  include code/team-style5
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+      
+      // Style 1
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 1
+        a(href='#team-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        // Team member
+        .col-xl-3.col-sm-6
+          .team-card-style-1.mx-auto
+            .team-card-inner
+              .team-thumb
+                +image('img/team/style-1/01.jpg', 'Team Member Picture')
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-4.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-4.sb-github
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-4.sb-stackoverflow
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-4.sb-skype
+                  i.socicon-skype
+              a(href='tel:+19871625346').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (987) 162 53 46
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+            span.team-position Lead Programmer
+            h4.team-name William Smith
+        // Team member
+        .col-xl-3.col-sm-6
+          .team-card-style-1.mx-auto
+            .team-card-inner
+              .team-thumb
+                +image('img/team/style-1/02.jpg', 'Team Member Picture')
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-4.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-4.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-4.sb-google-plus
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-4.sb-linkedin
+                  i.socicon-linkedin
+              a(href='tel:+57872336590').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+5 (787) 233 65 90
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+            span.team-position Marketing Manager
+            h4.team-name Samantha Palson
+        // Team member
+        .col-xl-3.col-sm-6
+          .team-card-style-1.mx-auto
+            .team-card-inner
+              .team-thumb
+                +image('img/team/style-1/03.jpg', 'Team Member Picture')
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-4.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-4.sb-pinterest
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-4.sb-behance
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-4.sb-dribbble
+                  i.socicon-dribbble
+              a(href='tel:+13907765843').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (390) 776 58 43
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+            span.team-position Graphic Designer
+            h4.team-name Emma Johnson
+        // Team member
+        .col-xl-3.col-sm-6
+          .team-card-style-1.mx-auto
+            .team-card-inner
+              .team-thumb
+                +image('img/team/style-1/04.jpg', 'Team Member Picture')
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-4.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-4.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-4.sb-skype
+                  i.socicon-skype
+                a(href='#').social-btn.sb-style-4.sb-linkedin
+                  i.socicon-linkedin
+              a(href='tel:+72056557984').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+7 (205) 655 79 84
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+            span.team-position CEO, Co-Founder
+            h4.team-name James McCorvinus
+      
+      // Style 2
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 2
+        a(href='#team-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.no-gutters.pb-5.mb-4
+        // Team member
+        .col-xl-3.col-md-4.col-sm-6
+          .team-card-style-2
+            +image('img/team/style-2/01.jpg', 'Team Member Picture')
+            .team-card-inner
+              h4.team-name Olivia Davis
+              span.team-position Lead Visual Artist
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-1.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-pinterest.sb-light-skin
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-1.sb-behance.sb-light-skin
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-1.sb-dribbble.sb-light-skin
+                  i.socicon-dribbble
+              a(href='tel:+19871625346').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (987) 162 53 46
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+        // Team member      
+        .col-xl-3.col-md-4.col-sm-6
+          .team-card-style-2
+            +image('img/team/style-2/02.jpg', 'Team Member Picture')
+            .team-card-inner
+              h4.team-name William Smith
+              span.team-position Lead Programmer
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-1.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-github.sb-light-skin
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-1.sb-stackoverflow.sb-light-skin
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-1.sb-skype.sb-light-skin
+                  i.socicon-skype
+              a(href='tel:+57872336590').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+5 (787) 233 65 90
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+        // Team member
+        .col-xl-3.col-md-4.col-sm-6
+          .team-card-style-2
+            +image('img/team/style-2/03.jpg', 'Team Member Picture')
+            .team-card-inner
+              h4.team-name Benjamin Miller
+              span.team-position Financial Consultant
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-1.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-facebook.sb-light-skin
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-google-plus.sb-light-skin
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-1.sb-linkedin.sb-light-skin
+                  i.socicon-linkedin
+              a(href='tel:+13907765843').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (390) 776 58 43
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+        // Team member
+        .col-xl-3.col-md-4.col-sm-6
+          .team-card-style-2
+            +image('img/team/style-2/04.jpg', 'Team Member Picture')
+            .team-card-inner
+              h4.team-name Emma Johnson
+              span.team-position Graphic Designer
+              .team-social-bar.text-center
+                a(href='#').social-btn.sb-style-1.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-pinterest.sb-light-skin
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-1.sb-behance.sb-light-skin
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-1.sb-dribbble.sb-light-skin
+                  i.socicon-dribbble
+              a(href='tel:+72056557984').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+7 (205) 655 79 84
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+      
+      // Style 3
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 3
+        a(href='#team-style3-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-3.mx-auto
+            .team-thumb
+              +image('img/team/style-3/01.jpg', 'Team Member Picture')
+            span.team-position Lead Programmer
+            h4.team-name William Smith
+            a(href='tel:+19871625346').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (987) 162 53 46
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-github
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-3.mx-auto
+            .team-thumb
+              +image('img/team/style-3/02.jpg', 'Team Member Picture')
+            span.team-position Marketing Manager
+            h4.team-name Samantha Palson
+            a(href='tel:+57872336590').team-contact-link
+              i.fe-icon-phone
+              | &nbsp; +5 (787) 233 65 90
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-google-plus
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-3.mx-auto
+            .team-thumb
+              +image('img/team/style-3/03.jpg', 'Team Member Picture')
+            span.team-position Graphic Designer
+            h4.team-name Emma Johnson
+            a(href='tel:+13907765843').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (390) 776 58 43
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-pinterest
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-1.sb-behance
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-1.sb-dribbble
+                  i.socicon-dribbble
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-3.mx-auto
+            .team-thumb
+              +image('img/team/style-3/04.jpg', 'Team Member Picture')
+            span.team-position CEO, Co-Founder
+            h4.team-name James McCorvinus
+            a(href='tel:+72056557984').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+7 (205) 655 79 84
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+      
+      // Style 4
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 4
+        a(href='#team-style4-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        // Team member
+        .col-xl-4.col-md-6.mb-30
+          .team-card-style-4.d-sm-table.w-100
+            .team-thumb.d-sm-table-cell.align-middle
+              +image('img/team/style-3/01.jpg', 'Team Member Picture')
+            .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+              span.team-position Lead Programmer
+              h4.team-name William Smith
+              a(href='tel:+19871625346').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (987) 162 53 46
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar-wrap  
+                .team-social-bar.mx-auto.mx-sm-0
+                  a(href='#').social-btn.sb-style-1.sb-twitter
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-1.sb-github
+                    i.socicon-github
+                  a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                    i.socicon-stackoverflow
+                  a(href='#').social-btn.sb-style-1.sb-skype
+                    i.socicon-skype
+        // Team member
+        .col-xl-4.col-md-6.mb-30
+          .team-card-style-4.d-sm-table.w-100
+            .team-thumb.d-sm-table-cell.align-middle
+              +image('img/team/style-3/02.jpg', 'Team Member Picture')
+            .d-table-sm-cell.align-middle.pl-sm-4.text-center.text-sm-left
+              span.team-position Marketing Manager
+              h4.team-name Sara Palson
+              a(href='tel:+57872336590').team-contact-link
+                i.fe-icon-phone
+                | &nbsp; +5 (787) 233 65 90
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar-wrap  
+                .team-social-bar.mx-auto.mx-sm-0
+                  a(href='#').social-btn.sb-style-1.sb-facebook
+                    i.socicon-facebook
+                  a(href='#').social-btn.sb-style-1.sb-twitter
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-1.sb-google-plus
+                    i.socicon-googleplus
+                  a(href='#').social-btn.sb-style-1.sb-linkedin
+                    i.socicon-linkedin
+        // Team member
+        .col-xl-4.col-md-6.mb-30
+          .team-card-style-4.d-sm-table.w-100
+            .team-thumb.d-sm-table-cell.align-middle
+              +image('img/team/style-3/04.jpg', 'Team Member Picture')
+            .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+              span.team-position CEO, Co-Founder
+              h4.team-name James Corvinus
+              a(href='tel:+72056557984').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+7 (205) 655 79 84
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar-wrap  
+                .team-social-bar.mx-auto.mx-sm-0
+                  a(href='#').social-btn.sb-style-1.sb-facebook
+                    i.socicon-facebook
+                  a(href='#').social-btn.sb-style-1.sb-twitter
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-1.sb-skype
+                    i.socicon-skype
+                  a(href='#').social-btn.sb-style-1.sb-linkedin
+                    i.socicon-linkedin
+      
+      // Style 5
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 5
+        a(href='#team-style5-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-5.mx-auto
+            .team-thumb
+              .team-card-inner
+                a(href='tel:+19871625346').team-contact-link
+                  i.fe-icon-phone
+                  | &nbsp;+1 (987) 162 53 46
+                a(href='mailto:info@example.com').team-contact-link
+                  i.fe-icon-mail
+                  | &nbsp;info@example.com
+                .team-social-bar.pt-3.text-center
+                  a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-6.sb-pinterest.sb-light-skin
+                    i.socicon-pinterest
+                  a(href='#').social-btn.sb-style-6.sb-behance.sb-light-skin
+                    i.socicon-behance
+                  a(href='#').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+                    i.socicon-dribbble
+              +image('img/team/style-2/01.jpg', 'Team Member Picture')
+            h4.team-name Olivia Davis
+            span.team-position Lead Visual Artist
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-5.mx-auto
+            .team-thumb
+              .team-card-inner
+                a(href='tel:+57872336590').team-contact-link
+                  i.fe-icon-phone
+                  | &nbsp;+5 (787) 233 65 90
+                a(href='mailto:info@example.com').team-contact-link
+                  i.fe-icon-mail
+                  | &nbsp;info@example.com
+                .team-social-bar.pt-3.text-center
+                  a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-6.sb-github.sb-light-skin
+                    i.socicon-github
+                  a(href='#').social-btn.sb-style-6.sb-stackoverflow.sb-light-skin
+                    i.socicon-stackoverflow
+                  a(href='#').social-btn.sb-style-6.sb-skype.sb-light-skin
+                    i.socicon-skype
+              +image('img/team/style-2/02.jpg', 'Team Member Picture')
+            h4.team-name William Smith
+            span.team-position Lead Programmer
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-5.mx-auto
+            .team-thumb
+              .team-card-inner
+                a(href='tel:+13907765843').team-contact-link
+                  i.fe-icon-phone
+                  | &nbsp;+1 (390) 776 58 43
+                a(href='mailto:info@example.com').team-contact-link
+                  i.fe-icon-mail
+                  | &nbsp;info@example.com
+                .team-social-bar.pt-3.text-center
+                  a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+                    i.socicon-facebook
+                  a(href='#').social-btn.sb-style-6.sb-google-plus.sb-light-skin
+                    i.socicon-googleplus
+                  a(href='#').social-btn.sb-style-6.sb-linkedin.sb-light-skin
+                    i.socicon-linkedin
+              +image('img/team/style-2/03.jpg', 'Team Member Picture')
+            h4.team-name Benjamin Miller
+            span.team-position Financial Consultant
+        // Team member
+        .col-xl-3.col-sm-6.mb-30
+          .team-card-style-5.mx-auto
+            .team-thumb
+              .team-card-inner
+                a(href='tel:+72056557984').team-contact-link
+                  i.fe-icon-phone
+                  | &nbsp;+7 (205) 655 79 84
+                a(href='mailto:info@example.com').team-contact-link
+                  i.fe-icon-mail
+                  | &nbsp;info@example.com
+                .team-social-bar.pt-3.text-center
+                  a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                    i.socicon-twitter
+                  a(href='#').social-btn.sb-style-6.sb-pinterest.sb-light-skin
+                    i.socicon-pinterest
+                  a(href='#').social-btn.sb-style-6.sb-behance.sb-light-skin
+                    i.socicon-behance
+                  a(href='#').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+                    i.socicon-dribbble
+              +image('img/team/style-2/04.jpg', 'Team Member Picture')
+            h4.team-name Emma Johnson
+            span.team-position Graphic Designer

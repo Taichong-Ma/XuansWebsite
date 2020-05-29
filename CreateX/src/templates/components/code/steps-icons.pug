@@ -1,0 +1,40 @@
+// Steps with Icons Code
+#steps-icons-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Step with Icon --&gt;</strong>
+                &lt;div class=&quot;step step-with-icon&quot;&gt;
+                  &lt;div class=&quot;step-number&quot;&gt;1&lt;/div&gt;
+                  &lt;div class=&quot;step-icon&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Gathering User Data&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;h3 class=&quot;step-title&quot;&gt;Gathering User Data&lt;/h3&gt;
+                  &lt;p class=&quot;step-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing...&lt;/p&gt;
+                  &lt;a class=&quot;step-link&quot; href=&quot;#&quot;&gt;View more&lt;i class=&quot;fe-icon-arrow-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Step with Icon</strong>
+                .step.step-with-icon
+                  .step-number 1
+                  .step-icon: img(src=&quot;path-to-image&quot; alt=&quot;Gathering User Data&quot;)
+                  h3.step-title Gathering User Data
+                  p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing...
+                  a(href=&quot;#&quot;).step-link
+                    | View more
+                    i.fe-icon-arrow-right

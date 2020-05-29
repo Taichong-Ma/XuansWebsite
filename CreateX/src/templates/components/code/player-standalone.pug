@@ -1,0 +1,29 @@
+// Standalone Video Player Button Code
+#player-standalone-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Standalone Video Player Button --&gt;</strong>
+                &lt;a class=&quot;video-player-button my-3 mr-3&quot; href=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; data-fancybox data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                  &lt;i class=&quot;fe-icon-play&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;span class=&quot;video-player-label text-muted&quot;&gt;Click me to watch video!&lt;/span&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Standalone Video Player Button</strong>
+                a(href=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&title=0&byline=0&portrait=0&quot; data-fancybox data-width=&quot;1000&quot; data-height=&quot;563&quot;).video-player-button.my-3.mr-3: i.fe-icon-play
+                span.video-player-label.text-muted Click me to watch video!

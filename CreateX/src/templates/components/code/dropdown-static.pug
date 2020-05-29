@@ -1,0 +1,92 @@
+// Dropdown Static Example Code
+#dropdown-static-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Basic Example --&gt;</strong>
+                &lt;div class=&quot;dropdown-menu d-block&quot; style=&quot;position: static;&quot;&gt;
+                  &lt;span class=&quot;dropdown-item-text&quot;&gt;Dropdown item text&lt;/span&gt;
+                  &lt;a class=&quot;dropdown-item active&quot; href=&quot;#&quot;&gt;Action active&lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- With Header --&gt;</strong>
+                &lt;div class=&quot;dropdown-menu d-block&quot; style=&quot;position: static;&quot;&gt;
+                  &lt;h6 class=&quot;dropdown-header&quot;&gt;Dropdown header&lt;/h6&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- With Icons and Badges --&gt;</strong>
+                &lt;div class=&quot;dropdown-menu d-block&quot; style=&quot;position: static;&quot;&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-home&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;Home
+                    &lt;span class=&quot;badge badge-pill badge-secondary&quot;&gt;2&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-user&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;Profile
+                    &lt;span class=&quot;badge badge-pill badge-primary&quot;&gt;3&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-message-square&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;Messages
+                    &lt;span class=&quot;badge badge-pill badge-info&quot;&gt;5&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-settings&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;Settings
+                    &lt;span class=&quot;badge badge-pill badge-warning&quot;&gt;1&lt;/span&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Basic Example</strong>
+                .dropdown-menu(style=&quot;position: static;&quot;).d-block
+                  span.dropdown-item-text Dropdown item text
+                  a(href=&quot;#&quot;).dropdown-item.active Action active
+                  a(href=&quot;#&quot;).dropdown-item Another action
+                  a(href=&quot;#&quot;).dropdown-item Something else here
+
+                <strong>//- With Header</strong>
+                .dropdown-menu(style=&quot;position: static;&quot;).d-block
+                  h6.dropdown-header Dropdown header
+                  a(href=&quot;#&quot;).dropdown-item.active Action active
+                  a(href=&quot;#&quot;).dropdown-item Another action
+                  a(href=&quot;#&quot;).dropdown-item Something else here
+
+                <strong>//- With Icons and Badges</strong>
+                .dropdown-menu(style=&quot;position: static;&quot;).d-block
+                  a(href=&quot;#&quot;).dropdown-item
+                    i.fe-icon-home
+                    | &amp;nbsp;Home
+                    span.badge.badge-pill.badge-secondary 2
+                  a(href=&quot;#&quot;).dropdown-item
+                    i.fe-icon-user
+                    | &amp;nbsp;Profile
+                    span.badge.badge-pill.badge-primary 3
+                  a(href=&quot;#&quot;).dropdown-item
+                    i.fe-icon-message-square
+                    | &amp;nbsp;Messages
+                    span.badge.badge-pill.badge-info 5
+                  a(href=&quot;#&quot;).dropdown-item
+                    i.fe-icon-settings
+                    | &amp;nbsp;Settings
+                    span.badge.badge-pill.badge-warning 1

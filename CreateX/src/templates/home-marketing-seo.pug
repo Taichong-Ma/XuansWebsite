@@ -1,0 +1,417 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-simple-wide'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Digital Marketing & SEO'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-color: #fbfaff; background-image: url(img/homepages/marketing-seo/hero-bg.png);').bg-center-top.bg-no-repeat.box-shadow
+    .container-fluid.pt-md-4
+      .row.align-items-center
+        .col-xl-5.col-md-6.offset-xl-1.py-5.text-center.text-md-left
+          h1.h2.block-title Helping You To Increase Your Website Traffic
+          p.text-lg.text-muted.pt-3.d-block.d-md-none.d-lg-block Donec ipsum risus, efficitur et sapien vehicula, porttitor aliquet tellus. Praesent odio tellus, pulvinar non aliquet sed, euismod ac dolor quod maxime placeat facere possimus.
+          .pt-3
+            a(href='#services').scroll-to.btn.btn-primary.mr-3.mb-3 Learn More
+            a(href='contacts-v1.html').btn.btn-accent.mb-3 Contact Us
+        .col-xl-5.col-md-6
+          img(src='img/homepages/marketing-seo/hero-img.png' alt='CreateX Marketing').d-block.mx-auto
+
+  // Services
+  section#services.container.py-5.my-2.my-md-4
+    h2.h3.block-title.text-center We provide services in
+    .row.pt-3
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/04.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Monitoring ranking
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/05.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Pay per click
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/06.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Google analytics
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/02.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Social marketing
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/07.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Email marketing
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+      // Service
+      .col-md-6
+        a(href='#').icon-box.icon-box-horizontal.d-sm-table.text-center.text-sm-left.text-decoration-none
+          .d-sm-table-cell.align-top
+            .icon-box-image: img(src='img/components/icon-box/03.png' alt='Image icon')
+          .d-sm-table-cell.align-top.pl-sm-4
+            h3.icon-box-title Map optimization
+            p.icon-box-text.text-sm.mb-0 Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.
+    .text-center.pt-2
+      a(href='services.html').btn.btn-primary All Services
+
+  // CTA #1
+  section(style='background-image: url(img/homepages/marketing-seo/cta01-bg.png);').bg-center.bg-repeat-y.pt-3
+    .container-fluid.pt-4
+      .row.align-items-center
+        .col-xl-5.col-md-6.offset-xl-1
+          img(src='img/homepages/marketing-seo/cta01.png' alt='CreateX Marketing').d-block.mx-auto
+        .col-xl-5.col-md-6.text-center.text-md-left.py-5
+          h2.h3.block-title.text-white We offer a full range of digial marketing
+          p.text-lg.text-white.py-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel congue dolor. Phasellus fermentum elit at mi ullamcorper imperdiet. Vestibulum ut justo eleifend, maximus ex vel, egestas lorem. Nunc imperdiet ullamcorper sem. Donec dignissim auctor orci non imperdiet. Donec nec neque tortor. Phasellus mattis velit sed justo maximus rhoncus. Donec vel leo quam.
+          a(href='#').scroll-to.btn.btn-light.mb-3 Learn More
+
+  // Process
+  section.bg-secondary.pt-5.pb-4
+    .container.pt-2.pt-md-4
+      h2.h3.block-title.text-center The Process. How it all works
+      .row.pt-3
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 1
+            h3.step-title Market Research
+            p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rerum facilis est.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 2
+            h3.step-title Expert Development
+            p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rerum facilis est.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 3
+            h3.step-title Segment Targeting
+            p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rerum facilis est.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 4
+            h3.step-title Collecting Metrics
+            p.step-text.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rerum facilis est.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+    
+  // Team
+  section.container.pt-5.pb-4
+    h2.h3.block-title.text-center.pt-3 Meet our expert team
+    .row.pt-4
+      // Team member
+      .col-lg-3.col-sm-6.mb-30
+        .team-card-style-5.mx-auto
+          .team-thumb
+            .team-card-inner
+              a(href='tel:+13907765843').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (390) 776 58 43
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar.pt-3.text-center
+                a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-6.sb-google-plus.sb-light-skin
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-6.sb-linkedin.sb-light-skin
+                  i.socicon-linkedin
+            +image('img/team/style-2/05.jpg', 'Team Member Picture')
+          h4.team-name Benjamin Miller
+          span.team-position CEO, Founder
+      // Team member
+      .col-lg-3.col-sm-6.mb-30
+        .team-card-style-5.mx-auto
+          .team-thumb
+            .team-card-inner
+              a(href='tel:+19871625346').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+1 (987) 162 53 46
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar.pt-3.text-center
+                a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-6.sb-pinterest.sb-light-skin
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-6.sb-behance.sb-light-skin
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+                  i.socicon-dribbble
+            +image('img/team/style-2/06.jpg', 'Team Member Picture')
+          h4.team-name Olivia Davis
+          span.team-position Lead Visual Artist
+      // Team member
+      .col-lg-3.col-sm-6.mb-30
+        .team-card-style-5.mx-auto
+          .team-thumb
+            .team-card-inner
+              a(href='tel:+57872336590').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+5 (787) 233 65 90
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar.pt-3.text-center
+                a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-6.sb-github.sb-light-skin
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-6.sb-stackoverflow.sb-light-skin
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-6.sb-skype.sb-light-skin
+                  i.socicon-skype
+            +image('img/team/style-2/07.jpg', 'Team Member Picture')
+          h4.team-name William Smith
+          span.team-position Lead Programmer
+      // Team member
+      .col-lg-3.col-sm-6.mb-30
+        .team-card-style-5.mx-auto
+          .team-thumb
+            .team-card-inner
+              a(href='tel:+72056557984').team-contact-link
+                i.fe-icon-phone
+                | &nbsp;+7 (205) 655 79 84
+              a(href='mailto:info@example.com').team-contact-link
+                i.fe-icon-mail
+                | &nbsp;info@example.com
+              .team-social-bar.pt-3.text-center
+                a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-6.sb-pinterest.sb-light-skin
+                  i.socicon-pinterest
+                a(href='#').social-btn.sb-style-6.sb-behance.sb-light-skin
+                  i.socicon-behance
+                a(href='#').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+                  i.socicon-dribbble
+            +image('img/team/style-2/08.jpg', 'Team Member Picture')
+          h4.team-name Emma Johnson
+          span.team-position SEO Specialist
+  
+  // Pricing
+  section.container
+    hr
+    .py-5
+      h2.h3.block-title.text-center.pt-3
+        | Choose your SEO plan
+        small <span class='font-weight-medium text-danger'>*</span> Note that you save 20% on Yearly subscription
+      .pricing-plans.pt-4
+        ul.nav.nav-tabs.nav-tabs-style-3.pricing-tabs.justify-content-center
+          li.nav-item
+            a(href='#' class='nav-link active' data-toggle='price' data-period='monthly') Monthly
+          li.nav-item
+            a(href='#' class='nav-link' data-toggle='price' data-period='yearly')
+              | Yearly&nbsp;
+              sup -20%
+        .owl-carousel.carousel-flush.pt-2(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+
+          // Plan
+          .mb-30.pb-3
+            .card.pricing-card
+              .card-body.text-center
+                span.badge.badge-success Best Offer
+                h5.pt-3 Starter
+                .pricing-card-price.monthly.active <span>$</span>40
+                .pricing-card-price.yearly <span>$</span>32
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>4GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Community support
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>5 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>2GB</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-primary Buy Now
+  
+          // Pricing Plan
+          .mb-30.pb-3
+            .card.pricing-card.border.border-primary
+              .card-body.text-center
+                span.badge.badge-warning Most Popular
+                h5.pt-3 Team
+                .pricing-card-price.monthly.active <span>$</span>70
+                .pricing-card-price.yearly <span>$</span>56
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>16GB</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>10 projects</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>5GB</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-gradient Buy Now
+
+          // Pricing Plan
+          .mb-30.pb-3
+            .card.pricing-card
+              .card-body.text-center
+                span.badge.badge-danger Rich Features
+                h5.pt-3 Premium
+                .pricing-card-price.monthly.active <span>$</span>100
+                .pricing-card-price.yearly <span>$</span>80
+                span.text-muted per month
+                ul.list-icon.d-table.mx-auto.pt-4.text-left
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Storage space: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Premium support 24/7
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Expert reviews: <strong>Unlimited</strong>
+                  li
+                    i.fe-icon-check-circle.text-muted
+                    | Traffic: <strong>Unlimited</strong>
+              .card-footer.text-center
+                a(href='#').btn.btn-primary Buy Now
+  
+  // CTA #2
+  section.container-fluid.pb-5
+    .bg-center-top.bg-no-repeat.py-5(style='background-color: #3724b9;')
+      .container.px-4
+        .row.align-items-center
+          .col-md-7.py-3
+            h2.h3.text-white.pb-3 Start your SEO campaign now!
+            p.text-lg.text-white.font-weight-medium Each plan comes with a risk-free 7 days trial.
+            p.text-white.pb-3 Morbi fringilla ex luctus, tempor ante id, finibus ante. Nulla facilisi. Phasellus et quam porta, elementum sem eget, pellentesque dolor sint occaecati cupiditate non provident.
+            a(href='contacts-v1.html').btn.btn-light Contact us now
+          .col-md-5
+            img(src='img/homepages/marketing-seo/cta01.png' alt='CreateX Marketing').d-block.mx-auto     
+
+  // Footer
+  footer.pt-4
+    .container
+      .row
+        .col-lg-3.pb-4.mb-2
+          a(href='index.html').navbar-brand.d-inline-block.mb-4
+            img(src='img/logo/logo-dark.png' alt='CreateX')
+          p.text-sm.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utar enim ad minim veniam.
+          ul.list-icon.text-sm.pb-2
+            li
+              i.fe-icon-map-pin.text-muted
+              a(href='#').navi-link
+                | &nbsp;396 Lillian Blvd, Holbrook, NY, USA
+            li
+              i.fe-icon-phone.text-muted
+              a(href='tel:+1212477690000').navi-link
+                | &nbsp;+1 (212) 477 690 000
+            li
+              i.fe-icon-mail.text-muted
+              a(href='mailto:support@example.com').navi-link
+                | &nbsp;support@example.com
+          a(href='#').social-btn.sb-style-6.sb-facebook
+            i.socicon-facebook
+          a(href='#').social-btn.sb-style-6.sb-twitter
+            i.socicon-twitter
+          a(href='#').social-btn.sb-style-6.sb-youtube
+            i.socicon-youtube
+          a(href='#').social-btn.sb-style-6.sb-instagram
+            i.socicon-instagram
+        .col-lg-6
+          .widget.mb-0
+            h4.widget-title Useful Links
+          .row
+            .col-md-6
+              .widget.widget-categories
+                ul
+                  li: a(href='#') About Us
+                  li: a(href='#') Our Story
+                  li: a(href='#') Careers at CreateX
+                  li: a(href='#') Services We Provide
+                  li: a(href='#') Latest News
+            .col-md-6
+              .widget.widget-categories
+                ul
+                  li: a(href='#') Help Center
+                  li: a(href='#') My Account Info
+                  li: a(href='#') Affiliate Program
+                  li: a(href='#') Office Directory
+                  li: a(href='#') Terms &amp; Conditions
+        .col-lg-3
+          .widget
+            h4.widget-title Our mobile app
+            a(href='#').market-btn.apple-btn.mr-3.mb-3
+              span.mb-subtitle Download on the
+              span.mb-title App Store
+            a(href='#').market-btn.google-btn.mr-3.mb-3
+              span.mb-subtitle Download on the
+              span.mb-title Google Play
+            a(href='#').market-btn.windows-btn.mr-3.mb-3
+              span.mb-subtitle Download on the
+              span.mb-title Windows Store
+      hr
+      .container.pt-5
+        h6.text-center Subscribe to Newsletter
+        .row.justify-content-center.pb-5
+          .col-xl-6.col-lg-7.col-md-9
+            form(action='https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=29ca296126' method='post' target='_blank' novalidate)
+              .input-group
+                input(type='email' name='EMAIL' placeholder="Email address").form-control
+                .input-group-append
+                  button(type='submit').btn.btn-primary Sign Up
+              small.form-text.text-muted.pt-1.text-center Enter email to receive a newsletter with new posts daily.
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='position: absolute; left: -5000px;' aria-hidden='true')
+                input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+        hr
+        .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+          div.order-2
+            a(href='#').footer-link About
+            a(href='#').footer-link.ml-3 Help &amp; Info
+            a(href='#').footer-link.ml-3 Privacy Policy
+          p.m-0.text-sm.order-1 <span class='text-muted'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block navi-link' target='_blank'>by Createx Studio</a>

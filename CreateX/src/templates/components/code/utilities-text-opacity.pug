@@ -1,0 +1,38 @@
+// Utilities: Text Opacity Code
+#utilities-text-opacity-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 Apply via set of CSS classes: <code>opacity-25</code>, <code>opacity-50</code>, <code>opacity-60</code>, <code>opacity-70</code>, <code>opacity-75</code>, <code>opacity-80</code>, <code>opacity-90</code>.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Utilities: Text Opacity --&gt;</strong>
+                &lt;p class=&quot;opacity-25&quot;&gt;Opacity 25%&lt;/p&gt;
+                &lt;p class=&quot;opacity-50&quot;&gt;Opacity 50%&lt;/p&gt;
+                &lt;p class=&quot;opacity-60&quot;&gt;Opacity 60%&lt;/p&gt;
+                &lt;p class=&quot;opacity-70&quot;&gt;Opacity 70%&lt;/p&gt;
+                &lt;p class=&quot;opacity-75&quot;&gt;Opacity 75%&lt;/p&gt;
+                &lt;p class=&quot;opacity-80&quot;&gt;Opacity 80%&lt;/p&gt;
+                &lt;p class=&quot;opacity-90&quot;&gt;Opacity 90%&lt;/p&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Utilities: Text Opacity</strong>
+                p.opacity-25 Opacity 25%
+                p.opacity-50 Opacity 50%
+                p.opacity-60 Opacity 60%
+                p.opacity-70 Opacity 70%
+                p.opacity-75 Opacity 75%
+                p.opacity-80 Opacity 80%
+                p.opacity-90 Opacity 90%

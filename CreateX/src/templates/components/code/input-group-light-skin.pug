@@ -1,0 +1,34 @@
+// Input Group Light Skin Code
+#input-group-light-skin-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html6' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug6' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html6' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Input Group Light Skin --&gt;</strong>
+                &lt;div class=&quot;input-group input-group-light-skin&quot;&gt;
+                  &lt;div class=&quot;input-group-prepend&quot;&gt;
+                    &lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fe-icon-lock&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;input class=&quot;form-control&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+                &lt;/div&gt;
+          div(id='pug6' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Input Group Light Skin</strong>
+                .input-group.input-group-light-skin
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fe-icon-lock
+                  input(type=&quot;password&quot; placeholder=&quot;Password&quot;).form-control

@@ -1,0 +1,74 @@
+// Toasts in Action Code
+#toasts-in-action-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p You can alter toast notification look and behaviour via flexible data API 
+          code data-toast-*
+          | :
+        ul.list-unstyled.mb-4
+          li
+            code 'type' = 'none' (default) / 'info' / 'success' / 'warning' / 'danger'
+            span.text-muted  - To alter look of the toast.
+          li
+            code 'icon' = 'fe-icon-heart'
+            span.text-muted  - Use class of built-in Feather icons or any othe icon pack you use.
+          li
+            code 'position' = 'topRight' / 'topCenter' / 'bottomRight' / 'bottomCenter' / 'bottomLeft' / 'topLeft'
+            span.text-muted  - Where the toast notification appears on the page.
+          li
+            code 'title' = '' (string)
+            span.text-muted  - Toast notification title.
+          li
+            code 'message' = '' (string)
+            span.text-muted  - Toast notification message.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Primary Toast Top Center --&gt;</strong>
+                &lt;button class=&quot;btn btn btn-secondary&quot; data-toast data-toast-position=&quot;topCenter&quot; data-toast-type=&quot;primary&quot; data-toast-icon=&quot;fe-icon-clock&quot; data-toast-title=&quot;Primary&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Primary Top Center&lt;/button&gt;
+
+                <strong>&lt;!-- Info Toast Top Right --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary&quot; data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Info&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Info Top Right&lt;/button&gt;
+
+                <strong>&lt;!-- Success Toast Top Left --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toast data-toast-position=&quot;topLeft&quot; data-toast-type=&quot;success&quot; data-toast-icon=&quot;fe-icon-check-circle&quot; data-toast-title=&quot;Success&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Success Top Left&lt;/button&gt;
+
+                <strong>&lt;!-- Warning Toast Bottom Right --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toast data-toast-position=&quot;bottomRight&quot; data-toast-type=&quot;warning&quot; data-toast-icon=&quot;fe-icon-alert-triangle&quot; data-toast-title=&quot;Warning&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Warning Bottom Right&lt;/button&gt;
+
+                <strong>&lt;!-- Danger Toast Bottom Left --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toast data-toast-position=&quot;bottomLeft&quot; data-toast-type=&quot;danger&quot; data-toast-icon=&quot;fe-icon-slash&quot; data-toast-title=&quot;Danger&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Danger Bottom Left&lt;/button&gt;
+
+                <strong>&lt;!-- Secondary Toast Bottom Center --&gt;</strong>
+                &lt;button class=&quot;btn btn-secondary mr-3 mb-3&quot; data-toast data-toast-position=&quot;bottomCenter&quot; data-toast-icon=&quot;fe-icon-bell&quot; data-toast-title=&quot;Secondary&quot; data-toast-message=&quot;toast notification with icon&quot;&gt;Secondary Bottom Center&lt;/button&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Primary Toast Top Center</strong>
+                button(data-toast data-toast-position=&quot;topCenter&quot; data-toast-type=&quot;primary&quot; data-toast-icon=&quot;fe-icon-clock&quot; data-toast-title=&quot;Primary&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn.btn-secondary Primary Top Center
+
+                <strong>//- Info Toast Top Right</strong>
+                button(data-toast data-toast-position=&quot;topRight&quot; data-toast-type=&quot;info&quot; data-toast-icon=&quot;fe-icon-help-circle&quot; data-toast-title=&quot;Info&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn-secondary Info Top Right
+
+                <strong>//- Success Toast Top Left</strong>
+                button(data-toast data-toast-position=&quot;topLeft&quot; data-toast-type=&quot;success&quot; data-toast-icon=&quot;fe-icon-check-circle&quot; data-toast-title=&quot;Success&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn-secondary Success Top Left
+                
+                <strong>//- Warning Toast Bottom Right</strong>
+                button(data-toast data-toast-position=&quot;bottomRight&quot; data-toast-type=&quot;warning&quot; data-toast-icon=&quot;fe-icon-alert-triangle&quot; data-toast-title=&quot;Warning&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn-secondary Warning Bottom Right
+                
+                <strong>//- Danger Toast Bottom Left</strong>
+                button(data-toast data-toast-position=&quot;bottomLeft&quot; data-toast-type=&quot;danger&quot; data-toast-icon=&quot;fe-icon-slash&quot; data-toast-title=&quot;Danger&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn-secondary Danger Bottom Left
+                
+                <strong>//- Secondary Toast Bottom Center</strong>
+                button(data-toast data-toast-position=&quot;bottomCenter&quot; data-toast-icon=&quot;fe-icon-bell&quot; data-toast-title=&quot;Secondary&quot; data-toast-message=&quot;toast notification with icon&quot;).btn.btn-secondary Secondary Bottom Center

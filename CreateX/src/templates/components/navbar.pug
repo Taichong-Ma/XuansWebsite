@@ -1,0 +1,63 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Navbar'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Default navbar
+      h4 Default navbar
+      hr.pb-4.mb-2
+      a(href='../home-shop-v1.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-default.jpg')
+    
+      // Simple navbar
+      h4.pt-3 Simple navbar
+      hr.pb-4.mb-2
+      a(href='../home-personal-blog.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-simple.jpg')
+    
+      // Simple wide navbar
+      h4.pt-3 Simple wide navbar
+      hr.pb-4.mb-2
+      a(href='../home-marketing-seo.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-simple-wide.jpg')
+    
+      // Floating navbar
+      h4.pt-3 Floating navbar
+      hr.pb-4.mb-2
+      a(href='../home-web-app-showcase.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-floating.jpg')
+    
+      // Ghost dark navbar
+      h4.pt-3 Ghost dark navbar
+      hr.pb-4.mb-2
+      a(href='../home-freelancer-portfolio.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-ghost-dark.jpg')
+    
+      // Ghost light navbar
+      h4.pt-3 Ghost light navbar
+      hr.pb-4.mb-2
+      a(href='../home-photographer-portfolio.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-ghost-light.jpg')
+    
+      // Ghost simple navbar
+      h4.pt-3 Ghost simple navbar
+      hr.pb-4.mb-2
+      a(href='../home-conference-landing.html').card.d-block.mb-5
+        img(src='../img/components/navbar/navbar-ghost-simple.jpg')

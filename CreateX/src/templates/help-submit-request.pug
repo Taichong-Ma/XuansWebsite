@@ -1,0 +1,67 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Submit a Request'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Submit a Request'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/pages/help-hero-bg.jpg'
+
+//- Page Content
+block content
+  
+  // Main Container
+  section.container.pb-5.mb-3
+    p.text-lg Our friendly Support team is always here to help you. Begin by selecting a topic we can help you with.
+    .wizard
+      form(novalidate).wizard-body.needs-validation
+        .row
+          .col-sm-6
+            .form-group
+              label(for='help-topic') Select a topic <strong class='text-danger'>*</strong>
+              select(required)#help-topic.form-control
+                option(value) —
+                option(value='Managing Account') Managing Account
+                option(value='Working with Dashboard') Working with Dashboard
+                option(value='Payment Methods') Payment Methods
+                option(value='Delivery Information') Delivery Information
+                option(value='Refund Policy') Refund Policy
+                option(value='Affiliate Program') Affiliate Program
+              .invalid-feedback Please choose a topic!
+          .col-sm-6
+            .form-group
+              label(for='help-subject') Request Subject 
+              input(type='text')#help-subject.form-control
+        .form-group
+          label(for='help-message') Request Message <strong class='text-danger'>*</strong>
+          textarea(rows='6' required)#help-message.form-control
+          .invalid-feedback Please provide a detailed description of your problem!
+        .row
+          .col-sm-6
+            .form-group
+              label(for='help-name') Your Name <strong class='text-danger'>*</strong>
+              input(type='text' required)#help-name.form-control
+              .invalid-feedback Please enter your name!
+          .col-sm-6
+            .form-group
+              label(for='help-email') Your Email <strong class='text-danger'>*</strong>
+              input(type='email' required)#help-email.form-control
+              .invalid-feedback Please enter valid email address!
+        .row
+          .col-sm-6
+            .form-group
+              label(for='help-url') Include a relevant URL
+              input(type='text')#help-url.form-control
+          .col-sm-6
+            .form-group
+              label(for='help-file') Attachments
+              .custom-file
+                input(type='file' id='help-file').custom-file-input
+                label(for='help-file').custom-file-label Choose file...
+        button(type='submit').btn.btn-primary.mr-4 Submit a request
+        a(href='#').navi-link.d-inline-block.align-middle.py-2 Privacy policy
+
+  //- footer-default.pug template
+  include partials/footer-default

@@ -1,0 +1,99 @@
+// Typography: List Types Code
+#typography-lists-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Unordered List --&gt;</strong>
+                &lt;ul&gt;
+                  &lt;li&gt;Sed ut perspiciatis unde...&lt;/li&gt;
+                  &lt;li&gt;Lorem ipsum dolor sit amet...&lt;/li&gt;
+                  &lt;li&gt;Ut enim ad minima veniam...&lt;/li&gt;
+                  &lt;li&gt;At vero eos et accusamus et...&lt;/li&gt;
+                &lt;/ul&gt;
+
+                <strong>&lt;!-- Ordered List --&gt;</strong>
+                &lt;ol&gt;
+                  &lt;li&gt;Sed ut perspiciatis unde...&lt;/li&gt;
+                  &lt;li&gt;Lorem ipsum dolor sit amet...&lt;/li&gt;
+                  &lt;li&gt;Ut enim ad minima veniam...&lt;/li&gt;
+                  &lt;li&gt;At vero eos et accusamus et...&lt;/li&gt;
+                &lt;/ol&gt;
+
+                <strong>&lt;!-- List with Icons --&gt;</strong>
+                &lt;ul class=&quot;list-icon&quot;&gt;
+                  &lt;li&gt;
+                    &lt;i class=&quot;fe-icon-check text-success&quot;&gt;&lt;/i&gt;
+                    Sed ut perspiciatis unde...
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;i class=&quot;fe-icon-x text-danger&quot;&gt;&lt;/i&gt;
+                    Lorem ipsum dolor sit amet...
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;i class=&quot;fe-icon-bell text-muted&quot;&gt;&lt;/i&gt;
+                    Ut enim ad minima veniam...
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;i class=&quot;fe-icon-bookmark text-info&quot;&gt;&lt;/i&gt;
+                    At vero eos et accusamus et...
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                
+                <strong>&lt;!-- Unstyled List --&gt;</strong>
+                &lt;ul class=&quot;list-unstyled&quot;&gt;
+                  &lt;li&gt;Sed ut perspiciatis unde...&lt;/li&gt;
+                  &lt;li&gt;Lorem ipsum dolor sit amet...&lt;/li&gt;
+                  &lt;li&gt;Ut enim ad minima veniam...&lt;/li&gt;
+                  &lt;li&gt;At vero eos et accusamus et...&lt;/li&gt;
+                &lt;/ul&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Unordered List</strong>
+                ul
+                  li Sed ut perspiciatis unde...
+                  li Lorem ipsum dolor sit amet...
+                  li Ut enim ad minima veniam...
+                  li At vero eos et accusamus et...
+
+                <strong>//- Ordered List</strong>
+                ol
+                  li Sed ut perspiciatis unde...
+                  li Lorem ipsum dolor sit amet...
+                  li Ut enim ad minima veniam...
+                  li At vero eos et accusamus et...
+                
+                <strong>//- List with Icons</strong>
+                ul.list-icon
+                  li
+                    i.fe-icon-check.text-success
+                    | Sed ut perspiciatis unde...
+                  li
+                    i.fe-icon-x.text-danger
+                    | Lorem ipsum dolor sit amet...
+                  li
+                    i.fe-icon-bell.text-muted
+                    | Ut enim ad minima veniam...
+                  li
+                    i.fe-icon-bookmark.text-info
+                    | At vero eos et accusamus et...
+
+                <strong>//- Unstyled List</strong>
+                ul.list-unstyled
+                  li Sed ut perspiciatis unde...
+                  li Lorem ipsum dolor sit amet...
+                  li Ut enim ad minima veniam...
+                  li At vero eos et accusamus et...

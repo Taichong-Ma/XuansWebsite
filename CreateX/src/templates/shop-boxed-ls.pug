@@ -1,0 +1,279 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Shop Catalog'
+  - var pageSubTitle = 'Shop Boxed Layout with <strong>Sidebar on the Left</strong>'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Boxed Left Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-3
+    .row
+
+      .col-lg-3
+        //- sidebar-shop.pug template
+        include partials/sidebar-shop
+
+      .col-lg-9
+        //- shop-toolbar.pug template
+        include partials/shop-toolbar
+
+        // Shop Grid
+        .row
+
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.d-flex.justify-content-between.align-items-center
+                span.badge.badge-danger Sale
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/01.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Smart home
+                h5.product-title: a(href='shop-single.html') Amazon Echo Dot (2nd Generation)
+                span.product-price
+                  del $62.00
+                  | $49.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(3)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/11.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Headphones
+                h5.product-title: a(href='shop-single.html') Edifier W855BT Bluetooth Headphones
+                span.product-price $99.75
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head
+                span.badge.badge-secondary Out of Stock
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/03.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Computers, laptops
+                h5.product-title: a(href='shop-single.html') Microsoft Surface Pro 4 Tablet
+                span.product-price.text-muted $1,049.10
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='shop-single.html'): i.fe-icon-arrow-right
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/09.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Action cameras
+                h5.product-title: a(href='shop-single.html') Samsung Gear 360 Camera
+                span.product-price $74.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(0)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/04.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Smartphones
+                h5.product-title: a(href='shop-single.html') Apple iPhone X 64GB Space Gray
+                span.product-price $939.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.d-flex.justify-content-between.align-items-center
+                span.badge.badge-success Popular
+                +rating-stars(5)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/06.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Video Games
+                h5.product-title: a(href='shop-single.html') Microsoft Xbox One S White
+                span.product-price $298.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/08.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta TV, Video &amp; Audio
+                h5.product-title: a(href='shop-single.html') Sony 55-Inch 4K Smart (Android) TV
+                span.product-price $1,195.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head
+               span.badge.badge-danger Sale
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/10.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Printers &amp; Ink
+                h5.product-title: a(href='shop-single.html') Hewlett-Packard LaserJet Pro Printer
+                span.product-price
+                  del $280.00
+                  | $249.50
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(0)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/07.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Smartphones
+                h5.product-title: a(href='shop-single.html') Samsung Galaxy S9 Plus 128GB
+                span.product-price $859.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head
+                span.badge.badge-secondary Out of Stock
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/12.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Wearable electornics
+                h5.product-title: a(href='shop-single.html') Apple Watch Series 3 Rose Gold
+                span.product-price.text-muted $329.40
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='shop-single.html'): i.fe-icon-arrow-right
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(3)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/05.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Headphones
+                h5.product-title: a(href='shop-single.html') Zeus Bluetooth Earbud Headphones
+                span.product-price $28.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-md-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(2)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/02.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Photo cameras
+                h5.product-title: a(href='shop-single.html') Aberg Best 21 Mega Pixels Photo Camera
+                span.product-price $135.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+        .pt-3
+          //-pagination.pug template
+          include partials/pagination
+
+  //- footer-shop.pug template
+  include partials/footer-shop

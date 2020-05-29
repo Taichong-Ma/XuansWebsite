@@ -1,0 +1,20 @@
+// Shop Toolbar
+.d-flex.justify-content-between.pb-2
+  .form-inline.pb-4
+    label(for='product-sort').text-muted.mr-3 Sort by
+    select(id='product-sort').form-control.mr-3
+      option Popularuty
+      option Low - Hight Price
+      option High - Low Price
+      option Average Rating
+      option A - Z Order
+      option Z - A Order
+  .form-inline.pb-4
+    label(for='product-show').text-muted.mr-3 <span class='d-none d-sm-inline'>Show&nbsp;</span>products
+    select(id='product-show').form-control
+      option 12
+      option 20
+      option 30
+      option 50
+      option 80
+      option 100

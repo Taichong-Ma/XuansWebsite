@@ -1,0 +1,376 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Product Comparison'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Pages'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-1
+    .comparison-table
+      table.table.table-bordered
+        thead
+          tr
+            td.align-middle
+              select(id='compare-criteria').form-control.form-control-bordered
+                option Comparison Criteria
+                option Summary
+                option General
+                option Multimedia
+                option Performance
+                option Design
+                option Display
+                option Storage
+                option Camera
+                option Battery
+                option Price &amp; Rating
+              .pt-3
+                .custom-control.custom-checkbox
+                  input(type='checkbox' id='differences').custom-control-input
+                  label(for='differences').custom-control-label Show differences only
+            td
+              .comparison-item
+                span.remove-item
+                  i.fe-icon-x
+                a(href='shop-single.html').comparison-item-thumb
+                  img(src='img/shop/comparison/th01.jpg' alt='Apple iPhone X')
+                a(href='shop-single.html').comparison-item-title Apple iPhone X
+                a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+            td
+              .comparison-item
+                span.remove-item
+                  i.fe-icon-x
+                a(href='shop-single.html').comparison-item-thumb
+                  img(src='img/shop/comparison/th02.jpg' alt='Google Pixel 2 XL')
+                a(href='shop-single.html').comparison-item-title Google Pixel 2 XL
+                a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+            td
+              .comparison-item
+                span.remove-item
+                  i.fe-icon-x
+                a(href='shop-single.html').comparison-item-thumb
+                  img(src='img/shop/comparison/th03.jpg' alt='Samsung Galaxy S9+')
+                a(href='shop-single.html').comparison-item-title Samsung Galaxy S9+
+                a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+        tbody
+          tr.bg-secondary
+            th.text-uppercase Summary
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Performance
+            td Hexa Core
+            td Octa Core
+            td Octa Core
+          tr
+            th Display
+            td 5.8" (14.73 cm)
+            td 6.0" (15.24 cm)
+            td 6.2" (15.75 cm)
+          tr
+            th Storage
+            td 64 GB
+            td 64 GB
+            td 64 GB
+          tr
+            th Camera
+            td 12 MP
+            td 12.2 MP
+            td 12 MP
+          tr
+            th Battery
+            td 2716 mAh
+            td 3520 mAh
+            td 3500 mAh
+          tr.bg-secondary
+            th.text-uppercase General
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Quick Charging
+            td Yes
+            td Yes
+            td Yes
+          tr
+            th Operating System
+            td iOS v11.0.1
+            td Android v8.0 (Oreo)	
+            td Android v8.0 (Oreo)	
+          tr
+            th Sim Slots
+            td Single SIM, GSM
+            td Single SIM, GSM
+            td Dual SIM, GSM+GSM
+          tr
+            th Launch Date
+            td November 3, 2017 (Official)
+            td November 15, 2017 (Official)
+            td March 16, 2018 (Official)
+          tr
+            th Sim Size
+            td SIM1: Nano
+            td SIM1: Nano
+            td SIM1: Nano SIM2: Nano (Hybrid)
+          tr
+            th Network
+            td 4G: Available (supports Indian bands) 3G: Available, 2G: Available
+            td 4G: Available (supports Indian bands) 3G: Available, 2G: Available
+            td 4G: Available (supports Indian bands) 3G: Available, 2G: Available
+          tr
+            th Fingerprint Sensor
+            td No
+            td Yes
+            td Yes
+          tr.bg-secondary
+            th.text-uppercase Multimedia
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Loudspeaker
+            td Yes
+            td Yes
+            td Yes
+          tr
+            th FM Radio
+            td No
+            td No
+            td No
+          tr
+            th Audio Jack
+            td Lightning
+            td 3.5 mm
+            td 3.5 mm
+          tr.bg-secondary
+            th.text-uppercase Performance
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Chipset
+            td Apple A11 Bionic
+            td Qualcomm Snapdragon 835 MSM8998
+            td Samsung Exynos 9 Octa 9810	
+          tr
+            th Graphics
+            td Apple GPU (three-core graphics)
+            td Adreno 540
+            td Mali-G72 MP18
+          tr
+            th Processor
+            td Hexa Core (2.53 GHz, Dual core, Monsoon + 1.42 GHz, Quad core, Mistral)
+            td Octa core (2.45 GHz, Quad core, Kryo 280 + 1.9 GHz, Quad core, Kryo 280)
+            td Octa core (2.7 GHz, Quad core, M2 Mongoose + 1.7 GHz, Quad core, Cortex A53)
+          tr
+            th Architecture
+            td 64 bit
+            td 64 bit
+            td 64 bit
+          tr
+            th RAM
+            td 3 GB
+            td 4 GB
+            td 6 GB
+          tr.bg-secondary
+            th.text-uppercase Design
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Build Material
+            td Case: AluminiumBack: Mineral Glass
+            td Case: AluminiumBack: Aluminium
+            td Case: AluminiumBack: Mineral Glass
+          tr
+            th Thickness
+            td 7.7 mm
+            td 7.9 mm
+            td 8.5 mm
+          tr
+            th Width
+            td 70.9 mm
+            td 76.7 mm
+            td 73.8 mm
+          tr
+            th Height
+            td 143.6 mm
+            td 157.9 mm
+            td 158.1 mm
+          tr
+            th Weight
+            td 174 grams
+            td 175 grams
+            td 189 grams
+          tr
+            th Waterproof
+            td Yes Water resistant (up to 30 minutes in a depth of 1 meter), IP67
+            td Yes Water resistant (up to 30 minutes in a depth of 1 meter), IP67
+            td Yes Water resistant (up to 30 minutes in a depth of 1.5 meter), IP68
+          tr
+            th Colors
+            td Silver, Space Grey
+            td Black, Black and White
+            td Midnight Black, Coral Blue, Lilac Purple
+          tr.bg-secondary
+            th.text-uppercase Display
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Display Type
+            td OLED
+            td P-OLED
+            td Super AMOLED
+          tr
+            th Pixel Density
+            td 463 ppi
+            td 537 ppi
+            td 531 ppi
+          tr
+            th Screen Protection
+            td Yes
+            td Corning Gorilla Glass v5
+            td Corning Gorilla Glass v5
+          tr
+            th Screen Size
+            td 5.8 inches (14.73 cm)
+            td 6.0 inches (15.24 cm)
+            td 6.2 inches (15.75 cm)	
+          tr
+            th Screen Resolution
+            td 1125 x 2436 pixels
+            td 1440 x 2880 pixels
+            td 1440 x 2960 pixels	
+          tr
+            th Touch Screen
+            td Yes 3D Touch Touchscreen, Multi-touch
+            td Yes Capacitive Touchscreen, Multi-touch
+            td Yes Capacitive Touchscreen, Multi-touch
+          tr.bg-secondary
+            th.text-uppercase Storage
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Internal Memory
+            td 64 GB
+            td 64 GB
+            td 64 GB
+          tr
+            th Expandable Memory
+            td No
+            td No
+            td Yes Up to 400 GB
+          tr.bg-secondary
+            th.text-uppercase Camera
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Settings
+            td Exposure compensation, ISO control
+            td Exposure compensation, ISO control
+            td Exposure compensation
+          tr
+            th Aperture
+            td F2.2
+            td F2.4
+            td F1.7
+          tr
+            th Camera Features
+            td 10 x Digital Zoom, Optical Zoom, Auto Flash, Face detection, Touch to focus
+            td Fixed Focus
+            td Wide Angle Selfie
+          tr
+            th Image Resolution
+            td 4000 x 3000 Pixels
+            td 4000 x 3000 Pixels
+            td 4000 x 3000 Pixels
+          tr
+            th Sensor
+            td BSI Sensor
+            td CMOS image sensor
+            td CMOS image sensor
+          tr
+            th Autofocus
+            td Yes
+            td No
+            td Yes
+          tr
+            th Shooting Modes
+            td Continuos Shooting, High Dynamic Range mode (HDR), Burst mode
+            td Continuos Shooting, High Dynamic Range mode (HDR)
+            td Continuos Shooting, High Dynamic Range mode (HDR)
+          tr
+            th Optical Image Stabilisation
+            td Yes Dual optical image stabilization
+            td Yes
+            td Yes
+          tr
+            th Flash
+            td Yes Retina Flash
+            td Yes Dual LED Flash
+            td Yes LED Flash
+          tr.bg-secondary
+            th.text-uppercase Battery
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Talktime
+            td Up to 21 Hours(3G)
+            td Up to 24 Hours(3G)
+            td Up to 25 Hours(3G)
+          tr
+            th Quick Charging
+            td Yes Fast, 50 % in 30 minutes
+            td Yes
+            td Yes
+          tr
+            th Wireless Charging
+            td Yes
+            td No
+            td Yes
+          tr
+            th Type
+            td Li-ion
+            td Li-ion
+            td Li-ion
+          tr
+            th Capacity
+            td 2716 mAh
+            td 3520 mAh
+            td 3500 mAh
+          tr.bg-secondary
+            th.text-uppercase Price &amp; Rating
+            td: span.text-medium &nbsp;Apple iPhone X&nbsp;
+            td: span.text-medium &nbsp;Google Pixel 2 XL&nbsp;
+            td: span.text-medium &nbsp;Samsung Galaxy S9+&nbsp;
+          tr
+            th Price
+            td $939.99
+            td $849.99
+            td $839.99
+          tr
+            th Rating
+            td 4.5/5
+            td 4/5
+            td 4/5
+          tr
+            th
+            td
+              a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm.btn-block Add to Cart
+            td
+              a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm.btn-block Add to Cart
+            td
+              a(href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm.btn-block Add to Cart
+
+
+  //- footer-shop.pug template
+  include partials/footer-shop

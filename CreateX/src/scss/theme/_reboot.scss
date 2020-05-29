@@ -1,0 +1,63 @@
+//
+// Reboot
+// --------------------------------------------------
+
+//Import Google Fonts (Montserrat + Open Sans)
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,700,900|Open+Sans:400,600,700');
+
+html * {
+  @include font-smoothing;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: {
+    position: center;
+    color: $body-bg;
+    repeat: no-repeat;
+    size: cover;
+    attachment: fixed;
+  }
+  font-size: $font-size-md;
+}
+
+// Links
+a:focus { outline: none; }
+
+// Small class
+.small { font-size: 80%; }
+
+// Images
+// Responsive images (ensure images don't scale beyond their parents)
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+svg { max-width: 100%; }
+
+// Responsive iframes
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+// Horizontal rule
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+  &.hr-light { border-top-color: $border-light-color; }
+}
+
+// Text Selection Color
+::selection {
+  background: $gray-800;
+  color: $white;
+}
+::-moz-selection {
+  background: $gray-800;
+  color: $white;
+}

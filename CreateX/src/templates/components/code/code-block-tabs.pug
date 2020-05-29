@@ -1,0 +1,51 @@
+// Code Block Tabs Code
+#code-block-tabs-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html5' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug5' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html5' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Code Block Tabs --&gt;</strong>
+                &lt;ul class=&quot;nav nav-tabs pre-nav-tabs justify-content-end&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#html&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;HTML&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#pug&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Pug&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content&quot;&gt;
+                  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;html&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;pre class=&quot;text-md&quot;&gt;Code goes here...&lt;/pre&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;pug&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;pre class=&quot;text-md&quot;&gt;Code goes here...&lt;/pre&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug5' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Code Block Tabs</strong>
+                ul(class=&quot;nav nav-tabs pre-nav-tabs justify-content-end&quot; role=&quot;tablist&quot;)
+                  li.nav-item
+                    a(href=&quot;#html&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) HTML
+                  li.nav-item
+                    a(href=&quot;#pug&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Pug
+                .tab-content
+                  div(id=&quot;html&quot; class=&quot;tab-pane fade show active&quot; role=&quot;tabpanel&quot;)
+                    pre.text-md
+                      | Code goes here...
+                  div(id=&quot;pug&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    pre.text-md
+                      | Code goes here...

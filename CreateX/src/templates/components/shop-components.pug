@@ -1,0 +1,183 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Components'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Shop: Product Card Code Modal
+  include code/shop-product-card
+
+  //- Shop: Product Category Card Code Modal
+  include code/shop-category-card
+
+  //- Shop: Promo Banner Code Modal
+  include code/shop-promo-banner
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+    
+      // Product cards
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Product cards
+        a(href='#shop-product-card-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-1
+
+        // Product
+        .col-xl-3.col-sm-6.mb-30.pb-2
+          .product-card.mx-auto
+            .product-head.d-flex.justify-content-between.align-items-center
+              span.badge.badge-danger Sale
+              +rating-stars(4)
+            a(href='#').product-thumb
+              +image('img/shop/01.jpg', 'Product Thumbnail')
+            .product-card-body
+              a(href='#').product-meta Smart home
+              h5.product-title: a(href='#') Amazon Echo Dot (2nd Generation)
+              span.product-price
+                del $62.00
+                | $49.99
+            .product-buttons-wrap
+              .product-buttons
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+        // Product
+        .col-xl-3.col-sm-6.mb-30.pb-2
+          .product-card.mx-auto
+            .product-head.text-right
+              +rating-stars(3)
+            a(href='#').product-thumb
+              +image('img/shop/11.jpg', 'Product Thumbnail')
+            .product-card-body
+              a(href='#').product-meta Headphones
+              h5.product-title: a(href='#') Edifier W855BT Bluetooth Headphones
+              span.product-price $99.75
+            .product-buttons-wrap
+              .product-buttons
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+        // Product
+        .col-xl-3.col-sm-6.mb-30.pb-2
+          .product-card.mx-auto
+            .product-head
+              span.badge.badge-secondary Out of Stock
+            a(href='#').product-thumb
+              +image('img/shop/03.jpg', 'Product Thumbnail')
+            .product-card-body
+              a(href='#').product-meta Computers, laptops
+              h5.product-title: a(href='#') Microsoft Surface Pro 4 Tablet
+              span.product-price.text-muted $1,049.10
+            .product-buttons-wrap
+              .product-buttons
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                .product-button
+                  a(href='#'): i.fe-icon-arrow-right
+
+        // Product
+        .col-xl-3.col-sm-6.mb-30.pb-2
+          .product-card.mx-auto
+            .product-head.text-right
+              +rating-stars(4)
+            a(href='#').product-thumb
+              +image('img/shop/09.jpg', 'Product Thumbnail')
+            .product-card-body
+              a(href='#').product-meta Action cameras
+              h5.product-title: a(href='#') Samsung Gear 360 Camera
+              span.product-price $74.00
+            .product-buttons-wrap
+              .product-buttons
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                .product-button
+                  a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+    
+      
+      // Product category card
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Product category card
+        a(href='#shop-category-card-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4
+
+        // Product category
+        .col-xl-4.col-sm-6.mb-30
+          a(href='#').product-category-card.mx-auto
+            .product-category-card-thumb
+              .main-img
+                +image('img/shop/categories/07.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/08.jpg', 'Shop Category')
+                +image('img/shop/categories/09.jpg', 'Shop Category')
+            .product-category-card-body
+              .product-category-card-meta Starting from $127.00
+              h5.product-category-card-title TV, Video &amp; Audio
+
+        // Product category
+        .col-xl-4.col-sm-6.mb-30
+          a(href='#').product-category-card.mx-auto
+            .product-category-card-thumb
+              .main-img
+                +image('img/shop/categories/19.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/20.jpg', 'Shop Category')
+                +image('img/shop/categories/21.jpg', 'Shop Category')
+            .product-category-card-body
+              .product-category-card-meta Starting from $54.00
+              h5.product-category-card-title Printers &amp; Ink
+
+        // Product category
+        .col-xl-4.col-sm-6.mb-30
+          a(href='#').product-category-card.mx-auto
+            .product-category-card-thumb
+              .main-img
+                +image('img/shop/categories/22.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/23.jpg', 'Shop Category')
+                +image('img/shop/categories/24.jpg', 'Shop Category')
+            .product-category-card-body
+              .product-category-card-meta Starting from $18.50
+              h5.product-category-card-title Video Games
+    
+      
+      // Promo banner
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Promo banner
+        a(href='#shop-promo-banner-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        .col-xl-9
+          include ../partials/shop-banner

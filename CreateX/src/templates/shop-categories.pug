@@ -1,0 +1,145 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Categories'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Shop Categories'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-4.mb-1
+    .row
+      
+      // Sidebar
+      .col-lg-3
+        a(href='#blog-single-sidebar' data-toggle='offcanvas').offcanvas-toggle
+          i.fe-icon-sidebar
+        aside#blog-single-sidebar.offcanvas-container
+          .offcanvas-scrollable-area.px-4.pt-5.px-lg-0.pt-lg-0
+            span.offcanvas-close
+              i.fe-icon-x
+            .widget.widget-categories
+              h4.widget-title Popular brands
+              ul
+                li: a(href='#') Apple <span>(254)</span>
+                li: a(href='#') Bosh <span>(39)</span>
+                li: a(href='#') Canon Inc. <span>(205)</span>
+                li: a(href='#') Dell <span>(128)</span>
+                li: a(href='#') IBM <span>(104)</span>
+                li: a(href='#') Hewlett-Packard <span>(35)</span>
+                li: a(href='#') Hitachi <span>(217)</span>
+                li: a(href='#') Lenovo <span>(95)</span>
+                li: a(href='#') LG Electronics <span>(310)</span>
+                li: a(href='#') Nikon <span>(28)</span>
+                li: a(href='#') Nokia <span>(134)</span>
+                li: a(href='#') Panasonic <span>(73)</span>
+                li: a(href='#') Samsung Electronics <span>(1446)</span>
+                li: a(href='#') Siemens <span>(87)</span>
+                li: a(href='#') Sharp Corporation <span>(41)</span>
+                li: a(href='#') Sony <span>(386)</span>
+                li: a(href='#') Toshiba <span>(62)</span>
+
+      .col-lg-9
+
+        // Promo Banner
+        include partials/shop-banner
+        
+        // Categories Grid
+        .row.pt-3
+
+          // Category
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/01.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/02.jpg', 'Shop Category')
+                  +image('img/shop/categories/03.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $149.80
+                h5.product-category-card-title Computers &amp; Accessories
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/07.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/08.jpg', 'Shop Category')
+                  +image('img/shop/categories/09.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $127.00
+                h5.product-category-card-title TV, Video &amp; Audio
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/04.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/05.jpg', 'Shop Category')
+                  +image('img/shop/categories/06.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $78.00
+                h5.product-category-card-title Smartphones &amp; Tablets
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/10.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/11.jpg', 'Shop Category')
+                  +image('img/shop/categories/12.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $310.00
+                h5.product-category-card-title Cameras, Photo &amp; Video
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/13.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/14.jpg', 'Shop Category')
+                  +image('img/shop/categories/15.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $35.99
+                h5.product-category-card-title Headphones
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/16.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/17.jpg', 'Shop Category')
+                  +image('img/shop/categories/18.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $79.99
+                h5.product-category-card-title Wearable Electronics
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/19.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/20.jpg', 'Shop Category')
+                  +image('img/shop/categories/21.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $54.00
+                h5.product-category-card-title Printers &amp; Ink
+          .col-sm-6.mb-4
+            a(href='shop-boxed-ls.html').product-category-card.mx-auto
+              .product-category-card-thumb
+                .main-img
+                  +image('img/shop/categories/22.jpg', 'Shop Category')
+                .thumblist
+                  +image('img/shop/categories/23.jpg', 'Shop Category')
+                  +image('img/shop/categories/24.jpg', 'Shop Category')
+              .product-category-card-body
+                .product-category-card-meta Starting from $18.50
+                h5.product-category-card-title Video Games
+
+  //- footer-shop.pug template
+  include partials/footer-shop

@@ -1,0 +1,51 @@
+// Portfolio Card Style 1 (Default) Code
+#portfolio-style1-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Portfolio Card Style 1 (Default) --&gt;</strong>
+                &lt;div class=&quot;portfolio-card&quot;&gt;
+                  &lt;a class=&quot;portfolio-thumb&quot; href=&quot;#&quot;&gt;
+                    &lt;img src=&quot;path-to-image&quot; alt=&quot;Portfolio Thumbnail&quot;/&gt;
+                  &lt;/a&gt;
+                  &lt;div class=&quot;portfolio-card-body&quot;&gt;
+                    &lt;div class=&quot;portfolio-meta&quot;&gt;
+                      &lt;span class=&quot;mr-3&quot;&gt;&lt;i class=&quot;fe-icon-user&quot;&gt;&lt;/i&gt;William Smith&lt;/span&gt;
+                      &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fe-icon-heart text-accent&quot;&gt;&lt;/i&gt;12&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;h5 class=&quot;portfolio-title&quot;&gt;
+                      &lt;a href=&quot;#&quot;&gt;iOS App UI Design&lt;/a&gt;
+                    &lt;/h5&gt;
+                    &lt;a class=&quot;tag-link&quot; href=&quot;#&quot;&gt;Mobile Apps&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Portfolio Card Style 1 (Default)</strong>
+                .portfolio-card
+                  a(href=&quot;#&quot;).portfolio-thumb
+                    +image(&quot;path-to-image&quot;, &quot;Portfolio Thumbnail&quot;)
+                  .portfolio-card-body
+                    .portfolio-meta
+                      span.mr-3
+                        i.fe-icon-user
+                        | William Smith
+                      a(href=&quot;#&quot;)
+                        i.fe-icon-heart.text-accent
+                        | 12
+                    h5.portfolio-title: a(href=&quot;#&quot;) iOS App UI Design
+                    a(href=&quot;#&quot;).tag-link Mobile Apps

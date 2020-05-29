@@ -1,0 +1,44 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var bodyBgImage = 'img/coming-soon-light-bg.png'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Coming Soon Light'
+
+//- Page Content
+block content
+  .container.py-5
+    .box-shadow.bg-white.py-5.px-4
+      .text-center.my-3
+        a(href='index.html').navbar-brand.d-inline-block.mb-5
+          +image('img/logo/logo-dark.png', 'CreateX')
+        h2.block-title.text-uppercase.mb-5 Launching Soon
+        p.text-muted.mb-1 Have no fear, we are launching soon!
+        p.text-muted We just have to dot the i's and cross the t's.
+        .py-4
+          .countdown.countdown-style-2.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}')
+        .row.justify-content-center.pb-5
+          .col-lg-7.col-md-9.col-sm-11
+            hr
+        h4.text-uppercase.mb-4.pb-2 Get Notified
+        p.text-muted.mb-1 We will let you know when we are launching.
+        p.text-muted.mb-0 Enter your email address in the form below.
+        .row.justify-content-center.py-5.mb-3
+          .col-lg-5.col-md-7.col-sm-9
+            form.input-group
+              input(type='email' placeholder='Your email address' required).form-control
+              .input-group-append
+                button(type='submit').btn.btn-primary Subscribe
+        p.text-lg <strong>Follow us:</strong>
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-6.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-6.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-6.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-6.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-6.sb-google-plus
+          i.socicon-googleplus

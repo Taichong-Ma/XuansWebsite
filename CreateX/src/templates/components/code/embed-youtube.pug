@@ -1,0 +1,28 @@
+// Responsive Embed: YouTube Video Code
+#embed-youtube-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Responsive Embed: YouTube Video --&gt;</strong>
+                &lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+                  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/VideoIDA&quot; allowfullscreen&gt;&lt;/iframe&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Responsive Embed: YouTube Video</strong>
+                .embed-responsive.embed-responsive-16by9
+                  iframe(src=&quot;https://www.youtube.com/embed/VideoID&quot; allowfullscreen).embed-responsive-item

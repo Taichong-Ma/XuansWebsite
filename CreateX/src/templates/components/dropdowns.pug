@@ -1,0 +1,200 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Dropdowns'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Dropdown Static Code Modal
+  include code/dropdown-static
+
+  //- Dropdown Position Code Modal
+  include code/dropdown-position
+
+  //- Dropdown Tabs Code Modal
+  include code/dropdown-tabs
+
+  //- Dropdown Pils Code Modal
+  include code/dropdown-pills
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    
+    // Static examples
+    .container.clearfix.pb-4.mb-2
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Static examples
+        a(href='#dropdown-static-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .dropdown-menu(style='position: static;').d-inline-block.align-top.mr-4.mb-grid-gutter
+        span.dropdown-item-text Dropdown item text
+        a(href='#').dropdown-item Action
+        a(href='#').dropdown-item Another action
+        a(href='#').dropdown-item Something else here
+      .dropdown-menu(style='position: static;').d-inline-block.align-top.mr-4.mb-grid-gutter
+        a(href='#').dropdown-item Regular link
+        a(href='#').dropdown-item Another regular link
+        a(href='#').dropdown-item.active Active link
+        a(href='#').dropdown-item Another regular link
+      .dropdown-menu(style='position: static;').d-inline-block.align-top.mr-4.mb-grid-gutter
+        h6.dropdown-header Dropdown header
+        a(href='#').dropdown-item Action
+        a(href='#').dropdown-item Another action
+        a(href='#').dropdown-item Something else here
+      .dropdown-menu(style='position: static;').d-inline-block.align-top.mr-4.mb-grid-gutter
+        a(href='#').dropdown-item
+          i.fe-icon-home
+          | &nbsp;Home
+          span.badge.badge-pill.badge-secondary 2
+        a(href='#').dropdown-item
+          i.fe-icon-user
+          | &nbsp;Profile
+          span.badge.badge-pill.badge-primary 3
+        a(href='#').dropdown-item
+          i.fe-icon-message-square
+          | &nbsp;Messages
+          span.badge.badge-pill.badge-info 5
+        a(href='#').dropdown-item
+          i.fe-icon-settings
+          | &nbsp;Settings
+          span.badge.badge-pill.badge-warning 1
+
+    // Position
+    .container.pb-5
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3
+          | Position &nbsp;
+          span.d-inline-block.font-family-body.text-md.font-weight-normal.text-muted Applicable to button styles 1, 2, 6.
+        a(href='#dropdown-position-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .btn-group.d-inline-block.mb-3.mr-3
+        button(type='button' data-toggle='dropdown').btn.btn-secondary.dropdown-toggle Dropdown
+        .dropdown-menu
+          a(href='#').dropdown-item Action
+          a(href='#').dropdown-item Another action
+          a(href='#').dropdown-item Something else here
+      .btn-group.dropup.d-inline-block.mb-3.mr-3
+        button(type='button' data-toggle='dropdown').btn.btn-secondary.dropdown-toggle Dropup
+        .dropdown-menu
+          a(href='#').dropdown-item Action
+          a(href='#').dropdown-item Another action
+          a(href='#').dropdown-item Something else here
+      .btn-group.dropright.d-inline-block.mb-3.mr-3
+        button(type='button' data-toggle='dropdown').btn.btn-secondary.dropdown-toggle Dropright
+        .dropdown-menu
+          a(href='#').dropdown-item Action
+          a(href='#').dropdown-item Another action
+          a(href='#').dropdown-item Something else here
+      .btn-group.dropleft.d-inline-block.mb-3.mr-3
+        button(type='button' data-toggle='dropdown').btn.btn-secondary.dropdown-toggle Dropleft
+        .dropdown-menu
+          a(href='#').dropdown-item Action
+          a(href='#').dropdown-item Another action
+          a(href='#').dropdown-item Something else here
+
+    // Inside tabs
+    .container
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3
+          | Inside tabs &nbsp;
+          span.d-inline-block.font-family-body.text-md.font-weight-normal.text-muted Applicable to all tab styles.
+        a(href='#dropdown-tabs-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4
+        .col-lg-6.mb-4.pb-2
+          ul(class='nav nav-tabs' role='tablist')
+            li.nav-item
+              a(href='#home1' class='nav-link active' data-toggle='tab' role='tab')
+                i.fe-icon-home
+                | &nbsp;Home
+            li.nav-item
+              a(href='#profile1' class='nav-link' data-toggle='tab' role='tab')
+                i.fe-icon-user
+                | &nbsp;Profile
+            li.nav-item.dropdown
+              a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+              .dropdown-menu
+                a(href='#messages1' class='dropdown-item' data-toggle='tab' role='tab') Messages
+                a(href='#settings1' class='dropdown-item' data-toggle='tab' role='tab') Settings
+          .tab-content
+            div(id='home1' class='tab-pane fade show active' role='tabpanel')
+              p.text-muted Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Excepteur sint occaecat cupidatat non proident.
+            div(id='profile1' class='tab-pane fade' role='tabpanel')
+              p.text-muted Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente.
+            div(id='messages1' class='tab-pane fade' role='tabpanel')
+              p.text-muted Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+            div(id='settings1' class='tab-pane fade' role='tabpanel')
+              p.text-muted Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        .col-lg-6.mb-4.pb-2
+          ul(class='nav nav-tabs nav-tabs-style-3' role='tablist')
+            li.nav-item
+              a(href='#home5' class='nav-link active' data-toggle='tab' role='tab')
+                i.fe-icon-home
+                | &nbsp;Home
+            li.nav-item
+              a(href='#profile5' class='nav-link' data-toggle='tab' role='tab')
+                i.fe-icon-user
+                | &nbsp;Profile
+            li.nav-item.dropdown
+              a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+              .dropdown-menu
+                a(href='#messages5' class='dropdown-item' data-toggle='tab' role='tab') Messages
+                a(href='#settings5' class='dropdown-item' data-toggle='tab' role='tab') Settings
+          .tab-content
+            div(id='home5' class='tab-pane fade show active' role='tabpanel')
+              p.text-muted Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Excepteur sint occaecat cupidatat non proident.
+            div(id='profile5' class='tab-pane fade' role='tabpanel')
+              p.text-muted Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente.
+            div(id='messages5' class='tab-pane fade' role='tabpanel')
+              p.text-muted Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+            div(id='settings5' class='tab-pane fade' role='tabpanel')
+              p.text-muted Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+
+    // Inside pills
+    .container.pb-2
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3
+          | Inside pills &nbsp;
+          span.d-inline-block.font-family-body.text-md.font-weight-normal.text-muted Applicable to all pill styles.
+        a(href='#dropdown-pills-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-lg-6.mb-4.pb-2
+          ul.nav.nav-pills
+            li.nav-item: a(href='#' class='nav-link active') Active
+            li.nav-item: a(href='#' class='nav-link') Link
+            li.nav-item.dropdown
+              a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+              .dropdown-menu
+                a(href='#' class='dropdown-item') Action
+                a(href='#' class='dropdown-item') Another Action
+                a(href='#' class='dropdown-item') Something else here
+        .col-lg-6.mb-4.pb-2
+          ul.nav.nav-pills.nav-pills-style-2
+            li.nav-item: a(href='#' class='nav-link active') Active
+            li.nav-item: a(href='#' class='nav-link') Link
+            li.nav-item.dropdown
+              a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+              .dropdown-menu
+                a(href='#' class='dropdown-item') Action
+                a(href='#' class='dropdown-item') Another Action
+                a(href='#' class='dropdown-item') Something else here

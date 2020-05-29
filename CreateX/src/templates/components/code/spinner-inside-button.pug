@@ -1,0 +1,41 @@
+// Spinner Inside Button Code
+#spinner-inside-button-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Border Spinner --&gt;</strong>
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+                  &lt;span class=&quot;spinner-border spinner-border-sm text-light mr-2&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+                  Loading...
+                &lt;/button&gt;
+
+                <strong>&lt;!-- Growing Spinner --&gt;</strong>
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+                  &lt;span class=&quot;spinner-grow spinner-grow-sm text-light mr-2&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+                  Loading...
+                &lt;/button&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Border Spinner</strong>
+                button(type=&quot;button&quot;).btn.btn-primary
+                  span(role=&quot;status&quot; aria-hidden=&quot;true&quot;).spinner-border.spinner-border-sm.text-light.mr-2
+                  | Loading...
+
+                <strong>//- Growing Spinner</strong>
+                button(type=&quot;button&quot;).btn.btn-primary
+                  span(role=&quot;status&quot; aria-hidden=&quot;true&quot;).spinner-grow.spinner-grow-sm.text-light.mr-2
+                  | Loading...

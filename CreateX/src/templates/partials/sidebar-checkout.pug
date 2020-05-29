@@ -1,0 +1,43 @@
+// Order Summary
+.widget
+  h4.widget-title Order Summary
+  .d-flex.justify-content-between.pb-2
+    div Cart subtotal:
+    div.font-weight-medium $2,548.50
+  .d-flex.justify-content-between.pb-2
+    div Shipping:
+    div.font-weight-medium $26.50
+  .d-flex.justify-content-between.pb-2
+    div Estimated tax:
+    div.font-weight-medium $9.72
+  hr
+  .pt-3.text-right.text-lg.font-weight-medium $2,584.72
+// Recent Products
+.widget.widget-featured-products
+  h4.widget-title Recrently Viewed
+  a(href='#').featured-product
+    .featured-product-thumb
+      +image('img/widgets/shop/01.jpg', 'Product Image')
+    .featured-product-info
+      h5.featured-product-title Amazon Echo Dot 2
+      +rating-stars(4)
+      span.featured-product-price
+        del $62.00
+        | &nbsp;$49.99
+  a(href='#').featured-product
+    .featured-product-thumb
+      +image('img/widgets/shop/02.jpg', 'Product Image')
+    .featured-product-info
+      h5.featured-product-title Zeus Bluetooth Earbuds
+      +rating-stars(3)
+      span.featured-product-price $28.99
+  a(href='#').featured-product
+    .featured-product-thumb
+      +image('img/widgets/shop/03.jpg', 'Product Image')
+    .featured-product-info
+      h5.featured-product-title Xbox One S White
+      +rating-stars(4)
+      span.featured-product-price $298.99
+// Promo Banner
+a(href='shop-single.html').d-block
+  img(src='img/shop/shop-banner-sidebar.jpg' alt='Promo Banner').d-block

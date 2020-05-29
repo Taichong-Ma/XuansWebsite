@@ -1,0 +1,139 @@
+//
+// Mobile Menu
+// --------------------------------------------------
+
+.mobile-menu {
+  border: 0;
+  .mobile-menu-link {
+    display: block;
+    position: relative;
+    padding: 1.25rem 0;
+    padding-right: 3.625rem;
+    padding-left: 1.875rem;
+    transition: color .3s;
+    color: $gray-800;
+    font: {
+      size: ($font-size-base * .8125);
+      weight: $nav-link-font-weight;
+    }
+    letter-spacing: $nav-link-letter-spacing;
+    text: {
+      transform: $nav-link-text-transform;
+      decoration: none;
+    }
+    &:hover, &.active { color: $primary; }
+    &.active::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $primary;
+      content: '';
+    }
+  }
+  .card {
+    margin-top: -.0625rem;
+    border: 0;
+    box-shadow: none;
+  }
+  .card::before { display: none; }
+  .card-header {
+    position: relative;
+    border: {
+      top: 1px solid $border-color;
+      bottom: 1px solid $border-color;
+    }
+  }
+  .card:first-child .card-header { border-top: 0; }
+  [data-toggle='collapse'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 100%;
+    padding: {
+      right: .9375rem;
+      left: .9375rem;
+    }
+    border-left: 1px solid $border-color;
+    box-shadow: none !important;
+    z-index: 5;
+    &::before { display: none; }
+    &::after {
+      right: .9375rem;
+      margin-top: -.9375rem;
+    }
+  }
+  .card-body {
+    padding: {
+      top: .625rem;
+      bottom: 1.125rem;
+    }
+    background-color: lighten($gray-100, 2%);
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .dropdown-header,
+  .dropdown-item,
+  .dropdown-item > a {
+    padding: {
+      right: 0;
+      left: 0;
+    }
+    font-size: $font-size-md;
+  }
+  .dropdown-header {
+    position: relative;
+    margin-bottom: 0;
+    padding: {
+      top: 1.25rem;
+      bottom: .5rem;
+    }
+    color: $gray-700;
+    font: {
+      family: $font-family-base;
+      size: ($font-size-base * .8125);
+      weight: 600;
+    }
+    letter-spacing: 0;
+    text-transform: uppercase;
+    > i { color: darken($gray-500, 5%); }
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -.125rem;
+      left: 0;
+      width: 90px;
+      height: 2px;
+      @extend .bg-gradient;
+      content: '';
+    }
+    & + li > a { padding-top: 1rem; }
+  }
+  .mobile-sublevel {
+    padding-bottom: .5625rem !important;
+    li {
+      border: 0;
+      border-left: 2px solid $border-color;
+      > a {
+        position: relative;
+        padding: .5rem 0 .5rem .9375rem;
+        font-size: ($font-size-base * .8125);
+        &::before {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 8px;
+          height: 2px;
+          background-color: $border-color;
+          content: '';
+        }
+      }
+    }
+  }
+}

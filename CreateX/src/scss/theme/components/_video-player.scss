@@ -1,0 +1,29 @@
+//
+// Video Player
+// --------------------------------------------------
+
+.video-player-button,
+.video-player-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.video-player-button {
+  width: $video-player-btn-size;
+  height: $video-player-btn-size;
+  padding-left: .25rem;
+  transition: all .3s;
+  border-radius: 50%;
+  background-color: $video-player-btn-bg;
+  color: $video-player-btn-color;
+  font-size: $font-size-lg;
+  line-height: $video-player-btn-size;
+  box-shadow: $video-btn-box-shadow;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  &:hover {
+    color: $primary;
+    box-shadow: $video-btn-hover-box-shadow;
+  }
+}

@@ -1,0 +1,84 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Alerts'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Alerts Color Variations Code Modal
+  include code/alert-colors
+
+  //- Alert with Background Image Code Modal
+  include code/alert-image
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-1
+
+      // Color variations
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Color variations
+          a(href='#alert-colors-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .row
+          .col-xl-9.col-md-11
+            .alert.alert-secondary.alert-dismissible.fade.show.mb-4
+              span(data-dismiss='alert').close
+              h3 Hello World!
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus sint optio explicabo eum perspiciatis ipsam adipisci, excepturi repellendus debitis <a href='#'>fugit laborum quae</a>, aspernatur ex neque hic nihil, reiciendis veritatis.
+            .alert.alert-primary.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-bell
+              | &nbsp;&nbsp;<strong>Primary alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+            .alert.alert-accent.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-clock
+              | &nbsp;&nbsp;<strong>Accent alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+            .alert.alert-info.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-info
+              | &nbsp;&nbsp;<strong>Info alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+            .alert.alert-success.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-check-square
+              | &nbsp;&nbsp;<strong>Success alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+            .alert.alert-warning.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-alert-triangle
+              | &nbsp;&nbsp;<strong>Warning alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+            .alert.alert-danger.alert-dismissible.fade.show.text-center.mb-4
+              span(data-dismiss='alert').close
+              i.fe-icon-slash
+              | &nbsp;&nbsp;<strong>Danger alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+
+      // Background image version
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Background image version
+          a(href='#alert-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .row
+          .col-xl-9.col-md-11
+            div(style='background-image: url(../img/components/alert-bg.jpg)').alert.alert-image-bg.alert-dismissible.fade.show.text-center.py-5
+              span(data-dismiss='alert').close.text-white
+              i(style='font-size: 50px;').d-blocki.fe-icon-clock.text-white.my-3
+              .h3.text-medium.text-white.text-shadow Check our Limited Offers.
+              .h4.text-white.font-weight-normal.text-shadow Save up to 50%
+              div.py-3
+                a(href='#').btn.btn-gradient View Offers

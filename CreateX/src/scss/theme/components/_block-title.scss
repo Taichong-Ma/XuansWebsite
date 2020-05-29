@@ -1,0 +1,85 @@
+//
+// Block Title
+// --------------------------------------------------
+
+.block-title {
+  position: relative;
+  padding-bottom: ($spacer * .8125);
+  &::after { @extend %divider; }
+  > small {
+    padding: ($spacer / 2) 0 ($spacer * .3125) 0;
+    font: {
+      family: $font-family-base;
+      size: $block-title-samll-size;
+      weight: normal;
+    }
+    letter-spacing: 0;
+  }
+  .block-title-icon {
+    display: block;
+    width: $block-title-icon-size;
+    height: $block-title-icon-size;
+    margin-bottom: ($spacer * 1.25);
+    background-color: $block-title-icon-bg;
+    color: $block-title-icon-color;
+    font-size: $block-title-icon-font-size;
+    line-height: ($block-title-icon-size + 4);
+    text-align: center;
+  }
+  &.text-white::after { background: $white !important; }
+}
+
+// Alignment
+.text-center {
+  .block-title,
+  .animated-digits,
+  &.block-title,
+  &.animated-digits {
+    &::after {
+      left: 50%;
+      margin-left: -1.125rem;
+    }
+    .block-title-icon {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
+  }
+}
+.text-right {
+  .block-title,
+  .animated-digits,
+  &.block-title,
+  &.animated-digits {
+    &::after {
+      right: .0625rem;
+      left: auto;
+    }
+    .block-title-icon {
+      margin: {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .text-md-left {
+    .block-title,
+    .animated-digits,
+    &.block-title,
+    &.animated-digits {
+      &::after {
+        left: .0625rem;
+        margin-left: 0;
+      }
+      .block-title-icon {
+        margin: {
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Checkout'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Checkout - Review'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-4.mb-2
+    .row
+
+      // Checkout: Review
+      .col-xl-9.col-lg-8.pb-5
+        .wizard
+          .wizard-steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between
+            a(href='checkout-address.html').wizard-step
+              i.fe-icon-check-circle
+              | 1. Address
+            a(href='checkout-shipping.html').wizard-step
+              i.fe-icon-check-circle
+              | 2. Shipping
+            a(href='checkout-payment.html').wizard-step
+              i.fe-icon-check-circle
+              | 3. Payment
+            .wizard-step.active 4. Review
+          .wizard-body
+            h3.h5.pb-3 Review Your Order
+            // Item
+            .cart-item.d-md-flex.justify-content-between.pr-2
+              .px-3.my-3
+                a(href='shop-single.html').cart-item-product
+                  .cart-item-product-thumb
+                    img(src='img/shop/cart/01.jpg' alt='Product')
+                  .cart-item-product-info
+                    h4.cart-item-product-title Canon EOS M50 Mirrorless Camera
+                    span <strong>Type:</strong> Mirrorless
+                    span <strong>Color:</strong> Black
+              .px-3.my-3.text-center
+                .cart-item-label Quantity
+                span.text-xl.font-weight-medium 1
+              .px-3.my-3.text-center
+                .cart-item-label Subtotal
+                span.text-xl.font-weight-medium $910.00
+              .px-3.my-3.text-center.align-self-center
+                a(href='cart.html').btn.btn-secondary.btn-sm Edit
+            // Item
+            .cart-item.d-md-flex.justify-content-between.pr-2
+              .px-3.my-3
+                a(href='shop-single.html').cart-item-product
+                  .cart-item-product-thumb
+                    img(src='img/shop/cart/02.jpg' alt='Product')
+                  .cart-item-product-info
+                    h4.cart-item-product-title Apple iPhone X 256 GB Space Gray
+                    span <strong>Memory:</strong> 256GB
+                    span <strong>Color:</strong> Space Gray
+              .px-3.my-3.text-center
+                .cart-item-label Quantity
+                span.text-xl.font-weight-medium 1
+              .px-3.my-3.text-center
+                .cart-item-label Subtotal
+                span.text-xl.font-weight-medium $1,450.00
+              .px-3.my-3.text-center.align-self-center
+                a(href='cart.html').btn.btn-secondary.btn-sm Edit
+            // Item
+            .cart-item.d-md-flex.justify-content-between.pr-2
+              .px-3.my-3
+                a(href='shop-single.html').cart-item-product
+                  .cart-item-product-thumb
+                    img(src='img/shop/cart/03.jpg' alt='Product')
+                  .cart-item-product-info
+                    h4.cart-item-product-title HP LaserJet Pro Laser Printer
+                    span <strong>Type:</strong> Laser
+                    span <strong>Color:</strong> White
+              .px-3.my-3.text-center
+                .cart-item-label Quantity
+                span.text-xl.font-weight-medium 1
+              .px-3.my-3.text-center
+                .cart-item-label Subtotal
+                span.text-xl.font-weight-medium $188.50
+              .px-3.my-3.text-center.align-self-center
+                a(href='cart.html').btn.btn-secondary.btn-sm Edit
+            .text-right.pb-4
+               span.text-muted Subtotal:
+               span.text-xl.font-weight-medium &nbsp;$2,548.50
+            .row
+              .col-sm-6
+                h4.h6 Shipping to:
+                ul.list-unstyled
+                  li
+                    span.text-muted Client:&nbsp;
+                    | Daniel Adams
+                  li
+                    span.text-muted Address:&nbsp;
+                    | 44 Shirley Ave. West Chicago, IL 60185, USA
+                  li
+                    span.text-muted Phone:&nbsp;
+                    | +1 (808) 764 554 330
+              .col-sm-6
+                h4.h6 Payment method:
+                ul.list-unstyled
+                  li
+                    span.text-muted Credit Card:&nbsp;
+                    | **** **** **** 5300
+          .wizard-footer.d-flex.justify-content-between
+            a(href='checkout-payment.html').btn.btn-secondary.my-2
+              i.fe-icon-arrow-left
+              span.d-none.d-sm-inline-block Back
+            a(href='checkout-complete.html').btn.btn-primary.my-2 Complete Order
+
+      // Sidebar
+      aside.col-xl-3.col-lg-4.pb-4.mb-2
+        //- sidebar-checkout.pug template
+        include partials/sidebar-checkout
+
+  //- footer-shop.pug template
+  include partials/footer-shop

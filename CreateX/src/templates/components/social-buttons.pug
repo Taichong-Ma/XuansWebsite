@@ -1,0 +1,1163 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Social Buttons'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Social Icons Style 1 Code Modal
+  include code/socials-style1
+
+  //- Social Icons Style 2 Code Modal
+  include code/socials-style2
+
+  //- Social Icons Style 3 Code Modal
+  include code/socials-style3
+
+  //- Social Icons Style 4 Code Modal
+  include code/socials-style4
+
+  //- Social Icons Style 5 Code Modal
+  include code/socials-style5
+
+  //- Social Icons Style 6 Code Modal
+  include code/socials-style6
+
+  //- Social Icons Style 7 Code Modal
+  include code/socials-style7
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+      
+      // Style 1
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 1
+          a(href='#socials-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-1.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-1.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-1.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-1.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-1.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-1.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-1.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-1.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-1.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-1.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-1.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-1.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-1.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-1.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-1.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-1.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-1.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-1.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-1.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-1.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-1.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-1.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-1.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-1.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-1.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-1.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-1.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-1.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-1.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-1.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-1.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-1.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-1.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-1.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-1.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-1.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-1.sb-youtube
+          i.socicon-youtube
+
+      // Style 1 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-1.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-1.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-1.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-1.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-1.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-1.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-1.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-1.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-1.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-1.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-1.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-1.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-1.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-1.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-1.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-1.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-1.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-1.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-1.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-1.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-1.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-1.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-1.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-1.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-1.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-1.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-1.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-1.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-1.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-1.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-1.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-1.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-1.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-1.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-1.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-1.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-1.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 2
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 2
+          a(href='#socials-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-2.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-2.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-2.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-2.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-2.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-2.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-2.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-2.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-2.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-2.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-2.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-2.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-2.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-2.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-2.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-2.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-2.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-2.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-2.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-2.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-2.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-2.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-2.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-2.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-2.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-2.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-2.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-2.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-2.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-2.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-2.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-2.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-2.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-2.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-2.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-2.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-2.sb-youtube
+          i.socicon-youtube
+
+      // Style 2 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-2.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-2.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-2.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-2.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-2.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-2.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-2.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-2.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-2.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-2.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-2.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-2.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-2.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-2.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-2.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-2.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-2.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-2.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-2.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-2.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-2.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-2.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-2.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-2.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-2.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-2.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-2.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-2.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-2.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-2.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-2.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-2.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-2.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-2.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-2.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-2.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-2.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 3
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 3
+          a(href='#socials-style3-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-3.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-3.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-3.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-3.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-3.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-3.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-3.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-3.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-3.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-3.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-3.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-3.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-3.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-3.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-3.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-3.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-3.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-3.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-3.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-3.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-3.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-3.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-3.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-3.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-3.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-3.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-3.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-3.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-3.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-3.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-3.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-3.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-3.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-3.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-3.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-3.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-3.sb-youtube
+          i.socicon-youtube
+
+      // Style 3 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-3.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-3.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-3.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-3.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-3.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-3.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-3.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-3.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-3.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-3.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-3.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-3.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-3.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-3.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-3.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-3.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-3.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-3.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-3.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-3.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-3.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-3.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-3.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-3.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-3.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-3.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-3.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-3.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-3.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-3.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-3.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-3.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-3.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-3.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-3.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-3.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-3.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 4
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 4
+          a(href='#socials-style4-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-4.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-4.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-4.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-4.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-4.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-4.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-4.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-4.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-4.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-4.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-4.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-4.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-4.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-4.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-4.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-4.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-4.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-4.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-4.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-4.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-4.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-4.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-4.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-4.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-4.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-4.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-4.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-4.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-4.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-4.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-4.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-4.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-4.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-4.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-4.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-4.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-4.sb-youtube
+          i.socicon-youtube
+
+      // Style 4 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-4.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-4.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-4.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-4.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-4.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-4.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-4.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-4.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-4.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-4.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-4.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-4.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-4.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-4.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-4.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-4.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-4.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-4.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-4.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-4.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-4.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-4.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-4.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-4.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-4.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-4.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-4.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-4.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-4.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-4.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-4.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-4.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-4.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-4.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-4.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-4.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-4.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 5
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 5
+          a(href='#socials-style5-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-5.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-5.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-5.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-5.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-5.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-5.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-5.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-5.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-5.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-5.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-5.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-5.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-5.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-5.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-5.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-5.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-5.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-5.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-5.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-5.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-5.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-5.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-5.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-5.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-5.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-5.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-5.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-5.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-5.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-5.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-5.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-5.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-5.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-5.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-5.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-5.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-5.sb-youtube
+          i.socicon-youtube
+
+      // Style 5 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-5.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-5.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-5.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-5.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-5.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-5.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-5.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-5.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-5.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-5.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-5.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-5.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-5.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-5.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-5.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-5.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-5.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-5.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-5.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-5.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-5.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-5.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-5.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-5.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-5.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-5.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-5.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-5.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-5.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-5.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-5.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-5.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-5.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-5.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-5.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-5.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-5.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 6
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 6
+          a(href='#socials-style6-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-6.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-6.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-6.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-6.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-6.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-6.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-6.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-6.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-6.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-6.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-6.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-6.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-6.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-6.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-6.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-6.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-6.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-6.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-6.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-6.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-6.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-6.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-6.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-6.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-6.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-6.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-6.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-6.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-6.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-6.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-6.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-6.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-6.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-6.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-6.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-6.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-6.sb-youtube
+          i.socicon-youtube
+
+      // Style 6 (light skin)
+      .bg-dark.py-5.px-4.mb-5
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-6.sb-amazon.sb-light-skin
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-6.sb-airbnb.sb-light-skin
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-6.sb-behance.sb-light-skin
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-6.sb-deviantart.sb-light-skin
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-6.sb-digg.sb-light-skin
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-6.sb-disqus.sb-light-skin
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-6.sb-dribbble.sb-light-skin
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-6.sb-drupal.sb-light-skin
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-6.sb-facebook.sb-light-skin
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-6.sb-flickr.sb-light-skin
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-6.sb-foursquare.sb-light-skin
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-6.sb-github.sb-light-skin
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-6.sb-google-plus.sb-light-skin
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-6.sb-instagram.sb-light-skin
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-6.sb-lastfm.sb-light-skin
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-6.sb-linkedin.sb-light-skin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-6.sb-odnoklassniki.sb-light-skin
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-6.sb-paypal.sb-light-skin
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-6.sb-pinterest.sb-light-skin
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-6.sb-reddit.sb-light-skin
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-6.sb-rss.sb-light-skin
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-6.sb-skype.sb-light-skin
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-6.sb-soundcloud.sb-light-skin
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-6.sb-stackoverflow.sb-light-skin
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-6.sb-steam.sb-light-skin
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-6.sb-stumbleupon.sb-light-skin
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-6.sb-tumblr.sb-light-skin
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-6.sb-twitch.sb-light-skin
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-6.sb-twitter.sb-light-skin
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-6.sb-vimeo.sb-light-skin
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-6.sb-vine.sb-light-skin
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-6.sb-vk.sb-light-skin
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-6.sb-wordpress.sb-light-skin
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-6.sb-xing.sb-light-skin
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-6.sb-yahoo.sb-light-skin
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-6.sb-yelp.sb-light-skin
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-6.sb-youtube.sb-light-skin
+          i.socicon-youtube
+      
+      // Style 7
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Style 7
+          a(href='#socials-style7-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-7.sb-amazon
+          i.socicon-amazon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-7.sb-airbnb
+          i.socicon-airbnb
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-7.sb-behance
+          i.socicon-behance
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-7.sb-deviantart
+          i.socicon-deviantart
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-7.sb-digg
+          i.socicon-digg
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-7.sb-disqus
+          i.socicon-disqus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-7.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-7.sb-drupal
+          i.socicon-drupal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-7.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-7.sb-flickr
+          i.socicon-flickr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-7.sb-foursquare
+          i.socicon-foursquare
+        a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-7.sb-github
+          i.socicon-github
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-7.sb-google-plus
+          i.socicon-googleplus
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-7.sb-instagram
+          i.socicon-instagram
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-7.sb-lastfm
+          i.socicon-lastfm
+        a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-7.sb-linkedin
+          i.socicon-linkedin
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-7.sb-odnoklassniki
+          i.socicon-odnoklassniki
+        a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-7.sb-paypal
+          i.socicon-paypal
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-7.sb-pinterest
+          i.socicon-pinterest
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-7.sb-reddit
+          i.socicon-reddit
+        a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-7.sb-rss
+          i.socicon-rss
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-7.sb-skype
+          i.socicon-skype
+        a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-7.sb-soundcloud
+          i.socicon-soundcloud
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-7.sb-stackoverflow
+          i.socicon-stackoverflow
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-7.sb-steam
+          i.socicon-steam
+        a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-7.sb-stumbleupon
+          i.socicon-stumbleupon
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-7.sb-tumblr
+          i.socicon-tumblr
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-7.sb-twitch
+          i.socicon-twitch
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-7.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-7.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-7.sb-vine
+          i.socicon-vine
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-7.sb-vk
+          i.socicon-vkontakte
+        a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-7.sb-wordpress
+          i.socicon-wordpress
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-7.sb-xing
+          i.socicon-xing
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-7.sb-yahoo
+          i.socicon-yahoo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-7.sb-yelp
+          i.socicon-yelp
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-7.sb-youtube
+          i.socicon-youtube
+
+      // Style 7 (light skin)
+      .pb-4
+        .bg-dark.py-5.px-4.mb-5
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Amazon').social-btn.sb-style-7.sb-amazon.sb-light-skin
+            i.socicon-amazon
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Airbnb').social-btn.sb-style-7.sb-airbnb.sb-light-skin
+            i.socicon-airbnb
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-btn.sb-style-7.sb-behance.sb-light-skin
+            i.socicon-behance
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Devianart').social-btn.sb-style-7.sb-deviantart.sb-light-skin
+            i.socicon-deviantart
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Digg').social-btn.sb-style-7.sb-digg.sb-light-skin
+            i.socicon-digg
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Disqus').social-btn.sb-style-7.sb-disqus.sb-light-skin
+            i.socicon-disqus
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-7.sb-dribbble.sb-light-skin
+            i.socicon-dribbble
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Drupal').social-btn.sb-style-7.sb-drupal.sb-light-skin
+            i.socicon-drupal
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-7.sb-facebook.sb-light-skin
+            i.socicon-facebook
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Flickr').social-btn.sb-style-7.sb-flickr.sb-light-skin
+            i.socicon-flickr
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Foursquare').social-btn.sb-style-7.sb-foursquare.sb-light-skin
+            i.socicon-foursquare
+          a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-btn.sb-style-7.sb-github.sb-light-skin
+            i.socicon-github
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-btn.sb-style-7.sb-google-plus.sb-light-skin
+            i.socicon-googleplus
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-7.sb-instagram.sb-light-skin
+            i.socicon-instagram
+          a(href='#' data-toggle='tooltip' data-placement='top' title='LastFM').social-btn.sb-style-7.sb-lastfm.sb-light-skin
+            i.socicon-lastfm
+          a(href='#' data-toggle='tooltip' data-placement='top' title='LinkedIn').social-btn.sb-style-7.sb-linkedin.sb-light-skin
+            i.socicon-linkedin
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Odnoklassniki').social-btn.sb-style-7.sb-odnoklassniki.sb-light-skin
+            i.socicon-odnoklassniki
+          a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-btn.sb-style-7.sb-paypal.sb-light-skin
+            i.socicon-paypal
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Pinterest').social-btn.sb-style-7.sb-pinterest.sb-light-skin
+            i.socicon-pinterest
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Reddit').social-btn.sb-style-7.sb-reddit.sb-light-skin
+            i.socicon-reddit
+          a(href='#' data-toggle='tooltip' data-placement='top' title='RSS').social-btn.sb-style-7.sb-rss.sb-light-skin
+            i.socicon-rss
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-btn.sb-style-7.sb-skype.sb-light-skin
+            i.socicon-skype
+          a(href='#' data-toggle='tooltip' data-placement='top' title='SoundCloud').social-btn.sb-style-7.sb-soundcloud.sb-light-skin
+            i.socicon-soundcloud
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-btn.sb-style-7.sb-stackoverflow.sb-light-skin
+            i.socicon-stackoverflow
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Steam').social-btn.sb-style-7.sb-steam.sb-light-skin
+            i.socicon-steam
+          a(href='#' data-toggle='tooltip' data-placement='top' title='StumbleUpon').social-btn.sb-style-7.sb-stumbleupon.sb-light-skin
+            i.socicon-stumbleupon
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Tumblr').social-btn.sb-style-7.sb-tumblr.sb-light-skin
+            i.socicon-tumblr
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Twitch').social-btn.sb-style-7.sb-twitch.sb-light-skin
+            i.socicon-twitch
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-7.sb-twitter.sb-light-skin
+            i.socicon-twitter
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-7.sb-vimeo.sb-light-skin
+            i.socicon-vimeo
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Vine').social-btn.sb-style-7.sb-vine.sb-light-skin
+            i.socicon-vine
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Vkontakte').social-btn.sb-style-7.sb-vk.sb-light-skin
+            i.socicon-vkontakte
+          a(href='#' data-toggle='tooltip' data-placement='top' title='WordPress').social-btn.sb-style-7.sb-wordpress.sb-light-skin
+            i.socicon-wordpress
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Xing').social-btn.sb-style-7.sb-xing.sb-light-skin
+            i.socicon-xing
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Yahoo!').social-btn.sb-style-7.sb-yahoo.sb-light-skin
+            i.socicon-yahoo
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Yelp').social-btn.sb-style-7.sb-yelp.sb-light-skin
+            i.socicon-yelp
+          a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-7.sb-youtube.sb-light-skin
+            i.socicon-youtube

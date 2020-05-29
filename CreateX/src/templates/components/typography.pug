@@ -1,0 +1,256 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Typography'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Typography: Headings Code Modal
+  include code/typography-headings
+
+  //- Typography: Displays Code Modal
+  include code/typography-displays
+
+  //- Typography: Body Copy Code Modal
+  include code/typography-body
+
+  //- Typography: Lists Types Code Modal
+  include code/typography-lists
+
+  //- Typography: Inline Text Elements Code Modal
+  include code/typography-inline
+
+  //- Typography: Blockquotes Code Modal
+  include code/typography-blockquotes
+
+  //- Typography: Description List Code Modal
+  include code/typography-description
+
+  //- Typography: Drop Caps Code Modal
+  include code/typography-dropcaps
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-30
+
+      // Headings
+      .row
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Headings
+            a(href='#typography-headings-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          h1.mb-1 H1. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 48px, Weight: 900, Line height: 58px
+          hr.pb-4
+          h2 H2. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 40px, Weight: 900, Line height: 48px
+          hr.pb-4
+          h3 H3. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 34px, Weight: 900, Line height: 43px
+          hr.pb-4
+          h4 H4. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 26px, Weight: 900, Line height: 34px
+          hr.pb-4
+          h5 H5. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 21px, Weight: 900, Line height: 28px
+          hr.pb-4
+          h6 H6. Heading
+          span.d-block.text-lg.text-muted.pb-4 Size: 18px, Weight: 900, Line height: 25px
+          hr
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Displays
+            a(href='#typography-displays-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          h2.display-1.mb-1 Display 1
+          span.d-block.text-lg.text-muted.pb-4 Size: 96px, Weight: 900, Line height: 106px
+          hr.pb-4
+          h2.display-2.mb-1 Display 2
+          span.d-block.text-lg.text-muted.pb-4 Size: 88px, Weight: 900, Line height: 97px
+          hr.pb-4
+          h2.display-3.mb-1 Display 3
+          span.d-block.text-lg.text-muted.pb-4 Size: 72px, Weight: 900, Line height: 79px
+          hr.pb-4
+          h2.display-4.mb-1 Display 4
+          span.d-block.text-lg.text-muted.pb-4 Size: 56px, Weight: 900, Line height: 62px
+          hr
+      .row
+
+        // Body copy
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Body copy
+            a(href='#typography-body-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          p.lead <strong>Lead text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+          p.text-xl <strong>Extra large text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href='#'>eiusmod tempor</a> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          p.text-lg <strong>Large text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href='#'>tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          p.text-md <strong>Normal text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <a href='#'>dolore magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          p.text-sm <strong>Small text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <a href='#'>dolore magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          p.text-xs <strong>Extra small text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href='#'>nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+
+        // List types
+        .col-md-6.pb-3
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 List types
+            a(href='#typography-lists-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          .row
+            .col-sm-6.pb-4
+              ul
+                li Sed ut perspiciatis unde omnis iste natus error sit
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                li Ut enim ad minima veniam
+                li At vero eos et accusamus et iusto odio dignissimos ducimus
+            .col-sm-6.pb-4
+              ol
+                li Sed ut perspiciatis unde omnis iste natus error sit
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                li Ut enim ad minima veniam
+                li At vero eos et accusamus et iusto odio dignissimos ducimus
+          .row
+            .col-sm-6.pb-4
+              ul.list-icon
+                li
+                  i.fe-icon-check.text-success
+                  | Sed ut perspiciatis unde omnis iste natus error sit
+                li
+                  i.fe-icon-x.text-danger
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                li
+                  i.fe-icon-bell.text-muted
+                  | Ut enim ad minima veniam, quis nostrum exercitationem
+                li
+                  i.fe-icon-bookmark.text-info
+                  | At vero eos et accusamus et iusto odio dignissimos ducimus
+            .col-sm-6.pb-4
+              ul.list-unstyled
+                li Sed ut perspiciatis unde omnis iste natus error sit
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                li Ut enim ad minima veniam, quis nostrum exercitationem
+                li At vero eos et accusamus et iusto odio dignissimos ducimus
+
+      // Inline text elements
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inline text elements
+        a(href='#typography-inline-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-md-6
+          p You can use the mark tag to <mark>highlight</mark> text.
+          p <del>This line of text is meant to be treated as deleted text.</del>
+          p <s>This line of text is meant to be treated as no longer accurate.</s>
+          p <ins>This line of text is meant to be treated as an addition to the document.</ins>
+        .col-md-6
+          p <u>This line of text will render as underlined</u>
+          p <small>This line of text is meant to be treated as fine print.</small>
+          p <strong>This line rendered as bold text.</strong>
+          p <em>This line rendered as italicized text.</em>
+
+      // Blockquotes
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Blockquotes
+        a(href='#typography-blockquotes-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .row.pb-5
+        .col-md-6.mb-30.pb-2
+          .blockquote
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo officia deserunt mollitia animi laborum.
+            footer.blockquote-footer
+              | Barbara Palson
+              cite Graphic Designer
+        .col-md-6.mb-30.pb-2
+          .blockquote.text-right
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo officia deserunt mollitia animi laborum.
+            footer.blockquote-footer
+              | Barbara Palson
+              cite Graphic Designer
+        .col-md-6.mb-30
+          .blockquote.text-center
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo officia deserunt mollitia animi laborum.
+            footer.blockquote-footer
+              | Barbara Palson
+              cite Graphic Designer
+
+      // Description list
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Description lists
+        a(href='#typography-description-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-md-6.pb-2
+          dl
+            dt Description lists no icons
+            dd A description list is perfect for defining terms.
+            dt Malesuada porta
+            dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit porto fegut harum quidem rerum facilis est et expedita distinctio.
+            dt Lorem ipsum dolor sit amet
+            dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus adipisci velit.
+        .col-md-6.pb-2
+          dl.dl-with-icon
+            dt
+              i.fe-icon-anchor
+              | Description lists with icons
+            dd A description list is perfect for defining terms.
+            dt
+              i.fe-icon-clock.text-muted
+              | Malesuada porta
+            dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit porto fegut harum quidem rerum facilis est et expedita distinctio.
+            dt
+              i.fe-icon-cloud-lightning.text-accent
+              | Lorem ipsum dolor sit amet
+            dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus adipisci velit.
+      // Drop caps
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Drop caps
+        a(href='#typography-dropcaps-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row
+        .col-md-6.pb-2
+          p.drop-cap Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi.
+        .col-md-6.pb-2
+          p.drop-cap.text-primary At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+      .row
+        .col-md-6.pb-2
+          p.drop-cap.text-accent Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+        .col-md-6.pb-2
+          p.drop-cap.text-info Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur numquam eius modi tempora incidunt ut labore et dolore?
+      .row
+        .col-md-6.pb-2
+          p.drop-cap.text-success Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        .col-md-6.pb-2
+          p.drop-cap.text-warning Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur numquam eius modi tempora incidunt ut labore et dolore ratione voluptatem sequi.
+      .row
+        .col-md-6.pb-2
+          p.drop-cap.text-danger Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.
+        .col-md-6.pb-2
+          p.drop-cap.text-muted Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat nulla pariatur numquam eius modi tempora.
+

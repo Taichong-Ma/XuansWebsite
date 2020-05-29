@@ -1,0 +1,81 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'My Tickets'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'My Tickets'
+  - var isModalTicket = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-4
+    .row
+      .col-lg-4.pb-5
+        //- sidebar-account.pug template
+        include partials/sidebar-account
+
+      // Tickets List
+      .col-lg-8.pb-5
+        .d-flex.justify-content-end.pb-3
+          .form-inline
+            label(for='order-sort').text-muted.mr-3 Sort Tickets
+            select#order-sort.form-control
+              option All
+              option Open
+              option Closed
+        .table-responsive
+          table.table.table-hover.mb-0
+            thead
+              tr
+                th Ticket Subject
+                th Date Submitted | Updated
+                th Type
+                th Priority
+                th Status
+            tbody
+              tr
+                td
+                  a(href='account-single-ticket.html').navi-link My new ticket
+                td 08/08/2017 | 08/14/2017
+                td Website problem
+                td
+                  span.badge.badge-warning.m-0 High
+                td
+                  span.badge.badge-accent.m-0 Open
+              tr
+                td
+                  a(href='account-single-ticket.html').navi-link Another ticket
+                td 07/21/2017 | 07/23/2017
+                td Partner request
+                td
+                  span.badge.badge-info.m-0 Medium
+                td
+                  span.badge.badge-secondary.m-0 Closed
+              tr
+                td
+                  a(href='account-single-ticket.html').navi-link Yet another ticket
+                td 05/19/2017 | 05/20/2017
+                td Complaint
+                td
+                  span.badge.badge-danger.m-0 Urgent
+                td
+                  span.badge.badge-secondary.m-0 Closed
+              tr
+                td
+                  a(href='account-single-ticket.html').navi-link My old ticket
+                td 05/19/2017 | 05/20/2017
+                td Info inquiry
+                td
+                  span.badge.badge-success.m-0 Low
+                td
+                  span.badge.badge-secondary.m-0 Closed
+        hr.mb-4
+        .text-right
+          button(class='btn btn-primary' data-toggle='modal' data-target='#open-ticket') Submit New Ticket
+
+  //- footer-shop.pug template
+  include partials/footer-shop

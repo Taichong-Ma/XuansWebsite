@@ -1,0 +1,226 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Steps'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Steps Simple Code Modal
+  include code/steps-simple
+
+  //- Steps Simple Light Skin Code Modal
+  include code/steps-simple-light
+
+  //- Steps with Icons Code Modal
+  include code/steps-icons
+
+  //- Steps with Icons Light Skin Code Modal
+  include code/steps-icons-light
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    
+    // Simple variant
+    section.container
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Simple variant
+        a(href='#steps-simple-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-5
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 1
+            h3.step-title Gathering User Data
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 2
+            h3.step-title Prototyping (Wireframes)
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 3
+            h3.step-title Pixel-perfect UI Design
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step
+            .step-number 4
+            h3.step-title Development (Coding)
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+    
+    // Simple variant. Light Skin
+    section.bg-dark.py-5
+      .container.pt-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.text-white.mr-3 Simple variant. Light Skin
+          a(href='#steps-simple-light-code' data-toggle='modal').navi-link.text-white.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4
+        .row
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-light-skin
+              .step-number 1
+              h3.step-title Gathering User Data
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-light-skin
+              .step-number 2
+              h3.step-title Prototyping (Wireframes)
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-light-skin
+              .step-number 3
+              h3.step-title Pixel-perfect UI Design
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-light-skin
+              .step-number 4
+              h3.step-title Development (Coding)
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+    
+    // With icons
+    section.container.py-5.mt-3
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With icons
+        a(href='#steps-icons-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row
+        .col-lg-3.col-sm-6
+          // Step
+          .step.step-with-icon
+            .step-number 1
+            .step-icon: img(src='../img/icons/user-data.svg' alt='Gathering User Data')
+            h3.step-title Gathering User Data
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step.step-with-icon
+            .step-number 2
+            .step-icon: img(src='../img/icons/prototyping.svg' alt='Prototyping (Wireframes)')
+            h3.step-title Prototyping (Wireframes)
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step.step-with-icon
+            .step-number 3
+            .step-icon: img(src='../img/icons/ui-design.svg' alt='Pixel-perfect UI Design')
+            h3.step-title Pixel-perfect UI Design
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+        .col-lg-3.col-sm-6
+          // Step
+          .step.step-with-icon
+            .step-number 4
+            .step-icon: img(src='../img/icons/coding.svg' alt='Development (Coding)')
+            h3.step-title Development (Coding)
+            p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            a(href='#').step-link
+              | View more
+              i.fe-icon-arrow-right
+    
+    // With icons. Light Skin
+    section.bg-dark.py-5
+      .container.pt-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.text-white.mr-3 With icons. Light Skin
+          a(href='#steps-icons-light-code' data-toggle='modal').navi-link.text-white.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4
+        .row
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-with-icon.step-light-skin
+              .step-number 1
+              .step-icon: img(src='../img/icons/user-data.svg' alt='Gathering User Data')
+              h3.step-title Gathering User Data
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-with-icon.step-light-skin
+              .step-number 2
+              .step-icon: img(src='../img/icons/prototyping.svg' alt='Prototyping (Wireframes)')
+              h3.step-title Prototyping (Wireframes)
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-with-icon.step-light-skin
+              .step-number 3
+              .step-icon: img(src='../img/icons/ui-design.svg' alt='Pixel-perfect UI Design')
+              h3.step-title Pixel-perfect UI Design
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right
+          .col-lg-3.col-sm-6
+            // Step
+            .step.step-with-icon.step-light-skin
+              .step-number 4
+              .step-icon: img(src='../img/icons/coding.svg' alt='Development (Coding)')
+              h3.step-title Development (Coding)
+              p.step-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              a(href='#').step-link
+                | View more
+                i.fe-icon-arrow-right

@@ -1,0 +1,219 @@
+//
+// Accordion
+// --------------------------------------------------
+
+// Style 1 (Default)
+.accordion {
+  .card {
+    border-top: 1px solid $border-color;
+    &:first-child { border: 0; }
+    &::after { display: none; }
+  }
+  .card-header,
+  .card-footer {
+    padding: 0;
+    border: 0;
+  }
+  .card,
+  [data-toggle='collapse'] {
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $primary;
+      content: '';
+      z-index: 5;
+    }
+  }
+  [data-toggle='collapse'] {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 25px 30px;
+    padding-right: 65px;
+    transition: color .3s, box-shadow .2s;
+    color: $primary;
+    font: {
+      size: $font-size-lg;
+      weight: bold;
+    }
+    text-decoration: none;
+    box-shadow: $box-shadow-inset;
+    > i {
+      display: inline-block;
+      margin: {
+        top: -2px;
+        right: 7px;
+      }
+      font-size: 1.1em;
+      vertical-align: middle;
+    }
+    &::before {
+      height: 0;
+      transition: height .25s;
+      background-color: $white;
+    }
+    &.collapsed::before {
+      height: 100%;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 28px;
+      width: 28px;
+      height: 28px;
+      margin-top: -14px;
+      transition: all .25s;
+      border-radius: 50%;
+      background-color: $primary;
+      color: $white;
+      font: {
+        family: feather;
+        size: $font-size-lg;
+        weight: normal;
+      }
+      line-height: 26px;
+      text-align: center;
+      box-shadow: 1px 8px 15px 0 rgba($primary, .35);
+      content: '\e931';
+    }
+    &.collapsed {
+      color: $headings-color;
+      box-shadow: none;
+      &::after {
+        transform: rotate(180deg);
+        background-color: $white;
+        color: $gray-800;
+        box-shadow: 1px -8px 15px 0 rgba($gray-700, .15);
+      }
+    }
+  }
+  .card:first-child [data-toggle='collapse'] {
+    box-shadow: none;
+  }
+  .card-body {
+    padding: {
+      top: 0;
+      right: 30px;
+      bottom: 30px;
+      left: 30px;
+    }
+  }
+}
+
+// Style 2
+.accordion-style-2 {
+  .card {
+    border-top: 0;
+    border-bottom: 1px solid $border-color !important;
+    box-shadow: none;
+    &:first-child { border-top: 1px solid $border-color !important; }
+  }
+  [data-toggle='collapse'] {
+    background-color: $white;
+    box-shadow: none;
+    &::after {
+      padding-left: 1px;
+      background-color: rgba($primary, .2);
+      color: $primary;
+      font: {
+        size: $font-size-lg;
+      }
+      line-height: 28px;
+      box-shadow: none;
+      content: '\e998';
+    }
+    &.collapsed::after {
+      padding-left: 0;
+      transform: none;
+      background-color: rgba($gray-700, .1);
+      box-shadow: none;
+      content: '\e9b3';
+    }
+  }
+  .card::before,
+  [data-toggle='collapse']::before { display: none; }
+}
+
+// Style 3
+.accordion-style-3 {
+  .card {
+    margin-bottom: 7px;
+    border: 0 !important;
+  }
+  .card-body {
+    position: relative;
+    padding: {
+      top: 30px;
+      bottom: 33px;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      content: '';
+      @extend .bg-gradient;
+    }
+  }
+  .card::before,
+  [data-toggle='collapse']::before { display: none; }
+  [data-toggle='collapse'] {
+    padding-right: 50px;
+    transition: none;
+    color: $white;
+    box-shadow: none;
+    @extend .bg-gradient;
+    &::after {
+      background: none !important;
+      box-shadow: none !important;
+    }
+    &.collapsed {
+      background: none !important;
+    }
+    > i {
+      width: 30px;
+      height: 30px;
+      margin-right: 9px;
+      border-radius: 50%;
+      background-color: $white;
+      color: $gray-800;
+      line-height: 28px;
+      text-align: center;
+      box-shadow: 1px 8px 15px 0 rgba($gray-700, .15);
+    }
+  }
+}
+// Firefox icon alignment fix
+@-moz-document url-prefix() {
+  .accordion-style-3 {
+    [data-toggle='collapse'] > i { line-height: 30px; }
+  }
+}
+
+
+@include media-breakpoint-down(xs) {
+  .accordion {
+    [data-toggle='collapse'] {
+      padding: 20px 18px;
+      padding-right: 50px;
+      font-size: $font-size-md;
+      &::after { right: 16px; }
+    }
+    .card-body {
+      padding: {
+        right: 20px;
+        left: 20px;
+      }
+    }
+  }
+  .accordion-style-3 [data-toggle='collapse'] {
+    padding-right: 40px;
+  }
+}

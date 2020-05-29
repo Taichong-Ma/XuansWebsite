@@ -1,0 +1,88 @@
+// Dropdown Position Code
+#dropdown-position-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Dropdown --&gt;</strong>
+                &lt;div class=&quot;btn-group&quot;&gt;
+                  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown&lt;/button&gt;
+                  &lt;div class=&quot;dropdown-menu&quot;&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Dropup --&gt;</strong>
+                &lt;div class=&quot;btn-group dropup&quot;&gt;
+                  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;Dropup&lt;/button&gt;
+                  &lt;div class=&quot;dropdown-menu&quot;&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/div&gt;
+                
+                <strong>&lt;!-- Dropright --&gt;</strong>
+                &lt;div class=&quot;btn-group dropright&quot;&gt;
+                  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;Dropright&lt;/button&gt;
+                  &lt;div class=&quot;dropdown-menu&quot;&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/div&gt;
+                
+                <strong>&lt;!-- Dropleft --&gt;</strong>
+                &lt;div class=&quot;btn-group dropleft&quot;&gt;
+                  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;Dropleft&lt;/button&gt;
+                  &lt;div class=&quot;dropdown-menu&quot;&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Dropdown</strong>
+                .btn-group
+                  button(type=&quot;button&quot; data-toggle=&quot;dropdown&quot;).btn.btn-secondary.dropdown-toggle Dropdown
+                  .dropdown-menu
+                    a(href=&quot;#&quot;).dropdown-item Action
+                    a(href=&quot;#&quot;).dropdown-item Another action
+                    a(href=&quot;#&quot;).dropdown-item Something else here
+
+                <strong>//- Dropup</strong>
+                .btn-group.dropup
+                  button(type=&quot;button&quot; data-toggle=&quot;dropdown&quot;).btn.btn-secondary.dropdown-toggle Dropup
+                  .dropdown-menu
+                    a(href=&quot;#&quot;).dropdown-item Action
+                    a(href=&quot;#&quot;).dropdown-item Another action
+                    a(href=&quot;#&quot;).dropdown-item Something else here
+                
+                <strong>//- Dropright</strong>
+                .btn-group.dropright
+                  button(type=&quot;button&quot; data-toggle=&quot;dropdown&quot;).btn.btn-secondary.dropdown-toggle Dropright
+                  .dropdown-menu
+                    a(href=&quot;#&quot;).dropdown-item Action
+                    a(href=&quot;#&quot;).dropdown-item Another action
+                    a(href=&quot;#&quot;).dropdown-item Something else here
+                
+                <strong>//- Dropleft</strong>
+                .btn-group.dropleft
+                  button(type=&quot;button&quot; data-toggle=&quot;dropdown&quot;).btn.btn-secondary.dropdown-toggle Dropleft
+                  .dropdown-menu
+                    a(href=&quot;#&quot;).dropdown-item Action
+                    a(href=&quot;#&quot;).dropdown-item Another action
+                    a(href=&quot;#&quot;).dropdown-item Something else here

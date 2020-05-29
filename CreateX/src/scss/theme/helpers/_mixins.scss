@@ -1,0 +1,180 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Font smoothing
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Gradient background
+@mixin gradient-background($gradient-from: $gradient-color-1, $gradient-to: $gradient-color-2) {
+  background: $gradient-from !important;
+  background: linear-gradient(to right, $gradient-from 0%, $gradient-from 20%, $gradient-to 100%) !important;
+}
+
+// Vertical gradient background
+@mixin gradient-background-vertical($gradient-from: $gradient-color-1, $gradient-to: $gradient-color-2) {
+  background: $gradient-from !important;
+  background: linear-gradient(to bottom, $gradient-from 0%, $gradient-from 20%, $gradient-to 100%) !important;
+}
+
+// Placeholder text
+@mixin placeholder($color: $gray-500) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  } // Internet Explorer 10+
+  &::-webkit-input-placeholder  {
+    color: $color;
+  } // Safari and Chrome
+}
+
+// Appearance
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+// Button Styel 1 Variants
+@mixin button-style-1-variant($btn-color) {
+  &:hover {
+    background: $btn-color;
+    box-shadow: 0 12px 18.8px 1.2px rgba($btn-color, .24);
+  }
+  &:active {
+    background-color: darken($btn-color, 10%);
+    box-shadow: 0 6px 8px .2px rgba($gray-700, .24) !important;
+  }
+  @if $btn-color == $secondary {
+    border: 1px solid $border-color;
+    line-height: ($btn-height - 2);
+    &:hover {
+      border-color: $border-color;
+      box-shadow: 0 12px 18.8px 1.2px rgba($gray-800, .15);
+    }
+    &:active {
+      background-color: $gray-300 !important;
+      box-shadow: none !important;
+    }
+    &.btn-lg { line-height: ($btn-height-lg - 2); }
+    &.btn-sm { line-height: ($btn-height-sm - 2); }
+  } @else if $btn-color == $light {
+    &:hover { box-shadow: none; }
+  }
+}
+
+// Button Styel 2 Variants
+@mixin button-style-2-variant($btn-color) {
+  &::before,
+  &::after { border: 1px solid $btn-color;}
+  &::after { background-color: $btn-color;}
+  &:hover:not(.btn-light), &:active:not(.btn-light) {
+    color: $btn-color !important;
+    &::before { background-color: $btn-color;}
+    &::after { background-color: $white;}
+  }
+  @if $btn-color == $secondary {
+    border: 0;
+    &:hover:not(.btn-light) {
+      background-color: $gray-300 !important;
+      color: $gray-700 !important;
+    }
+    &::before,
+    &::after { border: 1px solid $border-color;}
+  }
+}
+
+// Button Styel 4 Variants
+@mixin button-style-4-variant($btn-color) {
+  &.btn-icon-right i,
+  &.btn-icon-left i {
+    background-color: darken($btn-color, 10%);
+  }
+  &:hover {
+    &.btn-icon-right i,
+    &.btn-icon-left i {
+      background-color: $white;
+      color: $btn-color;
+    }
+  }
+  @if $btn-color == $secondary {
+    &.btn-icon-right i,
+    &.btn-icon-left i {
+      border: 1px solid $border-color !important;
+      background-color: $white !important;
+      color: $gray-700 !important;
+    }
+  } @else if $btn-color == $light {
+    &.btn-icon-right i,
+    &.btn-icon-left i {
+      border: 1px solid $border-color;
+      background-color: $white;
+      color: $gray-700 !important;
+    }
+  }
+}
+
+// Button Styel 5 Variants
+@mixin button-style-5-variant($btn-color) {
+  &::after {
+    background-color: darken($btn-color, 10%);
+  }
+  @if $btn-color == $secondary {
+    &::after { background-color: $gray-300; }
+  } @else if $btn-color == $light {
+    &::after { background-color: $gray-300; }
+  }
+}
+
+// Button Styel 6 Variants
+@mixin button-style-6-variant($btn-color) {
+  &::before { background-color: $btn-color; }
+  &:active::before { background-color: darken($btn-color, 10%); }
+  @if $btn-color == $secondary {
+    border: 0;
+    &::before {
+      background-color: darken($border-color, 6%);
+    }
+    &:hover {
+      box-shadow: 0 12px 18.8px 1.2px rgba($gray-800, .24);
+    }
+    &:hover::before,
+    &:active::before { background-color: $gray-300; }
+  }
+}
+
+// Alert Variants
+@mixin alert-custom-variant($color, $bg-color, $border-color) {
+  background-color: $bg-color;
+  color: $color;
+  &::before { border-color: $border-color; }
+  > *,
+  h1, h2, h3, h4, h5, h6, p, ul, ol, a {
+    &:not(.text-white),
+    &:not(.text-light) { color: $color; }
+  }
+  .close { color: $color !important; }
+}
+
+// List Group Variants
+@mixin list-group-variant($color, $bg-color, $border-color) {
+  border-color: $border-color !important;
+  background-color: $bg-color;
+  color: $color !important;
+  > *,
+  h1, h2, h3, h4, h5, h6, p, ul, ol, a { color: $color !important; }
+}
+
+// Toast Variants
+@mixin toast-variant($color) {
+  border-color: rgba($color, .5);
+  color: $color;
+  > .iziToast-close { color: $color; }
+}

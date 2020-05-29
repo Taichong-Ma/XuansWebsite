@@ -1,0 +1,72 @@
+// Typography: Description List Code
+#typography-description-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html7' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug7' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html7' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Description List --&gt;</strong>
+                &lt;dl&gt;
+                  &lt;dt&gt;Description lists no icons&lt;/dt&gt;
+                  &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+                  &lt;dt&gt;Malesuada porta&lt;/dt&gt;
+                  &lt;dd&gt;Vestibulum id ligula porta felis euismod...&lt;/dd&gt;
+                  &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+                  &lt;dd&gt;Fusce dapibus, tellus ac cursus commodo...&lt;/dd&gt;
+                &lt;/dl&gt;
+
+                <strong>&lt;!-- Description List with Icons --&gt;</strong>
+                &lt;dl class=&quot;dl-with-icon&quot;&gt;
+                  &lt;dt&gt;
+                    &lt;i class=&quot;fe-icon-anchor&quot;&gt;&lt;/i&gt;
+                    Description lists with icons
+                  &lt;/dt&gt;
+                  &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+                  &lt;dt&gt;
+                    &lt;i class=&quot;fe-icon-clock text-muted&quot;&gt;&lt;/i&gt;
+                    Malesuada porta
+                  &lt;/dt&gt;
+                  &lt;dd&gt;Vestibulum id ligula porta felis euismod...&lt;/dd&gt;
+                  &lt;dt&gt;
+                    &lt;i class=&quot;fe-icon-cloud-lightning text-accent&quot;&gt;&lt;/i&gt;
+                    Lorem ipsum dolor sit amet
+                  &lt;/dt&gt;
+                  &lt;dd&gt;Fusce dapibus, tellus ac cursus commodo...&lt;/dd&gt;
+                &lt;/dl&gt;
+          div(id='pug7' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Description List</strong>
+                dl
+                  dt Description lists no icons
+                  dd A description list is perfect for defining terms.
+                  dt Malesuada porta
+                  dd Vestibulum id ligula porta felis euismod...
+                  dt Lorem ipsum dolor sit amet
+                  dd Fusce dapibus, tellus ac cursus commodo...
+
+                <strong>//- Description List with Icons</strong>
+                dl.dl-with-icon
+                  dt
+                    i.fe-icon-anchor
+                    | Description lists with icons
+                  dd A description list is perfect for defining terms.
+                  dt
+                    i.fe-icon-clock.text-muted
+                    | Malesuada porta
+                  dd Vestibulum id ligula porta felis euismod...
+                  dt
+                    i.fe-icon-cloud-lightning.text-accent
+                    | Lorem ipsum dolor sit amet
+                  dd Fusce dapibus, tellus ac cursus commodo...

@@ -1,0 +1,110 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Reviews & Comments'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Review Code Modal
+  include code/review
+
+  //- Comment Code Modal
+  include code/comment
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Reviews
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Reviews
+        a(href='#review-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-4
+        .col-xl-9
+          .blockquote.comment.mb-4
+            .d-sm-flex.mb-2
+              h6.text-lg.mb-0 My husband love his new...
+              span.d-none.d-sm-inline.mx-3.text-muted.opacity-50 |
+              +rating-stars(4)
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/01.jpg', 'Review Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Barbara Palson
+                  cite August 12, 2018 at 3:10PM
+          .blockquote.comment
+            .d-sm-flex.mb-2
+              h6.text-lg.mb-0 Awesome quality for the price
+              span.d-none.d-sm-inline.mx-3.text-muted.opacity-50 |
+              +rating-stars(5)
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+            footer.testimonial-footer
+              .testimonial-avatar
+                +image('img/testimonials/02.jpg', 'Review Author Avatar')
+              .d-table-cell.align-middle.pl-2
+                .blockquote-footer
+                  | Hinata Nakamura
+                  cite July 25, 2018 at 11:50AM
+    
+      // Comments
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Comments
+        a(href='#comment-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-4
+        .col-xl-9
+          .blockquote.comment.mb-4
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+            .d-sm-flex.justify-content-between.align-items-center
+              .testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/03.jpg', 'Comment Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Michael Davis
+                    cite August 12, 2018 at 3:10PM
+              div.pt-3
+                a(href='#').btn.btn-primary.btn-sm
+                  i.fe-icon-corner-up-left
+                  | &nbsp;Reply
+            .blockquote.comment
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+              .testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/05.jpg', 'Comment Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Benjamin Miller
+                    cite August 13, 2018 at 5:00PM
+          .blockquote.comment
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+            .d-sm-flex.justify-content-between.align-items-center
+              .testimonial-footer
+                .testimonial-avatar
+                  +image('img/testimonials/04.jpg', 'Comment Author Avatar')
+                .d-table-cell.align-middle.pl-2
+                  .blockquote-footer
+                    | Sophia Johnson
+                    cite July 25, 2018 at 11:50AM
+              div.pt-3
+                a(href='#').btn.btn-primary.btn-sm
+                  i.fe-icon-corner-up-left
+                  | &nbsp;Reply

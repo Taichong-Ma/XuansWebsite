@@ -1,0 +1,61 @@
+// Review Code
+#review-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Review --&gt;</strong>
+                &lt;div class=&quot;blockquote comment&quot;&gt;
+                  &lt;div class=&quot;d-sm-flex mb-2&quot;&gt;
+                    &lt;h6 class=&quot;text-lg mb-0&quot;&gt;My husband love his new...&lt;/h6&gt;
+                    &lt;span class=&quot;d-none d-sm-inline mx-3 text-muted opacity-50&quot;&gt;|&lt;/span&gt;
+                    &lt;div class=&quot;rating-stars&quot;&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star active&quot;&gt;&lt;/i&gt;
+                      &lt;i class=&quot;fe-icon-star&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing...&lt;/p&gt;
+                  &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                    &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Review Author Avatar&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                      &lt;div class=&quot;blockquote-footer&quot;&gt;
+                        Barbara Palson
+                        &lt;cite&gt;August 12, 2018 at 3:10PM&lt;/cite&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/footer&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Review</strong>
+                .blockquote.comment
+                  .d-sm-flex.mb-2
+                    h6.text-lg.mb-0 My husband love his new...
+                    span.d-none.d-sm-inline.mx-3.text-muted.opacity-50 |
+                    +rating-stars(4)
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing...
+                  footer.testimonial-footer
+                    .testimonial-avatar
+                      +image(&quot;path-to-image&quot;, &quot;Review Author Avatar&quot;)
+                    .d-table-cell.align-middle.pl-2
+                      .blockquote-footer
+                        | Barbara Palson
+                        cite August 12, 2018 at 3:10PM

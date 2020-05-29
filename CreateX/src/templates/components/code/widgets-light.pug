@@ -1,0 +1,59 @@
+// Widgets: Light Skin Code
+#widgets-light-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p.mb-4 You can apply light skin to any above widget (General, Blog, Shop) by adding <code>widget-light-skin</code> class to <code>widget</code>.<br>See Contacts widget example below:
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html4' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug4' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html4' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Contacts Widget Light Skin --&gt;</strong>
+                &lt;div class=&quot;widget widget-contacts widget-light-skin&quot;&gt;
+                  &lt;h4 class=&quot;widget-title&quot;&gt;Contacts&lt;/h4&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-map-pin&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Find us&lt;/span&gt;
+                      &lt;a href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;&gt;1260 Broadway, New York&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Call us&lt;/span&gt;
+                      &lt;a href=&quot;tel:00180039025&quot;&gt;001 800 390 25&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Write us&lt;/span&gt;
+                      &lt;a href=&quot;mailto:info@example.com&quot;&gt;info@example.com&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+          div(id='pug4' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Contacts Widget Light Skin</strong>
+                .widget.widget-contacts.widget-light-skin
+                  h4.widget-title Contacts
+                  ul
+                    li
+                      i.fe-icon-map-pin
+                      span Find us
+                      a(href=&quot;https://www.google.com/maps/place/1260+Broadway,+New+York,+NY+10001,+USA/@40.7483811,-73.9898009,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a920a0a5fb:0xa4329a8e21872659!8m2!3d40.7483811!4d-73.9876122&quot; target=&quot;_blank&quot;) 1260 Broadway, New York
+                    li
+                      i.fe-icon-phone
+                      span Call us
+                      a(href=&quot;tel:00180039025&quot;) 001 800 390 25
+                    li
+                      i.fe-icon-mail
+                      span Write us
+                      a(href=&quot;mailto:info@example.com&quot;) info@example.com

@@ -1,0 +1,243 @@
+// Shop Sidebar
+
+// Off-Canvas Toggle
+a(href='#shop-sidebar' data-toggle='offcanvas').offcanvas-toggle
+  i.fe-icon-sidebar
+
+// Off-Canvas Container
+aside#shop-sidebar.offcanvas-container
+  .offcanvas-scrollable-area.px-4.pt-5.px-lg-0.pt-lg-0
+    span.offcanvas-close
+      i.fe-icon-x
+
+    // Categories
+    .widget.widget-categories
+      h4.widget-title Shop categories
+      ul
+        li
+          a(href='#computers' data-toggle='collapse')
+            | Computers &amp; Accessories
+            span &nbsp;(1138)
+          #computers.collapse.show
+            ul
+              li
+                a(href='#')
+                  | Desktop PCs
+                  span &nbsp;(508)
+              li
+                a(href='#')
+                  | Laptops
+                  span &nbsp;(423)
+              li
+                a(href='#')
+                  | Nettops
+                  span &nbsp;(97)
+              li
+                a(href='#')
+                  | PC Accessories
+                  span &nbsp;(110)
+        li
+          a(href='#phones' data-toggle='collapse').collapsed
+            | Smartphones &amp; Tablets
+            span &nbsp;(2356)
+          #phones.collapse
+            ul
+              li
+                a(href='#')
+                  | Smartphones
+                  span &nbsp;1032)
+              li
+                a(href='#')
+                  | Tablets
+                  span &nbsp;(937)
+              li
+                a(href='#')
+                  | Phablets
+                  span &nbsp;(386)
+        li
+          a(href='#tv' data-toggle='collapse').collapsed
+            | TV, Video &amp; Audio
+            span &nbsp;(420)
+          #tv.collapse
+            ul
+              li
+                a(href='#')
+                  | Smart TV Sets
+                  span &nbsp;(180)
+              li
+                a(href='#')
+                  | Blue-Ray Players
+                  span &nbsp;(132)
+              li
+                a(href='#')
+                  | Sound Systems
+                  span &nbsp;(47)
+              li
+                a(href='#')
+                  | Home Theaters
+                  span &nbsp;(61)
+        li
+          a(href='#headphones' data-toggle='collapse').collapsed
+            | Headphones
+            span &nbsp;(1239)
+          #headphones.collapse
+            ul
+              li
+                a(href='#')
+                  | Earbuds Headphones
+                  span &nbsp;(752)
+              li
+                a(href='#')
+                  | Over-Ear Headphones
+                  span &nbsp;(487)
+              li
+                a(href='#')
+                  | Bluetooth Headphones
+                  span &nbsp;(205)
+              li
+                a(href='#')
+                  | Sport &amp; Fitness
+                  span &nbsp;(96)
+              li
+                a(href='#')
+                  | Noise-Cancelling
+                  span &nbsp;(113)
+        li
+          a(href='#wearable' data-toggle='collapse').collapsed
+            | Wearable Electronics
+            span &nbsp;(340)
+          #wearable.collapse
+            ul
+              li
+                a(href='#')
+                  | Smart Watches
+                  span &nbsp;(175)
+              li
+                a(href='#')
+                  | Fitness Trackers
+                  span &nbsp;(123)
+              li
+                a(href='#')
+                  | Smart Glasses
+                  span &nbsp;(42)
+        li
+          a(href='#printers' data-toggle='collapse').collapsed
+            | Printers &amp; Ink
+            span &nbsp;(512)
+          #printers.collapse
+            ul
+              li
+                a(href='#')
+                  | All-in-One
+                  span &nbsp;(304)
+              li
+                a(href='#')
+                  | Copying
+                  span &nbsp;(115)
+              li
+                a(href='#')
+                  | Faxing
+                  span &nbsp;(211)
+              li
+                a(href='#')
+                  | Photo Printing
+                  span &nbsp;(68)
+              li
+                a(href='#')
+                  | Scanning
+                  span &nbsp;(143)
+
+    // Price range
+    .widget
+      h4.widget-title Price range
+      form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').range-slider
+        .ui-range-slider
+        footer.ui-range-slider-footer
+          .column
+            button(type='submit').btn.btn-primary.btn-xs Filter
+          .column
+            .ui-range-values
+              .ui-range-label Price:
+              .ui-range-value-min
+                | $<span></span>
+                input(type='hidden')
+              | &nbsp;&ndash;&nbsp;
+              .ui-range-value-max
+                | $<span></span>
+                input(type='hidden')
+
+    // Filter by brand
+    .widget
+      h4.widget-title Filter by brand
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='apple').custom-control-input
+        label(for='apple').custom-control-label
+          | Apple&nbsp;
+          span.text-muted (254)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='bosh').custom-control-input
+        label(for='bosh').custom-control-label
+          | Bosh&nbsp;
+          span.text-muted (39)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='canon').custom-control-input
+        label(for='canon').custom-control-label
+          | Canon Inc.&nbsp;
+          span.text-muted (128)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='dell').custom-control-input
+        label(for='dell').custom-control-label
+          | Dell&nbsp;
+          span.text-muted (310)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='hewlet').custom-control-input
+        label(for='hewlet').custom-control-label
+          | Hewlett-Packard&nbsp;
+          span.text-muted (42)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='hitachi').custom-control-input
+        label(for='hitachi').custom-control-label
+          | Hitachi&nbsp;
+          span.text-muted (217)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='lg').custom-control-input
+        label(for='lg').custom-control-label
+          | LG Electronics&nbsp;
+          span.text-muted (310)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='panasonic').custom-control-input
+        label(for='panasonic').custom-control-label
+          | Panasonic&nbsp;
+          span.text-muted (74)
+      .custom-control.custom-checkbox
+        input(type='checkbox' id='siemens').custom-control-input
+        label(for='siemens').custom-control-label
+          | Siemens&nbsp;
+          span.text-muted (86)
+
+    // Popular products
+    .widget.widget-featured-products
+      h4.widget-title Popular products
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/shop/01.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Amazon Echo Dot 2
+          +rating-stars(4)
+          span.featured-product-price
+            del $62.00
+            | &nbsp;$49.99
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/shop/02.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Zeus Bluetooth Earbuds
+          +rating-stars(3)
+          span.featured-product-price $28.99
+      a(href='shop-single.html').featured-product
+        .featured-product-thumb
+          +image('img/widgets/shop/03.jpg', 'Product Image')
+        .featured-product-info
+          h5.featured-product-title Xbox One S White
+          +rating-stars(4)
+          span.featured-product-price $298.99

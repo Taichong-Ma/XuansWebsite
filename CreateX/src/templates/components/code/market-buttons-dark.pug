@@ -1,0 +1,74 @@
+// Market Buttons Dark Code
+#market-buttons-dark-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- App Store Button --&gt;</strong>
+                &lt;a class=&quot;market-btn apple-btn market-btn-dark&quot; href=&quot;#&quot;&gt;
+                  &lt;span class=&quot;mb-subtitle&quot;&gt;Download on the&lt;/span&gt;
+                  &lt;span class=&quot;mb-title&quot;&gt;App Store&lt;/span&gt;
+                &lt;/a&gt;
+
+                <strong>&lt;!-- Google Play Button --&gt;</strong>
+                &lt;a class=&quot;market-btn google-btn market-btn-dark&quot; href=&quot;#&quot;&gt;
+                  &lt;span class=&quot;mb-subtitle&quot;&gt;Download on the&lt;/span&gt;
+                  &lt;span class=&quot;mb-title&quot;&gt;Google Play&lt;/span&gt;
+                &lt;/a&gt;
+
+                <strong>&lt;!-- Windows Store Button --&gt;</strong>
+                &lt;a class=&quot;market-btn windows-btn market-btn-dark&quot; href=&quot;#&quot;&gt;
+                  &lt;span class=&quot;mb-subtitle&quot;&gt;Download on the&lt;/span&gt;
+                  &lt;span class=&quot;mb-title&quot;&gt;Windows Store&lt;/span&gt;
+                &lt;/a&gt;
+                
+                <strong>&lt;!-- Amazon Button --&gt;</strong>
+                &lt;a class=&quot;market-btn amazon-btn market-btn-dark&quot; href=&quot;#&quot;&gt;
+                  &lt;span class=&quot;mb-subtitle&quot;&gt;Order now at&lt;/span&gt;
+                  &lt;span class=&quot;mb-title&quot;&gt;Amazon.com&lt;/span&gt;
+                &lt;/a&gt;
+
+                <strong>&lt;!-- Blackberry Store Button --&gt;</strong>
+                &lt;a class=&quot;market-btn blackberry-btn market-btn-dark&quot; href=&quot;#&quot;&gt;
+                  &lt;span class=&quot;mb-subtitle&quot;&gt;Download on the&lt;/span&gt;
+                  &lt;span class=&quot;mb-title&quot;&gt;Blackberry Store&lt;/span&gt;
+                &lt;/a&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- App Store Button</strong>
+                a(href=&quot;#&quot;).market-btn.apple-btn.market-btn-dark
+                  span.mb-subtitle Download on the
+                  span.mb-title App Store
+
+                <strong>//- Google Play Button</strong>
+                a(href=&quot;#&quot;).market-btn.google-btn.market-btn-dark
+                  span.mb-subtitle Download on the
+                  span.mb-title Google Play
+
+                <strong>//- Windows Store Button</strong>
+                a(href=&quot;#&quot;).market-btn.windows-btn.market-btn-dark
+                  span.mb-subtitle Download on the
+                  span.mb-title Windows Store
+                
+                <strong>//- Amazon Button</strong>
+                a(href=&quot;#&quot;).market-btn.amazon-btn.market-btn-dark
+                  span.mb-subtitle Order now at
+                  span.mb-title Amazon.com
+                
+                <strong>//- Blackberry Store Button</strong>
+                a(href=&quot;#&quot;).market-btn.blackberry-btn.market-btn-dark
+                  span.mb-subtitle Download on the
+                  span.mb-title Blackberry Store

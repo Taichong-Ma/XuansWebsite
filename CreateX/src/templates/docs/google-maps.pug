@@ -1,0 +1,78 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Google Maps API'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      p.mb-0 To be able to use Google Maps on your website you have to <strong>register Maps Javascript API key (Make sure to enable Geocoding API as well).</strong><br>Please follow the link below for the instructions.
+      a(href='https://developers.google.com/maps/documentation/javascript/get-api-key' class='font-weight-medium' target='_blank').d-block.mb-4 How to get API key instructions
+
+      h2.h5.pt-3 CreateX data API
+      p.font-weight-medium
+        u You can alter the map via flexible data API 
+          code data-
+          | :
+      ul.list-unstyled
+        li
+          code height="integer"
+          span  Height of the map in pixels
+        li
+          code address="string"
+          span  Address you want GM to point to
+        li
+          code zoom="integer"
+          span  The map scale 
+        li
+          code disable-controls="true/false"
+          span  Enable/disable map controls where true - disable and false - enable
+        li
+          code scrollwheel="true/false"
+          span  Enable/disable map scale using mouse scroll wheel
+        li
+          code marker="path-to-image (string)"
+          span  Paht to your map pin (marker) image preferably in PNG format with transparent background
+        li
+          code marker-title="string"
+          span  Tooltip text displayed when the user hovers over map marker
+        li
+          code styles="JSON"
+          span  Alter map visual appearance by passing custom styles in JSON format. We recommend <a href='https://snazzymaps.com/' class='font-weight-medium' target='_blank'>Snazzy Maps</a> styles collection.
+      p.font-weight-medium: u See example below:
+      ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+        li.nav-item
+          a(href='#html' class='nav-link active' data-toggle='tab' role='tab') HTML
+        li.nav-item
+          a(href='#pug' class='nav-link' data-toggle='tab' role='tab') Pug
+      .tab-content
+        div(id='html' class='tab-pane fade show active' role='tabpanel')
+          pre.text-md
+            code.
+              <strong>&lt;!-- Enable Map Controls --&gt;</strong>
+              &lt;div class=&quot;google-map&quot; data-height=&quot;300&quot; data-address=&quot;New York, USA&quot; data-zoom=&quot;10&quot; data-disable-controls=&quot;false&quot; data-scrollwheel=&quot;false&quot; data-marker=&quot;path-to-map-marker-image&quot; data-marker-title=&quot;We are here!&quot; data-styles='[{ &quot;styles in JSON format&quot; }]'&gt;&lt;/div&gt;
+        div(id='pug' class='tab-pane fade' role='tabpanel')
+          pre.text-md
+            code.
+              <strong>//- Enable Map Controls</strong>
+              .google-map(
+                data-height = &quot;300&quot;,
+                data-address = &quot;New York, USA&quot;,
+                data-zoom = &quot;10&quot;,
+                data-disable-controls = &quot;false&quot;,
+                data-scrollwheel = &quot;false&quot;,
+                data-marker = &quot;path-to-map-marker-image&quot;,
+                data-marker-title = &quot;We are here!&quot;,
+                data-styles = '[{ &quot;styles in JSON format&quot; }]'
+              )

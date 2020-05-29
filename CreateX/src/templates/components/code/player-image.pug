@@ -1,0 +1,37 @@
+// Video Player Button on Top of Image Code
+#player-image-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Video Player Button on Top of Image --&gt;</strong>
+                &lt;div class=&quot;bg-no-repeat bg-center bg-cover px-4 py-5 text-center&quot; style=&quot;background-image: url(path-to-background-image);&quot;&gt;
+                  &lt;div class=&quot;py-5&quot;&gt;
+                    &lt;a class=&quot;video-player-button my-3&quot; href=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; data-fancybox data-width=&quot;1000&quot; data-height=&quot;563&quot;&gt;
+                      &lt;i class=&quot;fe-icon-play&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;br&gt;
+                    &lt;span class=&quot;video-player-label text-white opacity-60&quot;&gt;Click me to watch video!&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Video Player Button on Top of Image</strong>
+                div(style=&quot;background-image: url(path-to-background-image);&quot;).bg-no-repeat.bg-center.bg-cover.px-4.py-5.text-center
+                  .py-5
+                    a(href=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&title=0&byline=0&portrait=0&quot; data-fancybox data-width=&quot;1000&quot; data-height=&quot;563&quot;).video-player-button.my-3: i.fe-icon-play
+                    br
+                    span.video-player-label.text-white.opacity-60 Click me to watch video!

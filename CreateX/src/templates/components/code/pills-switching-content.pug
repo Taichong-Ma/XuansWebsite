@@ -1,0 +1,56 @@
+// Pills Switching Content Code
+#pills-switching-content-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Switching Content --&gt;</strong>
+                &lt;ul class=&quot;nav nav-pills&quot; role=&quot;tablist&quot;&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;#home&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Home&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#profile&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Profile&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;#settings&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class=&quot;tab-content pt-2&quot;&gt;
+                  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p&gt;Raw denim you probably haven't heard of them...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p&gt;Food truck fixie locavore, accusamus...&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;tab-pane fade&quot; id=&quot;settings&quot; role=&quot;tabpanel&quot;&gt;
+                    &lt;p&gt;Etsy mixtape wayfarers, ethical wes anderson...&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Switching Content</strong>
+                ul(class=&quot;nav nav-pills&quot; role=&quot;tablist&quot;)
+                  li.nav-item: a(href=&quot;#home&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Home
+                  li.nav-item: a(href=&quot;#profile&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Profile
+                  li.nav-item: a(href=&quot;#settings&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;) Settings
+                .tab-content.pt-2
+                  div(id=&quot;home&quot; class=&quot;tab-pane fade show active&quot; role=&quot;tabpanel&quot;)
+                    p Raw denim you probably haven't heard of them...
+                  div(id=&quot;profile&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p Food truck fixie locavore, accusamus...
+                  div(id=&quot;settings&quot; class=&quot;tab-pane fade&quot; role=&quot;tabpanel&quot;)
+                    p Etsy mixtape wayfarers, ethical wes anderson...

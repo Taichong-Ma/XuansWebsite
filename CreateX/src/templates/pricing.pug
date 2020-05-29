@@ -1,0 +1,215 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Pricing'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/pages/pricing-hero-bg.jpg);').bg-center.bg-no-repeat.bg-cover.py-5
+    .container.py-4.py-sm-5
+      h1.text-center.text-white.text-shadow.pt-3 <span class='d-block h2 text-white'>Have an idea?</span>We offer solution.
+      p.lead.text-center.text-white.text-shadow.pt-2.pb-5 Sign up - first <strong>3 months</strong> trial for <strong>FREE</strong>!
+  
+  // Sign Up Form
+  section.container.mb-5(style='margin-top: -70px;')
+    .wizard
+      form.wizard-body.pb-4
+        .row.pt-2
+          .col-lg-3.col-sm-6
+            .form-group
+              label(for='signup-name').sr-only Your Name
+              input(type='text' id='signup-name' placeholder='Your Name').form-control
+          .col-lg-3.col-sm-6
+            .form-group
+              label(for='signup-email').sr-only Your Name
+              input(type='email' id='signup-email' placeholder='Email Address').form-control
+          .col-lg-3.col-sm-6
+            .form-group
+              label(for='signup-password').sr-only Create Password
+              input(type='password' id='signup-password' placeholder='Create Password').form-control
+          .col-lg-3.col-sm-6
+            .form-group
+              button(type='submit').btn.btn-style-5.btn-gradient.btn-block Get Started for Free
+  
+  // Pricing Plans
+  section.container.pt-sm-2
+    h2.h3.text-center
+      | <span class='font-weight-normal'>Or choose the</span> right plan <span class='font-weight-normal'>for you</span>
+    p.text-muted.text-center.pb-3 <span class='font-weight-medium text-danger'>*</span> Note that you save 20% on Yearly subscription
+    .pricing-plans.pb-5
+      ul.nav.nav-tabs.nav-tabs-style-3.pricing-tabs.justify-content-center
+        li.nav-item
+          a(href='#' class='nav-link active' data-toggle='price' data-period='monthly') Monthly
+        li.nav-item
+          a(href='#' class='nav-link' data-toggle='price' data-period='yearly')
+            | Yearly&nbsp;
+            sup -20%
+      .row
+        // Pricing Plan
+        .col-lg-4.col-sm-6.mb-30.pb-3
+          .pricing-card
+            span.badge.badge-success Best Offer
+            .pricing-card-body
+              img(src='img/pricing/01.png' alt='Starter Plan').pricing-card-image
+              h5 Starter
+              .pricing-card-price.monthly.active <span>$</span>40
+              .pricing-card-price.yearly <span>$</span>32
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>4GB</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Community support
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>5 projects</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>2GB</strong>
+            .pricing-card-button
+              a(href='#').btn.btn-style-5.btn-primary Buy Now
+        // Pricing Plan
+        .col-lg-4.col-sm-6.mb-30.pb-3
+          .pricing-card.border-primary
+            span.badge.badge-warning Most Popular
+            .pricing-card-body
+              img(src='img/pricing/02.png' alt='Team Plan').pricing-card-image
+              h5 Team
+              .pricing-card-price.monthly.active <span>$</span>70
+              .pricing-card-price.yearly <span>$</span>56
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>16GB</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Premium support 24/7
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>10 projects</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>5GB</strong>
+            .pricing-card-button
+              a(href='#').btn.btn-style-5.btn-gradient Buy Now
+        // Pricing Plan
+        .col-lg-4.col-sm-6.mb-30.pb-3
+          .pricing-card
+            span.badge.badge-danger Rich Features
+            .pricing-card-body
+              img(src='img/pricing/03.png' alt='Premium Plan').pricing-card-image
+              h5 Premium
+              .pricing-card-price.monthly.active <span>$</span>100
+              .pricing-card-price.yearly <span>$</span>80
+              span.text-muted per month
+              ul.list-icon.d-table.mx-auto.pt-4.text-left
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Storage space: <strong>Unlimited</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Premium support 24/7
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Expert reviews: <strong>Unlimited</strong>
+                li
+                  i.fe-icon-check-circle.text-muted
+                  | Traffic: <strong>Unlimited</strong>
+            .pricing-card-button
+              a(href='#').btn.btn-style-5.btn-primary Buy Now
+  
+  // Clients
+  section.py-5.bg-secondary
+    .container
+      h2.h3.block-title.text-center.mt-2.mb-5
+        | <span class='font-weight-normal'>Our </span>clients
+        small Well respected people and companies from around the world
+      .row
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/01.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/02.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/03.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/04.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/07.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/05.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/08.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/09.png' width='165' alt='Partner').d-block.mx-auto
+  
+  // Testimonials
+  section.py-5
+    .container.py-1
+      h2.h3.block-title.text-center.mt-2.mb-5
+        | <span class='font-weight-normal'>And here </span>what they say
+      .owl-carousel.testimonials-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": -15, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":2},"1200":{"items":3}} }')
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Barbara Palson
+                cite Graphic Designer
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Hinata Nakamura
+                cite Financial Director
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Michael Davis
+                cite Co-Founder, CEO
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/04.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Sophia Johnson
+                cite Marketing Manager
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/05.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Christopher Lee
+                cite Marketing Manager
+
+  //- footer-default.pug template
+  include partials/footer-default

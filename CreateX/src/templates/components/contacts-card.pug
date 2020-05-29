@@ -1,0 +1,250 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Contacts Card'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isGoogleMap = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Contacts Card Default Code Modal
+  include code/contacts-card-default
+
+  //- Contacts Card Image Code Modal
+  include code/contacts-card-image
+
+  //- Contacts Card Map Code Modal
+  include code/contacts-card-map
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4.mb-2
+      
+      // Default
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Default
+        a(href='#contacts-card-default-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .card-body
+              h6 Orlando, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    a(href='#') 514 S. Magnolia St. Orlando, FL 32806, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+178632256040') +1 (786) 322 560 40
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:orlando@example.com') orlando@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .card-body
+              h6 Chicago, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin.icon-style-2
+                    span Find us
+                    a(href='#') 769, Industrial Dr, West Chicago, IL 60185, USA
+                  li
+                    i.fe-icon-phone.icon-style-2
+                    span Call us
+                    a(href='tel:+184725276533') +1 (847) 252 765 33
+                  li
+                    i.fe-icon-mail.icon-style-2
+                    span Write us
+                    a(href='mailto:chicago@example.com') chicago@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .card-body
+              h6 New York, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    a(href='#') 396 Lillian Blvd, Holbrook, NY 11741, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+1212477690000') +1 (212) 477 690 000
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:newyork@example.com') newyork@example.com
+      
+      // With image
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With image
+        a(href='#contacts-card-image-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            +image('img/contacts/orlando.jpg', 'Orlando, USA')
+            .card-body
+              h6 Orlando, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    a(href='#') 514 S. Magnolia St. Orlando, FL 32806, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+178632256040') +1 (786) 322 560 40
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:orlando@example.com') orlando@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            +image('img/contacts/chicago.jpg', 'Chicago, USA')
+            .card-body
+              h6 Chicago, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin.icon-style-2
+                    span Find us
+                    a(href='#') 769, Industrial Dr, West Chicago, IL 60185, USA
+                  li
+                    i.fe-icon-phone.icon-style-2
+                    span Call us
+                    a(href='tel:+184725276533') +1 (847) 252 765 33
+                  li
+                    i.fe-icon-mail.icon-style-2
+                    span Write us
+                    a(href='mailto:chicago@example.com') chicago@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            +image('img/contacts/newyork.jpg', 'New York, USA')
+            .card-body
+              h6 New York, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    a(href='#') 396 Lillian Blvd, Holbrook, NY 11741, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+1212477690000') +1 (212) 477 690 000
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:newyork@example.com') newyork@example.com
+      
+      // With Google map
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 With Google map
+        a(href='#contacts-card-map-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.pb-4
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .google-map(
+              data-height = '210',
+              data-address = '514 S. Magnolia St. Orlando, FL 32806, USA',
+              data-zoom = '15',
+              data-disable-controls = 'true',
+              data-scrollwheel = 'true',
+              data-marker = '../img/map-marker.png',
+              data-marker-title = 'We are here!'
+            )
+            .card-body
+              h6 Orlando, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    | 514 S. Magnolia St. Orlando, FL 32806, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+178632256040') +1 (786) 322 560 40
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:orlando@example.com') orlando@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .google-map(
+              data-height = '210',
+              data-address = '769, Industrial Dr, West Chicago, IL 60185, USA',
+              data-zoom = '12',
+              data-disable-controls = 'true',
+              data-scrollwheel = 'true',
+              data-marker = '../img/map-marker.png',
+              data-marker-title = 'We are here!'
+            )
+            .card-body
+              h6 Chicago, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin.icon-style-2
+                    span Find us
+                    | 769, Industrial Dr, West Chicago, IL 60185, USA
+                  li
+                    i.fe-icon-phone.icon-style-2
+                    span Call us
+                    a(href='tel:+184725276533') +1 (847) 252 765 33
+                  li
+                    i.fe-icon-mail.icon-style-2
+                    span Write us
+                    a(href='mailto:chicago@example.com') chicago@example.com
+        .col-lg-4.col-sm-6.mb-30.pb-4
+          .card
+            .google-map(
+              data-height = '210',
+              data-address = '396 Lillian Blvd, Holbrook, NY 11741, USA',
+              data-zoom = '11',
+              data-disable-controls = 'true',
+              data-scrollwheel = 'true',
+              data-marker = '../img/map-marker.png',
+              data-marker-title = 'We are here!'
+            )
+            .card-body
+              h6 New York, USA
+              .widget.widget-contacts
+                ul
+                  li
+                    i.fe-icon-map-pin
+                    span Find us
+                    | 396 Lillian Blvd, Holbrook, NY 11741, USA
+                  li
+                    i.fe-icon-phone
+                    span Call us
+                    a(href='tel:+1212477690000') +1 (212) 477 690 000
+                  li
+                    i.fe-icon-mail
+                    span Write us
+                    a(href='mailto:newyork@example.com') newyork@example.com

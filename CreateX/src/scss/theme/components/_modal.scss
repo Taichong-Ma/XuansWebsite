@@ -1,0 +1,21 @@
+//
+// Modal
+// --------------------------------------------------
+
+.modal-header {
+  position: relative;
+  .close {
+    position: absolute;
+    top: .625rem;
+    right: .5rem;
+    margin: 0;
+    padding: 0 .3rem;
+  }
+}
+.modal-title { font-size: $h5-font-size; }
+.modal-content {
+  box-shadow: $modal-content-box-shadow-xs;
+}
+@include media-breakpoint-up(sm) {
+  box-shadow: $modal-content-box-shadow-sm-up;
+}

@@ -1,0 +1,326 @@
+//
+// Team
+// --------------------------------------------------
+
+// General for all styles
+.team-card-style-1,
+.team-card-style-3,
+.team-card-style-5 {
+  position: relative;
+  max-width: 360px;
+  text-align: center;
+}
+.team-contact-link {
+  display: block;
+  margin-top: ($spacer / 4);
+  transition: all .25s;
+  font: {
+    size: $font-size-sm;
+    weight: 700;
+  }
+  text-decoration: none;
+  > i {
+    display: inline-block;
+    font-size: 1.1em;
+    vertical-align: middle;
+  }
+}
+.team-card-style-1,
+.team-card-style-3,
+.team-card-style-4 {
+  .team-position {
+    display: block;
+    margin-bottom: ($spacer / 2);
+    color: $gray-500;
+    font: {
+      size: $font-size-sm;
+      weight: 700;
+    }
+    opacity: .6;
+  }
+}
+.team-card-style-3,
+.team-card-style-4,
+.team-card-style-5 {
+  .team-name {
+    margin-bottom: $spacer;
+    font: {
+      size: $font-size-xl;
+      weight: 600;
+    }
+  }
+}
+.team-thumb > img {
+  display: block;
+  width: 100%;
+}
+
+// Style 1 (Specific styles)
+.team-card-style-1 {
+  padding-bottom: ($spacer * 2.25);
+  > * {
+    position: relative;
+    z-index: 5;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all .3s .12s;
+    @extend .bg-gradient-vertical;
+    content: '';
+    opacity: 0;
+  }
+  .team-card-inner {
+    margin-bottom: $spacer;
+    padding: {
+      top: ($spacer * 3);
+      right: $spacer;
+      bottom: ($spacer * 1.25);
+      left: $spacer;
+    }
+    background-color: $white;
+    box-shadow: $box-shadow;
+  }
+  .team-thumb {
+    width: 108px;
+    height: 108px;
+    margin: auto;
+    margin-bottom: $spacer;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .team-social-bar {
+    margin: {
+      top: $spacer;
+      bottom: ($spacer / 2);
+    }
+    transform: scale(.8);
+  }
+  .team-contact-link {
+    transition-delay: .12s;
+    color: $gray-500;
+    opacity: .6;
+    &:hover {
+      color: $gray-500;
+      opacity: 1;
+    }
+  }
+  .team-card-inner,
+  .team-thumb,
+  .team-social-bar { transition: all .3s .12s; }
+  .team-position,
+  .team-name { transition: color .3s .12s; }
+  .team-name {
+    margin-bottom: 0;
+    font: {
+      size: ($font-size-base * 1.25);
+      weight: bold;
+    }
+  }
+}
+.no-touchevents .team-card-style-1:hover {
+  &::before {
+    height: 100%;
+    box-shadow: $box-shadow;
+    opacity: 1;
+  }
+  .team-card-inner {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .team-thumb { transform: scale(1.1); }
+  .team-social-bar { transform: scale(1); }
+  .team-contact-link,
+  .team-position,
+  .team-name { color: $white; }
+  .team-contact-link { opacity: 1; }
+}
+
+// Style 2 (Specific styles)
+.team-card-style-2 {
+  position: relative;
+  > img {
+    display: block;
+    width: 100%;
+  }
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .35s .12s;
+    content: '';
+    z-index: 1;
+  }
+  &::before { background-color: rgba($black, .25); }
+  &::after {
+    @extend .bg-gradient-vertical;
+    opacity: 0;
+  }
+  .team-card-inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 1.25rem;
+    transform: translateY(-45%);
+    transition: all .35s .12s;
+    text-align: center;
+    opacity: 0;
+    z-index: 5;
+  }
+  .team-name,
+  .team-position,
+  .team-contact-link { color: $white; }
+  .team-name {
+    margin-bottom: ($spacer / 3);
+    font: {
+      size: ($font-size-base * 1.25);
+      weight: bold;
+    }
+  }
+  .team-position {
+    display: block;
+    margin-bottom: $spacer;
+    font: {
+      size: $font-size-sm;
+      weight: 600;
+    }
+    text-transform: uppercase;
+  }
+  .team-social-bar {
+    margin: {
+      top: $spacer;
+      bottom: ($spacer / 2);
+    }
+  }
+  .team-contact-link { opacity: 1; }
+  &:hover {
+    &::before { opacity: 0; }
+    &::after { opacity: .7; }
+    .team-card-inner {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+}
+
+// Style 3, 4 (Specific styles)
+.team-card-style-3,
+.team-card-style-4 {
+  position: relative;
+  padding: {
+    top: ($spacer * 1.875);
+    right: ($spacer * 1.25);
+    bottom: ($spacer * 2.375);
+    left: ($spacer * 1.25);
+  }
+  transition: all .35s;
+  border: 1px solid $border-color;
+  .team-thumb {
+    width: 90px;
+    margin: auto;
+    margin-bottom: ($spacer * 1.0625);
+  }
+  .team-position { margin-bottom: 0; }
+  .team-contact-link {
+    color: $gray-700;
+    font-weight: 600;
+    > i { color: $gray-500 !important; }
+    &:hover { color: rgba($gray-700, .6); }
+  }
+  .team-social-bar-wrap {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    > .team-social-bar {
+      display: table;
+      margin: auto;
+      background-color: $white;
+      box-shadow: $social-btn-box-shadow;
+    }
+  }
+  &:hover {
+    border-color: transparent;
+    box-shadow: $card-box-shadow;
+  }
+}
+.team-card-style-4 {
+  padding: {
+    top: 1.5rem;
+    bottom: 1.875rem;
+    left: 1.5rem;
+  }
+  .team-name { margin-bottom: ($spacer * .3125); }
+  .team-social-bar-wrap {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: ($spacer * 1.25);
+    > .team-social-bar { margin: 0; }
+  }
+}
+
+// Style 5
+.team-card-style-5 {
+  padding-bottom: 1.5rem;
+  transition: box-shadow .35s .12s;
+  .team-thumb {
+    position: relative;
+    margin-bottom: ($spacer * 1.5);
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity .35s .12s;
+      background-color: $primary;
+      content: '';
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  .team-card-inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacer;
+    padding-bottom: 1.625rem;
+    transform: translateY(10px);
+    transition: all .35s .12s;
+    text-align: center;
+    opacity: 0;
+    z-index: 5;
+  }
+  .team-contact-link,
+  .team-contact-link:hover { color: $white; }
+  .sb-style-6.sb-light-skin,
+  .sb-style-7.sb-light-skin { border-color: rgba($white, .35); }
+  .team-name {
+    margin-bottom: ($spacer * .375);
+    padding: 0 $spacer;
+  }
+  .team-position {
+    display: block;
+    padding: 0 $spacer;
+    transition: color .35s .12s;
+  }
+  &:hover {
+    box-shadow: $card-box-shadow;
+    .team-thumb::after { opacity: .7; }
+    .team-card-inner {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .team-position { color: $primary; }
+  }
+}

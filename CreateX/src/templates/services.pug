@@ -1,0 +1,204 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Services Landing'
+
+//- Page Content
+block content
+
+  // Hero
+  section.bg-parallax.py-5
+    .bg-parallax-img(data-parallax='{"y" : 100}')
+      +image('img/pages/about-hero-bg.png', 'Parallax Background')
+    div(style='max-width: 800px;').bg-parallax-content.px-3.py-5.mx-auto.mt-4.mb-4.text-center
+      h1.pt-2 Our Services
+      p.text-xl.opacity-80.pb-3 We provide quality services in Web Design &amp; Development since 2007.
+  
+  // Statistics
+  section.bg-secondary.container-fluid.mb-5.border-top
+    .row
+      .col-md-3.col-sm-6.border-right.py-5.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='350')
+          h5.animated-digits-digit
+            span 0
+            | +
+          p.animated-digits-text
+            | Totally satisfied clients
+      .col-md-3.col-sm-6.py-5.border-right.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='92')
+          h5.animated-digits-digit
+            span 0
+            | %
+          p.animated-digits-text
+            | Positive feedback
+      .col-md-3.col-sm-6.py-5.border-right.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='1446')
+          h5.animated-digits-digit
+            span 0
+          p.animated-digits-text
+            | Completed projects
+      .col-md-3.col-sm-6.py-5.border-bottom
+        .animated-digits.mx-auto.text-center(data-number='28')
+          h5.animated-digits-digit
+            | $
+            span 0
+          p.animated-digits-text
+            | Average cost per hour
+  
+  // Services
+  section.container.pt-3.mb-3
+    h2.h3.block-title.text-center
+      | What we do
+      small Whatever we do, we do with your end user in mind 
+    .row.pt-5.mt-30
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/01.png' alt='UX Prototyping').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 UX Prototyping
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/02.png' alt='Web & UI Design').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Web &amp; UI Design
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/03.png' alt='Front-End Development').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Front-End Development
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/04.png' alt='Back-End Development').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Back-End Development
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/05.png' alt='Usability Testing').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 Usability Testing
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+      .col-lg-4.col-sm-6.mb-30.pb-5
+        a(href='services-single.html').card
+          div(style='width: 90px; height: 90px; margin-top: -45px;').box-shadow.bg-white.rounded-circle.mx-auto
+            img(src='img/services/06.png' alt='SEO Optimization').d-block.mx-auto
+          .card-body.text-center
+            h3.card-title.pt-1 SEO Optimization
+            p.card-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            span.text-sm.text-uppercase.font-weight-bold
+              | Learn More&nbsp;
+              i.fe-icon-arrow-right
+  
+  // Clients
+  section.py-5.bg-secondary
+    .container
+      h2.h3.block-title.text-center.mt-2.mb-5
+        | Our clients
+        small Well respected people and companies from around the world
+      .row
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/01.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/02.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/03.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/04.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/07.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/05.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/08.png' width='165' alt='Partner').d-block.mx-auto
+        .col-6.col-md-3
+          a(href='#').d-block.bg-white.box-shadow.py-5.mb-30
+            img(src='img/partners/09.png' width='165' alt='Partner').d-block.mx-auto
+  
+  // Testimonials
+  section.py-5
+    .container.py-1
+      h2.h3.block-title.text-center.mt-2.mb-5
+        | And here what they say
+      .owl-carousel.testimonials-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": -15, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":2},"1200":{"items":3}} }')
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/01.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Barbara Palson
+                cite Graphic Designer
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/02.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Hinata Nakamura
+                cite Financial Director
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/03.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Michael Davis
+                cite Co-Founder, CEO
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/04.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Sophia Johnson
+                cite Marketing Manager
+        .blockquote.testimonial
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          footer.testimonial-footer
+            .testimonial-avatar
+              +image('img/testimonials/05.jpg', 'Testimonial Author Avatar')
+            .d-table-cell.align-middle.pl-2
+              .blockquote-footer
+                | Christopher Lee
+                cite Marketing Manager
+
+  //- footer-default.pug template
+  include partials/footer-default

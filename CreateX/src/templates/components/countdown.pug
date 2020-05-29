@@ -1,0 +1,95 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Countdown'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Countdown Base Code Modal
+  include code/countdown-base
+
+  //- Countdown Style 1 Code Modal
+  include code/countdown-style1
+
+  //- Countdown Style 2 Code Modal
+  include code/countdown-style2
+
+  //- Countdown Style 3 Code Modal
+  include code/countdown-style3
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // Base styling
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Base styling
+        a(href='#countdown-base-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        .col-md-6
+          .countdown.h3(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+          .countdown.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+          .countdown.h5(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+          .countdown.h6(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+        .col-md-6
+          .bg-dark.px-4.pt-4.pb-2
+            .countdown.countdown-light-skin.h3(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+            .countdown.countdown-light-skin.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+            .countdown.countdown-light-skin.h5(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}').mb-3
+            .countdown.countdown-light-skin.h6(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}')
+    
+      // Style 1
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 1
+        a(href='#countdown-style1-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        .col-md-6
+          .countdown.countdown-style-1.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}').mb-3
+        .col-md-6
+          .bg-dark.px-4.pt-4.pb-1
+            .countdown.countdown-style-1.countdown-light-skin.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}')
+    
+      // Style 2
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 2
+        a(href='#countdown-style2-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        .col-md-6
+          .countdown.countdown-style-2.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}').mb-3
+        .col-md-6
+          .bg-dark.px-4.pt-4.pb-1
+            .countdown.countdown-style-2.countdown-light-skin.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}')
+      
+      // Style 3
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Style 3
+        a(href='#countdown-style3-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5.mb-2
+        .col-md-6
+          .countdown.countdown-style-3.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}').mb-3
+        .col-md-6
+          .bg-dark.px-4.pt-4.pb-1
+            .countdown.countdown-style-3.countdown-light-skin.h4(data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Minutes", "label-second": "Seconds"}')

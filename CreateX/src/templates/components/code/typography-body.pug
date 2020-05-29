@@ -1,0 +1,35 @@
+// Typography: Body Copy Code
+#typography-body-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Typography: Text lead, xl, lg, md, sm, xs --&gt;</strong>
+                &lt;p class=&quot;lead&quot;&gt;&lt;strong&gt;Lead text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+                &lt;p class=&quot;text-xl&quot;&gt;&lt;strong&gt;Extra large text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+                &lt;p class=&quot;text-lg&quot;&gt;&lt;strong&gt;Large text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+                &lt;p class=&quot;text-md&quot;&gt;&lt;strong&gt;Normal text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;&lt;strong&gt;Small text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+                &lt;p class=&quot;text-xs&quot;&gt;&lt;strong&gt;Extra small text.&lt;/strong&gt; Lorem ipsum dolor...&lt;/p&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Typography: Text lead, xl, lg, md, sm, xs</strong>
+                p.lead &lt;strong&gt;Lead text.&lt;/strong&gt; Lorem ipsum dolor...
+                p.text-xl &lt;strong&gt;Extra large text.&lt;/strong&gt; Lorem ipsum dolor...
+                p.text-lg &lt;strong&gt;Large text.&lt;/strong&gt; Lorem ipsum dolor...
+                p.text-md &lt;strong&gt;Normal text.&lt;/strong&gt; Lorem ipsum dolor...
+                p.text-sm &lt;strong&gt;Small text.&lt;/strong&gt; Lorem ipsum dolor...
+                p.text-xs &lt;strong&gt;Extra small text.&lt;/strong&gt; Lorem ipsum dolor...

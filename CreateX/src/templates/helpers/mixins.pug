@@ -1,0 +1,139 @@
+//- Top Level Menu Item
+mixin menu-link(url, title)
+  - var linkattr = isNestedFile ? {'href': '../' + url} : {'href': url}
+  a()&attributes(linkattr)= title
+
+//- Sub Menu Item
+mixin submenu-item(url, title, extraClass)
+  - var linkAttr = isNestedFile ? {'href': '../' + url} : {'href': url}
+  - var activeClass = (menuTitle === title) ? 'active' : ''
+  li()&attributes({'class': [extraClass, activeClass]})
+    a()&attributes(linkAttr)= title
+
+//- Sub Menu Item Components    
+mixin submenu-component-item(url, title)
+  - var linkAttr = isNestedFile ? {'href': '../components/' + url} : {'href': 'components/' + url}
+  - var activeClass = (pageTitle === title) ? 'active' : ''
+  li()&attributes({'class': activeClass})
+    a()&attributes(linkAttr)= title
+
+//- Mega Menu Links
+mixin megamenu-links(items)
+  ul.sub-menu
+    each item in items
+      - var linkAttr = isNestedFile ? {'href': '../components/' + item.link} : {'href': 'components/' +  item.link}
+      - var activeClass = (pageTitle === item.title) ? 'active' : ''
+      li()&attributes({'class': activeClass})
+        a()&attributes(linkAttr)= item.title
+
+//- Image
+mixin image(link, alt)
+  - var imgAttrs = isNestedFile ? {'src': '../' + link, 'alt': alt} : {'src': link, 'alt': alt}
+  img()&attributes(imgAttrs)
+
+//- Rating Stars
+mixin rating-stars(number)
+  .rating-stars
+    case number
+      when 0
+        - break
+      when 1
+        i.fe-icon-star.active
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star
+        - break
+      when 2
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star
+        - break
+      when 3
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star
+        i.fe-icon-star
+        - break
+      when 4
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star
+        - break
+      when 5
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        i.fe-icon-star.active
+        - break
+      default
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star
+        i.fe-icon-star      
+
+//- Social Buttons
+mixin social-buttons(socials, shape, skin)
+  each social in socials
+    - var linkAttrs = {'href': social.link, 'class': ['social-button',  'sb-' + social.icon, 'shape-' + shape, 'sb-' + skin], 'target': '_blank'}
+    a()&attributes(linkAttrs)
+      i()&attributes({'class': ['socicon-' + social.icon]})
+
+//- Components Menu
+mixin components-menu(items, isActive)
+  nav#components-list.list-group.list-group-flush
+    each item in items
+      - var activeClass = (isActive === item.title) ? 'active' : ''
+      - var linkAttrs = {'href': item.link, 'data-filter-item': item.data, 'class': ['list-group-item', 'list-group-item-action', activeClass]}
+      a()&attributes(linkAttrs)= item.title
+
+//- Page Title
+mixin page-title
+  - var pageTitleBgLink = isNestedFile ? '../' + pageTitleBgImage : pageTitleBgImage
+  - var pageTitleBg = pageTitleBgImage ? {'style': 'background-image: url(' + pageTitleBgLink + ');'} : ''
+  - var pageTitleBgCoverMode = pageTitleBgCover ? 'bg-cover' : ''
+  - var pageTitleBgFixedMode = pageTitleBgFixed ? 'bg-fixed' : ''
+  - var pageTitleLg = pageTitleLarge ? 'page-title-lg' : ''
+  - var pageTitleIndL = pageTitleIndentLeft ? 'page-title-indent-left' : ''
+  - var pageTitleIndR = pageTitleIndentRight ? 'page-title-indent-right' : ''
+  - var pageTitleClass = ['page-title', 'd-flex', pageTitleLg, pageTitleBgCoverMode, pageTitleBgFixedMode, pageTitleIndL, pageTitleIndR]
+  - var containerAttrs = {'class': ['container', 'text-' + pageTitleXY.x, 'align-self-' + pageTitleXY.y]}
+  if pageTitleInverse
+    div(class=pageTitleClass, class='bg-dark', aria-label='Page title')&attributes(pageTitleBg)
+      div()&attributes(containerAttrs)
+        if breadcrumbs.length
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              each breadcrumb in breadcrumbs
+                if breadcrumb.link
+                  li.breadcrumb-item
+                    - var linkatts = {'href': breadcrumb.link}
+                    a()&attributes(linkatts)= breadcrumb.title
+                else
+                  li.breadcrumb-item.active(aria-current='page')= breadcrumb.title
+        h1.page-title-heading.text-white !{pageTitle}
+        if pageSubTitle.length
+          .page-title-subheading.text-white !{pageSubTitle}
+  else
+    div(class=pageTitleClass, aria-label='Page title')&attributes(pageTitleBg)
+      div()&attributes(containerAttrs)
+        if breadcrumbs.length
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              each breadcrumb in breadcrumbs
+                if breadcrumb.link
+                  li.breadcrumb-item
+                    - var linkatts = {'href': breadcrumb.link}
+                    a()&attributes(linkatts)= breadcrumb.title
+                else
+                  li.breadcrumb-item.active(aria-current='page')= breadcrumb.title
+        h1.page-title-heading !{pageTitle}
+        if pageSubTitle.length
+          .page-title-subheading !{pageSubTitle}

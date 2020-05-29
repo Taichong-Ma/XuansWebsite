@@ -1,0 +1,180 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Utilities'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Utilities: Text Colors Code Modal
+  include code/utilities-text-colors
+
+  //- Utilities: Background Colors Code Modal
+  include code/utilities-backgrounds
+
+  //- Utilities: Background Faded Colors Code Modal
+  include code/utilities-backgrounds-faded
+
+  //- Utilities: Text Opacity Code Modal
+  include code/utilities-text-opacity
+
+  //- Utilities: Alignment Code Modal
+  include code/utilities-alignment
+
+  //- Utilities: Borders Code Modal
+  include code/utilities-borders
+
+  //- Utilities: Border Colors Code Modal
+  include code/utilities-border-colors
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-30
+      .row
+        // Text colors
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Text colors
+            a(href='#utilities-text-colors-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          ul.list-unstyled.text-lg
+            li.text-primary <strong>Primary.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-accent <strong>Accent.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-info <strong>Info.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-success <strong>Success.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-warning <strong>Warning.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-danger <strong>Danger.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-dark <strong>Dark.</strong> Lorem ipsum dolor sit amet consectetur.
+            li <strong>Body.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-black-50 <strong>Black-50.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-muted <strong>Muted.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-inline-block.px-3.py-2.bg-dark <strong>White.</strong> Lorem ipsum dolor sit amet consectetur.
+        // Conextual backgrounds
+        .col-md-6.pb-5
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Background colors
+            a(href='#utilities-backgrounds-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4
+          ul.list-unstyled.text-lg
+            li.text-white.d-block.px-3.py-2.bg-primary <strong>Primary BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-accent <strong>Accent BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-info <strong>Info BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-success <strong>Success BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-warning <strong>Warning BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-danger <strong>Danger BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.text-white.d-block.px-3.py-2.bg-dark <strong>Dark BG.</strong> Lorem ipsum dolor sit amet consectetur.
+            li.d-block.px-3.py-2.bg-secondary <strong>Secondary BG.</strong> Lorem ipsum dolor sit amet consectetur.
+      // Background faded colors
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Background faded colors
+        a(href='#utilities-backgrounds-faded-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.text-lg.pb-5
+        .col-sm-3
+          p.text-primary.p-3.bg-primary-faded.mb-30 .bg-primary-faded
+        .col-sm-3
+          p.text-accent.p-3.bg-accent-faded.mb-30 .bg-accent-faded
+        .col-sm-3
+          p.text-info.p-3.bg-info-faded.mb-30 .bg-info-faded
+        .col-sm-3
+          p.text-success.p-3.bg-success-faded.mb-30 .bg-success-faded
+        .col-sm-3
+          p.text-warning.p-3.bg-warning-faded.mb-30 .bg-warning-faded
+        .col-sm-3
+          p.text-danger.p-3.bg-danger-faded.mb-30 .bg-danger-faded
+        .col-sm-3
+          p.text-dark.p-3.bg-dark-faded.mb-30 .bg-dark-faded
+      // Text opacity
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Text opacity
+        a(href='#utilities-text-opacity-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.text-lg.pb-5
+        .col-md-2.col-sm-4
+          p.opacity-25 <strong>Opacity 25%</strong>
+        .col-md-2.col-sm-4
+          p.opacity-50 <strong>Opacity 50%</strong>
+        .col-md-2.col-sm-4
+          p.opacity-60 <strong>Opacity 60%</strong>
+        .col-md-2.col-sm-4
+          p.opacity-70 <strong>Opacity 70%</strong>
+        .col-md-2.col-sm-4
+          p.opacity-80 <strong>Opacity 80%</strong>
+        .col-md-2.col-sm-4
+          p.opacity-90 <strong>Opacity 90%</strong>
+      // Alignment
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Alignment
+        a(href='#utilities-alignment-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      .row.text-lg.pb-5
+        .col-sm-4.text-left
+          p.d-inline-block.p-3.border.bg-gray Left aligned element
+        .col-sm-4.text-center
+          p.d-inline-block.p-3.border.bg-gray Center aligned element
+        .col-sm-4.text-right
+          p.d-inline-block.p-3.border.bg-gray Right aligned element
+      // Text utilities
+      h4 Text utilities &nbsp;
+      hr.pb-4
+      .row.pb-5
+        .col-sm-6
+          p(style='width: 120px').text-nowrap.p-2.border.bg-gray This text should overflow the parent. Apply class <code>.text-overflow</code>.
+          p <span class='text-lowercase text-lg'>Lowercased Text.</span> Apply class <code>.text-lowercase</code>.
+          p <span class='text-uppercase text-lg'>Uppercased Text.</span> Apply class <code>.text-uppercase</code>.
+          p <span class='text-capitalize text-lg'>CapiTaliZed text.</span> Apply class <code>.text-capitalize</code>.
+        .col-sm-6
+          p
+            span(style='max-width: 150px;').d-inline-block.align-middle.text-truncate.text-lg Praeterea iter est quasdam res quas ex communi.
+            | Apply class <code>.text-truncate</code>.
+          p <span class='font-weight-bold text-lg'>Bold text.</span> Apply class <code>.font-weight-bold</code>.
+          p <span class='font-weight-normal text-lg'>Normal text.</span> Apply class <code>.font-weight-normal</code>.
+          p <span class='font-italic text-lg'>Italic text.</span> Apply class <code>.font-italic</code>.
+      // Borders
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Borders
+          a(href='#utilities-borders-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4
+        div(style='width: 130px; height: 130px').d-inline-block.bg-gray.border.border-dark.mr-3.mb-3
+        div(style='width: 130px; height: 130px').d-inline-block.bg-gray.border-top.border-dark.mr-3.mb-3
+        div(style='width: 130px; height: 130px').d-inline-block.bg-gray.border-right.border-dark.mr-3.mb-3
+        div(style='width: 130px; height: 130px').d-inline-block.bg-gray.border-bottom.border-dark.mr-3.mb-3
+        div(style='width: 130px; height: 130px').d-inline-block.bg-gray.border-left.border-dark.mr-3.mb-3
+      // Border colors
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Border colors
+        a(href='#utilities-border-colors-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-primary.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-accent.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-info.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-success.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-warning.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-danger.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-dark.mr-3.mb-3
+      div(style='width: 120px; height: 120px').d-inline-block.bg-gray.border.border-secondary.mr-3.mb-3

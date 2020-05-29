@@ -1,0 +1,66 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Pagination'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var isModalExample = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Pagination Code Modal
+  include code/pagination-default
+
+  //- Entry Navigation Code Modal
+  include code/pagination-entry-navigation
+
+  //- Load More Button Code Modal
+  include code/pagination-load-more
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-3
+
+      // Pagination
+      .pb-5.mb-3
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Pagination
+          a(href='#pagination-default-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        //- pagination.pug template
+        include ../partials/pagination.pug
+
+      // Entry navigation
+      .pb-5.mb-3
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Entry navigation
+          a(href='#pagination-entry-navigation-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        //- entry-navigation-blog.pug template
+        include ../partials/entry-navigation-blog.pug
+
+      // Load more button
+      .pb-5
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Load more button
+          a(href='#pagination-load-more-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-2
+        .text-center
+          a(href='#').btn.btn-style-6.btn-primary
+            i.fe-icon-rotate-cw
+            | &nbsp;Load More

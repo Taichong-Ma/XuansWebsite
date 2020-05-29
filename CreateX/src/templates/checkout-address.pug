@@ -1,0 +1,103 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Checkout'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Checkout - Address'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-4.mb-2
+    .row
+
+      // Checkout: Address
+      .col-xl-9.col-lg-8.pb-5
+        .wizard
+          .wizard-steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between
+            .wizard-step.active 1. Address
+            a(href='checkout-shipping.html').wizard-step 2. Shipping
+            a(href='checkout-payment.html').wizard-step 3. Payment
+            a(href='checkout-review.html').wizard-step 4. Review
+          .wizard-body
+            h3.h5.pb-2 Billing Address
+            .row
+              .col-sm-6
+                .form-group
+                  label(for='checkout-fn').text-muted First Name
+                  input(type='text')#checkout-fn.form-control
+              .col-sm-6
+                .form-group
+                  label(for='checkout-ln').text-muted Last Name
+                  input(type='text')#checkout-ln.form-control
+            .row
+              .col-sm-6
+                .form-group
+                  label(for='checkout-email').text-muted E-mail Address
+                  input(type='email')#checkout-email.form-control
+              .col-sm-6
+                .form-group
+                  label(for='checkout-phone').text-muted Phone Number
+                  input(type='text')#checkout-phone.form-control
+            .row
+              .col-sm-6
+                .form-group
+                  label(for='checkout-company').text-muted Company
+                  input(type='text')#checkout-company.form-control
+              .col-sm-6
+                .form-group
+                  label(for='checkout-country').text-muted Country
+                  select#checkout-country.form-control
+                    option Choose country
+                    option Australia
+                    option Canada
+                    option France
+                    option Germany
+                    option Switzerland
+                    option USA
+            .row
+              .col-sm-6
+                .form-group
+                  label(for='checkout-city').text-muted Country
+                  select#checkout-city.form-control
+                    option Choose city
+                    option Amsterdam
+                    option Berlin
+                    option Geneve
+                    option New York
+                    option Paris
+              .col-sm-6
+                .form-group
+                  label(for='checkout-zip').text-muted ZIP Code
+                  input(type='text')#checkout-zip.form-control
+            .row
+              .col-sm-6
+                .form-group
+                  label(for='checkout-address-1').text-muted Address 1
+                  input(type='text')#checkout-address-1.form-control
+              .col-sm-6
+                .form-group
+                  label(for='checkout-address-2').text-muted Address 2
+                  input(type='text')#checkout-address-2.form-control
+            h3.h5.pt-3.pb-2 Shipping Address
+            .custom-control.custom-checkbox
+              input(type='checkbox' checked)#same-address.custom-control-input
+              label(for='same-address').custom-control-label Same as billing address
+          .wizard-footer.d-flex.justify-content-between
+            a(href='cart.html').btn.btn-secondary.my-2
+              i.fe-icon-arrow-left
+              span.d-none.d-sm-inline-block Back to cart
+            a(href='checkout-shipping.html').btn.btn-primary.my-2
+              span.d-none.d-sm-inline-block Continue
+              i.fe-icon-arrow-right
+
+      // Sidebar
+      aside.col-xl-3.col-lg-4.pb-4.mb-2
+        //- sidebar-checkout.pug template
+        include partials/sidebar-checkout
+
+  //- footer-shop.pug template
+  include partials/footer-shop

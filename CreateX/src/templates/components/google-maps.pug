@@ -1,0 +1,120 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Google Maps'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var isGoogleMap = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Maps Default Code Modal
+  include code/maps-default
+
+  //- Maps Custom Styling Code Modal
+  include code/maps-custom
+
+  //- Maps Enable Controls Code Modal
+  include code/maps-controls
+
+  //- Maps inside Card Code Modal
+  include code/maps-card
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      .row
+        // Default map
+        .col-md-6.pb-5.mb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Default map
+            a(href='#maps-default-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .google-map(
+            data-height = '270',
+            data-address = 'New York, USA',
+            data-zoom = '9',
+            data-disable-controls = 'true',
+            data-scrollwheel = 'true',
+            data-marker-title = 'We are here!'
+          )
+        // Custom styling
+        .col-md-6.pb-5.mb-2
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Custom styling
+            a(href='#maps-custom-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .google-map(
+            data-height = '270',
+            data-address = 'New York, USA',
+            data-zoom = '9',
+            data-disable-controls = 'true',
+            data-scrollwheel = 'false',
+            data-marker = '../img/map-marker.png',
+            data-marker-title = 'We are here!',
+            data-styles = '[{"featureType":"road","stylers":[{"hue":"#5e00ff"},{"saturation":-79}]},{"featureType":"poi","stylers":[{"saturation":-78},{"hue":"#6600ff"},{"lightness":-47},{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"lightness":22}]},{"featureType":"landscape","stylers":[{"hue":"#6600ff"},{"saturation":-11}]},{"featureType":"water","stylers":[{"saturation":-65},{"hue":"#1900ff"},{"lightness":8}]},{"featureType":"road.local","stylers":[{"weight":1.3},{"lightness":30}]},{"featureType":"transit","stylers":[{"visibility":"simplified"},{"hue":"#5e00ff"},{"saturation":-16}]},{"featureType":"transit.line","stylers":[{"saturation":-72}]}]'
+          )
+      
+      // Enable map controls
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Enable map controls
+        a(href='#maps-controls-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .google-map(
+        data-height = '300',
+        data-address = 'New York, USA',
+        data-zoom = '10',
+        data-disable-controls = 'false',
+        data-scrollwheel = 'false',
+        data-marker = '../img/map-marker-alt.png',
+        data-marker-title = 'We are here!',
+        data-styles = '[{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}]'
+      )
+    
+      // Inside card
+      .py-5.my-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.mr-3 Inside card
+          a(href='#maps-card-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.pb-4.mb-1
+        .row
+          .col-xl-5.col-lg-6.col-md-6.mb-3
+            .card
+              .google-map(
+                data-height = '270',
+                data-address = '89 Clinton Dr. Holbrook, NY 11741, USA',
+                data-zoom = '9',
+                data-disable-controls = 'true',
+                data-scrollwheel = 'true',
+                data-marker = '../img/map-marker.png',
+                data-marker-title = 'We are here!'
+              )
+              .card-body
+                ul.list-icon.mb-2
+                  li 
+                    i.fe-icon-map-pin.text-muted
+                    | 89 Clinton Dr. Holbrook, NY 11741, USA
+                  li 
+                    i.fe-icon-phone.text-muted
+                    | +1 (212) 477 690 000
+                  li 
+                    i.fe-icon-mail.text-muted
+                    | email@example.com

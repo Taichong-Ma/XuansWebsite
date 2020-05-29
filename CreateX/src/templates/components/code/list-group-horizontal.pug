@@ -1,0 +1,51 @@
+// Horizontal List Group Example Code
+#list-group-horizontal-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html7' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug7' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html7' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Basic Horizontal List Group (starting sm screen) --&gt;</strong>
+                &lt;ul class=&quot;list-group list-group-horizontal-sm&quot;&gt;
+                  &lt;li class=&quot;list-group-item&quot;&gt;Cras justo odio&lt;/li&gt;
+                  &lt;li class=&quot;list-group-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+                  &lt;li class=&quot;list-group-item&quot;&gt;Morbi leo risus&lt;/li&gt;
+                &lt;/ul&gt;
+
+                <strong>&lt;!-- Justified Horizontal List Group (starting sm screen) --&gt;</strong>
+                &lt;ul class=&quot;list-group list-group-horizontal-sm&quot;&gt;
+                  &lt;li class=&quot;list-group-item flex-fill text-center&quot;&gt;Cras justo odio&lt;/li&gt;
+                  &lt;li class=&quot;list-group-item flex-fill text-center&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+                  &lt;li class=&quot;list-group-item flex-fill text-center&quot;&gt;Morbi leo risus&lt;/li&gt;
+                &lt;/ul&gt;
+          div(id='pug7' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Basic Horizontal List Group (starting sm screen)</strong>
+                ul.list-group.list-group-horizontal-sm
+                  li.list-group-item
+                    | Cras justo odio
+                  li.list-group-item
+                    | Dapibus ac facilisis in
+                  li.list-group-item
+                    | Morbi leo risus
+
+                <strong>//- Justified Horizontal List Group (starting sm screen)</strong>
+                ul.list-group.list-group-horizontal-sm
+                  li.list-group-item.flex-fill.text-center
+                    | Cras justo odio
+                  li.list-group-item.flex-fill.text-center
+                    | Dapibus ac facilisis in
+                  li.list-group-item.flex-fill.text-center
+                    | Morbi leo risus

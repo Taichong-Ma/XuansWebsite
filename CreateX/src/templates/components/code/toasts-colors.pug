@@ -1,0 +1,162 @@
+// Toasts Colors Code
+#toasts-colors-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        p You can alter toast notification look and behaviour via flexible data API 
+          code data-toast-*
+          | :
+        ul.list-unstyled.mb-4
+          li
+            code 'type' = 'none' (default) / 'info' / 'success' / 'warning' / 'danger'
+            span.text-muted  - To alter look of the toast.
+          li
+            code 'icon' = 'fe-icon-heart'
+            span.text-muted  - Use class of built-in Feather icons or any othe icon pack you use.
+          li
+            code 'position' = 'topRight' / 'topCenter' / 'bottomRight' / 'bottomCenter' / 'bottomLeft' / 'topLeft'
+            span.text-muted  - Where the toast notification appears on the page.
+          li
+            code 'title' = '' (string)
+            span.text-muted  - Toast notification title.
+          li
+            code 'message' = '' (string)
+            span.text-muted  - Toast notification message.
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Primary Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-primary&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-bell&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Primary&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Secondary Toast No Icon --&gt;</strong>
+                &lt;div class=&quot;iziToast&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot;&gt;
+                    &lt;strong&gt;Secondary&lt;/strong&gt;
+                    &lt;p&gt;toast notification without icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Accent Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-accent&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-clock&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Accent&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Success Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-success&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-check-circle&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Success&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Info Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-info&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-help-circle&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Info&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Warning Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-warning&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-alert-triangle&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Warning&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Danger Toast --&gt;</strong>
+                &lt;div class=&quot;iziToast iziToast-danger&quot;&gt;
+                  &lt;div class=&quot;iziToast-body&quot; style=&quot;padding-left: 33px;&quot;&gt;
+                    &lt;i class=&quot;iziToast-icon fe-icon-slash&quot;&gt;&lt;/i&gt;
+                    &lt;strong&gt;Danger&lt;/strong&gt;
+                    &lt;p&gt;toast notification with icon&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;iziToast-close&quot;&gt;&lt;/button&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Primary Toast</strong>
+                .iziToast.iziToast-primary
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-bell
+                    strong Primary
+                    p toast notification with icon
+                  button.iziToast-close
+
+                <strong>//- Secondary Toast No Icon</strong>
+                .iziToast
+                  .iziToast-body
+                    strong Secondary
+                    p toast notification without icon
+                  button.iziToast-close
+
+                <strong>//- Accent Toast</strong>
+                .iziToast.iziToast-accent
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-clock
+                    strong Accent
+                    p toast notification with icon
+                  button.iziToast-close
+                
+                <strong>//- Success Toast</strong>
+                .iziToast.iziToast-success
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-check-circle
+                    strong Success
+                    p toast notification with icon
+                  button.iziToast-close
+                
+                <strong>//- Info Toast</strong>
+                .iziToast.iziToast-info
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-help-circle
+                    strong Info
+                    p toast notification with icon
+                  button.iziToast-close
+                
+                <strong>//- Warning Toast</strong>
+                .iziToast.iziToast-warning
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-alert-triangle
+                    strong Warning
+                    p toast notification with icon
+                  button.iziToast-close
+                
+                <strong>//- Danger Toast</strong>
+                .iziToast.iziToast-danger
+                  .iziToast-body(style=&quot;padding-left: 33px;&quot;)
+                    i.iziToast-icon.fe-icon-slash
+                    strong Danger
+                    p toast notification with icon
+                  button.iziToast-close

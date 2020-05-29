@@ -1,0 +1,449 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Online Shop v.2'
+
+//- Page Content
+block content
+
+  // Featured Categories
+  section.container-fluid.pt-30
+    .row
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5  Computers &amp; Accessories
+            p.text-muted.pb-3 Startting from <strong>$149.80</strong>
+            span.btn.btn-style-5.btn-primary.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/01.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/02.jpg', 'Shop Category')
+                +image('img/shop/categories/03.jpg', 'Shop Category')
+        
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5 TV, Video &amp; Audio
+            p.text-muted.pb-3 Startting from <strong>$127.00</strong>
+            span.btn.btn-style-5.btn-accent.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/07.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/08.jpg', 'Shop Category')
+                +image('img/shop/categories/09.jpg', 'Shop Category')
+        
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5 Smartphones &amp; Tablets
+            p.text-muted.pb-3 Startting from <strong>$78.00</strong>
+            span.btn.btn-style-5.btn-warning.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/04.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/05.jpg', 'Shop Category')
+                +image('img/shop/categories/06.jpg', 'Shop Category')
+        
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5 Cameras, Photo &amp; Video
+            p.text-muted.pb-3 Startting from <strong>$310.00</strong>
+            span.btn.btn-style-5.btn-info.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/10.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/11.jpg', 'Shop Category')
+                +image('img/shop/categories/12.jpg', 'Shop Category')
+        
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5 Video Games
+            p.text-muted.pb-3 Startting from <strong>$18.50</strong>
+            span.btn.btn-style-5.btn-success.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/22.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/23.jpg', 'Shop Category')
+                +image('img/shop/categories/24.jpg', 'Shop Category')
+        
+      .col-lg-6.mb-30
+        a(href='shop-boxed-ls.html').d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.align-items-center.bg-white.p-4.p-xl-5.text-decoration-none.box-shadow.border
+          .py-3.px-md-4.order-2.order-sm-1.text-center.text-sm-left.mx-auto.mx-sm-0
+            h5 Printers &amp; Ink
+            p.text-muted.pb-3 Startting from <strong>$54.00</strong>
+            span.btn.btn-style-5.btn-danger.btn-sm
+              | View products&nbsp;
+              i.fe-icon-arrow-right
+          .product-category-card.bg-white.order-1.order-sm-2
+            .product-category-card-thumb.box-shadow-none
+              .main-img
+                +image('img/shop/categories/19.jpg', 'Shop Category')
+              .thumblist
+                +image('img/shop/categories/20.jpg', 'Shop Category')
+                +image('img/shop/categories/21.jpg', 'Shop Category')
+
+  // Featured Products
+  section.container.pt-4.pb-5.mt-2.mb-4
+    h2.h4.block-title.text-center Featured Products
+    .row.pt-4
+
+      // Products Grid
+      .col-lg-9.col-md-8
+        .row
+
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.d-flex.justify-content-between.align-items-center
+                span.badge.badge-danger Sale
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/01.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Smart home
+                h5.product-title: a(href='shop-single.html') Amazon Echo Dot (2nd Generation)
+                span.product-price
+                  del $62.00
+                  | $49.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(3)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/11.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Headphones
+                h5.product-title: a(href='shop-single.html') Edifier W855BT Bluetooth Headphones
+                span.product-price $99.75
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head
+                span.badge.badge-secondary Out of Stock
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/03.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Computers, laptops
+                h5.product-title: a(href='shop-single.html') Microsoft Surface Pro 4 Tablet
+                span.product-price.text-muted $1,049.10
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='shop-single.html'): i.fe-icon-arrow-right
+          
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/09.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Action cameras
+                h5.product-title: a(href='shop-single.html') Samsung Gear 360 Camera
+                span.product-price $74.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+          
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(0)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/04.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Smartphones
+                h5.product-title: a(href='shop-single.html') Apple iPhone X 64GB Space Gray
+                span.product-price $939.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.d-flex.justify-content-between.align-items-center
+                span.badge.badge-success Popular
+                +rating-stars(5)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/06.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Video Games
+                h5.product-title: a(href='shop-single.html') Microsoft Xbox One S White
+                span.product-price $298.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(4)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/08.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta TV, Video &amp; Audio
+                h5.product-title: a(href='shop-single.html') Sony 55-Inch 4K Smart (Android) TV
+                span.product-price $1,195.00
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-lg-4.col-sm-6.mb-30
+            .product-card.mx-auto.mb-3
+              .product-head
+                span.badge.badge-danger Sale
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/10.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Printers &amp; Ink
+                h5.product-title: a(href='shop-single.html') Hewlett-Packard LaserJet Pro Printer
+                span.product-price
+                  del $280.00
+                  | $249.50
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+
+          // Product
+          .col-lg-4.col-sm-6.mb-30.d-none.d-lg-block
+            .product-card.mx-auto.mb-3
+              .product-head.text-right
+                +rating-stars(3)
+              a(href='shop-single.html').product-thumb
+                +image('img/shop/05.jpg', 'Product Thumbnail')
+              .product-card-body
+                a(href='shop-categories.html').product-meta Headphones
+                h5.product-title: a(href='shop-single.html') Zeus Bluetooth Earbud Headphones
+                span.product-price $28.99
+              .product-buttons-wrap
+                .product-buttons
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to your wishlist!'): i.fe-icon-heart
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Product' data-toast-message='added to comparison table!'): i.fe-icon-repeat
+                  .product-button
+                    a(href='#' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Product' data-toast-message='added to cart successfuly!'): i.fe-icon-shopping-cart
+        .text-center.pt-3
+          a(href='shop-boxed-ls.html').btn.btn-style-5.btn-primary View all products
+      
+      // Sidebar (Ads)
+      .col-lg-3.col-md-4
+        hr.mt-5.d-md-none
+        .box-shadow.py-4.px-3.text-center.mb-30
+          i.d-block.fe-icon-info.lead.text-primary.mb-3.mt-2
+          h5.h6.block-title.mb-4 Your Ads can be displayed here
+          a(href='#').btn.btn-gradient.btn-sm.mb-3 Contact us
+        a(href='#').d-table.mx-auto.mb-30: img(src='img/homepages/corporate-blog/banner1.jpg' alt='Add Banner').d-block.w-100
+        a(href='#').d-table.box-shadow.mx-auto: img(src='img/homepages/corporate-blog/banner2.jpg' alt='Add Banner').d-block.w-100
+
+
+  // Product Widgets
+  section.container.pb-4.mb-2
+    .row
+    
+      // Top Sellers
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title Top Sellers
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/04.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Nyko Grip for Nintendo Switch
+              +rating-stars(4)
+              span.featured-product-price
+                del $99.00
+                | &nbsp;$89.00
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/02.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Zeus Bluetooth Earbuds
+              +rating-stars(3)
+              span.featured-product-price $28.99
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/03.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Xbox One S White
+              +rating-stars(4)
+              span.featured-product-price $298.99
+
+      // New Arrivals
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title New Arrivals
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/06.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Aberg Best 21 MP Camera
+              +rating-stars(3)
+              span.featured-product-price $135.00
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/05.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Samsung Galaxy S9 Plus 128GB
+              +rating-stars(4)
+              span.featured-product-price $859.00
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/07.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Apple Watch Series 3 Rose Gold
+              +rating-stars(4)
+              span.featured-product-price $329.40
+
+      // Best Rated
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title Best Rated
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/01.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Amazon Echo Dot (2nd Gen)
+              +rating-stars(5)
+              span.featured-product-price
+                del $62.00
+                | &nbsp;$49.99
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/09.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Edifier Bluetooth Headphones
+              +rating-stars(5)
+              span.featured-product-price $99.75
+          a(href='shop-single.html').featured-product
+            .featured-product-thumb
+              +image('img/widgets/shop/08.jpg', 'Product Image')
+            .featured-product-info
+              h5.featured-product-title Apple iPhone X 64GB Space Gray
+              +rating-stars(5)
+              span.featured-product-price $939.99
+  
+  // Popular Brands
+  section.bg-secondary.pt-5.pb-4
+    .container.pt-3.pb-2
+      h2.h4.block-title.text-center Popular Brands
+      .owl-carousel.carousel-flush.pt-3(data-owl-carousel='{ "nav": false, "dots": true, "autoplay": true, "autoplayTimeout": 3500, "loop": true, "autoHeight": true, "responsive": {"0":{"items":1},"360":{"items":2},"600":{"items":3},"991":{"items":4},"1200":{"items":4}} }')
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/10.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/11.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/14.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/13.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/12.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/15.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/16.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+        a(href='#').d-block.bg-white.box-shadow.py-4.py-sm-5.px-2.mb-30
+          img(src='img/partners/17.png' style='width: 165px;' alt='Partner').d-block.mx-auto
+  
+  // Shop Services
+  section.container.py-5
+    .row.pt-3
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/shop/services/01.png' width='90' alt='Free Worldwide Shipping').mx-auto.mb-4
+        h3.text-lg.mb-2.text-body Free Worldwide Shipping
+        p.text-sm.text-muted.mb-0 Free shipping for all orders over $100
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/shop/services/02.png' width='90' alt='Money Back Guarantee').mx-auto.mb-4
+        h3.text-lg.mb-2.text-body Money Back Guarantee
+        p.text-sm.text-muted.mb-0 We return money within 30 days
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/shop/services/03.png' width='90' alt='24/7 Customer Support').mx-auto.mb-4
+        h3.text-lg.mb-2.text-body 24/7 Customer Support
+        p.text-sm.text-muted.mb-0 Friendly 24/7 customer support
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/shop/services/04.png' width='90' alt='Secure Online Payment').mx-auto.mb-4
+        h3.text-lg.mb-2.text-body Secure Online Payment
+        p.text-sm.text-muted.mb-0 We posess SSL / Secure Certificate
+
+  //- footer-shop.pug template
+  include partials/footer-shop

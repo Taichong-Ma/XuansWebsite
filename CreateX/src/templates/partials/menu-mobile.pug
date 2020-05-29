@@ -1,0 +1,271 @@
+// Mobile Menu
+.accordion.mobile-menu#accordion-menu
+
+  // Home
+  .card
+    .card-header
+      a(href='index.html')&attributes((parentMenu === 'Home') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Home
+      a(href='#home-submenu' data-toggle='collapse').collapsed
+    #home-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li.dropdown-header
+            i.fe-icon-briefcase
+            | &nbsp;&nbsp;Portfolio
+          li()&attributes((menuTitle === 'Digital Agency') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-digital-agency.html') Digital Agency
+          li()&attributes((menuTitle === 'Architectural Agency') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Architectural Agency
+              span.badge.badge-secondary Soon
+          li()&attributes((menuTitle === "Freelancer's Portfolio") ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-freelancer-portfolio.html') Freelancer's Portfolio
+          li()&attributes((menuTitle === "Photographer's Portfolio") ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-photographer-portfolio.html') Photographer's Portfolio
+          li.dropdown-header
+            i.fe-icon-shopping-bag
+            | &nbsp;&nbsp;E-Commerce
+          li()&attributes((menuTitle === 'Online Shop v.1') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-shop-v1.html') Online Shop v.1
+          li()&attributes((menuTitle === 'Online Shop v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-shop-v2.html') Online Shop v.2
+          li.dropdown-header
+            i.fe-icon-edit
+            | &nbsp;&nbsp;Blog
+          li()&attributes((menuTitle === 'Corporate Blog') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-corporate-blog.html') Corporate Blog
+          li()&attributes((menuTitle === 'Personal Blog') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-personal-blog.html') Personal Blog
+          li.dropdown-header
+            i.fe-icon-home
+            | &nbsp;&nbsp;Landing Pages
+          li()&attributes((menuTitle === 'Mobile App Showcase') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-mobile-app-showcase.html') Mobile App Showcase
+          li()&attributes((menuTitle === 'Web App Showcase (SAAS)') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-web-app-showcase.html') Web App Showcase (SAAS)
+          li()&attributes((menuTitle === 'Product Promo Page') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Product Promo Page
+              span.badge.badge-secondary Soon
+          li()&attributes((menuTitle === 'Conference Landing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-conference-landing.html') Conference Landing
+          li.dropdown-header
+            i.fe-icon-dollar-sign
+            | &nbsp;&nbsp;Business
+          li()&attributes((menuTitle === 'Corporate Website') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Corporate Website
+              span.badge.badge-secondary Soon
+          li()&attributes((menuTitle === 'Digital Marketing & SEO') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-marketing-seo.html') Digital Marketing &amp; SEO
+          li()&attributes((menuTitle === 'Venture Capital Investments') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='home-capital-investments.html') Venture Capital Investments
+          li()&attributes((menuTitle === 'Startup Homepage') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Startup Homepage
+              span.badge.badge-secondary Soon
+          li.dropdown-header
+            i.fe-icon-menu
+            | &nbsp;&nbsp;Directory &amp; Listings
+          li()&attributes((menuTitle === 'Real Estate Listing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Real Estate Listing
+              span.badge.badge-secondary Soon
+          li()&attributes((menuTitle === 'Jobs Board') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='#').disabled-link
+              | Jobs Board
+              span.badge.badge-secondary Soon
+
+  // Portfolio
+  .card
+    .card-header
+      a(href='portfolio-style1-boxed.html')&attributes((parentMenu === 'Portfolio') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Portfolio
+      a(href='#portfolio-submenu' data-toggle='collapse').collapsed
+    #portfolio-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li()&attributes((menuTitle === 'Style 1 Boxed Layout' || menuTitle === 'Style 1 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style1-boxed.html') Style 1 Grid
+            ul.mobile-sublevel
+              li()&attributes((menuTitle === 'Style 1 Boxed Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-style1-boxed.html') Style 1 Boxed Layout
+              li()&attributes((menuTitle === 'Style 1 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-style1-fw.html') Style 1 Full Width Layout
+          li()&attributes((menuTitle === 'Style 2 Boxed Layout' || menuTitle === 'Style 2 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-style2-boxed.html') Style 2 Grid
+            ul.mobile-sublevel
+              li()&attributes((menuTitle === 'Style 2 Boxed Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-style2-boxed.html') Style 2 Boxed Layout
+              li()&attributes((menuTitle === 'Style 2 Full Width Layout') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-style2-fw.html') Style 2 Full Width Layout
+          li()&attributes((menuTitle === 'Side Gallery Grid' || menuTitle === 'Side Gallery List' || menuTitle === 'Wide Slider' || menuTitle === 'Wide Gallery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='portfolio-single-side-gallery-grid.html') Single Project
+            ul.mobile-sublevel
+              li()&attributes((menuTitle === 'Side Gallery Grid') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-single-side-gallery-grid.html') Side Gallery Grid
+              li()&attributes((menuTitle === 'Side Gallery List') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-single-side-gallery-list.html') Side Gallery List
+              li()&attributes((menuTitle === 'Wide Slider') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-single-wide-slider.html') Wide Slider
+              li()&attributes((menuTitle === 'Wide Gallery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='portfolio-single-wide-gallery.html') Wide Gallery
+
+  // Blog
+  .card
+    .card-header
+      a(href='blog-grid-rs.html')&attributes((parentMenu === 'Blog') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Blog
+      a(href='#blog-submenu' data-toggle='collapse').collapsed
+    #blog-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li.dropdown-header Blog Layouts
+          li()&attributes((menuTitle === 'Grid Right Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-grid-rs.html') Grid Right Sidebar
+          li()&attributes((menuTitle === 'Grid Left Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-grid-ls.html') Grid Left Sidebar
+          li()&attributes((menuTitle === 'Grid No Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-grid-ns.html') Grid No Sidebar
+          li.dropdown-header Single Post Formats
+          li()&attributes((menuTitle === 'Post Gallery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-gallery.html') Post Gallery
+          li()&attributes((menuTitle === 'Post Image Carousel') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-carousel.html') Post Image Carousel
+          li()&attributes((menuTitle === 'Post Video') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-video.html') Post Video
+          li()&attributes((menuTitle === 'Post Audio') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-audio.html') Post Audio
+          li()&attributes((menuTitle === 'Post Quotation') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-quotation.html') Post Quotation
+          li()&attributes((menuTitle === 'Post Link') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='blog-single-link.html') Post Link
+
+  // Shop
+  .card
+    .card-header
+      a(href='shop-boxed-ls.html')&attributes((parentMenu === 'Shop') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Shop
+      a(href='#shop-submenu' data-toggle='collapse').collapsed
+    #shop-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li.dropdown-header Shop Layouts
+          li()&attributes((menuTitle === 'Boxed Left Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-boxed-ls.html') Boxed Left Sidebar
+          li()&attributes((menuTitle === 'Boxed Right Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-boxed-rs.html') Boxed Right Sidebar
+          li()&attributes((menuTitle === 'Boxed Filters Top') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-boxed-ft.html') Boxed Filters Top
+          li()&attributes((menuTitle === 'Boxed No Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-boxed-ns.html') Boxed No Sidebar
+          li()&attributes((menuTitle === 'Full Width Left Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-fw-ls.html') Full Width Left Sidebar
+          li()&attributes((menuTitle === 'Full Width Right Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-fw-rs.html') Full Width Right Sidebar
+          li()&attributes((menuTitle === 'Full Width Filters Top') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-fw-ft.html') Full Width Filters Top
+          li()&attributes((menuTitle === 'Full Width No Sidebar') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-fw-ns.html') Full Width No Sidebar
+          li.dropdown-header Shop Pages
+          li()&attributes((menuTitle === 'Shop Categories') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-categories.html') Shop Categories
+          li()&attributes((menuTitle === 'Product Page') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='shop-single.html') Product Page
+          li()&attributes((menuTitle === 'Cart') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='cart.html') Cart
+          li()&attributes((menuTitle === 'Checkout - Address') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='checkout-address.html') Checkout - Address
+          li()&attributes((menuTitle === 'Checkout - Shipping') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='checkout-shipping.html') Checkout - Shipping
+          li()&attributes((menuTitle === 'Checkout - Payment') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='checkout-payment.html') Checkout - Payment
+          li()&attributes((menuTitle === 'Checkout - Review') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='checkout-review.html') Checkout - Review
+          li()&attributes((menuTitle === 'Checkout - Complete') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='checkout-complete.html') Checkout - Complete
+
+  // Account
+  .card
+    .card-header
+      a(href='account-orders.html')&attributes((parentMenu === 'Account') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Account
+      a(href='#account-submenu' data-toggle='collapse').collapsed
+    #account-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li()&attributes((menuTitle === 'Login / Register') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-login.html') Login / Register
+          li()&attributes((menuTitle === 'Password Recovery') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-password-recovery.html') Password Recovery
+          li()&attributes((menuTitle === 'Orders List') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-orders.html') Orders List
+          li()&attributes((menuTitle === 'Profile Settings') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-profile.html') Profile Settings
+          li()&attributes((menuTitle === 'Contact / Shipping Address') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-address.html') Contact / Shipping Address
+          li()&attributes((menuTitle === 'Wishlist') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-wishlist.html') Wishlist
+          li()&attributes((menuTitle === 'My Tickets') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-tickets.html') My Tickets
+          li()&attributes((menuTitle === 'Single Ticket') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='account-single-ticket.html') Single Ticket
+
+  // Pages
+  .card
+    .card-header
+      a(href='#')&attributes((parentMenu === 'Pages') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Pages
+      a(href='#pages-submenu' data-toggle='collapse').collapsed
+    #pages-submenu.collapse(data-parent='#accordion-menu')
+      .card-body
+        ul
+          li()&attributes((menuTitle === 'About Us v.1' || menuTitle === 'About Us v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='about-us-v1.html') About Us
+            ul.mobile-sublevel
+              li&attributes((menuTitle === 'About Us v.1') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='about-us-v1.html') About Us v.1
+              li&attributes((menuTitle === 'About Us v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='about-us-v2.html') About Us v.2
+          li()&attributes((menuTitle === 'Contacts v.1' || menuTitle === 'Contacts v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='contacts-v1.html') Contacts
+            ul.mobile-sublevel
+              li&attributes((menuTitle === 'Contacts v.1') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='contacts-v1.html') Contacts v.1
+              li&attributes((menuTitle === 'Contacts v.2') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='contacts-v2.html') Contacts v.2
+          li()&attributes((menuTitle === 'Help Topics' || menuTitle === 'Single Topic' || menuTitle === 'Submit a Request') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='help-topics.html') Help Center
+            ul.mobile-sublevel
+              li&attributes((menuTitle === 'Help Topics') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='help-topics.html') Help Topics
+              li&attributes((menuTitle === 'Single Topic') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='help-single-topic.html') Single Topic
+              li&attributes((menuTitle === 'Submit a Request') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='help-submit-request.html') Submit a Request
+          li()&attributes((menuTitle === 'Services Landing' || menuTitle === 'Single Service Page') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='services.html') Services
+            ul.mobile-sublevel
+              li&attributes((menuTitle === 'Services Landing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='services.html') Services Landing
+              li&attributes((menuTitle === 'Single Service Page') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+                a(href='services-single.html') Single Service Page
+          li()&attributes((menuTitle === 'Pricing') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='pricing.html') Pricing
+          li()&attributes((pageTitle === 'Product Comparison') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='product-comparison.html') Product Comparison
+          li()&attributes((pageTitle === 'Order Tracking') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='order-tracking.html') Order Tracking
+          li()&attributes((menuTitle === 'Search Results') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='search-results.html') Search Results
+          li.dropdown-item
+            a(href='coming-soon-light.html') Coming Soon
+            ul.mobile-sublevel
+              li.dropdown-item: a(href='coming-soon-light.html') Coming Soon Light
+              li.dropdown-item: a(href='coming-soon-dark.html') Coming Soon Dark
+          li()&attributes((menuTitle === '404 Not Found') ? {'class': 'dropdown-item active'} : {'class': 'dropdown-item'})
+            a(href='404.html') 404 Not Found
+          li.dropdown-item
+            a(href='docs/dev-setup.html').text-accent
+              i.d-inline-block.fe-icon-file-text.align-middle.mr-1
+              | Documentation
+
+  // Components
+  .card
+    .card-header
+      a(href='components.html')&attributes((pageTitle === 'Components') ? {'class': 'mobile-menu-link active'} : {'class': 'mobile-menu-link'}) Components

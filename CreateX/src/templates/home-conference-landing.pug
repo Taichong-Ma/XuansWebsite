@@ -1,0 +1,414 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-simple-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Conference Landing'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/conference-landing/hero-bg.jpg);').bg-dark.bg-center.bg-no-repeat.py-5
+    .container.py-5.my-5.text-center.text-sm-left
+      .pt-sm-5.mt-sm-5
+        h1.display-3.text-white.pt-md-5.pb-2
+          span(data-parallax='{"y" : -20}').d-block
+            span(data-parallax='{"rotateZ" : 20}' style='width: 80px;').d-none.d-sm-inline-block.bg-white.text-dark.text-center.mr-2 C
+            span <span class='d-sm-none'>C</span>onsumer
+          span(data-parallax='{"y" : 10}').d-block
+            span(data-parallax='{"rotateZ" : -20}' style='width: 80px;').d-none.d-sm-inline-block.bg-white.text-dark.text-center.mr-2 E
+            span <span class='d-sm-none'>E</span>lectronics
+          span(data-parallax='{"y" : 40}').d-block
+            span(data-parallax='{"rotateZ" : 20}' style='width: 80px;').d-none.d-sm-inline-block.bg-white.text-dark.text-center.mr-2 S
+            span <span class='d-sm-none'>S</span>ummit
+        .countdown.countdown-style-2.countdown-light-skin.h4(data-parallax='{"y" : 70}' data-date-time='10/10/2020 12:00' data-labels='{"label-day": "Days", "label-hour": "Hours", "label-minute": "Mins", "label-second": "Secs"}')
+
+  // Event Details
+  section.bg-dark.pt-3.pb-5
+    .container
+      hr.hr-light
+    .container.text-center.text-sm-left.pt-5.pb-5.mb-5
+      .row.pb-5.mb-5
+        .col-md-4.col-sm-7.mb-30
+          h3.h5.text-white About
+          p.text-white.opacity-60.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua reprehenderit.
+        .col-md-2.col-sm-5.mb-30
+          h3.h5.text-white Where
+          p.text-white.font-weight-medium.mb-0 Conference Center
+          p.text-white.opacity-60 Los Angeles, California
+        .col-md-3.col-sm-7.mb-30
+          h3.h5.text-white When
+          p.text-white.font-weight-medium.mb-0 Friday, Saturday and Sunday
+          p.text-white.opacity-60.mb-0 January 25, 26 and 27, 2019
+        .col-md-3.col-sm-5.mb-30
+          h3.h5.text-white.pb-2 Buy early tickets!
+          a(href='#tickets').scroll-to.btn.btn-primary.btn-block Buy Now
+  
+  // Schedule
+  section(style='margin-top: -220px;').container.pb-3
+    .bg-white.box-shadow.px-3.px-sm-5.pt-5.text-center.text-sm-left
+      h2.h3 Schedule
+      .row.pt-4
+        .col-md-4.mb-4
+          .text-xl.font-weight-medium.text-primary.mb-2 January 25, 2019
+          h3.h5.font-weight-bold.pb-3 New gadgets and devices
+          dl
+            dt.font-weight-bold 09:30 – 12:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Vanessa Hudgens
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 12:15 – 14:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;William Smith
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 14:00 – 16:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Sara Palson
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+        .col-md-4.mb-4
+          .text-xl.font-weight-medium.text-primary.mb-2 January 26, 2019
+          h3.h5.font-weight-bold.pb-3 Innovations in AI and AR
+          dl
+            dt.font-weight-bold 09:30 – 12:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;James Corvinus
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 12:15 – 14:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Benjamin Miller
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 14:00 – 16:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Olivia Davis
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+        .col-md-4.mb-4
+          .text-xl.font-weight-medium.text-primary.mb-2 January 27, 2019
+          h3.h5.font-weight-bold.pb-3 Top Trends in Electronics
+          dl
+            dt.font-weight-bold 09:30 – 12:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Barbara Palson
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 12:15 – 14:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Hinata Nakamura
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            dt.font-weight-bold 14:00 – 16:00
+            dd.text-sm 
+              span.d-block.font-weight-medium.text-body.pb-2
+                i.d-inline-block.align-middle.fe-icon-user 
+                | &nbsp;Michael Davis
+              p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+
+  // Speakers
+  section.container.pt-4.pt-sm-5.pb-4
+    h2.h3.pt-2.text-center.text-sm-left Speakers
+    .row.pt-4
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/05.jpg', 'Team Member Picture')
+          .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position Lead Programmer
+            h4.team-name William Smith
+            a(href='tel:+19871625346').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (987) 162 53 46
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-github
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/06.jpg', 'Team Member Picture')
+          .d-table-sm-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position Marketing Manager
+            h4.team-name Sara Palson
+            a(href='tel:+57872336590').team-contact-link
+              i.fe-icon-phone
+              | &nbsp; +5 (787) 233 65 90
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-google-plus
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/08.jpg', 'Team Member Picture')
+          .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position CEO, Co-Founder
+            h4.team-name James Corvinus
+            a(href='tel:+72056557984').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+7 (205) 655 79 84
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/09.jpg', 'Team Member Picture')
+          .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position Lead Programmer
+            h4.team-name Benjamin Miller
+            a(href='tel:+19871625346').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (987) 162 53 46
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-github
+                  i.socicon-github
+                a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                  i.socicon-stackoverflow
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/10.jpg', 'Team Member Picture')
+          .d-sm-table-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position CEO, Co-Founder
+            h4.team-name Hinata Nakamura
+            a(href='tel:+72056557984').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+7 (205) 655 79 84
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-skype
+                  i.socicon-skype
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+      // Team member
+      .col-xl-4.col-md-6.mb-30
+        .team-card-style-4.d-sm-table.w-100
+          .team-thumb.d-sm-table-cell.align-middle
+            +image('img/team/style-3/11.jpg', 'Team Member Picture')
+          .d-table-sm-cell.align-middle.pl-sm-4.text-center.text-sm-left
+            span.team-position Marketing Manager
+            h4.team-name Olivia Davis
+            a(href='tel:+57872336590').team-contact-link
+              i.fe-icon-phone
+              | &nbsp; +5 (787) 233 65 90
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+            .team-social-bar-wrap  
+              .team-social-bar.mx-auto.mx-sm-0
+                a(href='#').social-btn.sb-style-1.sb-facebook
+                  i.socicon-facebook
+                a(href='#').social-btn.sb-style-1.sb-twitter
+                  i.socicon-twitter
+                a(href='#').social-btn.sb-style-1.sb-google-plus
+                  i.socicon-googleplus
+                a(href='#').social-btn.sb-style-1.sb-linkedin
+                  i.socicon-linkedin
+
+  // Tickets
+  section(data-offset-top='-1')#tickets.container
+    hr
+    .pt-4.pt-sm-5
+    h2.h3.pt-2.pl-sm-3.text-center.text-sm-left Tickets
+    .owl-carousel.carousel-flush.pt-3(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+
+      // Pricing Plan
+      .mb-30.pb-3
+        .card.pricing-card
+          .card-body.text-center
+            span.badge.badge-success Low Cost
+            h5.pt-3 Starter Package
+            .pricing-card-price <span>$</span>400
+            span.text-muted per visitor
+            ul.list-icon.d-table.mx-auto.pt-4.text-left
+              li
+                i.fe-icon-check-circle.text-muted
+                | All showrooms access: <strong>Yes</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Community support
+              li
+                i.fe-icon-check-circle.text-muted
+                | Expert reviews: <strong>5 projects</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Traffic: <strong>2GB</strong>
+          .card-footer.text-center
+            a(href='#').btn.btn-primary Buy Now
+
+      // Pricing Plan
+      .mb-30.pb-3
+        .card.pricing-card.border.border-primary
+          .card-body.text-center
+            span.badge.badge-warning Most Popular
+            h5.pt-3 Basic Package
+            .pricing-card-price <span>$</span>700
+            span.text-muted per visitor
+            ul.list-icon.d-table.mx-auto.pt-4.text-left
+              li
+                i.fe-icon-check-circle.text-muted
+                | All showrooms access: <strong>Yes</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Premium support 24/7
+              li
+                i.fe-icon-check-circle.text-muted
+                | Expert reviews: <strong>10 projects</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Traffic: <strong>5GB</strong>
+          .card-footer.text-center
+            a(href='#').btn.btn-primary Buy Now
+
+      // Pricing Plan
+      .mb-30.pb-3
+        .card.pricing-card
+          .card-body.text-center
+            span.badge.badge-danger Rich Features
+            h5.pt-3 Premium Package
+            .pricing-card-price <span>$</span>1'000
+            span.text-muted per visitor
+            ul.list-icon.d-table.mx-auto.pt-4.text-left
+              li
+                i.fe-icon-check-circle.text-muted
+                | All showrooms access: <strong>Yes</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Premium support 24/7
+              li
+                i.fe-icon-check-circle.text-muted
+                | Expert reviews: <strong>Unlimited</strong>
+              li
+                i.fe-icon-check-circle.text-muted
+                | Traffic: <strong>Unlimited</strong>
+          .card-footer.text-center
+            a(href='#').btn.btn-primary Buy Now
+
+  // Gallery
+  .container-fluid.pt-xl-3
+    .row.justify-content-center
+      .col-xl-10
+        .bg-white.box-shadow.px-3.px-sm-5.pt-4.pt-md-5.pb-4
+          h2.h3.text-center.text-sm-left Gallery
+          .row.pt-3
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/01.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th01.jpg' alt='Gallery Image')
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/02.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th02.jpg' alt='Gallery Image')
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/03.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th03.jpg' alt='Gallery Image')
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/04.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th04.jpg' alt='Gallery Image')
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/05.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th05.jpg' alt='Gallery Image')
+            .col-md-4.col-sm-6.mb-30
+              a(href='img/homepages/conference-landing/gallery/06.jpg' data-fancybox='gallery' data-options='{"caption": "Gallery Image Caption"}').gallery-item
+                img(src='img/homepages/conference-landing/gallery/th06.jpg' alt='Gallery Image')
+
+  // Footer
+  footer(style='margin-top: -220px;').bg-dark.pt-5
+    
+    // Subscription
+    .container.pt-5.mt-5
+      .pt-5.mt-5
+        h5.text-white.text-center.pt-5 Subscribe to Newsletter
+        .row.justify-content-center.pb-4.mb-3
+          .col-xl-6.col-lg-7.col-md-9
+            form(action='https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=29ca296126' method='post' target='_blank' novalidate)
+              .input-group
+                input(type='email' name='EMAIL' placeholder="Email address").form-control.form-control-light-skin
+                .input-group-append
+                  button(type='submit').btn.btn-primary Sign Up
+              small.form-text.text-white.opacity-50.pt-1.text-center Enter email to receive conference updates weekly.
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='position: absolute; left: -5000px;' aria-hidden='true')
+                input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+
+        // Follow Me
+        h5.text-white.text-center Follow Us
+        .text-center.pt-2.pb-4.mb-4
+          a(href='#').social-btn.sb-style-6.sb-facebook.sb-light-skin
+            i.socicon-facebook
+          a(href='#').social-btn.sb-style-6.sb-twitter.sb-light-skin
+            i.socicon-twitter
+          a(href='#').social-btn.sb-style-6.sb-linkedin.sb-light-skin
+            i.socicon-linkedin
+          a(href='#').social-btn.sb-style-6.sb-youtube.sb-light-skin
+            i.socicon-youtube
+          a(href='#').social-btn.sb-style-6.sb-instagram.sb-light-skin
+            i.socicon-instagram
+        hr.hr-light
+        .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+          div.order-2
+            a(href='#').footer-link.text-white About
+            a(href='#').footer-link.text-white.ml-3 Help &amp; Info
+            a(href='#').footer-link.text-white.ml-3 Privacy Policy
+          p.m-0.text-sm.order-1 <span class='text-white opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-white opacity-80 p-0' target='_blank'>by Createx Studio</a>

@@ -1,0 +1,70 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Dev Environment Setup'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation', 'link': '#'}]
+
+//- Page Content
+block content
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-docs
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-2
+      .alert.alert-secondary.mb-4
+        | <strong>Please note:</strong> this step is absolutely optional. It aims for advanced user who want to speed up development process with professional grade Front-End toolset shiped with CreateX. If you are not familiar with these tools and have no time to dive in you can still use plain HTML / CSS / JS to customize CreateX. Files you need are located inside <strong>Createx/dist</strong> folder. In this case you can skip this and next sections. Happy coding :)
+      p.text-lg.font-weight-medium CreateX is built using modern development toolset.
+      img(src='../img/docs/technologies.png' alt='Technologies')
+      .d-block.mt-4.mb-4
+        dl
+          dt.font-family-body.text-md
+            | Node.js 
+            a(href='https://nodejs.org/en/' target='_blank') Official website
+          dd Is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+          dt.font-family-body.text-md
+            | Gulp 
+            a(href='https://gulpjs.com/' target='_blank') Official website
+          dd The JavaScript task runner. It helps with performing repetitive tasks like minification, compilation, unit testing, linting, etc. This is possible thanks to extensive Gulp Plugins library.
+          dt.font-family-body.text-md
+            | Sass (Syntactically Awesome Style Sheets) 
+            a(href='http://sass-lang.com/' target='_blank') Official website
+          dd Sass is a scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). It is the most mature, stable, and powerful professional grade CSS extension language in the world. Sass gives you the power of variables, mixins, functions, etc.
+          dt.font-family-body.text-md
+            | Pug (former Jade) 
+            a(href='https://pugjs.org/api/getting-started.html' target='_blank') Official website
+          dd Pug is a high performance Node.js Templating Engine. Just like SASS, Pug is a prepocessor and, as such it helps you accomplishing tasks like wrapping away repetitive work by providing features not available in plain HTML like variables, includes, mixins, functions, etc.
+          dt.font-family-body.text-md
+            | Bootstrap 4 
+            a(href='http://getbootstrap.com' target='_blank') Official website
+          dd Latest version of the most popular HTML, CSS, and JS framework in the world. CreateX is built on Bootstrap 4 and heavily depends on it. CreateX has all BS4 components + bunch of own plugins and its own components.
+      
+      p.mb-4 <u>This section will explain how to setup professional Front-End development environment for fast and smooth CreateX customization using these technologies.</u>
+      
+      h2.h5.pt-3 Text Editor and Terminal (Command Line)
+      p 
+        | You can use any text editor at your disposal and available Command line tool (Command Prompt for Windows or Terminal on MacOS). My personal preference is 
+        a(href='https://code.visualstudio.com/' class='font-weight-medium' target='_blank') Visual Studio Code.
+        |  It is free, has great buil-in terminal (console), built-in git client, debugging, huge extensions library and available for MacOS, Windows, Linux.
+      
+      h2.h5.pt-3 Installing Node.js and npm
+      p In order to be able to setup CreateX development environment you will need to <strong>install Node.js and its Package Manager (npm)</strong>.
+      p 
+        | Node.js is absolutely free and available for download via its official website for MacOS, Windows, Linux systems. 
+        a(href='https://nodejs.org/en/' class='font-weight-medium' target='_blank') Download Node.js and npm here.
+      p
+        | Learn more about Node Package Manager and available packages here: 
+        a(href='https://www.npmjs.com' class='font-weight-medium' target='_blank') https://www.npmjs.com
+      
+      h2.h5.pt-3 Installing packages necessary for CreateX development
+      p When Node.js and npm is installed you are ready to install all dependencies necessary for CreateX development.
+      u.d-block.mb-3 Inside your command line tool type:
+      kbd.d-inline-block.mb-3 npm install
+      p
+        | This will start the process of installing all dependencies which is listed inside <code>Createx/package.json</code> file. Wait until installation is finished and jump to the next section 
+        a(href='working-with-gulp.html' class='font-weight-medium') Working with Gulp.

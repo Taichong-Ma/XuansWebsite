@@ -1,0 +1,38 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Jumbotron'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Jumbotron Code Modal
+  include code/jumbotron
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+
+      // Jumbotron
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Jumbotron
+        a(href='#jumbotron-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .jumbotron
+        h2.h1 Hello, world!
+        p.text-xl This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+        hr.my-4
+        p.pb-3 It uses utility classes for typography and spacing to space content out within the larger container.
+        a(href='#').btn.btn-primary Learn more

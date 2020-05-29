@@ -1,0 +1,62 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Responsive Embed'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Responsive Embed: YouTube Video Code Modal
+  include code/embed-youtube
+
+  //- Responsive Embed: Vimeo Video Code Modal
+  include code/embed-vimeo
+
+  //- Responsive Embed: SoundCloud Audio Code Modal
+  include code/embed-soundcloud
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-4
+    
+      // YouTube video
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 YouTube video
+        a(href='#embed-youtube-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-3
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://www.youtube.com/embed/DFn042hPZMA' allowfullscreen).embed-responsive-item
+    
+      // Vimeo video
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Vimeo video
+        a(href='#embed-vimeo-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-3
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+    
+      // Soundcloud audio
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Soundcloud audio
+        a(href='#embed-soundcloud-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .pb-5.mb-2
+        iframe(src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149243221&color=%23ac32e4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true' allowfullscreen)

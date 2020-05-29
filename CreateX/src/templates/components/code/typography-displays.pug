@@ -1,0 +1,31 @@
+// Typography: Displays Code
+#typography-displays-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Typography: Displays 1 - 4 --&gt;</strong>
+                &lt;h2 class=&quot;display-1&quot;&gt;Display 1&lt;/h2&gt;
+                &lt;h2 class=&quot;display-2&quot;&gt;Display 2&lt;/h2&gt;
+                &lt;h2 class=&quot;display-3&quot;&gt;Display 3&lt;/h2&gt;
+                &lt;h2 class=&quot;display-4&quot;&gt;Display 4&lt;/h2&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Typography: Displays 1 - 4</strong>
+                h2.display-1 Display 1
+                h2.display-2 Display 2
+                h2.display-3 Display 3
+                h2.display-4 Display 4

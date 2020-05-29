@@ -1,0 +1,340 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Basic Styles
+// --------------------------------------------------
+
+.btn {
+  position: relative;
+  height: $btn-height;
+  transform: translateZ(0);
+  border: 0;
+  font-size: $button-font-size;
+  letter-spacing: $btn-letter-spacing;
+  cursor: pointer;
+  z-index: 1;
+  text: {
+    transform: $btn-text-transform;
+    decoration: none;
+  }
+  touch-action: manipulation;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: none;
+  }
+  &::before,
+  &::after {
+    transition: .2s;
+  }
+  &:active,
+  &:active::before,
+  &:active::after {
+    transition: .12s !important;
+  }
+  > i, > img {
+    display: inline-block;
+    font-size: 1.1em;
+    vertical-align: middle;
+  }
+  > img {
+    width: 1.25rem;
+    margin: {
+      top: -($spacer * .0625);
+      right: ($spacer * .375);
+    }
+  }
+
+  // Disabled
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+    &:hover { box-shadow: none !important; }
+  }
+
+  // Button sizes
+  &.btn-lg {
+    height: $btn-height-lg;
+    font-size: $button-font-size-lg;
+  }
+  &.btn-sm {
+    height: $btn-height-sm;
+    font-size: $button-font-size-sm;
+  }
+  &.btn-xs {
+    height: $btn-height-xs;
+    padding: $btn-padding-y-xs $btn-padding-x-xs;
+    font-size: $button-font-size-xs;
+    line-height: $btn-line-height-xs;
+  }
+}
+// Edge icon alignment fix
+@supports (-ms-ime-align: auto) {
+  .btn > i { margin-top: -2px; }
+}
+
+
+// Style 1 (Default)
+// --------------------------------------------------
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-style-1-variant($value);
+  }
+}
+.btn-warning,
+.btn-gradient { color: $white; }
+.btn-secondary,
+.btn-light { color: $body-color !important; }
+.btn-gradient {
+  @extend .bg-gradient;
+  &:hover {
+    color: $white;
+    box-shadow: 0 12px 18.8px 1.2px rgba($primary, .24);
+  }
+  &:active {
+    box-shadow: 0 6px 8px .2px rgba($gray-700, .24) !important;
+  }
+}
+
+
+// Style 2
+// --------------------------------------------------
+
+.btn-style-2 {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+  }
+  &::before {
+    top: 7px;
+    left: -7px;
+  }
+  &:hover { box-shadow: none !important; }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      @include button-style-2-variant($value);
+    }
+  }
+  &.btn-gradient {
+    &::before,
+    &::after { border: 1px solid $gradient-color-1;}
+    &::after { @extend .bg-gradient; }
+    &:hover {
+      color: $gradient-color-1;
+      &::before { @extend .bg-gradient; }
+      &::after { background: $white !important;}
+    }
+  }
+}
+
+
+// Style 3
+// --------------------------------------------------
+
+.btn-style-3 {
+  &:hover, &:active { box-shadow: none !important; }
+  &::after {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+    content: '';
+    z-index: -1;
+  }
+  &:hover {
+    &::after { height: 5px; }
+  }
+  &.btn-secondary {
+    border: 0;
+    background-color: darken(map-get($theme-colors, "secondary"), 5%);
+  }
+}
+
+// Style 4
+// --------------------------------------------------
+
+.btn-style-4 {
+  border-radius: floor($btn-height / 2);
+  &.btn-icon-right,
+  &.btn-icon-left {
+    i {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      width: 31px;
+      height: 31px;
+      margin-top: -15px;
+      transition: $btn-transition;
+      border-radius: 50%;
+      line-height: 30px;
+      &::before { margin-left: 2px; }
+    }
+  }
+  &.btn-icon-left { padding-left: 46px; }
+  &.btn-icon-right {
+    padding-right: 46px;
+    i {
+      right: 7px;
+      left: auto;
+    }
+  }
+
+  &.btn-lg {
+    border-radius: floor($btn-height-lg / 2);
+  }
+  &.btn-sm {
+    border-radius: floor($btn-height-sm / 2);
+    &.btn-icon-right,
+    &.btn-icon-left {
+      i {
+        width: 26px;
+        height: 26px;
+        margin-top: -13px;
+        line-height: 26px;
+      }
+    }
+    &.btn-icon-left {
+      padding-left: 34px;
+      i { left: 2px; }
+    }
+    &.btn-icon-right {
+      padding-right: 34px;
+      i {
+        right: 2px;
+        left: auto;
+      }
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      @include button-style-4-variant($value);
+    }
+  }
+  &.btn-gradient {
+    &.btn-icon-right i,
+    &.btn-icon-left i {
+      background-color: $white;
+      color: map-get($theme-colors, "primary");
+    }
+  }
+}
+
+
+// Style 5
+// --------------------------------------------------
+
+.btn-style-5 {
+  overflow: hidden;
+  &::after {
+    position: absolute;
+    top: -20%;
+    left: -43px;
+    width: 50px;
+    height: 200%;
+    transform: rotate(35deg);
+    transform-origin: right;
+    transition: left .25s ease-in-out;
+    content: '';
+    z-index: -1;
+  }
+  &:hover {
+    &::after { left: -80px; }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      @include button-style-5-variant($value);
+    }
+  }
+  &.btn-gradient::after {
+    background-color: darken(map-get($theme-colors, "primary"), 10%);
+  }
+}
+
+
+// Style 6
+// --------------------------------------------------
+
+.btn-style-6 {
+  background-color: $white;
+  color: $body-color;
+  box-shadow: 0 .75rem 1.175rem .075rem rgba($gray-700, .15);
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    transition: all .25s;
+    content: '';
+    z-index: -2;
+  }
+  &:hover {
+    &::before { width: 100%;}
+  }
+  &:focus {
+    box-shadow: 0 .75rem 1.175rem .075rem rgba($gray-700, .15);
+  }
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      @include button-style-6-variant($value);
+    }
+  }
+  &.btn-gradient {
+    background: $white !important;
+    &::before {
+      @extend .bg-gradient;
+    }
+  }
+}
+
+// Scroll to Top Button
+.scroll-to-top-btn {
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: -($btn-height * 2);
+  width: $btn-height;
+  height: $btn-height;
+  transition: bottom 400ms cubic-bezier(.68, -.55, .265, 1.55), opacity .3s, background-color .3s, border-color .3s;
+  background-color: rgba($gray-800, .3);
+  color: $white;
+  font-size: $h5-font-size;
+  opacity: 0;
+  z-index: $zindex-scroll-top-btn;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  &:hover {
+    background-color: $gray-800;
+    color: $white;
+  }
+  &:focus, &:active { color: $white; }
+  &.visible {
+    bottom: .875rem;
+    opacity: 1;
+  }
+  > i { line-height: $btn-height; }
+  @include media-breakpoint-down(sm) {
+    bottom: -($btn-height-sm * 2);
+    width: $btn-height-sm;
+    height: $btn-height-sm;
+    line-height: ($btn-height-sm - 5);
+    > i { line-height: $btn-height-sm; }
+  }
+}

@@ -1,0 +1,64 @@
+// Contacts Card Default Code
+#contacts-card-default-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Contacts Card Default --&gt;</strong>
+                &lt;div class=&quot;card&quot;&gt;
+                  &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h6&gt;New York, USA&lt;/h6&gt;
+                    &lt;div class=&quot;widget widget-contacts&quot;&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;
+                          &lt;i class=&quot;fe-icon-map-pin&quot;&gt;&lt;/i&gt;
+                          &lt;span&gt;Find us&lt;/span&gt;
+                          &lt;a href=&quot;link-to-google-map&quot; target=&quot;_blank&quot;&gt;396 Lillian Blvd, Holbrook, NY 11741, USA&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                          &lt;i class=&quot;fe-icon-phone&quot;&gt;&lt;/i&gt;
+                          &lt;span&gt;Call us&lt;/span&gt;
+                          &lt;a href=&quot;tel:+1212477690000&quot;&gt;+1 (212) 477 690 000&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                          &lt;i class=&quot;fe-icon-mail&quot;&gt;&lt;/i&gt;
+                          &lt;span&gt;Write us&lt;/span&gt;
+                          &lt;a href=&quot;mailto:newyork@example.com&quot;&gt;newyork@example.com&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Contacts Card Default</strong>
+                .card
+                  .card-body
+                    h6 New York, USA
+                    .widget.widget-contacts
+                      ul
+                        li
+                          i.fe-icon-map-pin
+                          span Find us
+                          a(href=&quot;link-to-google-map&quot; target=&quot;_blank&quot;) 396 Lillian Blvd, Holbrook, NY 11741, USA
+                        li
+                          i.fe-icon-phone
+                          span Call us
+                          a(href=&quot;tel:+1212477690000&quot;) +1 (212) 477 690 000
+                        li
+                          i.fe-icon-mail
+                          span Write us
+                          a(href=&quot;mailto:newyork@example.com&quot;) newyork@example.com

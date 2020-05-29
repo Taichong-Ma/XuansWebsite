@@ -1,0 +1,31 @@
+//
+// Code (Override some default Bootstrap styles) + Extra
+// -----------------------------------------------------
+
+// User Input
+kbd { border-radius: 0; }
+
+// Code Block
+pre {
+  padding: $spacer;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  background-color: $pre-bg;
+}
+
+// Tabs inside code block
+.nav-tabs.pre-nav-tabs {
+  padding: ($spacer / 2);
+  border: {
+    top: 1px solid $border-color;
+    right: 1px solid $border-color;
+    left: 1px solid $border-color;
+  }
+  background-color: $pre-bg;
+  .nav-link {
+    margin: {
+      top: .3125rem;
+      bottom: .3125rem;
+    }
+  }
+}

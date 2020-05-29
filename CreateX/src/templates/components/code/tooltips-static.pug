@@ -1,0 +1,81 @@
+// Tooltips Static Example Code
+#tooltips-static-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Tooltips Static Examples --&gt;</strong>
+                &lt;div class=&quot;example-tooltip&quot;&gt;
+
+                  <strong>&lt;!-- Tooltip Static (On the Top) --&gt;</strong>
+                  &lt;div class=&quot;tooltip bs-tooltip-top&quot; role=&quot;tooltip&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;tooltip-inner&quot;&gt;Tooltip on the top&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Tooltip Static (On the Right) --&gt;</strong>
+                  &lt;div class=&quot;tooltip bs-tooltip-right&quot; role=&quot;tooltip&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;tooltip-inner&quot;&gt;Tooltip on the right&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Tooltip Static (On the Bottom) --&gt;</strong>
+                  &lt;div class=&quot;tooltip bs-tooltip-bottom&quot; role=&quot;tooltip&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;tooltip-inner&quot;&gt;Tooltip on the bottom&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Tooltip Static (On the Left) --&gt;</strong>
+                  &lt;div class=&quot;tooltip bs-tooltip-left&quot; role=&quot;tooltip&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;tooltip-inner&quot;&gt;Tooltip on the left&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  <strong>&lt;!-- Tooltip Static (with HTML) --&gt;</strong>
+                  &lt;div class=&quot;tooltip bs-tooltip-top&quot; role=&quot;tooltip&quot;&gt;
+                    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;tooltip-inner&quot;&gt;&lt;i&gt;Tooltip&lt;/i&gt; &lt;u&gt;with&lt;/u&gt; &lt;strong&gt;HTML&lt;/strong&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Tooltips Static Examples</strong>
+                .example-tooltip
+
+                  <strong>//- Tooltip Static (On the Top)</strong>
+                  .tooltip.bs-tooltip-top(role=&quot;tooltip&quot;)
+                    .arrow
+                    .tooltip-inner Tooltip on the top
+                  
+                  <strong>//- Tooltip Static (On the Right)</strong>
+                  .tooltip.bs-tooltip-right(role=&quot;tooltip&quot;)
+                    .arrow
+                    .tooltip-inner Tooltip on the right
+
+                  <strong>//- Tooltip Static (On the Bottom)</strong>
+                  .tooltip.bs-tooltip-bottom(role=&quot;tooltip&quot;)
+                    .arrow
+                    .tooltip-inner Tooltip on the bottom
+
+                  <strong>//- Tooltip Static (On the Left)</strong>
+                  .tooltip.bs-tooltip-left(role=&quot;tooltip&quot;)
+                    .arrow
+                    .tooltip-inner Tooltip on the left
+
+                  <strong>//- Tooltip Static (with HTML)</strong>
+                  .tooltip.bs-tooltip-top(role=&quot;tooltip&quot;)
+                    .arrow
+                    .tooltip-inner &lt;i&gt;Tooltip&lt;/i&gt; &lt;u&gt;with&lt;/u&gt; &lt;strong&gt;HTML&lt;/strong&gt;

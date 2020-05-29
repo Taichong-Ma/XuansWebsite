@@ -1,0 +1,246 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'About Us v.1'
+
+//- Page Content
+block content
+
+  // Hero
+  section.bg-parallax.bg-secondary.py-5.mb-5
+    .bg-parallax-img(data-parallax='{"y" : 100}')
+      +image('img/pages/about-hero-bg.png', 'Parallax Background')
+    .container.bg-parallax-content.py-5.my-3.text-center
+      h1.pb-4 <span class='d-block h3 font-family-body font-weight-light text-muted mb-2'>We are leading</span>Web Design Agency<span class='d-block h2 font-weight-normal text-muted mt-3'>since 2007</span>
+      a(href='#services').scroll-to.btn.btn-gradient Learn More
+
+  // Services
+  section(data-offset-top='110')#services.container.pt-3.pb-4.mb-5
+    h2.h3.block-title.text-center.mb-3
+      | What We Offer
+      small Is to be your reliable partner in following areas
+    .row
+      .col-lg-3.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-monitor
+          h3.icon-box-title Responsive Web Design
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          a(href='services.html').icon-box-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-smartphone
+          h3.icon-box-title Mobile First UX Design
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          a(href='services.html').icon-box-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-server
+          h3.icon-box-title Back-End Development
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          a(href='services.html').icon-box-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        .icon-box.text-center.mx-auto
+          .icon-box-icon: i.fe-icon-life-buoy
+          h3.icon-box-title Lifetime Client Support
+          p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          a(href='services.html').icon-box-link
+            | Learn more
+            i.fe-icon-arrow-right
+    hr.mt-5
+
+  // Team
+  section.container.pb-5
+    h2.h3.block-title.text-center.mb-4
+      | Meet Our Team
+      small People behind your great experience
+    .row
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/01.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-github
+                i.socicon-github
+              a(href='#').social-btn.sb-style-4.sb-stackoverflow
+                i.socicon-stackoverflow
+              a(href='#').social-btn.sb-style-4.sb-skype
+                i.socicon-skype
+            a(href='tel:+19871625346').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (987) 162 53 46
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Lead Programmer
+          h4.team-name William Smith
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/02.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-4.sb-linkedin
+                i.socicon-linkedin
+            a(href='tel:+57872336590').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+5 (787) 233 65 90
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Marketing Manager
+          h4.team-name Samantha Palson
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/03.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-pinterest
+                i.socicon-pinterest
+              a(href='#').social-btn.sb-style-4.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-4.sb-dribbble
+                i.socicon-dribbble
+            a(href='tel:+13907765843').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+1 (390) 776 58 43
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position Graphic Designer
+          h4.team-name Emma Johnson
+      // Team member
+      .col-lg-3.col-sm-6
+        .team-card-style-1.mx-auto
+          .team-card-inner
+            .team-thumb
+              +image('img/team/style-1/04.jpg', 'Team Member Picture')
+            .team-social-bar.text-center
+              a(href='#').social-btn.sb-style-4.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-4.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-4.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-4.sb-linkedin
+                i.socicon-linkedin
+            a(href='tel:+72056557984').team-contact-link
+              i.fe-icon-phone
+              | &nbsp;+7 (205) 655 79 84
+            a(href='mailto:info@example.com').team-contact-link
+              i.fe-icon-mail
+              | &nbsp;info@example.com
+          span.team-position CEO, Co-Founder
+          h4.team-name James McCorvinus
+  
+  // Skills
+  section.d-lg-table.bg-secondary
+    .d-none.d-lg-table-cell.align-middle.w-50.bg-center.bg-no-repeat.bg-cover.text-center(style='background-image: url(img/pages/about-skills-bg.jpg);')
+      a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button: i.fe-icon-play
+      span.d-block.video-player-label.text-muted.pt-3 Click me to watch video!
+    .d-lg-table-cell.py-5.my-lg-5.px-2.px-lg-5
+      .p-3
+        h2.h3.block-title.mb-4 Our Key Skills
+        p.text-muted.pb-4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        // Progress
+        .progress.mb-3
+          .progress-bar(role='progressbar' style='width: 60%;' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-globe
+              | Web Development - 60%
+        // Progress
+        .progress.mb-3
+          .progress-bar.bg-accent(role='progressbar' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-monitor
+              | UX/UI Design - 50%
+        // Progress
+        .progress.mb-3
+          .progress-bar.bg-info(role='progressbar' style='width: 45%;' aria-valuenow='45' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-edit
+              | Illustration - 45%
+        // Progress
+        .progress.mb-3
+          .progress-bar.bg-success(role='progressbar' style='width: 55%;' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-feather
+              | Iconography - 55%
+        // Progress
+        .progress.mb-3
+          .progress-bar.bg-warning(role='progressbar' style='width: 75%;' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-database
+              | Back-End Dev - 75%
+        // Progress
+        .progress.mb-3
+          .progress-bar.bg-danger(role='progressbar' style='width: 65%;' aria-valuenow='65' aria-valuemin='0' aria-valuemax='100')
+            span
+              i.fe-icon-settings
+              | Front-End Dev - 65%
+  
+  // Partners
+  section.container.py-5.my-2
+    h2.h3.block-title.text-center.mt-3.mb-5
+      | Our Partners
+      small Well respected people and companies from around the world
+    .row
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/01.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/02.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/03.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/04.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/07.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/05.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/08.png' width='165' alt='Partner').d-block.mx-auto
+      .col-6.col-md-3
+        a(href='#').d-block.box-shadow.py-5.mb-30
+          img(src='img/partners/09.png' width='165' alt='Partner').d-block.mx-auto
+
+  // Contact Us CTA
+  section.bg-gradient.py-4
+    div(style='background-image: url(img/pages/dotted-map.png);').container.position-relative.bg-no-repeat.bg-center.py-5.text-center
+      h2.block-title.text-white.mt-5.mb-4
+        | Let's Connect
+        small.text-white Share your ideas with us and we do our best to turn your ideas into reality.
+      a(href='contacts-v1.html').btn.btn-light.mb-5 Contact Us
+
+  //- footer-default.pug template
+  include partials/footer-default

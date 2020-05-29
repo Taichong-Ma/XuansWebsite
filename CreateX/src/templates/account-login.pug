@@ -1,0 +1,90 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Login / Register Account'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Login / Register'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}]
+
+//- Page Content
+block content
+  .container.mb-3
+    .row
+      .col-md-6.pb-5
+        form(novalidate).needs-validation.wizard
+          .wizard-body.pt-2
+            .d-sm-flex.justify-content-between.pb-2
+              a(href='#').btn.btn-secondary.btn-sm.btn-block.my-2.mr-3
+                i.socicon-facebook
+                | &nbsp;Login
+              a(href='#').btn.btn-secondary.btn-sm.btn-block.my-2.mr-3
+                i.socicon-twitter
+                | &nbsp;Login
+              a(href='#').btn.btn-secondary.btn-sm.btn-block.my-2.mr-3
+                i.socicon-linkedin
+                | &nbsp;Login
+            hr
+            h3.h5.pt-4.pb-2 Or using form below
+            .input-group.form-group
+              .input-group-prepend
+                span.input-group-text
+                  i.fe-icon-mail
+              input(type='email' placeholder='Email' required).form-control
+              .invalid-feedback Please enter your email!
+            .input-group.form-group
+              .input-group-prepend
+                span.input-group-text
+                  i.fe-icon-lock
+              input(type='password' placeholder='Password' required).form-control
+              .invalid-feedback Please enter valid password!
+            .d-flex.flex-wrap.justify-content-between
+              .custom-control.custom-checkbox
+                input(type='checkbox' checked)#remember-me.custom-control-input
+                label(for='remember-me').custom-control-label Remember me
+              a(href='account-password-recovery.html').navi-link Forgot password?
+          .wizard-footer.text-right
+            button(type='submit').btn.btn-primary Login
+      .col-md-6.pb-5
+        h3.h4.pb-1 No Account? Register
+        p Registration takes less than a minute but gives you full control over your orders.
+        form(novalidate).needs-validation
+          .row
+            .col-sm-6
+              .form-group
+                label(for='reg-fn') First Name
+                input(type='text' required)#reg-fn.form-control
+                .invalid-feedback Please enter your first name!
+            .col-sm-6
+              .form-group
+                label(for='reg-ln') Last Name
+                input(type='text' required)#reg-ln.form-control
+                .invalid-feedback Please enter your last name!
+            .col-sm-6
+              .form-group
+                label(for='reg-email') E-mail Address
+                input(type='email' required)#reg-email.form-control
+                .invalid-feedback Please enter valid email address!
+            .col-sm-6
+              .form-group
+                label(for='reg-phone') Phone Number
+                input(type='text' required)#reg-phone.form-control
+                .invalid-feedback Please enter your phone number!
+            .col-sm-6
+              .form-group
+                label(for='reg-password') Password
+                input(type='password' required)#reg-password.form-control
+                .invalid-feedback Please enter password!
+            .col-sm-6
+              .form-group
+                label(for='reg-password-confirm') Confirm Password
+                input(type='password' required)#reg-password-confirm.form-control
+                .invalid-feedback Passwords do not match!
+          .text-right
+            button(type='submit').btn.btn-primary Register
+
+
+  //- footer-shop.pug template
+  include partials/footer-shop

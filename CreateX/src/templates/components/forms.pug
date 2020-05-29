@@ -1,0 +1,457 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Forms'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Forms Supported Types Code Modal
+  include code/forms-supported-types
+
+  //- Forms Checkboxes and Radios Code Modal
+  include code/forms-checkboxes-radios
+
+  //- Forms Switches Code Modal
+  include code/forms-switch
+
+  //- Forms Sizing Code Modal
+  include code/forms-sizing
+
+  //- Forms Disabled Code Modal
+  include code/forms-disabled
+
+  //- Forms Inline Code Modal
+  include code/forms-inline
+
+  //- Forms Help Text Code Modal
+  include code/forms-help-text
+
+  //- Forms Validation: Status Text Code Modal
+  include code/forms-validation-text
+
+  //- Forms Validation: Status Text Code Modal
+  include code/forms-validation-tooltips
+
+  //- Forms Light Skin Code Modal
+  include code/forms-light-skin
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container
+
+      // Supported input types
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Supported input types
+        a(href='#forms-supported-types-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-lg-10
+          .form-group.row.align-items-center
+            label(for='text-input').col-2.col-form-label.text-muted Text
+            .col-10
+              input(type='text' id='text-input' value='Artisanal kale').form-control
+          .form-group.row.align-items-center
+            label(for='search-input').col-2.col-form-label.text-muted Search
+            .col-10
+              input(type='search' id='search-input' value='How do I shoot web').form-control
+          .form-group.row.align-items-center
+            label(for='email-input').col-2.col-form-label.text-muted Email
+            .col-10
+              input(type='email' id='email-input' value='email@example.com').form-control
+          .form-group.row.align-items-center
+            label(for='url-input').col-2.col-form-label.text-muted URL
+            .col-10
+              input(type='url' id='url-input' value='https://getbootstrap.com').form-control
+          .form-group.row.align-items-center
+            label(for='tel-input').col-2.col-form-label.text-muted Phone
+            .col-10
+              input(type='tel' id='tel-input' value='1-(770)-334-2518').form-control
+          .form-group.row.align-items-center
+            label(for='pass-input').col-2.col-form-label.text-muted Password
+            .col-10
+              input(type='password' id='pass-input' value='mypasswordexample').form-control
+          .form-group.row
+            label(for='textarea-input').col-2.col-form-label.text-muted Textarea
+            .col-10
+              textarea(id='textarea-input' rows='5').form-control Hello World!
+          .form-group.row.align-items-center
+            label(for='select-input').col-2.col-form-label.text-muted Select
+            .col-10
+              select(id='select-input').form-control
+                option Choose option...
+                option Option item 1
+                option Option item 2
+                option Option item 3
+          .form-group.row.align-items-center
+            label(for='multiselect-input').col-2.col-form-label.text-muted Multiselect
+            .col-10
+              select(id='multiselect-input' size='3' multiple).form-control
+                option Option item 1
+                option Option item 2
+                option Option item 3
+                option Option item 4
+                option Option item 5
+                option Option item 6
+          .form-group.row.align-items-center
+            label(for='file-input').col-2.col-form-label.text-muted File
+            .col-10
+              .custom-file
+                input(type='file' id='file-input').custom-file-input
+                label(for='file-input').custom-file-label Choose file...
+          .form-group.row.align-items-center
+            label(for='number-input').col-2.col-form-label.text-muted Number
+            .col-10
+              input(type='number' id='number-input' value='37').form-control
+          .form-group.row.align-items-center
+            label(for='date-time-input').col-2.col-form-label.text-muted Date and time
+            .col-10
+              input(type='datetime-local' id='date-time-input').form-control
+          .form-group.row.align-items-center
+            label(for='date-input').col-2.col-form-label.text-muted Date
+            .col-10
+              input(type='date' id='date-input' value='2018-06-13').form-control
+          .form-group.row.align-items-center
+            label(for='month-input').col-2.col-form-label.text-muted Month
+            .col-10
+              input(type='month' id='month-input' value='2018-06').form-control
+          .form-group.row.align-items-center
+            label(for='week-input').col-2.col-form-label.text-muted Week
+            .col-10
+              input(type='week' id='week-input' value='2018-W33').form-control
+          .form-group.row.align-items-center
+            label(for='time-input').col-2.col-form-label.text-muted Time
+            .col-10
+              input(type='time' id='time-input' value='14:45:00').form-control
+          .form-group.row.align-items-center
+            label(for='color-input').col-2.col-form-label.text-muted Color
+            .col-10
+              input(type='color' id='color-input' value='#f5f5f5').form-control
+
+      // Checkboxes & radio buttons
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Checkboxes &amp; radio buttons
+        a(href='#forms-checkboxes-radios-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-4
+        .col-md-6.form-group
+          .d-inline-block.mr-5
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='ex-check-1').custom-control-input
+              label(for='ex-check-1').custom-control-label Check this checkbox
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='ex-check-2' checked).custom-control-input
+              label(for='ex-check-2').custom-control-label Uncheck this checkbox
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='ex-check-3' disabled).custom-control-input
+              label(for='ex-check-3').custom-control-label Disabled checkbox
+          .d-inline-block
+            .custom-control.custom-radio
+              input(type='radio' id='ex-radio-1' name='radio').custom-control-input
+              label(for='ex-radio-1').custom-control-label Toggle this radio
+            .custom-control.custom-radio
+              input(type='radio' id='ex-radio-2' name='radio' checked).custom-control-input
+              label(for='ex-radio-2').custom-control-label Toggle this radio
+            .custom-control.custom-radio
+              input(type='radio' id='ex-radio-3' name='radio' disabled).custom-control-input
+              label(for='ex-radio-3').custom-control-label Disabled radio
+        .col-md-6.form-group
+          .form-group
+            .custom-control.custom-checkbox.custom-control-inline
+              input(type='checkbox' id='ex-check-4').custom-control-input
+              label(for='ex-check-4').custom-control-label Check this checkbox
+            .custom-control.custom-checkbox.custom-control-inline
+              input(type='checkbox' id='ex-check-5' checked).custom-control-input
+              label(for='ex-check-5').custom-control-label Uncheck this checkbox
+            .custom-control.custom-checkbox.custom-control-inline
+              input(type='checkbox' id='ex-check-6' disabled).custom-control-input
+              label(for='ex-check-6').custom-control-label Disabled checkbox
+          .form-group
+            .custom-control.custom-radio.custom-control-inline
+              input(type='radio' id='ex-radio-4' name='radio2').custom-control-input
+              label(for='ex-radio-4').custom-control-label Toggle this radio
+            .custom-control.custom-radio.custom-control-inline
+              input(type='radio' id='ex-radio-5' name='radio2' checked).custom-control-input
+              label(for='ex-radio-5').custom-control-label Toggle this radio
+            .custom-control.custom-radio.custom-control-inline
+              input(type='radio' id='ex-radio-6' name='radio2' disabled).custom-control-input
+              label(for='ex-radio-6').custom-control-label Disabled radio
+
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Switches
+        a(href='#forms-switch-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .custom-control.custom-switch
+        input(type='checkbox' id='customSwitch1').custom-control-input
+        label(for='customSwitch1').custom-control-label Toggle this switch element
+      .custom-control.custom-switch
+        input(type='checkbox' id='customSwitch2' disabled).custom-control-input
+        label(for='customSwitch2').custom-control-label Disabled switch element
+
+      .row.mt-3.pt-5
+
+        // Sizing
+        .col-md-6.form-group.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Sizing
+            a(href='#forms-sizing-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .form-group
+            label(for='large-input') Large input
+            input(type='text' id='large-input' placeholder='Large input placeholder').form-control.form-control-lg
+          .form-group
+            label(for='normal-input') Normal input
+            input(type='text' id='normal-input' placeholder='Normal input placeholder').form-control
+          .form-group
+            label(for='small-input') Small input
+            input(type='text' id='small-input' placeholder='Small input placeholder').form-control.form-control-sm
+
+        // Readonly & disabled
+        .col-md-6.form-group.pb-4
+          .d-flex.flex-wrap.justify-content-between
+            h4.mr-3 Readonly &amp; disabled
+            a(href='#forms-disabled-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+              i.fe-icon-code
+              | &nbsp;&nbsp;Show code
+          hr.pb-4.mb-1
+          .form-group
+            input(type='text' placeholder='Readonly input here...' readonly).form-control
+          .form-group
+            input(type='text' id='disabled-input' placeholder='Disabled input here...' disabled).form-control
+          .form-group
+            select(id='disabled-select-input' disabled).form-control
+              option Disabled select here...
+              option Option item 1
+              option Option item 2
+              option Option item 3
+
+      // Inline form
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Inline form
+        a(href='#forms-inline-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      form.form-inline.pb-4
+        label.sr-only Name
+        input(type='text' id='nline-form-input-name' placeholder='John Doe').form-control.mb-3.mr-sm-4
+        label.sr-only Username
+        input(type='text' id='inline-form-input-username' placeholder='Username').form-control.mb-3.mr-sm-4
+        .custom-control.custom-checkbox.mb-3.mr-4
+          input(type='checkbox' id='inline-form-check-1').custom-control-input
+          label(for='inline-form-check-1').custom-control-label Remember me
+        button(type='submit').btn.btn-primary.mb-3 Submit
+      form.form-inline.pb-4
+        label(for='inline-form-select').text-muted.mr-3 Preference
+        select(id='inline-form-select').form-control.mb-3.mr-sm-4
+          option Choose...
+          option One
+          option Two
+          option Three
+        .custom-control.custom-checkbox.mb-3.mr-4
+          input(type='checkbox' id='inline-form-check-2').custom-control-input
+          label(for='inline-form-check-2').custom-control-label Remember my preference
+        button(type='submit').btn.btn-accent.mb-3 Submit
+
+    
+      // Help text
+      .d-flex.flex-wrap.justify-content-between.pt-4
+        h4.mr-3 Help text
+        a(href='#forms-help-text-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+      .row.pb-5
+        .col-lg-9
+          .form-group
+            label(for='help-text-input') Password
+            input(type='password' id='help-text-input' placeholder='Your password here').form-control
+            small.form-text.text-muted Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+
+      // Validation: Status text
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Validation: Status text
+        a(href='#forms-validation-text-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+    form(novalidate).container.needs-validation.pb-5
+      .row
+        .col-md-4.form-group
+          label(for='validationCustom01') First name
+          input(type='text' id='validationCustom01' placeholder='First name' value='John' required).form-control
+          .valid-feedback Looks good!
+        .col-md-4.form-group
+          label(for='validationCustom02') Last name
+          input(type='text' id='validationCustom02' placeholder='Last name' value='Doe' required).form-control
+          .valid-feedback Looks good!
+        .col-md-4.form-group
+          label(for='validationCustomUsername') Username
+          input(type='text' id='validationCustomUsername' placeholder='Username' required).form-control
+          .invalid-feedback Please choose a username.
+          .valid-feedback Looks good!
+      .row
+        .col-md-6.form-group
+          label(for='validationCustom03') City
+          select(id='validationCustom03' required).form-control
+            option(value='') Choose city...
+            option(value='Dallas') Dallas
+            option(value='Houston') Houston
+            option(value='Los Angeles') Los Angeles
+            option(value='Miami') Miami
+            option(value='New York') New York
+          .invalid-feedback Please provide a valid city.
+          .valid-feedback Looks good!
+        .col-md-3.form-group
+          label(for='validationCustom04') State
+          select(id='validationCustom04' required).form-control
+            option(value='') Choose state...
+            option(value='Arizona') Arizona
+            option(value='Colorado') Colorado
+            option(value='Florida') Florida
+            option(value='Indiana') Indiana
+            option(value='Kentucky') Kentucky
+            option(value='Texas') Texas
+          .invalid-feedback Please provide a valid state.
+          .valid-feedback Looks good!
+        .col-md-3.form-group
+          label(for='validationCustom05') Zip
+          input(type='text' id='validationCustom05' placeholder='Zip' required).form-control
+          .invalid-feedback Please provide a valid zip.
+          .valid-feedback Looks good!
+      .form-group
+        .custom-control.custom-checkbox
+          input(type='checkbox' id='invalidCheck' required).custom-control-input
+          label(for='invalidCheck').custom-control-label Agree to terms and conditions
+          .invalid-feedback You must agree before submitting.
+      button(type='submit').btn.btn-primary Submit Form
+
+    .container.pt-4.pb-2
+
+      // Validation: Status tooltips
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Validation: Status tooltips
+        a(href='#forms-validation-tooltips-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-1
+    form(novalidate).container.needs-validation.pb-5.mb-4
+      .row
+        .col-md-4.form-group
+          label(for='validationTooltip01') First name
+          input(type='text' id='validationTooltip01' placeholder='First name' value='John' required).form-control
+          .valid-tooltip Looks good!
+        .col-md-4.form-group
+          label(for='validationTooltip02') Last name
+          input(type='text' id='validationTooltip02' placeholder='Last name' value='Doe' required).form-control
+          .valid-tooltip Looks good!
+        .col-md-4.form-group
+          label(for='validationTooltipUsername') Username
+          input(type='text' id='validationTooltipUsername' placeholder='Username' required).form-control
+          .invalid-tooltip Please choose a username.
+          .valid-tooltip Looks good!
+      .row
+        .col-md-6.form-group
+          label(for='validationTooltip03') City
+          select(id='validationTooltip03' required).form-control
+            option(value='') Choose city...
+            option(value='Dallas') Dallas
+            option(value='Houston') Houston
+            option(value='Los Angeles') Los Angeles
+            option(value='Miami') Miami
+            option(value='New York') New York
+          .invalid-tooltip Please provide a valid city.
+          .valid-tooltip Looks good!
+        .col-md-3.form-group
+          label(for='validationTooltip04') State
+          select(id='validationTooltip04' required).form-control
+            option(value='') Choose state...
+            option(value='Arizona') Arizona
+            option(value='Colorado') Colorado
+            option(value='Florida') Florida
+            option(value='Indiana') Indiana
+            option(value='Kentucky') Kentucky
+            option(value='Texas') Texas
+          .invalid-tooltip Please provide a valid state.
+          .valid-tooltip Looks good!
+        .col-md-3.form-group
+          label(for='validationTooltip05') Zip
+          input(type='text' id='validationTooltip05' placeholder='Zip' required).form-control
+          .invalid-tooltip Please provide a valid zip.
+          .valid-tooltip Looks good!
+      .form-group
+        .custom-control.custom-checkbox
+          input(type='checkbox' id='invalidCheck01' required).custom-control-input
+          label(for='invalidCheck01').custom-control-label Agree to terms and conditions
+          .invalid-tooltip You must agree before submitting.
+      button(type='submit').btn.btn-primary Submit Form
+
+    // Light Skin
+    .bg-dark.py-5
+      .container.py-2
+        .d-flex.flex-wrap.justify-content-between
+          h4.text-white.mr-3 Forms light version
+          a(href='#forms-light-skin-code' data-toggle='modal').navi-link.text-white.font-weight-bold.text-sm.text-uppercase.py-2
+            i.fe-icon-code
+            | &nbsp;&nbsp;Show code
+        hr.hr-light.pb-4.mb-1
+        .row.pb-2
+          .col-lg-10
+            .form-group.row.align-items-center
+              label(for='text-input-light').col-2.col-form-label.text-white.opacity-60 Text
+              .col-10
+                input(type='text' id='text-input-light' value='Artisanal kale').form-control.form-control-light-skin
+            .form-group.row
+              label(for='textarea-input-light').col-2.col-form-label.text-white.opacity-60 Textarea
+              .col-10
+                textarea(id='textarea-input-light' rows='5').form-control.form-control-light-skin Hello World!
+            .form-group.row.align-items-center
+              label(for='select-input-light').col-2.col-form-label.text-white.opacity-60 Select
+              .col-10
+                select(id='select-input-light').form-control.form-control-light-skin
+                  option Choose option...
+                  option Option item 1
+                  option Option item 2
+                  option Option item 3
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 File
+              .col-10
+                .custom-file.form-control-light-skin
+                  input(type='file' id='file-input-light').custom-file-input
+                  label(for='file-input-light').custom-file-label Choose file...
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Checkbox
+              .col-10
+                .custom-control.custom-checkbox.custom-control-inline
+                  input(type='checkbox' id='check-light').custom-control-input
+                  label(for='check-light').custom-control-label.text-white Check this checkbox
+                .custom-control.custom-checkbox.custom-control-inline
+                  input(type='checkbox' id='check-light-2' checked).custom-control-input
+                  label(for='check-light-2').custom-control-label.text-white Uncheck this checkbox
+            .form-group.row.align-items-center
+              label.col-2.col-form-label.text-white.opacity-60 Radio button
+              .col-10
+                .custom-control.custom-radio.custom-control-inline
+                  input(type='radio' id='radio-light' name='radio-light' checked).custom-control-input
+                  label(for='radio-light').custom-control-label.text-white Uncheck this radio
+                .custom-control.custom-radio.custom-control-inline
+                  input(type='radio' id='radio-light-2' name='radio-light').custom-control-input
+                  label(for='radio-light-2').custom-control-label.text-white Check this radio

@@ -1,0 +1,113 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Toast Notifications'
+  - var pageTitleInverse = true
+  - var pageTitleBgImage ='img/page-title/components-pattern.png'
+  - var pageTitleIndentLeft = true
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': '../components.html'}]
+
+//- Page Content
+block content
+
+  //- Toasts Colors Code Modal
+  include code/toasts-colors
+
+  //- Toasts in Action Code Modal
+  include code/toasts-in-action
+
+  //- Default Bootstrap Toast Code Modal
+  include code/toasts-bootstrap
+
+  // Off-Canvas (Sidebar)
+  include ../partials/sidebar-components
+
+  // Off-Canvas Wrapper
+  .offcanvas-wrapper
+    .container.pb-5.mb-3
+    
+      // Color variations
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Color variations
+        a(href='#toasts-colors-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      .row.pb-5
+        .col-sm-6
+          .iziToast.iziToast-primary
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-bell
+              strong Primary
+              p toast notification with icon
+            button.iziToast-close
+          .iziToast
+            .iziToast-body
+              strong Secondary
+              p toast notification without icon
+            button.iziToast-close
+          .iziToast.iziToast-accent
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-clock
+              strong Accent
+              p toast notification with icon
+            button.iziToast-close
+          .iziToast.iziToast-success
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-check-circle
+              strong Success
+              p toast notification with icon
+            button.iziToast-close
+        .col-sm-6
+          .iziToast.iziToast-info
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-help-circle
+              strong Info
+              p toast notification with icon
+            button.iziToast-close
+          .iziToast.iziToast-warning
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-alert-triangle
+              strong Warning
+              p toast notification with icon
+            button.iziToast-close
+          .iziToast.iziToast-danger
+            .iziToast-body(style='padding-left: 33px;')
+              i.iziToast-icon.fe-icon-slash
+              strong Danger
+              p toast notification with icon
+            button.iziToast-close
+    
+      // Toasts in action
+      .d-flex.flex-wrap.justify-content-between
+        h4.mr-3 Toasts in action
+        a(href='#toasts-in-action-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      button(data-toast data-toast-position='topCenter' data-toast-type='primary' data-toast-icon='fe-icon-clock' data-toast-title='Primary' data-toast-message='toast notification with icon').btn.btn.btn-secondary.mr-3.mb-3 Primary Top Center
+      button(data-toast data-toast-position='topRight' data-toast-type='info' data-toast-icon='fe-icon-help-circle' data-toast-title='Info' data-toast-message='toast notification with icon').btn.btn-secondary.mr-3.mb-3 Info Top Right
+      button(data-toast data-toast-position='topLeft' data-toast-type='success' data-toast-icon='fe-icon-check-circle' data-toast-title='Success' data-toast-message='toast notification with icon').btn.btn-secondary.mr-3.mb-3 Success Top Left
+      button(data-toast data-toast-position='bottomRight' data-toast-type='warning' data-toast-icon='fe-icon-alert-triangle' data-toast-title='Warning' data-toast-message='toast notification with icon').btn.btn-secondary.mr-3.mb-3 Warning Bottom Right
+      button(data-toast data-toast-position='bottomLeft' data-toast-type='danger' data-toast-icon='fe-icon-slash' data-toast-title='Danger' data-toast-message='toast notification with icon').btn.btn-secondary.mr-3.mb-3 Danger Bottom Left
+      button(data-toast data-toast-position='bottomCenter' data-toast-icon='fe-icon-bell' data-toast-title='Secondary' data-toast-message='toast notification with icon').btn.btn-secondary.mr-3.mb-3 Secondary Bottom Center
+    
+      // Default Bootstrap toast
+      .d-flex.flex-wrap.justify-content-between.mt-5
+        h4.mr-3 Default Bootstrap toast
+        a(href='#toasts-bootstrap-code' data-toggle='modal').navi-link.font-weight-bold.text-sm.text-uppercase.py-2
+          i.fe-icon-code
+          | &nbsp;&nbsp;Show code
+      hr.pb-4.mb-2
+      div(role='alert' aria-live='assertive' aria-atomic='true' data-autohide='false').toast.fade.show
+        .toast-header
+          div(style='width: 1.25rem; height: 1.25rem;').d-inline-block.align-middle.bg-primary.rounded-circle.mr-2
+          strong.mr-auto Bootstrap
+          small 11 mins ago
+          button(type='button' data-dismiss='toast' aria-label='Close').ml-2.close
+            span(aria-hidden='true') &times;
+        .toast-body
+          | Hello, world! This is a toast message.

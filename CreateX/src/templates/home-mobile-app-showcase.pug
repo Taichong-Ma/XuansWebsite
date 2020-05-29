@@ -1,0 +1,201 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Mobile App Showcase'
+
+//- Page Content
+block content
+
+  // Hero
+  section.pt-2
+   .bg-center-top.bg-no-repeat.mt-md-5.pt-5(style='background-image: url(img/homepages/mobile-app-showcase/hero-bg.png);')
+      .container.pt-5.pb-5.pb-md-2
+        .row
+          .col-lg-7.col-md-6
+            img(src='img/homepages/mobile-app-showcase/hero-device.png' alt='CreateX App').d-block.mx-auto.mr-md-5
+          .col-lg-5.col-md-6.pt-md-5.text-center.text-md-left
+            h1.pt-md-5.pb-md-4 Minimal App For Your Lifestyle
+            a(href='https://player.vimeo.com/video/93641234?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.bg-gradient.text-white.my-3.mr-3: i.fe-icon-play
+            span.video-player-label Click me to watch video!
+            .pt-4.mt-md-3
+              a(href='#').market-btn.apple-btn.mr-3.mb-3
+                span.mb-subtitle Download on the
+                span.mb-title App Store
+              a(href='#').market-btn.google-btn.mb-3
+                span.mb-subtitle Download on the
+                span.mb-title Google Play
+  
+  section(style='background-image: url(img/homepages/mobile-app-showcase/features-bg.png);').bg-center-top.bg-no-repeat
+
+    // Features
+    .container.pb-5
+      h2.h3.block-title.text-center
+        | Awesome features
+        small Our app introduces some kill features
+      .row.pt-3
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-award
+            h3.icon-box-title Award-Winning Design
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-trending-up
+            h3.icon-box-title Truly High Performance
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-bell
+            h3.icon-box-title Smart Notifications
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-mic
+            h3.icon-box-title Built-In Voice Recording
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-upload-cloud
+            h3.icon-box-title Cloud Files Storage
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-shopping-bag
+            h3.icon-box-title Buy Right From App
+            p.icon-box-text.text-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#').icon-box-link
+              | Learn more
+              i.fe-icon-arrow-right
+
+    // Screenshots
+    .container.pb-3.pt-lg-2
+      h2.h3.block-title.text-center
+        | Screenshots
+        small Look at the main app interface screenshots to see if you like it
+  .container-fluid.pb-5
+    .owl-carousel.carousel-flush(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"500":{"items":2},"920":{"items":3},"1200":{"items":4},"1400":{"items":5}} }')
+      figure.figure.mb-4
+        img(src='img/homepages/mobile-app-showcase/screens/01.jpg' alt='Onboarding Screen').figure-img
+        figcaption.figure-caption.text-center Onboarding Screen
+      figure.figure.mb-4
+        img(src='img/homepages/mobile-app-showcase/screens/02.jpg' alt='Playlist Screen').figure-img
+        figcaption.figure-caption.text-center Playlist Screen
+      figure.figure.mb-4
+        img(src='img/homepages/mobile-app-showcase/screens/03.jpg' alt='Playlist Scroll Screen').figure-img
+        figcaption.figure-caption.text-center Playlist Scroll Screen
+      figure.figure.mb-4
+        img(src='img/homepages/mobile-app-showcase/screens/04.jpg' alt='Player 1 Screen').figure-img
+        figcaption.figure-caption.text-center Player 1 Screen
+      figure.figure.mb-4
+        img(src='img/homepages/mobile-app-showcase/screens/05.jpg' alt='Player 2 Screen').figure-img
+        figcaption.figure-caption.text-center Player 2 Screen
+  
+  // Tablet Version
+  section.container-fluid.pt-lg-2.pb-5
+    .row.align-items-center
+      .col-xl-4.offset-xl-2.col-lg-6.col-md-5.pb-4.text-center.text-md-left
+        h2.h3 Tablet version is available
+        p.text-muted.pt-3.pb-4 Morbi fringilla ex luctus, tempor ante id, finibus ante. Nulla facilisi. <span class='d-sm-block d-md-none d-lg-block'>Phasellus et quam porta, elementum sem eget, pellentesque dolor. Pellentesque efficitur suscipit ullamcorper cum soluta nobis est eligendi optio cumque nihil impedit.</span>
+        .text-md-nowrap
+          a(href='#').market-btn.apple-btn.mr-3.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title App Store
+          a(href='#').market-btn.google-btn.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title Google Play
+      .col-lg-6.col-md-7
+        img(src='img/homepages/mobile-app-showcase/tablet-app.jpg' alt='Tablet Version')
+  
+  // CTA + Numbers
+  section(style='background-image: url(img/homepages/mobile-app-showcase/cta-bg.jpg);').bg-center-top.bg-no-repeat.bg-cover.pb-4
+    .container-fluid.pb-4
+      .row
+        .col-md-3.col-sm-6.border-white.border-right.py-5.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='10')
+            h5.animated-digits-digit.text-white
+              span 0
+              | k+
+            p.animated-digits-text
+              | Totally satisfied users
+        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='98')
+            h5.animated-digits-digit.text-white
+              span 0
+              | %
+            p.animated-digits-text
+              | Positive feedback
+        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='760')
+            h5.animated-digits-digit.text-white
+              span 0
+              | +
+            p.animated-digits-text
+              | Downloads per day
+        .col-md-3.col-sm-6.py-5.border-white.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='25')
+            h5.animated-digits-digit.text-white
+              span 0
+            p.animated-digits-text
+              | People behind this app
+    .container.py-5.text-center
+      h2.h3.block-title.text-white Download right now
+      .row.justify-content-center.pt-3
+        .col-xl-7.col-lg-8.col-md-10
+          p.text-white.opacity-60.pb-4 Morbi fringilla ex luctus, tempor ante id, finibus ante. Nulla facilisi. Phasellus et quam porta, elementum sem eget, pellentesque dolor. Pellentesque efficitur suscipit ullamcorper.
+          a(href='#').market-btn.market-btn-light-skin.apple-btn.mx-2.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title App Store
+          a(href='#').market-btn.market-btn-light-skin.google-btn.mx-2.mb-3
+            span.mb-subtitle Download on the
+            span.mb-title Google Play
+
+  // Footer
+  footer.container.pt-3
+    .py-5.my-3.text-center
+      a(href='index.html').navbar-brand.d-inline-block.pb-2
+        img(src='img/logo/logo-dark.png' alt='CreateX')
+      .pt-4
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-btn.sb-style-6.sb-twitter
+          i.socicon-twitter
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-btn.sb-style-6.sb-facebook
+          i.socicon-facebook
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-btn.sb-style-6.sb-dribbble
+          i.socicon-dribbble
+        a(href='#' data-toggle='tooltip' data-placement='top' title='YouTube').social-btn.sb-style-6.sb-youtube
+          i.socicon-youtube
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Vimeo').social-btn.sb-style-6.sb-vimeo
+          i.socicon-vimeo
+        a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-btn.sb-style-6.sb-instagram
+          i.socicon-instagram
+    hr
+    .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+      div.order-2
+        a(href='#').footer-link About
+        a(href='#').footer-link.ml-3 Help &amp; Info
+        a(href='#').footer-link.ml-3 Privacy Policy
+      p.m-0.text-sm.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block navi-link opacity-80 p-0' target='_blank'>by Createx Studio</a>

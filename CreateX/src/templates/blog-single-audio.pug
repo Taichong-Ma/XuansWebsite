@@ -1,0 +1,54 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Single Post'
+  - var pageSubTitle = 'Post Format: <strong>Audio</strong>'
+  - var pageTitleBgImage ='img/page-title/blog-pattern.jpg'
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Post Audio'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-grid-rs.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-3
+    .row
+
+      // Post Content
+      .col-lg-9
+
+        //- single-post-meta.pug template
+        include partials/single-post-meta
+
+        // Audio
+        iframe(src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149243221&color=%23ac32e4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true' allowfullscreen)
+        
+        p.pt-4.pb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        h4 Deep Purple "Smoke on the Water". Song History.
+        p.pb-4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+        .blockquote.mb-4
+          p.text-muted At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+          footer.blockquote-footer
+            | Barbara Wilson
+            cite Musician
+        p.pb-4 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+        //- single-post-share.pug template
+        include partials/single-post-share
+
+        //- single-post-author.pug template
+        include partials/single-post-author
+
+        //- entry-navigation-blog.pug template
+        include partials/entry-navigation-blog
+
+      .col-lg-3
+        //- sidebar-blog.pug template
+        include partials/sidebar-blog-single
+
+  //- post-comments.pug template
+  include partials/post-comments
+
+  //- footer-blog.pug template
+  include partials/footer-blog

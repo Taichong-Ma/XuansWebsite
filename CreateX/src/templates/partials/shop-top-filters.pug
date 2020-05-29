@@ -1,0 +1,121 @@
+// Shop Top Filters
+.pb-2
+  .d-md-flex.justify-content-between
+    .d-flex
+      .form-inline.pb-4
+        label(for='product-sort').text-muted.mr-3 Sort by
+        select(id='product-sort').form-control.form-control-bordered.mr-3
+          option Popularuty
+          option Low - Hight Price
+          option High - Low Price
+          option Average Rating
+          option A - Z Order
+          option Z - A Order
+      .form-inline.pb-4
+        label(for='product-show').text-muted.mr-3 Products
+        select(id='product-show').form-control.form-control-bordered
+          option 12
+          option 20
+          option 30
+          option 50
+          option 80
+          option 100
+    .pb-4.text-center.text-md-left
+      a(href='#shop-filters' data-toggle='collapse').btn.btn-secondary
+        i.fe-icon-filter
+        | &nbsp;Filters
+  #shop-filters.collapse
+    .border.pt-4.px-4.mb-3
+      .row
+        .col-lg-3.col-sm-6
+          .widget.widget-categories
+            h4.widget-title Choose category
+            ul
+              li: a(href='#') Computers &amp; Accessories <span>(1138)</span>
+              li: a(href='#') Smartphones &amp; Tablets <span>(2356)</span>
+              li: a(href='#') TV, Video &amp; Audio <span>(420)</span>
+              li: a(href='#') Cameras, Photo &amp; Video <span>(510)</span>
+        .col-lg-3.col-sm-6
+          .widget
+            h4.widget-title Price range
+            form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').range-slider
+              .ui-range-slider
+              footer.ui-range-slider-footer
+                .column
+                  button(type='submit').btn.btn-primary.btn-xs Filter
+                .column
+                  .ui-range-values
+                    .ui-range-label Price:
+                    .ui-range-value-min
+                      | $<span></span>
+                      input(type='hidden')
+                    | &nbsp;&ndash;&nbsp;
+                    .ui-range-value-max
+                      | $<span></span>
+                      input(type='hidden')
+        .col-lg-3.col-sm-6
+          .widget
+            h4.widget-title Filter by price
+            .custom-control.custom-radio
+              input(type='radio' id='p100' name='price' checked).custom-control-input
+              label(for='p100').custom-control-label
+                | $0 - $100&nbsp;
+                span.text-muted (254)
+            .custom-control.custom-radio
+              input(type='radio' id='p300' name='price').custom-control-input
+              label(for='p300').custom-control-label
+                | $101 - $300&nbsp;
+                span.text-muted (39)
+            .custom-control.custom-radio
+              input(type='radio' id='p500' name='price').custom-control-input
+              label(for='p500').custom-control-label
+                | $301 - $500&nbsp;
+                span.text-muted (128)
+            .custom-control.custom-radio
+              input(type='radio' id='p750' name='price').custom-control-input
+              label(for='p750').custom-control-label
+                | $501 - $750&nbsp;
+                span.text-muted (310)
+            .custom-control.custom-radio
+              input(type='radio' id='p1000' name='price').custom-control-input
+              label(for='p1000').custom-control-label
+                | $751 - $1,000&nbsp;
+                span.text-muted (42)
+            .custom-control.custom-radio
+              input(type='radio' id='p1500' name='price').custom-control-input
+              label(for='p1500').custom-control-label
+                | $1,001 - $1,500&nbsp;
+                span.text-muted (217)
+        .col-lg-3.col-sm-6
+          .widget
+            h4.widget-title Filter by brand
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='apple').custom-control-input
+              label(for='apple').custom-control-label
+                | Apple&nbsp;
+                span.text-muted (254)
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='bosh').custom-control-input
+              label(for='bosh').custom-control-label
+                | Bosh&nbsp;
+                span.text-muted (39)
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='canon').custom-control-input
+              label(for='canon').custom-control-label
+                | Canon Inc.&nbsp;
+                span.text-muted (128)
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='dell').custom-control-input
+              label(for='dell').custom-control-label
+                | Dell&nbsp;
+                span.text-muted (310)
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='hewlet').custom-control-input
+              label(for='hewlet').custom-control-label
+                | Hewlett-Packard&nbsp;
+                span.text-muted (42)
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='lg').custom-control-input
+              label(for='lg').custom-control-label
+                | LG Electronics&nbsp;
+                span.text-muted (310)

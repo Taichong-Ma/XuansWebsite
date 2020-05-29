@@ -1,0 +1,53 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Order Tracking'
+  - var pageTitleBgImage ='img/page-title/shop-pattern.jpg'
+  - var parentMenu = 'Pages'
+  - var isModalOrder = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-boxed-ls.html'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-4
+
+    // Order Tracking
+    .wizard.pb-3
+      .bg-dark.px-3.py-4.text-center.text-white.text-uppercase Tracking order No - <strong>34VB5540K83</strong>
+      .d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.bg-secondary.px-3.py-4
+        .w-100.text-center
+          span.font-weight-medium Shipped Via:
+          | &nbsp;UPS Ground
+        .w-100.text-center
+          span.font-weight-medium Status:
+          | &nbsp;Processing Order
+        .w-100.text-center
+          span.font-weight-medium Expected Date:
+          | &nbsp;Dec 25, 2018
+      .wizard-body.pb-5
+        .wizard-steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between
+          .wizard-step.active
+            i.wizard-icon.fe-icon-check-circle
+            | Order Confirmed
+          .wizard-step.active
+            i.wizard-icon.fe-icon-settings
+            | Processing Order
+          .wizard-step
+            i.wizard-icon.fe-icon-award
+            | Quality Check
+          .wizard-step
+            i.wizard-icon.fe-icon-truck
+            | Product Dispatched
+          .wizard-step
+            i.wizard-icon.fe-icon-home
+            | Product Delivered
+      .wizard-footer.d-sm-flex.flex-wrap.justify-content-between.align-items-center.text-center
+        .custom-control.custom-checkbox.mt-2.mr-3
+          input(type='checkbox' id='notify-me' checked).custom-control-input
+          label(for='notify-me').custom-control-label Notify me when order is delivered
+        a(href='#order-details' data-toggle='modal').btn.btn-primary.btn-sm.mt-2 View Order Details
+
+  //- footer-shop.pug template
+  include partials/footer-shop

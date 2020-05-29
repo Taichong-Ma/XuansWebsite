@@ -1,0 +1,231 @@
+//
+// Utilities
+// Extends default Bootstrap utility classes
+// Classes with a purpose to reduce the frequency of 
+// highly repetitive declarations
+// --------------------------------------------------
+
+// Font families
+.font-family-body { font-family: $font-family-base !important; }
+.font-family-heading { font-family: $headings-font-family !important; }
+
+// Font Weight
+.font-weight-medium { font-weight: 600 !important; }
+
+// Text decorations
+.text-crossed { text-decoration: line-through !important; }
+.text-shadow { text-shadow: 0 1px rgba($black, .5) !important; }
+.text-decoration-none { text-decoration: none !important; }
+
+// Background colors
+.bg-gray-dark { background-color: lighten($black, 11%) !important; }
+.bg-gray,
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td { background-color: theme-color("secondary") !important; }
+
+// Gradient background
+.bg-gradient { @include gradient-background($gradient-color-1, $gradient-color-2);}
+.bg-gradient-vertical { @include gradient-background-vertical($gradient-color-1, $gradient-color-2);}
+
+
+// Background faded colors / Table contextual colors
+.bg-primary-faded,
+.table-primary,
+.table-primary > th,
+.table-primary > td { background-color: rgba(theme-color("primary"), .1) !important; }
+.bg-accent-faded,
+.table-accent,
+.table-accent > th,
+.table-accent > td { background-color: rgba(theme-color("accent"), .1) !important; }
+.bg-info-faded,
+.table-info,
+.table-info > th,
+.table-info > td { background-color: rgba(theme-color("info"), .1) !important; }
+.bg-success-faded,
+.table-success,
+.table-success > th,
+.table-success > td { background-color: rgba(theme-color("success"), .1) !important; }
+.bg-warning-faded,
+.table-warning,
+.table-warning > th,
+.table-warning > td { background-color: rgba(theme-color("warning"), .1) !important; }
+.bg-danger-faded,
+.table-danger,
+.table-danger > th,
+.table-danger > td { background-color: rgba(theme-color("danger"), .1) !important; }
+.bg-dark-faded,
+.table-active,
+.table-active > th,
+.table-active > td { background-color: rgba($gray-800, .1) !important; }
+
+// Background size
+.bg-auto { background-size: auto !important; }
+.bg-cover { background-size: cover !important; }
+.bg-contain { background-size: contain !important; }
+
+// Background attachment
+.bg-fixed { background-attachment: fixed !important; }
+.bg-scroll { background-attachment: scroll !important; }
+.touchevents .bg-fixed { background-attachment: scroll !important; }
+
+// Background position
+.bg-center { background-position: center !important; }
+.bg-center-top { background-position: center top !important; }
+.bg-center-bottom { background-position: center bottom !important; }
+.bg-right-center { background-position: right center !important; }
+.bg-left-center { background-position: left center !important; }
+
+// Background repeat
+.bg-no-repeat { background-repeat: no-repeat !important; }
+.bg-repeat-x { background-repeat: repeat-x !important; }
+.bg-repeat-y { background-repeat: repeat-y !important; }
+
+// Parallax Background
+.bg-parallax {
+  position: relative;
+  overflow: hidden;
+}
+.bg-parallax-img,
+.bg-overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+.bg-parallax-img {
+  top: -50%;
+  height: 200%;
+  z-index: 1;
+  > img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    max-width: none;
+    overflow: hidden;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}
+.bg-overlay {
+  top: 0;
+  height: 100%;
+  background-color: $black;
+  opacity: .5;
+  z-index: 2;
+}
+.bg-parallax-content,
+.bg-content {
+  position: relative;
+  z-index: 5;
+}
+
+// Cover Image
+.img-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  z-index: 1;
+}
+[class^='col-'] > .img-cover {
+  left: 15px;
+  width: calc(100% - 30px);
+}
+
+// Box Shadow
+.box-shadow { box-shadow: $card-box-shadow !important; }
+.box-shadow-none { box-shadow: none !important; }
+
+// Border Colors
+.border-dark { border-color: $gray-800 !important; }
+.border-white,
+.border-light {
+  border-color: rgba($white, .25) !important;
+  &.border, &.border-top, &.border-right,
+  &.border-bottom, &.border-left {
+    border-color: rgba($white, .25) !important;
+  }
+}
+
+// Opacity
+.opacity-25 { opacity: .25 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-60 { opacity: .6 !important; }
+.opacity-70 { opacity: .7 !important; }
+.opacity-75 { opacity: .75 !important; }
+.opacity-80 { opacity: .8 !important; }
+.opacity-90 { opacity: .9 !important; }
+
+// Spacing
+.mt-30 { margin-top: 30px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.pt-30 { padding-top: 30px !important; }
+.pb-30 { padding-bottom: 30px !important; }
+
+// Border radius
+.rounded { border-radius: $border-radius !important; }
+
+// Close component
+.close {
+  opacity: 1 !important;
+  &:focus { outline: none; }
+}
+
+// Overflow
+.overflow-hidden { overflow: hidden !important; }
+
+// Text Nowrap
+.text-xs-nowrap {
+  @include media-breakpoint-down(sm) {
+    white-space: nowrap;
+  }
+}
+.text-sm-nowrap {
+  @include media-breakpoint-up(sm) {
+    white-space: nowrap;
+  }
+}
+.text-md-nowrap {
+  @include media-breakpoint-up(md) {
+    white-space: nowrap;
+  }
+}
+.text-lg-nowrap {
+  @include media-breakpoint-up(lg) {
+    white-space: nowrap;
+  }
+}
+.text-xl-nowrap {
+  @include media-breakpoint-up(xl) {
+    white-space: nowrap;
+  }
+}
+
+// Grayscale to Color Effect
+.gray-to-color,
+.gray-to-color img {
+  transition: all .3s;
+  filter: grayscale(100%);
+  &:hover,
+  &:hover img { filter: grayscale(0); }
+}
+
+// Break Word
+.break-word {
+  word-break: break-all;
+}

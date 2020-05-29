@@ -1,0 +1,165 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'About Us'
+  - var pageTitleBgImage ='img/page-title/blog-pattern.jpg'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'About Us v.2'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Pages', 'link': '#'}]
+
+//- Page Content
+block content
+  .container.pb-5.mb-3
+    
+    // Buy Online
+    .d-md-table.w-100.p-4.p-lg-5.mb-30.box-shadow
+      .d-md-table-cell.align-middle.mx-auto.mb-4.mb-md-0(style='width: 150px;')
+        img(src='img/pages/about-icons/01.png' alt='Buy Online').d-block.w-100
+      .d-md-table-cell.align-middle.pl-md-4.pl-lg-5.text-center.text-md-left
+        h3.h4 Search, Select, Buy Online.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='shop-boxed-ls.html').font-weight-medium.text-decoration-none
+          | View Products
+          i.fe-icon-arrow-right.d-inline-block.align-middle.ml-1
+    
+    // Delivery Worldwide
+    .d-md-table.w-100.p-4.p-lg-5.mb-30.box-shadow
+      .d-md-table-cell.align-middle.mx-auto.mb-4.mb-md-0(style='width: 150px;')
+        img(src='img/pages/about-icons/02.png' alt='Delivery Worldwide').d-block.w-100
+      .d-md-table-cell.align-middle.pl-md-4.pl-lg-5.text-center.text-md-left
+        h3.h4 Fast Delivery Worldwide.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='#').font-weight-medium.text-decoration-none
+          | Shipping Details
+          i.fe-icon-arrow-right.d-inline-block.align-middle.ml-1
+    
+    // Mobile App
+    .d-md-table.w-100.p-4.p-lg-5.mb-30.box-shadow
+      .d-md-table-cell.align-middle.mx-auto.mb-4.mb-md-0(style='width: 150px;')
+        img(src='img/pages/about-icons/03.png' alt='Mobile App').d-block.w-100
+      .d-md-table-cell.align-middle.pl-md-4.pl-lg-5.text-center.text-md-left
+        h3.h4 Great Mobile App. Shop On The Go.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat.
+        a(href='#').market-btn.apple-btn.mr-3.mt-3
+          span.mb-subtitle Download on the
+          span.mb-title App Store
+        a(href='#').market-btn.google-btn.mr-3.mt-3
+          span.mb-subtitle Download on the
+          span.mb-title Google Play
+        a(href='#').market-btn.windows-btn.mr-3.mt-3
+          span.mb-subtitle Download on the
+          span.mb-title Windows Store
+    
+    // Outlet Stores
+    .d-md-table.w-100.p-4.p-lg-5.box-shadow
+      .d-md-table-cell.align-middle.mx-auto.mb-4.mb-md-0(style='width: 150px;')
+        img(src='img/pages/about-icons/04.png' alt='Outlet Stores').d-block.w-100
+      .d-md-table-cell.align-middle.pl-md-4.pl-lg-5.text-center.text-md-left
+        h3.h4 Shop Offline. Cozy Outlet Stores.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='contacts-v2.html').font-weight-medium.text-decoration-none
+          | See Outlet Stores
+          i.fe-icon-arrow-right.d-inline-block.align-middle.ml-1
+
+    // Team
+    .text-center.pt-5.pb-4.mt-3
+      h3.h4.mb-1 Our Core Team
+      p.text-muted People behind your awesome shopping experience.
+    .row
+      // Team member
+      .col-xl-3.col-sm-6.mb-30
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/01.jpg', 'Team Member Picture')
+          span.team-position Financial Director
+          h4.team-name William Smith
+          a(href='tel:+19871625346').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (987) 162 53 46
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-github
+                i.socicon-github
+              a(href='#').social-btn.sb-style-1.sb-stackoverflow
+                i.socicon-stackoverflow
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+      // Team member
+      .col-xl-3.col-sm-6.mb-30
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/02.jpg', 'Team Member Picture')
+          span.team-position Marketing Manager
+          h4.team-name Samantha Palson
+          a(href='tel:+57872336590').team-contact-link
+            i.fe-icon-phone
+            | &nbsp; +5 (787) 233 65 90
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-google-plus
+                i.socicon-googleplus
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+      // Team member
+      .col-xl-3.col-sm-6.mb-30
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/03.jpg', 'Team Member Picture')
+          span.team-position UX Designer
+          h4.team-name Emma Johnson
+          a(href='tel:+13907765843').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+1 (390) 776 58 43
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-pinterest
+                i.socicon-pinterest
+              a(href='#').social-btn.sb-style-1.sb-behance
+                i.socicon-behance
+              a(href='#').social-btn.sb-style-1.sb-dribbble
+                i.socicon-dribbble
+      // Team member
+      .col-xl-3.col-sm-6.mb-30
+        .team-card-style-3.mx-auto
+          .team-thumb
+            +image('img/team/style-3/04.jpg', 'Team Member Picture')
+          span.team-position CEO, Co-Founder
+          h4.team-name James McCorvinus
+          a(href='tel:+72056557984').team-contact-link
+            i.fe-icon-phone
+            | &nbsp;+7 (205) 655 79 84
+          a(href='mailto:info@example.com').team-contact-link
+            i.fe-icon-mail
+            | &nbsp;info@example.com
+          .team-social-bar-wrap  
+            .team-social-bar
+              a(href='#').social-btn.sb-style-1.sb-facebook
+                i.socicon-facebook
+              a(href='#').social-btn.sb-style-1.sb-twitter
+                i.socicon-twitter
+              a(href='#').social-btn.sb-style-1.sb-skype
+                i.socicon-skype
+              a(href='#').social-btn.sb-style-1.sb-linkedin
+                i.socicon-linkedin
+
+  //- footer-default.pug template
+  include partials/footer-default

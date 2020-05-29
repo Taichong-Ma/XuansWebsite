@@ -1,0 +1,278 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-default'
+  - var pageTitle = 'Portfolio'
+  - var pageSubTitle = 'Style 2 Grid View <strong>Full Width Layout</strong>'
+  - var pageTitleBgImage ='img/page-title/portfolio-pattern.png'
+  - var parentMenu = 'Portfolio'
+  - var menuTitle = 'Style 2 Full Width Layout'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Portfolio', 'link': 'portfolio-style2-boxed.html'}]
+
+//- Page Content
+block content
+  .container-fluid
+    
+    // Filters
+    ul(class='nav nav-tabs nav-tabs-style-2 mb-4')
+      li.nav-item
+        a(href='#' class='nav-link active' data-filter='*')
+          | All&nbsp;
+          sup 12
+      li.nav-item
+        a(href='#' class='nav-link' data-filter='.mobile-apps')
+          | Mobile Apps&nbsp;
+          sup 4
+      li.nav-item
+        a(href='#' class='nav-link' data-filter='.web-design')
+          | Web Design&nbsp;
+          sup 2
+      li.nav-item
+        a(href='#' class='nav-link' data-filter='.branding')
+          | Branding&nbsp;
+          sup 3
+      li.nav-item
+        a(href='#' class='nav-link' data-filter='.interior-design')
+          | Interior Design&nbsp;
+          sup 3
+
+    // Grid
+    .isotope-grid.filter-grid.cols-4
+      .gutter-sizer
+      .grid-sizer
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/01.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | William Smith
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') iOS App UI Design
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 12
+
+      // Portfolio Item
+      .grid-item.web-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/02.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Benjamin Miller
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Web App Front-End
+          .card-footer
+            div
+              a(href='#').tag-link Web Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 8
+
+      // Portfolio Item
+      .grid-item.branding.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-slider.html').portfolio-thumb
+            +image('img/portfolio/03.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Olivia Davis
+            h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Company Brand Design
+          .card-footer
+            div
+              a(href='#').tag-link Branding
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 25
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+            +image('img/portfolio/04.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Michael Brown
+            h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') iOS App Development
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 43
+
+      // Portfolio Item
+      .grid-item.interior-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/05.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Emilia Green
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') Working Space Design
+          .card-footer
+            div
+              a(href='#').tag-link Interior Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 27
+
+      // Portfolio Item
+      .grid-item.branding.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/07.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Emma Johnson
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Apple Package Design
+          .card-footer
+            div
+              a(href='#').tag-link Package Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 116
+
+      // Portfolio Item
+      .grid-item.interior-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-slider.html').portfolio-thumb
+            +image('img/portfolio/06.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | William Smith
+            h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Wall Shelves Design
+          .card-footer
+            div
+              a(href='#').tag-link Interior Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 38
+
+      // Portfolio Item
+      .grid-item.branding.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+            +image('img/portfolio/08.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Olivia Davis
+            h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') Bottle &amp; Logo Design
+          .card-footer
+            div
+              a(href='#').tag-link Package Branding
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 205
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-grid.html').portfolio-thumb
+            +image('img/portfolio/09.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Benjamin Miller
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-grid.html') Watch Interaface Design
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 156
+
+      // Portfolio Item
+      .grid-item.web-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-side-gallery-list.html').portfolio-thumb
+            +image('img/portfolio/10.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Edward Hodge
+            h5.portfolio-title: a(href='portfolio-single-side-gallery-list.html') Web UI Prototypin
+          .card-footer
+            div
+              a(href='#').tag-link Web Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 97
+
+      // Portfolio Item
+      .grid-item.interior-design.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-slider.html').portfolio-thumb
+            +image('img/portfolio/11.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Emma Johnson
+            h5.portfolio-title: a(href='portfolio-single-wide-slider.html') Furniture Design
+          .card-footer
+            div
+              a(href='#').tag-link Interior Design
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 120
+
+      // Portfolio Item
+      .grid-item.mobile-apps.mb-30.pb-2
+        .card.portfolio-card
+          a(href='portfolio-single-wide-gallery.html').portfolio-thumb
+            +image('img/portfolio/12.jpg', 'Portfolio Thumbnail')
+          .card-body
+            .portfolio-meta
+              span
+                i.fe-icon-user
+                | Michael Brown
+            h5.portfolio-title: a(href='portfolio-single-wide-gallery.html') Photo App UX
+          .card-footer
+            div
+              a(href='#').tag-link Mobile Apps
+            .portfolio-meta
+              a(href='#')
+                i.fe-icon-heart.text-accent
+                | 183
+
+  .container.pt-2.pb-5.mb-3
+      //-pagination.pug template
+      include partials/pagination
+
+  //- footer-portfolio.pug template
+  include partials/footer-portfolio

@@ -1,0 +1,33 @@
+// Load More Button Code
+#pagination-load-more-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html3' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug3' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html3' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Load More Button --&gt;</strong>
+                &lt;div class=&quot;text-center&quot;&gt;
+                  &lt;a class=&quot;btn btn-style-6 btn-primary&quot; href=&quot;#&quot;&gt;
+                    &lt;i class=&quot;fe-icon-rotate-cw&quot;&gt;&lt;/i&gt;
+                    &amp;nbsp;Load More
+                  &lt;/a&gt;
+                &lt;/div&gt;
+          div(id='pug3' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Load More Button</strong>
+                .text-center
+                  a(href=&quot;#&quot;).btn.btn-style-6.btn-primary
+                    i.fe-icon-rotate-cw
+                    | &nbsp;Load More

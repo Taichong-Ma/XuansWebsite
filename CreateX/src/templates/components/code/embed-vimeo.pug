@@ -1,0 +1,28 @@
+// Responsive Embed: Vimeo Video Code
+#embed-vimeo-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html2' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug2' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html2' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Responsive Embed: Vimeo Video --&gt;</strong>
+                &lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+                  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+                &lt;/div&gt;
+          div(id='pug2' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Responsive Embed: Vimeo Video</strong>
+                .embed-responsive.embed-responsive-16by9
+                  iframe(src=&quot;https://player.vimeo.com/video/VideoID?color=ac32e4&title=0&byline=0&portrait=0&quot; allowfullscreen).embed-responsive-item

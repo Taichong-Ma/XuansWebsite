@@ -1,0 +1,79 @@
+//
+// Testimonial and Comment (based on Blockquote component)
+// -------------------------------------------------------
+
+.testimonial,
+.comment {
+  .testimonial-footer {
+    display: table;
+    padding-top: ($spacer * 1.5);
+  }
+  .blockquote-footer {
+    margin-top: 0;
+  }
+  .testimonial-avatar {
+    display: table-cell;
+    width: $testimonial-avatar-size;
+    vertical-align: middle;
+    > img {
+      display: block;
+      width: $testimonial-avatar-size;
+      height: $testimonial-avatar-size;
+      border-radius: 50%;
+    }
+  }
+}
+.comment {
+  padding: ($spacer * 1.5);
+  &::before { display: none; }
+  .comment {
+    margin-top: ($spacer * 1.5);
+    padding-bottom: 0;
+    border-top: 1px solid $border-color;
+    box-shadow: none;
+  }
+}
+
+// Alignment
+.text-center {
+  .testimonial,
+  &.testimonial {
+    .testimonial-footer { margin: auto; }
+    .blockquote-footer {
+      text-align: left;
+      &::before {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+.text-right {
+  .testimonial,
+  &.testimonial {
+    .testimonial-footer {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+// Inside Carousel
+.testimonials-carousel {
+  .owl-item {
+    padding: {
+      right: 1.375rem;
+      left: 1.375rem;
+    }
+  }
+  .owl-dots {
+    margin-top: -1rem;
+    padding-top: 0;
+  }
+  .testimonial {
+    margin: {
+      top: .5rem;
+      bottom: 2.375rem;
+    }
+  }
+}

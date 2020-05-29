@@ -1,0 +1,59 @@
+//
+// Wizard
+// --------------------------------------------------
+
+.wizard {
+  background-color: $white;
+  box-shadow: $card-box-shadow;
+  .wizard-steps {
+    .wizard-step {
+      width: 100%;
+      margin: {
+        bottom: -.0625rem;
+        left: -.0625rem;
+      }
+      padding: 1.125rem 1rem;
+      transition: all .3s;
+      border: 1px solid $border-color;
+      color: $gray-800;
+      font-weight: 600;
+      text: {
+        align: center;
+        decoration: none;
+      }
+      > i {
+        display: inline-block;
+        margin: {
+          top: -.125rem;
+          right: .375rem;
+        }
+        color: $success;
+        font-size: 1.2em;
+        vertical-align: middle;
+      }
+      > .wizard-icon {
+        display: block;
+        margin: 0 auto .625rem;
+        color: $gray-500;
+        font-size: 1.6em;
+      }
+      &:hover {
+        background-color: $gray-100;
+      }
+      &.active {
+        border-color: $primary;
+        background-color: $primary;
+        color: $white;
+        box-shadow: 0 12px 18.8px 1.2px rgba($primary, .24);
+        cursor: default;
+        pointer-events: none;
+        > .wizard-icon { color: $white; }
+      }
+    }
+  }
+  .wizard-body { padding: 2.5rem 1.5rem 1.875rem; }
+  .wizard-footer {
+    padding: 15px 1.5rem;
+    border-top: 1px solid $border-color;
+  }
+}

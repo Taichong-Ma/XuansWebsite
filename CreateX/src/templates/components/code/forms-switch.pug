@@ -1,0 +1,42 @@
+// Forms Switch Code
+#forms-switch-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html10' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug10' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html10' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Switch --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-switch&quot;&gt;
+                  &lt;input type=&quot;checkbox&quot; class=&quot;custom-control-input&quot; id=&quot;customSwitch1&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;customSwitch1&quot;&gt;Toggle this switch element&lt;/label&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Disabled switch --&gt;</strong>
+                &lt;div class=&quot;custom-control custom-switch&quot;&gt;
+                  &lt;input type=&quot;checkbox&quot; class=&quot;custom-control-input&quot; disabled id=&quot;customSwitch2&quot;&gt;
+                  &lt;label class=&quot;custom-control-label&quot; for=&quot;customSwitch2&quot;&gt;Disabled switch element&lt;/label&gt;
+                &lt;/div&gt;
+          div(id='pug10' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Switch</strong>
+                .custom-control.custom-switch
+                  input(type=&quot;checkbox&quot; id=&quot;customSwitch1&quot;).custom-control-input
+                  label(for=&quot;customSwitch1&quot;).custom-control-label Toggle this switch element
+
+                <strong>//- Disabled switch</strong>
+                .custom-control.custom-switch
+                  input(type=&quot;checkbox&quot; id=&quot;customSwitch2&quot; disabled).custom-control-input
+                  label(for=&quot;customSwitch2&quot;).custom-control-label Disabled switch element
+                

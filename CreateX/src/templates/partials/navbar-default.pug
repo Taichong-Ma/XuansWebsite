@@ -1,0 +1,77 @@
+//- offcanvas-menu.pug template
+include offcanvas-menu
+
+//- offcanvas-cart.pug template
+include offcanvas-cart
+
+// Navbar: Default
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header.navbar-wrapper.navbar-sticky
+  .d-table-cell.align-middle.pr-md-3
+    a(href='index.html').navbar-brand.mr-1
+      +image('img/logo/logo-dark.png', 'CreateX')
+  .d-table-cell.w-100.align-middle.pl-md-3
+    .navbar-top.d-none.d-lg-flex.justify-content-between.align-items-center
+      div
+        a(href='tel:+1212477690000').navbar-link.mr-3
+          i.fe-icon-phone
+          | +1 (212) 477 690 000
+        a(href='mailto:support@example.com').navbar-link.mr-3
+          i.fe-icon-mail
+          | support@example.com
+        a(href='#').social-btn.sb-style-3.sb-twitter
+          i.socicon-twitter
+        a(href='#').social-btn.sb-style-3.sb-facebook
+          i.socicon-facebook
+        a(href='#').social-btn.sb-style-3.sb-pinterest
+          i.socicon-pinterest
+        a(href='#').social-btn.sb-style-3.sb-instagram
+          i.socicon-instagram
+      div
+        ul.list-inline.mb-0
+          li.dropdown-toggle.mr-2
+            a(href='account-login.html').navbar-link
+              i.fe-icon-user
+              | Login or Create account
+            .dropdown-menu.right-aligned.p-3.text-center(style='min-width: 200px;')
+              p.text-sm.opacity-70 Sign in to your account or register new one to have full control over your orders, receive bonuses and more.
+              a(href='account-login.html').btn.btn-primary.btn-sm.btn-block Sign In
+              p.text-sm.text-muted.mt-3.mb-0 New customer? <a href='account-login.html'>Register</a>
+          li.dropdown-toggle
+            a(href='#').navbar-link
+              +image('img/flags/en.png', 'English')
+              | Eng / Usd
+            .dropdown-menu.lang-dropdown.right-aligned
+              .p-3
+                select.form-control
+                  option(value='usd') $ USD
+                  option(value='eur') € EUR
+                  option(value='ukp') £ UKP
+                  option(value='jpy') ¥ JPY
+              a(href='#').dropdown-item
+                +image('img/flags/fr.png', 'Français')
+                | Français
+              a(href='#').dropdown-item
+                +image('img/flags/de.png', 'Deutsch')
+                | Deutsch
+              a(href='#').dropdown-item
+                +image('img/flags/it.png', 'Italiano')
+                | Italiano
+
+    .navbar.justify-content-end.justify-content-lg-between
+      //- search.pug template
+      include search
+      //- menu-main.pug template
+      include menu
+      div
+        ul.navbar-buttons.d-inline-block.align-middle.mr-lg-2
+          li.d-block.d-lg-none
+            a(href='#mobile-menu' data-toggle='offcanvas')
+              i.fe-icon-menu
+          li
+            a(href='#' data-toggle='search')
+              i.fe-icon-search
+          li
+            a(href='#shopping-cart' data-toggle='offcanvas'): i.fe-icon-shopping-cart
+            span.badge.badge-danger 3
+        a(href='https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/' target='_blank').btn.btn-gradient.ml-3.d-none.d-xl-inline-block Buy Now

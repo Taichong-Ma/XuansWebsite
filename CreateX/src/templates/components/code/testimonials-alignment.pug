@@ -1,0 +1,100 @@
+// Testimonials Alignment Code
+#testimonials-alignment-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Testimonial Left Aligned --&gt;</strong>
+                &lt;div class=&quot;blockquote testimonial&quot;&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                    &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                      &lt;img src=&quot;path-to-imageg&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                      &lt;div class=&quot;blockquote-footer&quot;&gt;
+                        Barbara Palson
+                        &lt;cite&gt;Graphic Designer&lt;/cite&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/footer&gt;
+                &lt;/div&gt;
+                
+                <strong>&lt;!-- Testimonial Center Aligned --&gt;</strong>
+                &lt;div class=&quot;blockquote testimonial text-center&quot;&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                    &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                      &lt;img src=&quot;path-to-image&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;d-table-cell align-middle pl-2&quot;&gt;
+                      &lt;div class=&quot;blockquote-footer&quot;&gt;
+                        Hinata Nakamura
+                        &lt;cite&gt;Financial Director&lt;/cite&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/footer&gt;
+                &lt;/div&gt;
+
+                <strong>&lt;!-- Testimonial Right Aligned --&gt;</strong>
+                &lt;div class=&quot;blockquote testimonial text-right&quot;&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                  &lt;footer class=&quot;testimonial-footer&quot;&gt;
+                    &lt;div class=&quot;d-table-cell align-middle pr-2&quot;&gt;
+                      &lt;div class=&quot;blockquote-footer&quot;&gt;
+                        Michael Davis
+                        &lt;cite&gt;Co-Founder, CEO&lt;/cite&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;testimonial-avatar&quot;&gt;
+                      &lt;img src=&quot;path-to-iamge&quot; alt=&quot;Testimonial Author Avatar&quot;/&gt;
+                    &lt;/div&gt;
+                  &lt;/footer&gt;
+                &lt;/div&gt;
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Testimonial Left Aligned</strong>
+                .blockquote.testimonial
+                  p Lorem ipsum dolor sit amet...
+                  footer.testimonial-footer
+                    .testimonial-avatar
+                      +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                    .d-table-cell.align-middle.pl-2
+                      .blockquote-footer
+                        | Barbara Palson
+                        cite Graphic Designer
+
+                <strong>//- Testimonial Center Aligned</strong>
+                .blockquote.testimonial.text-center
+                  p Lorem ipsum dolor sit amet...
+                  footer.testimonial-footer
+                    .testimonial-avatar
+                      +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)
+                    .d-table-cell.align-middle.pl-2
+                      .blockquote-footer
+                        | Hinata Nakamura
+                        cite Financial Director
+
+                <strong>//- Testimonial Right Aligned</strong>
+                .blockquote.testimonial.text-right
+                  p Lorem ipsum dolor sit amet...
+                  footer.testimonial-footer
+                    .d-table-cell.align-middle.pr-2
+                      .blockquote-footer
+                        | Michael Davis
+                        cite Co-Founder, CEO
+                    .testimonial-avatar
+                      +image(&quot;path-to-image&quot;, &quot;Testimonial Author Avatar&quot;)

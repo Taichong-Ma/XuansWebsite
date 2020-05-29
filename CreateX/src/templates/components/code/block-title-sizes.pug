@@ -1,0 +1,33 @@
+// Block Title Sizes Code
+#block-title-sizes-code.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Code
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body.pb-0
+        ul(class='nav nav-tabs pre-nav-tabs justify-content-end' role='tablist')
+          li.nav-item
+            a(href='#html1' class='nav-link active' data-toggle='tab' role='tab') HTML
+          li.nav-item
+            a(href='#pug1' class='nav-link' data-toggle='tab' role='tab') Pug
+        .tab-content
+          div(id='html1' class='tab-pane fade show active' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>&lt;!-- Block Title Sizes via h1-h6 tags --&gt;</strong>
+                &lt;h2 class=&quot;block-title&quot;&gt;H2. Block title&lt;/h2&gt;
+                &lt;h3 class=&quot;block-title&quot;&gt;H3. Block title&lt;/h3&gt;
+                &lt;h4 class=&quot;block-title&quot;&gt;H4. Block title&lt;/h4&gt;
+                &lt;h5 class=&quot;block-title&quot;&gt;H5. Block title&lt;/h5&gt;
+                &lt;h6 class=&quot;block-title&quot;&gt;H6. Block title&lt;/h6&gt;         
+          div(id='pug1' class='tab-pane fade' role='tabpanel')
+            pre.text-md
+              code.
+                <strong>//- Block Title Sizes via h1-h6 tags</strong>
+                h2.block-title H2. Block title
+                h3.block-title H3. Block title
+                h4.block-title H4. Block title
+                h5.block-title H5. Block title
+                h6.block-title H6. Block title
